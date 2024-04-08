@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/white"
+    android:gravity="bottom"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="114dp"
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/foto_de_perfil" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:background="@drawable/fechar_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Nome Completo Usuário"
+        android:textColor="@color/cortexto2"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="51dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="2022327065@ifam.edu.br"
+        android:textColor="@color/cor_de_texto_fraca"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="77dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="107dp"
+        android:layout_height="26dp"
+        android:background="@drawable/fundo_button_verde"
+        android:text="Ver perfil"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="123dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
