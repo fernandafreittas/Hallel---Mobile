@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -47,6 +48,15 @@ public class LoginActivity extends AppCompatActivity {
         EditText txtEmail = findViewById(R.id.TxtEmail);
         EditText textSenha = findViewById(R.id.TxtSenha);
         CheckBox lembreDeMim = findViewById(R.id.LembreMe);
+        ImageButton imageButton = findViewById(R.id.mostraSenha);
+
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePasswordVisibility(textSenha);
+            }
+        });
 
 
         binding.BtnCriarConta.setOnClickListener(new View.OnClickListener() {
@@ -102,4 +112,21 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    private void togglePasswordVisibility(EditText editText) {
+        int cursorPosition = editText.getSelectionEnd();
+
+        if (editText.getInputType() == (android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+            editText.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+        } else {
+            editText.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        }
+
+        editText.setSelection(cursorPosition);
+
     }
+
+
+
+
+
+}
