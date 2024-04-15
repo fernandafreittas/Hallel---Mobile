@@ -1,0 +1,270 @@
+[
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_header_menu.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\header_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_date_week.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_date_week.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fechar_header.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fechar_header.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_headerbottom.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\headerbottom.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_foto_do_evento_more_info.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\foto_do_evento_more_info.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_add.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\add.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_shop.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_logohallel.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\logohallel.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_hour_event.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_hour_event.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_atividades_vector.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\atividades_vector.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_time_event.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_time_event.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_camping.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_camping.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_agenda_vector.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\agenda_vector.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_ser_voluntario.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\ser_voluntario.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_missoes_vector.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\missoes_vector.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_button.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_associado_vector.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\associado_vector.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_iconperfil.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\iconperfil.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\font_inter.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\font\\inter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_about_church.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_about_church.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_igreja_vector.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\igreja_vector.png"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-45:/layout_ser_voluntario.xml.flat",
+        "source": "com.example.myapplication.app-main-47:/layout/ser_voluntario.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_cards.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_cards.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_baseline_arrow_forward_ios_24.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\baseline_arrow_forward_ios_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_vector_doacao.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\vector_doacao.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_desc_moreinfo.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_desc_moreinfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_baseline_subdirectory_arrow_left_24.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\baseline_subdirectory_arrow_left_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_img_arraial.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\img_arraial.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_headercolor.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\headercolor.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_resource__.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\resource__.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_location.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_location.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_desc_info.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_desc_info.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_baseline_arrow_back_ios_24.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\baseline_arrow_back_ios_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_act.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_act.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_testeiconhome.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\testeiconhome.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_missions.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_missions.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_logout.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_logout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_background_edittext.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\background_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_img_fundo.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\img_fundo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_cursos_vector.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\cursos_vector.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_acampamento_vector.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\acampamento_vector.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\menu_main_menu.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_curso.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_curso.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_foto_de_perfil.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\foto_de_perfil.png"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_iconevent.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\iconevent.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_more_infos.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\more_infos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_button_verde.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_button_verde.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\font_inter_semibold.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\font\\inter_semibold.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_more_info_text.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_more_info_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_capa_more_infos.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\capa_more_infos.png"
+    }
+]
