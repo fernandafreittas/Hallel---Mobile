@@ -35,7 +35,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ActivityVizualizaEventosBinding binding;
-    List<AllEventosListResponse> responseEventos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,49 +44,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityVizualizaEventosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        System.out.println("teste1");
 
-        HttpMain requisicao = new HttpMain();
 
-        requisicao.ListAllEventos(new HttpMain.HttpCallback() {
-
-            @Override
-            public void onSuccess(String response) {
-                // Processar a resposta em um thread de fundo
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
-                        List<AllEventosListResponse> responseEventos2 = new Gson().fromJson(response, listType);
-                        responseEventos = responseEventos2;
-
-                        // Adicionando um log para verificar se a lista está preenchida
-
-                        // Atualizar a UI no thread principal
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                // Chamar recicleView() apenas quando a lista estiver pronta
-                                recicleView(responseEventos);
-                            }
-                        });
-                    }
-                }).start();
-            }
-            @Override
-            public void onFailure(IOException e) {
-                System.out.println("teste3");
-                // Lida com a falha na requisição
-                // Por exemplo, você pode exibir uma mensagem de erro para o usuário
-            }
-        });
     }
 
-    private void recicleView(List<AllEventosListResponse> responseEventos) {
-        binding.recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        binding.recyclerView.setHasFixedSize(true);
-        EventosRecycle recycle = new EventosRecycle();
-        recycle.setEventos(responseEventos);
-        binding.recyclerView.setAdapter(recycle);
-    }
+   
 }
