@@ -2,7 +2,5 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="cordetextohallel">#005424</color>
-    <color name="cortexto2">#003617</color>
-    <color name="cor_de_texto_fraca">#668774</color>
+    <color name="verde">#005424</color>
 </resources>
