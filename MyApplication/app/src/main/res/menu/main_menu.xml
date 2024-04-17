@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/iconevent"
+            android:title="Eventos" />
+        <item
+            android:id="@+id/nav_home2"
+            android:icon="@drawable/agenda_vector"
+            android:title="Agenda" />
+        <item
+            android:id="@+id/nav_home3"
+            android:icon="@drawable/icon_curso"
+            android:title="Cursos" />
+
+        <item
+            android:id="@+id/nav_home4"
+            android:icon="@drawable/cursos_vector"
+            android:title="Ministérios" />
+
+        <item
+            android:id="@+id/nav_home5"
+            android:icon="@drawable/icon_about_church"
+            android:title="Sobre a Igreja" />
+        <item
+            android:id="@+id/nav_home6"
+            android:icon="@drawable/icon_date_week"
+            android:title="Programação Semanal" />
+        <item
+            android:id="@+id/nav_home7"
+            android:icon="@drawable/icon_missions"
+            android:title="Missões" />
+        <item
+            android:id="@+id/nav_home8"
+            android:icon="@drawable/icon_camping"
+            android:title="Acampamentos e Retiros" />
+        <item
+            android:id="@+id/nav_home9"
+            android:icon="@drawable/icon_act"
+            android:title="Atividades" />
+
+        <item
+            android:id="@+id/nav_home10"
+            android:icon="@drawable/icon_shop"
+            android:title="Loja" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Mais opções">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/add"
+                    android:title="Adicionar conta" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/icon_logout"
+                    android:title="Sair" />
+
+            </menu>
+
+        </item>
+
+    </group>
+
+</menu>

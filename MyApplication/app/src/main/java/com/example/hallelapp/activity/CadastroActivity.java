@@ -96,7 +96,6 @@ public class CadastroActivity extends AppCompatActivity {
         });
 
 
-/*
 
         //evento disparado quando clicar no botão de criar conta
         cadastrar.setOnClickListener(new View.OnClickListener() {
@@ -131,7 +130,7 @@ public class CadastroActivity extends AppCompatActivity {
 
 
             }
-        });*/
+        });
 
     }
 
