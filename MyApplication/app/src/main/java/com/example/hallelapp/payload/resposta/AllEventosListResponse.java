@@ -3,10 +3,11 @@ package com.example.hallelapp.payload.resposta;
 import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.model.PagamentoEntradaEvento;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class AllEventosListResponse {
+public class AllEventosListResponse implements Serializable {
 
     private String id;
     private String titulo;

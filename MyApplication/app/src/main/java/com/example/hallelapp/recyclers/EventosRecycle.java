@@ -60,6 +60,15 @@ public class EventosRecycle extends RecyclerView.Adapter<EventosRecycle.MyViewHo
 
         holder.imageEvento.setImageBitmap(decodedByte);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.onItemClick(v, position);
+                }
+            }
+        });
+
     }
 
     @Override
@@ -83,6 +92,17 @@ public class EventosRecycle extends RecyclerView.Adapter<EventosRecycle.MyViewHo
             imageEvento = itemView.findViewById(R.id.imagemEvento);
         }
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    private OnItemClickListener mListener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
+
 
 
 

@@ -20,6 +20,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.hallelapp.activity.MoreInfosActivity;
+import com.example.hallelapp.activity.VizualizaEventosActivity;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     private static final int idSair = R.id.sairButton;
 
+    List<AllEventosListResponse> responseEventos;
+
+    int indexArray = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +55,146 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         btnPerfil = findViewById(R.id.btnperfil);
         navigationView.setVisibility(View.GONE);
         btnVerEventos = findViewById(R.id.btnvertodos);
+        ImageView imagemEventos = findViewById(R.id.imgevento);
+        ImageButton botaoAvancaEvento = findViewById(R.id.imageButton3);
+        ImageButton botaoRetrocederEvento = findViewById(R.id.imageButton2);
+
+
+
+
+        HttpMain requisicao = new HttpMain();
+
+        requisicao.ListAllEventos(new HttpMain.HttpCallback() {
+
+            @Override
+            public void onSuccess(String response) {
+                // Processar a resposta em um thread de fundo
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
+                        List<AllEventosListResponse> responseEventos2 = new Gson().fromJson(response, listType);
+                        responseEventos = responseEventos2;
+                        AllEventosListResponse evento = responseEventos.get(0);
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                String StringBase64 = evento.getImagem();
+
+                                // Obter a parte da string que contém os dados em base64
+                                String[] partes = StringBase64.split(",");
+                                String dadosBase64 = partes[1];
+
+                                // Decodificar a string base64 em uma imagem Bitmap
+                                byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                                imagemEventos.setImageBitmap(decodedByte);
+
+
+                            }
+                        });
+
+
+
+
+                    }
+                }).start();
+            }
+            @Override
+            public void onFailure(IOException e) {
+                System.out.println("teste3");
+                // Lida com a falha na requisição
+                // Por exemplo, você pode exibir uma mensagem de erro para o usuário
+            }
+        });
+
+
+        botaoAvancaEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(indexArray<responseEventos.size()-1){
+                    indexArray++;
+
+                }else {
+                    indexArray = 0;
+
+                }
+
+
+
+                AllEventosListResponse evento = responseEventos.get(indexArray);
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String StringBase64 = evento.getImagem();
+
+                        // Obter a parte da string que contém os dados em base64
+                        String[] partes = StringBase64.split(",");
+                        String dadosBase64 = partes[1];
+
+                        // Decodificar a string base64 em uma imagem Bitmap
+                        byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                        imagemEventos.setImageBitmap(decodedByte);
+
+
+                    }
+                });
+
+            }
+        });
+
+        botaoRetrocederEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(indexArray>0){
+                    indexArray--;
+                }else {
+                    indexArray = responseEventos.size()-1;
+                }
+
+
+
+
+                AllEventosListResponse evento = responseEventos.get(indexArray);
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String StringBase64 = evento.getImagem();
+
+                        // Obter a parte da string que contém os dados em base64
+                        String[] partes = StringBase64.split(",");
+                        String dadosBase64 = partes[1];
+
+                        // Decodificar a string base64 em uma imagem Bitmap
+                        byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                        imagemEventos.setImageBitmap(decodedByte);
+
+
+                    }
+                });
+
+
+
+            }
+        });
+
+
+
 
 
         btnVerEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MoreInfosActivity.class);
+                Intent intent = new Intent(MainActivity.this, VizualizaEventosActivity.class);
                 startActivity(intent);
             }
         });

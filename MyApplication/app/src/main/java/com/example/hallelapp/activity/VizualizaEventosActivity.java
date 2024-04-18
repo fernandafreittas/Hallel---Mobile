@@ -1,6 +1,8 @@
 package com.example.hallelapp.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import com.example.hallelapp.MainActivity;
 import com.example.hallelapp.R;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
 import com.example.hallelapp.htpp.HttpMain;
@@ -76,7 +79,12 @@ public class VizualizaEventosActivity extends AppCompatActivity {
                 // Por exemplo, você pode exibir uma mensagem de erro para o usuário
             }
         });
+
+
+
     }
+
+
 
     private void recicleView(List<AllEventosListResponse> responseEventos) {
         binding.recyclerView.setLayoutManager(new GridLayoutManager(this,2));
@@ -84,5 +92,21 @@ public class VizualizaEventosActivity extends AppCompatActivity {
         EventosRecycle recycle = new EventosRecycle();
         recycle.setEventos(responseEventos);
         binding.recyclerView.setAdapter(recycle);
+
+        // Adicionando clique ao RecyclerView
+        recycle.setOnItemClickListener(new EventosRecycle.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+
+                System.out.println(position);
+                AllEventosListResponse evento = responseEventos.get(position);
+                Intent intent = new Intent(VizualizaEventosActivity.this, MoreInfosActivity.class);
+                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                startActivity(intent);
+
+            }
+        });
     }
+
+
 }
