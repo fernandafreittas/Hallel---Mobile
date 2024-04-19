@@ -1,7 +1,9 @@
 package com.example.hallelapp;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -19,11 +21,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.hallelapp.activity.LoginActivity;
 import com.example.hallelapp.activity.MoreInfosActivity;
 import com.example.hallelapp.activity.VizualizaEventosActivity;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
+import com.example.hallelapp.payload.resposta.LoginResponse;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -42,6 +46,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     List<AllEventosListResponse> responseEventos;
 
+    LoginResponse informacoesDeLogin;
+
     int indexArray = 0;
 
 
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         NavigationView navigationView = findViewById(R.id.navigation_bar);
         navigationView.setNavigationItemSelectedListener(this);
         btnPerfil = findViewById(R.id.btnperfil);
@@ -58,8 +65,10 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         ImageView imagemEventos = findViewById(R.id.imgevento);
         ImageButton botaoAvancaEvento = findViewById(R.id.imageButton3);
         ImageButton botaoRetrocederEvento = findViewById(R.id.imageButton2);
+        Button login = findViewById(R.id.buttonDoacao);
 
 
+       informacoesDeLogin = obterDadosSalvos();
 
 
         HttpMain requisicao = new HttpMain();
@@ -215,6 +224,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -228,5 +245,22 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         }
 
         return false;
+
     }
+
+    private LoginResponse obterDadosSalvos() {
+        SharedPreferences sharedPref = getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
+        String savedResponse = sharedPref.getString("dados de login", null);
+
+        if (savedResponse != null) {
+            // Aqui você precisa converter a string de volta para um objeto LoginResponse
+            Gson gson = new Gson(); // Certifique-se de ter Gson adicionado ao seu projeto
+            return gson.fromJson(savedResponse, LoginResponse.class);
+        }
+
+        return null;
+    }
+
 }

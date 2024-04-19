@@ -2,6 +2,7 @@ package com.example.hallelapp.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -49,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText textSenha = findViewById(R.id.TxtSenha);
         CheckBox lembreDeMim = findViewById(R.id.LembreMe);
         ImageButton imageButton = findViewById(R.id.mostraSenha);
+        TextView criarConta = findViewById(R.id.textCriarconta);
 
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +99,15 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+        criarConta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
@@ -124,6 +135,8 @@ public class LoginActivity extends AppCompatActivity {
         editText.setSelection(cursorPosition);
 
     }
+
+
 
 
 

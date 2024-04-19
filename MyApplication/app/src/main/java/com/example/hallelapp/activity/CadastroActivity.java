@@ -1,5 +1,6 @@
 package com.example.hallelapp.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.hallelapp.MainActivity;
 import com.example.hallelapp.R;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.payload.requerimento.CadastroRequest;
@@ -48,6 +50,8 @@ public class CadastroActivity extends AppCompatActivity {
         TextView txtErro = findViewById(R.id.txtErro);
         ImageButton mostrasenha = findViewById(R.id.mostraSenha);
         ImageButton mostraConfirmaSenha = findViewById(R.id.mostraConfirmarSenha);
+        TextView fazerLogin = findViewById(R.id.fazerLogin);
+
 
 
 
@@ -131,6 +135,14 @@ public class CadastroActivity extends AppCompatActivity {
 
             }
         });
+
+        fazerLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
     }
 
