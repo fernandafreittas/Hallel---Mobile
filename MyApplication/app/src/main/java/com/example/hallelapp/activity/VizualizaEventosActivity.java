@@ -84,8 +84,6 @@ public class VizualizaEventosActivity extends AppCompatActivity {
 
     }
 
-
-
     private void recicleView(List<AllEventosListResponse> responseEventos) {
         binding.recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         binding.recyclerView.setHasFixedSize(true);

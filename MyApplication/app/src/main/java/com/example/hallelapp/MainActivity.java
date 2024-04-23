@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                 // Lida com a falha na requisição
                 // Por exemplo, você pode exibir uma mensagem de erro para o usuário
             }
+
         });
 
 
