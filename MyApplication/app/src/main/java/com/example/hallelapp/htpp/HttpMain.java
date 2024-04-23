@@ -29,8 +29,11 @@ public class HttpMain {
     // estou colocando o ip do meu computador pois se eu colocar local host
     // ele irá procurar dentro do celular emulado e não da maquina
 
+    //fernanda
+   // private static final String UrlBase = "http://10.100.85.80:8080/api/";
+
+    //lolo
     private static final String UrlBase = "http://192.168.1.4:8080/api/";
-    private static final String UrlAdm = "administrador/";
 
     public static final MediaType JSON = MediaType.get("application/json");
 
@@ -95,6 +98,8 @@ public class HttpMain {
         }.execute();
     }
 
+    //realiza o login e traz as informações de login
+
     public void login(final LoginRequest loginRequest ,  final HttpCallback callback){
         new AsyncTask<Void,Void,String>() {
             @SuppressLint("StaticFieldLeak")
@@ -151,12 +156,7 @@ public class HttpMain {
     }
 
 
-
-
-
-
-
-
+//lista os eventos
     public void ListAllEventos(final HttpCallback callback) {
         OkHttpClient client = new OkHttpClient();
 
@@ -186,6 +186,10 @@ public class HttpMain {
                 callback.onFailure(e);
             }
         });
+    }
+
+    public void ParticiparDeEvento(){
+
     }
 
 

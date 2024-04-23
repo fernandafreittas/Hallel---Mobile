@@ -26,10 +26,13 @@ import com.example.hallelapp.activity.MoreInfosActivity;
 import com.example.hallelapp.activity.VizualizaEventosActivity;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
 import com.example.hallelapp.htpp.HttpMain;
+import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.example.hallelapp.payload.resposta.LoginResponse;
+import com.example.hallelapp.tools.ObterInformacoesDaSecao;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
@@ -46,7 +49,9 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     List<AllEventosListResponse> responseEventos;
 
-    LoginResponse informacoesDeLogin;
+    InformacoesDaSessao informacoesDeLogin;
+
+    ObterInformacoesDaSecao obterInformacoesDaSecao;
 
     int indexArray = 0;
 
@@ -68,7 +73,25 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         Button login = findViewById(R.id.buttonDoacao);
 
 
-       informacoesDeLogin = obterDadosSalvos();
+
+        obterInformacoesDaSecao = new ObterInformacoesDaSecao(this);
+
+
+       informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();
+
+       System.out.println(informacoesDeLogin.toString());
+
+      if (informacoesDeLogin.getLembreDeMin()==false){
+
+          SharedPreferences sharedPref = getSharedPreferences(
+                  getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
+          SharedPreferences.Editor editor = sharedPref.edit();
+          editor.putString("id", null);
+          editor.putString("token", null);
+          editor.apply();
+
+       }
 
 
         HttpMain requisicao = new HttpMain();
@@ -248,19 +271,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     }
 
-    private LoginResponse obterDadosSalvos() {
-        SharedPreferences sharedPref = getSharedPreferences(
-                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-        String savedResponse = sharedPref.getString("dados de login", null);
-
-        if (savedResponse != null) {
-            // Aqui você precisa converter a string de volta para um objeto LoginResponse
-            Gson gson = new Gson(); // Certifique-se de ter Gson adicionado ao seu projeto
-            return gson.fromJson(savedResponse, LoginResponse.class);
-        }
-
-        return null;
-    }
 
 }

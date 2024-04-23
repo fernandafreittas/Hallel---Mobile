@@ -22,6 +22,8 @@ import com.example.hallelapp.R;
 import com.example.hallelapp.databinding.ActivityLoginBinding;
 import com.example.hallelapp.databinding.ActivityMainBinding;
 import com.example.hallelapp.htpp.HttpMain;
+import com.example.hallelapp.model.InformacoesDaSessao;
+import com.example.hallelapp.model.Membro;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.resposta.LoginResponse;
 import com.google.gson.Gson;
@@ -29,6 +31,9 @@ import com.google.gson.Gson;
 import java.io.IOException;
 
 public class LoginActivity extends AppCompatActivity {
+
+    //	"email":"lolo93@gmail.com",
+    //	"senha":"lolo123"
 
     private ActivityLoginBinding binding;
 
@@ -77,14 +82,21 @@ public class LoginActivity extends AppCompatActivity {
                             LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
 
 
-                            if (lembreDeMim.isChecked()) {
-                                loginResponse.setLembreDeMim(true);
-                            } else {
-                                loginResponse.setLembreDeMim(false);
-                            }
 
-                            System.out.println(loginResponse.toString());
-                            SalvarDados(loginResponse);
+
+
+
+                                SalvarDados(loginResponse,lembreDeMim.isChecked());
+
+
+
+                            InformacoesDaSessao informacoesDaSessao = new InformacoesDaSessao();
+                            informacoesDaSessao.setToken(loginResponse.getToken());
+                            Membro membro = loginResponse.getMembro();
+                            informacoesDaSessao.setId(membro.getId());
+
+                            finish();
+
                         }
 
                         @Override
@@ -110,15 +122,24 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+//trocar string por json
+    private void SalvarDados(LoginResponse loginResponse,Boolean lembreDeMin){
 
-    private void SalvarDados(LoginResponse loginResponse){
-        String response = loginResponse.toString();
+
+
+        Membro membro = loginResponse.getMembro();
+
+        String id = membro.getId();
+        String token = loginResponse.getToken();
+
 
         SharedPreferences sharedPref = getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("dados de login",response);
+        editor.putString("id",id);
+        editor.putString("token", token);
+        editor.putBoolean("lembreDeMin",lembreDeMin);
         editor.apply();
 
     }
