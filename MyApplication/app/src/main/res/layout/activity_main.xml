@@ -422,8 +422,8 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_bar"
-        android:layout_width="332dp"
-        android:layout_height="wrap_content"
+        android:layout_width="331dp"
+        android:layout_height="722dp"
         android:layout_gravity="start"
         app:headerLayout="@layout/header_menu"
         app:layout_constraintBottom_toBottomOf="parent"

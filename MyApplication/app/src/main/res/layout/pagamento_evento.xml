@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Pagamento"
+        android:textColor="#004F22"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="370dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:background="#F5FAF5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="369dp"
+        android:layout_height="38dp"
+        android:background="#E3F8E3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Informações sobre a doação"
+        android:textColor="#004F22"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Doador:"
+        android:textColor="#004F22"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/txtView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="Periodo:"
+        android:textColor="#004F22"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/txtView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="Valor:"
+        android:textColor="#004F22"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Gisele Saraiva Vieira"
+        android:textColor="#004F22"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Pontualmente"
+        android:textColor="#004F22"
+        app:layout_constraintStart_toEndOf="@+id/txtView29"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginTop="12dp"
+        android:text="   R$20,00"
+        android:textColor="#004F22"
+        app:layout_constraintStart_toEndOf="@+id/txtView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="89dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bckgd_alterar_infos"
+        android:text="Alterar"
+        android:textColor="#004F22"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Escolha sua forma de pagamento"
+        android:textColor="#005424"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="141dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/fundo_cards"
+        android:drawableTop="@drawable/boleto"
+        android:paddingTop="12dp"
+        android:text="boleto"
+        android:textColor="#005424"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="346dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="127dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fundo_cards"
+            android:drawableTop="@drawable/pix_icon_198027_2_1"
+            android:paddingTop="7dp"
+            android:text="Pix"
+            android:textColor="#005424" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fundo_cards"
+            android:drawableTop="@drawable/cartao"
+            android:paddingTop="12dp"
+            android:text="Cartão"
+            android:textColor="#005424" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
