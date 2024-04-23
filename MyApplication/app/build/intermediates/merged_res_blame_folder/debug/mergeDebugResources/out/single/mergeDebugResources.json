@@ -1,270 +1,362 @@
 [
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_header_menu.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\header_menu.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_shop.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_shop.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_date_week.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_date_week.xml"
+        "merged": "com.example.hallelapp-debug-34:/xml_backup_rules.xml.flat",
+        "source": "com.example.hallelapp-main-36:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fechar_header.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fechar_header.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_capa_more_infos.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/capa_more_infos.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_headerbottom.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\headerbottom.png"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_foto_do_evento_more_info.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\foto_do_evento_more_info.png"
+        "merged": "com.example.hallelapp-debug-34:/layout_header_menu.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/header_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_add.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\add.xml"
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_cadastro.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_cadastro.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_shop.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_shop.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_missions.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_missions.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_logohallel.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\logohallel.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_button_verde.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_button_verde.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.hallelapp-debug-34:/drawable_backgroundbutton.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/backgroundbutton.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.hallelapp-debug-34:/drawable_frame_35.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/frame_35.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_hour_event.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_hour_event.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_add.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/add.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.hallelapp-debug-34:/drawable_frame_1.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/frame_1.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_atividades_vector.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\atividades_vector.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_date_week.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_date_week.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_time_event.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_time_event.png"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_camping.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_camping.xml"
+        "merged": "com.example.hallelapp-debug-34:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.hallelapp-main-36:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_agenda_vector.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\agenda_vector.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_missoes_vector.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/missoes_vector.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_hour_event.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_hour_event.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_branco.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_branco.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_ser_voluntario.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\ser_voluntario.xml"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_location.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_location.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_missoes_vector.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\missoes_vector.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_cursos_vector.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/cursos_vector.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_button.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_button.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_branco_com_sombra.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_branco_com_sombra.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_associado_vector.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\associado_vector.png"
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_vizualiza_eventos.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_vizualiza_eventos.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_iconperfil.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\iconperfil.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_igreja_vector.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/igreja_vector.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.hallelapp-debug-34:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.hallelapp-debug-34:/drawable_baseline_arrow_forward_ios_24.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/baseline_arrow_forward_ios_24.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\font_inter.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\font\\inter.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_botton_valores.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/botton_valores.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_about_church.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_about_church.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_act.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_act.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_igreja_vector.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\igreja_vector.png"
+        "merged": "com.example.hallelapp-debug-34:/layout_ser_voluntario.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/ser_voluntario.xml"
     },
     {
-        "merged": "com.example.myapplication.app-debug-45:/layout_ser_voluntario.xml.flat",
-        "source": "com.example.myapplication.app-main-47:/layout/ser_voluntario.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_voluntario.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_voluntario.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_cards.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_cards.xml"
+        "merged": "com.example.hallelapp-debug-34:/layout_participar_evento.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/participar_evento.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_baseline_arrow_forward_ios_24.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\baseline_arrow_forward_ios_24.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_vector__2_.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/vector__2_.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_baseline_arrow_back_ios_24.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/baseline_arrow_back_ios_24.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_vector_doacao.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\vector_doacao.png"
+        "merged": "com.example.hallelapp-debug-34:/font_inter_semibold.xml.flat",
+        "source": "com.example.hallelapp-main-36:/font/inter_semibold.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_desc_moreinfo.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_desc_moreinfo.xml"
+        "merged": "com.example.hallelapp-debug-34:/font_inter.xml.flat",
+        "source": "com.example.hallelapp-main-36:/font/inter.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_baseline_subdirectory_arrow_left_24.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\baseline_subdirectory_arrow_left_24.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_img_fundo.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/img_fundo.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_img_arraial.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\img_arraial.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_input_text_cartao.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/input_text_cartao.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_headercolor.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\headercolor.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_vector_doacao.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/vector_doacao.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_resource__.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\resource__.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_baseline_subdirectory_arrow_left_24.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/baseline_subdirectory_arrow_left_24.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_location.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_location.png"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_desc_info.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_desc_info.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_desc_info.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_desc_info.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_baseline_arrow_back_ios_24.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\baseline_arrow_back_ios_24.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_curso.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_curso.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_act.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_act.xml"
+        "merged": "com.example.hallelapp-debug-34:/layout_eventos_adapter.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/eventos_adapter.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_testeiconhome.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\testeiconhome.xml"
+        "merged": "com.example.hallelapp-debug-34:/menu_main_menu.xml.flat",
+        "source": "com.example.hallelapp-main-36:/menu/main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_missions.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_missions.xml"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_logout.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_logout.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_teste.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/teste.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_background_edittext.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\background_edittext.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_agenda_vector.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/agenda_vector.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.hallelapp-debug-34:/drawable_logohallel.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/logohallel.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_img_fundo.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\img_fundo.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_acampamento_vector.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/acampamento_vector.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_cursos_vector.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\cursos_vector.png"
+        "merged": "com.example.hallelapp-debug-34:/layout_doar_pevento.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/doar_pevento.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_acampamento_vector.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\acampamento_vector.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_atividades_vector.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/atividades_vector.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\activity_main.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_logout.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_logout.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\menu_main_menu.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\menu\\main_menu.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_desc_moreinfo.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_desc_moreinfo.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_icon_curso.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\icon_curso.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_about_church.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_about_church.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_foto_de_perfil.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\foto_de_perfil.png"
+        "merged": "com.example.hallelapp-debug-34:/drawable_ellipse_92.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/ellipse_92.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_img_arraial.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/img_arraial.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_iconevent.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\iconevent.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_backgroundtxt.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/backgroundtxt.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\layout_more_infos.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\layout\\more_infos.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_background_edittext.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/background_edittext.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_button_verde.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_button_verde.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_input_text.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/input_text.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\font_inter_semibold.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\font\\inter_semibold.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_logohallelpng.jpg.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/logohallelpng.jpg"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\xml\\backup_rules.xml"
+        "merged": "com.example.hallelapp-debug-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_fundo_more_info_text.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\fundo_more_info_text.xml"
+        "merged": "com.example.hallelapp-debug-34:/drawable_foto_do_evento_more_info.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/foto_do_evento_more_info.png"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-debug-45:\\drawable_capa_more_infos.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\.gradle\\daemon\\8.4\\com.example.myapplication.app-main-47:\\drawable\\capa_more_infos.png"
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_more_infos.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_more_infos.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_more_info_text.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_more_info_text.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_headercolor.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/headercolor.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.hallelapp-main-36:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_time_event.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_time_event.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_associado_vector.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/associado_vector.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_button.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_button.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_cards.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_cards.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_fechar_header.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fechar_header.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_testeiconhome.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/testeiconhome.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_pagamento_evento.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/pagamento_evento.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_resource__.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/resource__.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_card_participar.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_card_participar.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_iconevent.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/iconevent.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_foto_de_perfil.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/foto_de_perfil.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_iconperfil.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/iconperfil.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_icon_camping.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/icon_camping.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_main.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_olhosenha.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/olhosenha.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_login.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_headerbottom.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/headerbottom.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_termosdeuso.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/termosdeuso.png"
     }
 ]

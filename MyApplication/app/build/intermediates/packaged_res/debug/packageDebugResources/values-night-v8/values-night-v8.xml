@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Base.Theme.MyApplication" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Base.Theme.HallelApp" parent="Theme.AppCompat.Light.NoActionBar">
         
         
     </style>

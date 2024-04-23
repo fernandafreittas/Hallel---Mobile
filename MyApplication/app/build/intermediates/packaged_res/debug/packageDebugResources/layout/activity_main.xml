@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <!-- Header -->
-
-    <!-- Logo -->
-
-
+    tools:context="com.example.hallelapp.MainActivity">
+    <!--  Header  -->
+    <!--  Logo  -->
     <TextView
         android:id="@+id/welcomehallell"
         android:layout_width="wrap_content"
@@ -80,17 +75,15 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -112,7 +105,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView3"
                     app:layout_constraintVertical_bias="0.0" />
-
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -195,8 +187,6 @@
                     app:layout_constraintHorizontal_bias="0.526"
                     app:layout_constraintStart_toStartOf="@+id/imageView4"
                     app:layout_constraintTop_toBottomOf="@+id/imgevento" />
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
@@ -223,16 +213,13 @@
                     app:layout_constraintHorizontal_bias="0.114"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView4"
-                    app:layout_constraintVertical_bias="0.066"
-
-                    />
+                    app:layout_constraintVertical_bias="0.066" />
 
                 <View
                     android:layout_width="40dp"
-                    android:layout_height="match_parent"></View>
+                    android:layout_height="match_parent" />
 
                 <Button
-
                     android:id="@+id/buttonAssociado"
                     android:layout_width="158dp"
                     android:layout_height="89dp"
@@ -250,8 +237,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView4"
                     app:layout_constraintVertical_bias="0.066" />
-
-
             </LinearLayout>
 
             <LinearLayout
@@ -282,10 +267,9 @@
 
                 <View
                     android:layout_width="40dp"
-                    android:layout_height="match_parent"></View>
+                    android:layout_height="match_parent" />
 
                 <Button
-
                     android:id="@+id/buttoncursos"
                     android:layout_width="158dp"
                     android:layout_height="89dp"
@@ -303,7 +287,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView4"
                     app:layout_constraintVertical_bias="0.48" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -312,7 +295,6 @@
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
-
 
                 <Button
                     android:id="@+id/buttonSemanal"
@@ -339,9 +321,7 @@
 
                 <View
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp">
-
-                </View>
+                    android:layout_height="30dp"></View>
 
                 <Button
                     android:id="@+id/buttonMissoes"
@@ -368,9 +348,7 @@
 
                 <View
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp">
-
-                </View>
+                    android:layout_height="30dp"></View>
 
                 <Button
                     android:id="@+id/buttonAcampamentos"
@@ -397,9 +375,7 @@
 
                 <View
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp">
-
-                </View>
+                    android:layout_height="30dp"></View>
 
                 <Button
                     android:id="@+id/buttonAtvs"
@@ -426,15 +402,9 @@
 
                 <View
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp">
-
-                </View>
-
-
+                    android:layout_height="30dp"></View>
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
 
     <ImageButton
@@ -459,8 +429,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/main_menu">
-
-    </com.google.android.material.navigation.NavigationView>
-
+        app:menu="@menu/main_menu"></com.google.android.material.navigation.NavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

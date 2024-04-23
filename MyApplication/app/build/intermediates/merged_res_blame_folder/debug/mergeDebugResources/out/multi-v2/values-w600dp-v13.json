@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplication.app-mergeDebugResources-43:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "com.example.hallelapp-mergeDebugResources-32:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\MyApplication\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\mb\\Hallel-Mobile\\MyApplication\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
                         "startOffsets": "17",
-                        "endColumns": "41",
-                        "endOffsets": "54"
+                        "endColumns": "57",
+                        "endOffsets": "70"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "41",
-                        "endOffsets": "92"
+                        "endColumns": "57",
+                        "endOffsets": "108"
                     }
                 }
             ]

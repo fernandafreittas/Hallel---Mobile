@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication"
+    package="com.example.hallelapp"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
+    <!-- permisão para usar a internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
-        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.example.hallelapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.example.hallelapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -22,18 +24,36 @@
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label=""
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.HallelApp"
+        android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.example.myapplication.sidebar"
+            android:name="com.example.hallelapp.activity.FormVoluntarioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.MoreInfosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.VizualizaEventosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.VizualizarEventosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.ui.login.VizualizarEventosActivity"
             android:exported="false"
-            android:label="@string/title_activity_sidebar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_vizualizar_eventos" />
         <activity
-            android:name="com.example.myapplication.MainActivity"
+            android:name="com.example.hallelapp.activity.CadastroActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,15 +62,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-        <activity android:name="com.example.myapplication.MoreInfosActivity" />
-
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.myapplication.androidx-startup"
+            android:authorities="com.example.hallelapp.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
@@ -62,13 +76,6 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
-
-        <uses-library
-            android:name="androidx.window.extensions"
-            android:required="false" />
-        <uses-library
-            android:name="androidx.window.sidecar"
-            android:required="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

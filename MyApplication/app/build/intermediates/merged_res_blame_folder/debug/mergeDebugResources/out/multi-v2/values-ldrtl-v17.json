@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplication.app-mergeDebugResources-43:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.hallelapp-mergeDebugResources-32:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gisele Vieira\\.gradle\\caches\\transforms-3\\35ed2e3914499ed486c6fb7a8c526163\\transformed\\material-1.10.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\caches\\transforms-3\\f6054fe3d79ac079b0186d1449dca8f2\\transformed\\material-1.10.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
