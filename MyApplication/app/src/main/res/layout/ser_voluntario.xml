@@ -182,7 +182,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@drawable/input_text"
                     android:ems="10"
-                    app:layout_constraintBottom_toTopOf="@+id/button5"
+                    app:layout_constraintBottom_toTopOf="@+id/btncontinuar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.42"
                     app:layout_constraintStart_toStartOf="parent"
@@ -199,7 +199,7 @@
                     android:paddingLeft="10sp"
                     android:text="Não tenho preferência"
                     android:textColor="@color/cordetextohallel"
-                    app:layout_constraintBottom_toTopOf="@+id/button5"
+                    app:layout_constraintBottom_toTopOf="@+id/btncontinuar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.159"
                     app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +207,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btncontinuar"
                     android:layout_width="129dp"
                     android:layout_height="36dp"
                     android:layout_marginBottom="112dp"
