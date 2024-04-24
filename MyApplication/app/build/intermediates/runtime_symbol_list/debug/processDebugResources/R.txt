@@ -79,7 +79,6 @@ int animator mtrl_fab_transformation_sheet_expand_spec 0x7f020021
 int array com_google_android_gms_fonts_certs 0x7f030000
 int array com_google_android_gms_fonts_certs_dev 0x7f030001
 int array com_google_android_gms_fonts_certs_prod 0x7f030002
-int array planets_array 0x7f030004
 int array preloaded_fonts 0x7f030003
 int attr SharedValue 0x7f040000
 int attr SharedValueId 0x7f040001
@@ -3233,8 +3232,10 @@ int id btn50 0x7f0a0286
 int id btn80 0x7f0a0287
 int id btnBoleto 0x7f0a0269
 int id btnCartao 0x7f0a026a
+int id btnGerarBoleto 0x7f0a0280
 int id btnPix 0x7f0a026b
 int id btncontinuar 0x7f0a028e
+int id btncopyBoleto 0x7f0a0291
 int id btnperfil 0x7f0a006d
 int id btnvertodos 0x7f0a006e
 int id button 0x7f0a0070
@@ -3385,9 +3386,13 @@ int id imageView12 0x7f0a0103
 int id imageView13 0x7f0a0104
 int id imageView14 0x7f0a0105
 int id imageView15 0x7f0a028d
+int id imageView16 0x7f0a026f
+int id imageView17 0x7f0a0270
+int id imageView18 0x7f0a0292
 int id imageView19 0x7f0a0271
 int id imageView2 0x7f0a0106
 int id imageView20 0x7f0a0272
+int id imageView21 0x7f0a0293
 int id imageView3 0x7f0a0107
 int id imageView4 0x7f0a0108
 int id imageView5 0x7f0a0109
@@ -3936,6 +3941,7 @@ int layout notification_template_custom_big 0x7f0d0069
 int layout notification_template_icon_group 0x7f0d006a
 int layout notification_template_part_chronometer 0x7f0d006b
 int layout notification_template_part_time 0x7f0d006c
+int layout pagamento_boleto 0x7f0d0074
 int layout pagamento_evento 0x7f0d006d
 int layout participar_evento 0x7f0d006e
 int layout select_dialog_item_material 0x7f0d006f

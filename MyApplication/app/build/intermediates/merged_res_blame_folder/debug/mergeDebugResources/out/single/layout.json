@@ -16,10 +16,6 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\header_menu.xml"
     },
     {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/doar_pevento.xml",
-        "source": "com.example.hallelapp-main-36:/layout/doar_pevento.xml"
-    },
-    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_cadastro.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_cadastro.xml"
     },
@@ -28,8 +24,8 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\pagamento_boleto.xml"
     },
     {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/participar_evento.xml",
-        "source": "com.example.hallelapp-main-36:/layout/participar_evento.xml"
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/pagamento_boleto.xml",
+        "source": "com.example.hallelapp-main-36:/layout/pagamento_boleto.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_login.xml",
@@ -54,9 +50,5 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\ser_voluntario.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\ser_voluntario.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/ser_voluntario.xml",
-        "source": "com.example.hallelapp-main-36:/layout/ser_voluntario.xml"
     }
 ]

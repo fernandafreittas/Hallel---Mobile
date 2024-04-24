@@ -3,7 +3,6 @@ local
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
-array planets_array
 array preloaded_fonts
 color black
 color cor_de_texto_fraca
@@ -99,8 +98,10 @@ id btn50
 id btn80
 id btnBoleto
 id btnCartao
+id btnGerarBoleto
 id btnPix
 id btncontinuar
+id btncopyBoleto
 id btnperfil
 id btnvertodos
 id button
@@ -131,9 +132,13 @@ id imageView12
 id imageView13
 id imageView14
 id imageView15
+id imageView16
+id imageView17
+id imageView18
 id imageView19
 id imageView2
 id imageView20
+id imageView21
 id imageView3
 id imageView4
 id imageView5
@@ -219,6 +224,7 @@ layout activity_vizualiza_eventos
 layout doar_pevento
 layout eventos_adapter
 layout header_menu
+layout pagamento_boleto
 layout pagamento_evento
 layout participar_evento
 layout ser_voluntario
