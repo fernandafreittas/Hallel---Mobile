@@ -30,11 +30,11 @@ public class HttpMain {
     // ele irá procurar dentro do celular emulado e não da maquina
 
     //fernanda casa
-    private static final String UrlBase = "http://192.168.100.36:8080/api/";
+
 
 
     //lorenzo
-    //private static final String UrlBase = "http://192.168.1.4:8080/api/";
+    private static final String UrlBase = "http://192.168.100.36:8080/api/";
     private static final String UrlAdm = "administrador/";
 
     public static final MediaType JSON = MediaType.get("application/json");
