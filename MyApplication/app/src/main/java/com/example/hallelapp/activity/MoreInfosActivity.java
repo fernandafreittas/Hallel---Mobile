@@ -40,6 +40,7 @@ public class MoreInfosActivity extends AppCompatActivity {
         TextView dataEvento = findViewById(R.id.textView9);
         TextView horarioEvento = findViewById(R.id.textView10);
         TextView palestrantesEvento = findViewById(R.id.textView12);
+        Button btnParticparEvento = findViewById(R.id.button3);
 
         // Recuperar o objeto evento da intent
         AllEventosListResponse evento = (AllEventosListResponse) getIntent().getSerializableExtra("evento");
@@ -95,6 +96,7 @@ public class MoreInfosActivity extends AppCompatActivity {
 
                 palestrantesEvento.setText(palestrantesConcatenados);
 
+
             }
         });
 
@@ -105,5 +107,15 @@ public class MoreInfosActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnParticparEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MoreInfosActivity.this, ParticiparDeEventos.class);
+                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                startActivity(intent);
+            }
+        });
+
     }
 }

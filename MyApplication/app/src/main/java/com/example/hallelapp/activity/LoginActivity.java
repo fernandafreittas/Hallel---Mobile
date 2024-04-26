@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -79,9 +80,11 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(String response) {
                             System.out.println(response);
+
                             LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
 
 
+                            Log.d("JSON_RESPONSE", response);
 
 
 

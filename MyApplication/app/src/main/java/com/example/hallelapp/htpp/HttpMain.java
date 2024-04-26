@@ -2,6 +2,7 @@ package com.example.hallelapp.htpp;
 
 import com.example.hallelapp.payload.requerimento.CadastroRequest;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
+import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -98,7 +99,7 @@ public class HttpMain {
         }.execute();
     }
 
-    //realiza o login e traz as informações de login
+//realiza o login e traz as informações de login
 
     public void login(final LoginRequest loginRequest ,  final HttpCallback callback){
         new AsyncTask<Void,Void,String>() {
@@ -188,7 +189,55 @@ public class HttpMain {
         });
     }
 
-    public void ParticiparDeEvento(){
+    public void ParticiparDeEvento(final ParticiparEventosRequest participarEventosRequest, final HttpCallback callback){
+
+        new AsyncTask<Void,Void,String>() {
+            @SuppressLint("StaticFieldLeak")
+            @Override
+            protected String doInBackground(Void... voids) {
+                    OkHttpClient client = new OkHttpClient();
+                    Gson gson = new Gson();
+                    String json = gson.toJson(participarEventosRequest);
+                    String url = UrlBase + "home/eventos/participarEvento";
+
+                    System.out.println("url :" +url);
+                    System.out.println(participarEventosRequest.toString());
+
+
+                    RequestBody body = RequestBody.create(json,JSON);
+
+                    Request request = new Request.Builder()
+                            .url(url)
+                            .post(body)
+                            .build();
+
+                    try {
+
+                        Response response = client.newCall(request).execute();
+                        if(response.isSuccessful()){
+                            return response.body().toString();
+                        }else{
+                            return null;
+                        }
+
+                    }catch (IOException e){
+                        e.printStackTrace();
+                        return null;
+                    }
+
+            }
+
+            @Override
+            protected void onPostExecute(String result) {
+                if(result!=null){
+                    System.out.println("Deu certo");
+                    callback.onSuccess(result);
+                }else {
+                    callback.onFailure(new IOException("erro ao realizar requisição"));
+                }
+            }
+        }.execute();
+
 
     }
 
