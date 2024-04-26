@@ -36,6 +36,12 @@ public class HttpMain {
     //lolo
     private static final String UrlBase = "http://192.168.1.4:8080/api/";
 
+    //fernanda casa
+
+   // private static final String UrlBase = "http://192.168.100.36:8080/api/";
+
+
+
     public static final MediaType JSON = MediaType.get("application/json");
 
 

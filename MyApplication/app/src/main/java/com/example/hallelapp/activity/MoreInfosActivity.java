@@ -26,6 +26,7 @@ import java.util.List;
 public class MoreInfosActivity extends AppCompatActivity {
 
     private Button button4;
+    private Button buttonVoluntario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +101,9 @@ public class MoreInfosActivity extends AppCompatActivity {
             }
         });
 
+        buttonVoluntario = findViewById(R.id.buttonVoluntario);
+
+
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,11 +112,21 @@ public class MoreInfosActivity extends AppCompatActivity {
             }
         });
 
+
         btnParticparEvento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MoreInfosActivity.this, ParticiparDeEventos.class);
                 intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                startActivity(intent);
+            }
+        });
+
+
+        buttonVoluntario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MoreInfosActivity.this,FormVoluntarioActivity.class);
                 startActivity(intent);
             }
         });
