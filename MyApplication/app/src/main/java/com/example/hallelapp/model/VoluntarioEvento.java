@@ -1,10 +1,10 @@
-package com.example.hallelapp.payload.requerimento;
+package com.example.hallelapp.model;
 
 import java.util.Date;
 
-public class SeVoluntariarEventoReq {
+public class VoluntarioEvento {
 
-    private String idEvento;
+    private String id;
     private String nome;
     private String email;
     private String Sexo;
@@ -13,12 +13,23 @@ public class SeVoluntariarEventoReq {
     private String cpf;
     private String preferencia;
 
-    public String getIdEvento() {
-        return idEvento;
+    public VoluntarioEvento(String id, String nome, String email, String sexo, Date dataNascimento, String numeroDeTelefone, String cpf, String preferencia) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        Sexo = sexo;
+        this.dataNascimento = dataNascimento;
+        this.numeroDeTelefone = numeroDeTelefone;
+        this.cpf = cpf;
+        this.preferencia = preferencia;
     }
 
-    public void setIdEvento(String idEvento) {
-        this.idEvento = idEvento;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -79,8 +90,8 @@ public class SeVoluntariarEventoReq {
 
     @Override
     public String toString() {
-        return "SeVoluntariarEventoReq{" +
-                "id='" + idEvento + '\'' +
+        return "VoluntarioEvento{" +
+                "id='" + id + '\'' +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", Sexo='" + Sexo + '\'' +

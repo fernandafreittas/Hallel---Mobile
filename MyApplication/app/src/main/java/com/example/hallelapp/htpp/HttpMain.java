@@ -1,8 +1,10 @@
 package com.example.hallelapp.htpp;
 
+import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.CadastroRequest;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
+import com.example.hallelapp.payload.requerimento.SeVoluntariarEventoReq;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,6 +24,7 @@ import okhttp3.Response;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
+import android.util.Log;
 
 
 public class HttpMain {
@@ -246,6 +249,51 @@ public class HttpMain {
 
 
     }
+
+
+    public void SeVoluntariarEmEvento(final SeVoluntariarEventoReq seVoluntariarEventoReq
+            , final HttpMembro.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(seVoluntariarEventoReq);
+        String url = UrlBase + "home/eventos/seVoluntariar";
+
+        Log.d("HttpMembro", "url: " + url);
+        Log.d("HttpMembro", seVoluntariarEventoReq.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
 
 
 

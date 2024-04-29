@@ -127,6 +127,7 @@ public class MoreInfosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MoreInfosActivity.this,FormVoluntarioActivity.class);
+                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
                 startActivity(intent);
             }
         });
