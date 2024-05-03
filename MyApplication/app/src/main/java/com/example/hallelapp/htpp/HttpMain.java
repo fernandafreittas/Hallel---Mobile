@@ -293,6 +293,42 @@ public class HttpMain {
         });
     }
 
+    public void ListValoresEvento(String idEvento, final HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+
+
+
+        String url = UrlBase + "home/"+idEvento+"/listValoresEvento";
+
+        System.out.println(url);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get() // Especifica que é uma requisição GET
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+
+
+
 
 
 

@@ -16,9 +16,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallelapp.MainActivity;
 import com.example.hallelapp.R;
+import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
+import com.example.hallelapp.payload.resposta.ValoresEventoResponse;
+import com.google.gson.Gson;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -27,6 +31,8 @@ public class MoreInfosActivity extends AppCompatActivity {
 
     private Button button4;
     private Button buttonVoluntario;
+
+    ValoresEventoResponse valoresEventoResponse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +48,46 @@ public class MoreInfosActivity extends AppCompatActivity {
         TextView horarioEvento = findViewById(R.id.textView10);
         TextView palestrantesEvento = findViewById(R.id.textView12);
         Button btnParticparEvento = findViewById(R.id.button3);
+        TextView txtValorSemDesconto = findViewById(R.id.textView22);
+        TextView txtValorDescontoMembro = findViewById(R.id.textView24);
+        TextView txtValoreDescontoAssociado = findViewById(R.id.textView26);
+
 
         // Recuperar o objeto evento da intent
         AllEventosListResponse evento = (AllEventosListResponse) getIntent().getSerializableExtra("evento");
+
+        HttpMain requisicao = new HttpMain();
+
+        requisicao.ListValoresEvento(evento.getId(), new HttpMain.HttpCallback() {
+            @Override
+            public void onSuccess(String response) {
+                Gson gson = new Gson();
+                ValoresEventoResponse valoresEventoResponse2 = gson.fromJson(response, ValoresEventoResponse.class);
+                valoresEventoResponse = valoresEventoResponse2;
+                System.out.println(valoresEventoResponse.toString());
+
+                // Coloque a lógica que depende de valoresEventoResponse aqui dentro
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Aqui você pode acessar valoresEventoResponse e realizar as operações necessárias
+                        if (valoresEventoResponse.getValorEvento() != null && valoresEventoResponse.getValorDescontoMembro() != null
+                        && valoresEventoResponse.getValorDescontoAssociado() != null) {
+                            txtValorSemDesconto.setText(String.valueOf(valoresEventoResponse.getValorEvento()));
+                            txtValorDescontoMembro.setText(String.valueOf(valoresEventoResponse.getValorEvento() - valoresEventoResponse.getValorDescontoMembro()));
+                            txtValoreDescontoAssociado.setText(String.valueOf(valoresEventoResponse.getValorEvento() - valoresEventoResponse.getValorDescontoAssociado()));
+                        } else {
+                            // Trate o caso em que valoresEventoResponse é nulo
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(IOException e) {
+
+            }
+        });
 
 
 
@@ -66,6 +109,9 @@ public class MoreInfosActivity extends AppCompatActivity {
                 descricaoEvento.setText(evento.getDescricao());
                 LocalEvento localEvento = evento.getLocalEvento();
                 enderecoEvento.setText(localEvento.getLocalizacao());
+
+
+
 
                 // Criando um objeto Date
                 Date data = evento.getDate();
