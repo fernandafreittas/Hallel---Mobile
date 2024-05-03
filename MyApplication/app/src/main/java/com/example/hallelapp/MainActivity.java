@@ -14,10 +14,14 @@ import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.hallelapp.activity.MoreInfosActivity;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
@@ -35,21 +39,35 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     private ImageButton btnPerfil;
     private Button btnVerEventos;
+    private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-
-    private static final int idSair = R.id.sairButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        NavigationView navigationView = findViewById(R.id.navigation_bar);
+        navigationView = findViewById(R.id.navigation_bar);
         navigationView.setNavigationItemSelectedListener(this);
         btnPerfil = findViewById(R.id.btnperfil);
         navigationView.setVisibility(View.GONE);
         btnVerEventos = findViewById(R.id.btnvertodos);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        View headerView = navigationView.getHeaderView(0);
 
+        AppCompatImageButton sairButton = headerView.findViewById(R.id.sairButton);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        sairButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.closeDrawers();
+            }
+        });
 
         btnVerEventos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,19 +80,16 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         btnPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (navigationView.getVisibility() == View.VISIBLE) {
-                    navigationView.setVisibility(View.GONE);
-                } else {
-                    navigationView.setVisibility(View.VISIBLE);
-                }
+                // Abrir o navigation drawer
+                drawerLayout.openDrawer(GravityCompat.END);
             }
         });
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        //ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+          //  Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            //v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            //return insets;
+        //});
     }
 
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -88,5 +103,12 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         }
 
         return false;
+    }
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 }
