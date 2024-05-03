@@ -16,6 +16,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
@@ -24,6 +25,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.hallelapp.activity.MoreInfosActivity;
+import com.example.hallelapp.activity.PerfilActivity;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         View headerView = navigationView.getHeaderView(0);
 
         AppCompatImageButton sairButton = headerView.findViewById(R.id.sairButton);
+        AppCompatButton verperfil = headerView.findViewById(R.id.buttonVerPerfil);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -66,6 +69,16 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             @Override
             public void onClick(View v) {
                 drawerLayout.closeDrawers();
+            }
+        });
+
+        verperfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                drawerLayout.closeDrawers();
+                Intent intent = new Intent(MainActivity.this, PerfilActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -85,11 +98,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             }
         });
 
-        //ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-          //  Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            //v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            //return insets;
-        //});
     }
 
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
