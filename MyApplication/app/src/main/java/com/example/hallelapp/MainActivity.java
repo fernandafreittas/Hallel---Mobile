@@ -18,6 +18,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
@@ -27,7 +28,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.hallelapp.activity.LoginActivity;
 import com.example.hallelapp.activity.MoreInfosActivity;
+
 import com.example.hallelapp.activity.VizualizaEventosActivity;
+
+import com.example.hallelapp.activity.PerfilActivity;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.htpp.HttpMembro;
@@ -328,6 +332,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
 
         AppCompatImageButton sairButton = headerView.findViewById(R.id.sairButton);
+        AppCompatButton verperfil = headerView.findViewById(R.id.buttonVerPerfil);
 
         MenuItem deslogar = headerView.findViewById(R.id.nav_logout);
 
@@ -344,6 +349,16 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             @Override
             public void onClick(View v) {
                 drawerLayout.closeDrawers();
+            }
+        });
+
+        verperfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                drawerLayout.closeDrawers();
+                Intent intent = new Intent(MainActivity.this, PerfilActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -366,6 +381,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
 
 
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -379,6 +395,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             //v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             //return insets;
         //});
+
 
     }
 

@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Borda -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#ADC6B9" /> <!-- Cor da borda -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Background principal -->
+    <item android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#F3F3F3" /> <!-- Cor do background -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</layer-list>

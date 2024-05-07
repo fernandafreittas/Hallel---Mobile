@@ -16,6 +16,7 @@
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true"
 
+
         tools:targetApi="31" >
 
         <activity
@@ -23,6 +24,11 @@
             android:exported="false" />
 
 
+
+
+
+        <activity android:name=".activity.PerfilActivity"
+            android:exported="false"/>
 
         <activity android:name=".activity.FormVoluntarioActivity"
             android:exported="false"/>
