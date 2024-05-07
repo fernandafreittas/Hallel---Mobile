@@ -401,7 +401,7 @@
                     app:layout_constraintStart_toEndOf="@+id/textView39" />
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/buttonEventosPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/back_buttons_perfil"
@@ -434,7 +434,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.36"
-                    app:layout_constraintStart_toEndOf="@+id/button7"
+                    app:layout_constraintStart_toEndOf="@+id/buttonEventosPerfil"
                     app:layout_constraintTop_toBottomOf="@+id/imageView20"
                     app:layout_constraintVertical_bias="0.239" />
 
