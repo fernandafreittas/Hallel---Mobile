@@ -27,6 +27,7 @@ import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.model.Membro;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.resposta.LoginResponse;
+import com.example.hallelapp.tools.AESExample;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -89,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-                                SalvarDados(loginResponse,lembreDeMim.isChecked());
+                                SalvarDados(loginResponse,lembreDeMim.isChecked(), senha);
 
 
 
@@ -125,27 +126,43 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-//trocar string por json
-    private void SalvarDados(LoginResponse loginResponse,Boolean lembreDeMin){
-
-
-
+    private void SalvarDados(LoginResponse loginResponse, Boolean lembreDeMin, String senhaLogin) {
         Membro membro = loginResponse.getMembro();
 
         String id = membro.getId();
         String token = loginResponse.getToken();
+        String login = membro.getEmail();
+        String senha = senhaLogin;
 
 
-        SharedPreferences sharedPref = getSharedPreferences(
-                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("id",id);
-        editor.putString("token", token);
-        editor.putBoolean("lembreDeMin",lembreDeMin);
-        editor.apply();
+        try {
+            // Criptografar email e senha
+            String emailCriptografado = AESExample.criptografar(login);
+            String senhaCriptografada = AESExample.criptografar(senha);
+
+            SharedPreferences sharedPref = getSharedPreferences(
+                    getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString("id", id);
+            editor.putString("token", token);
+            editor.putBoolean("lembreDeMin", lembreDeMin);
+
+            // Salvar as informações criptografadas
+            editor.putString("informacao1", emailCriptografado);
+            editor.putString("informacao2", senhaCriptografada);
+
+            System.out.println("criptografado :"+senhaCriptografada);
+
+            editor.apply();
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Lidar com erros de criptografia aqui
+        }
 
     }
+
 
     private void togglePasswordVisibility(EditText editText) {
         int cursorPosition = editText.getSelectionEnd();

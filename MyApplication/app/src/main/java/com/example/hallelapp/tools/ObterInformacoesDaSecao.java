@@ -33,11 +33,32 @@ public class ObterInformacoesDaSecao {
         return sharedPref.getBoolean("lembreDeMin", false); // Retorna o valor booleano do lembrete, ou false se não encontrado
     }
 
-    public InformacoesDaSessao obterDadosSalvos() {
+    private String obterInformacao1() throws Exception {
+        SharedPreferences sharedPref = mContext.getSharedPreferences(
+                mContext.getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String informacao1Criptografada = sharedPref.getString("informacao1", "");
+        return AESExample.descriptografar(informacao1Criptografada);
+    }
+
+    private String obterInformacao2() throws Exception {
+        SharedPreferences sharedPref = mContext.getSharedPreferences(
+                mContext.getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String informacao2Criptografada = sharedPref.getString("informacao2", "");
+        return AESExample.descriptografar(informacao2Criptografada);
+    }
+
+
+
+
+
+    public InformacoesDaSessao obterDadosSalvos() throws Exception {
         InformacoesDaSessao informacoes = new InformacoesDaSessao();
         informacoes.setId(obterIdDeLogin());
         informacoes.setToken(obterTokenDeLogin());
         informacoes.setLembreDeMin(obterLembreteDeLogin());
+        informacoes.setInformacao1(obterInformacao1());
+        informacoes.setInformacao2(obterInformacao2());
+
         return informacoes;
     }
 

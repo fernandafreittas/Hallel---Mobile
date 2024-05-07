@@ -30,9 +30,13 @@ import com.example.hallelapp.activity.MoreInfosActivity;
 import com.example.hallelapp.activity.VizualizaEventosActivity;
 import com.example.hallelapp.databinding.ActivityVizualizaEventosBinding;
 import com.example.hallelapp.htpp.HttpMain;
+import com.example.hallelapp.htpp.HttpMembro;
 import com.example.hallelapp.model.InformacoesDaSessao;
+import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.example.hallelapp.payload.resposta.LoginResponse;
+import com.example.hallelapp.payload.resposta.PerfilResponse;
+import com.example.hallelapp.payload.resposta.ValoresEventoResponse;
 import com.example.hallelapp.tools.ObterInformacoesDaSecao;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
@@ -61,6 +65,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     int indexArray = 0;
 
+    PerfilResponse perfilResponse;
+
 
 
     @Override
@@ -69,6 +75,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+
+        //decalração dos componentes
 
         NavigationView navigationView = findViewById(R.id.navigation_bar);
 
@@ -84,12 +92,19 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
 
 
+
         obterInformacoesDaSecao = new ObterInformacoesDaSecao(this);
 
 
-       informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();
+        try {
+            informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
-       System.out.println(informacoesDeLogin.toString());
+        System.out.println(informacoesDeLogin.toString());
+
+       //metodo que verifica se o lembre de Mim == false
 
       if (informacoesDeLogin.getLembreDeMin()==false){
 
@@ -99,12 +114,58 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
           SharedPreferences.Editor editor = sharedPref.edit();
           editor.putString("id", null);
           editor.putString("token", null);
+          editor.putString("informacao1",null);
+          editor.putString("informacao2",null);
           editor.apply();
 
        }
 
 
+      //objetos para consumir rotas da api
+
         HttpMain requisicao = new HttpMain();
+        HttpMembro requisicaoMembro = new HttpMembro();
+
+
+        //renova o token
+
+        if(informacoesDeLogin.getInformacao1() != null && informacoesDeLogin.getInformacao2() != null){
+
+            LoginRequest loginRequest = new LoginRequest(informacoesDeLogin.getInformacao1(),informacoesDeLogin.getInformacao2());
+           System.out.println( loginRequest.toString());
+
+            requisicao.login(loginRequest, new HttpMain.HttpCallback() {
+                @Override
+                public void onSuccess(String response) {
+                    LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
+
+                    SharedPreferences sharedPref = getSharedPreferences(
+                            getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
+                    System.out.println( "renovação do toke"+ loginResponse.getToken());
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putString("token",loginResponse.getToken());
+                    editor.apply();
+
+                    informacoesDeLogin.setToken(loginResponse.getToken());
+
+                }
+
+                @Override
+                public void onFailure(IOException e) {
+
+                }
+            });
+
+
+        }
+
+
+
+
+
+
+        //requisição para api" ela pega os eventos que estão na api"
 
         requisicao.ListAllEventos(new HttpMain.HttpCallback() {
 
@@ -151,6 +212,36 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                 // Por exemplo, você pode exibir uma mensagem de erro para o usuário
             }
         });
+
+
+        //requisição para api "pega as informações do membro"
+        if(informacoesDeLogin.getToken() != null){
+
+            requisicaoMembro.InformacoesDePerfil(informacoesDeLogin , new HttpMain.HttpCallback() {
+                @Override
+                public void onSuccess(String response) {
+                    Gson gson = new Gson();
+                    PerfilResponse perfilResponse2 = gson.fromJson(response, PerfilResponse.class);
+                    perfilResponse = perfilResponse2;
+                    System.out.println(perfilResponse.toString());
+
+                }
+
+                @Override
+                public void onFailure(IOException e) {
+
+                }
+            });
+
+
+
+        }
+
+
+
+
+
+
 
 
         botaoAvancaEvento.setOnClickListener(new View.OnClickListener() {
@@ -237,6 +328,12 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
 
         AppCompatImageButton sairButton = headerView.findViewById(R.id.sairButton);
+
+        MenuItem deslogar = headerView.findViewById(R.id.nav_logout);
+
+        ImageView imagemPerfil = headerView.findViewById(R.id.imageView5);
+
+
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);

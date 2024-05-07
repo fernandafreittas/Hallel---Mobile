@@ -52,7 +52,11 @@ public class ParticiparDeEventos extends AppCompatActivity {
         obterInformacoesDaSecao = new ObterInformacoesDaSecao(this);
 
 
-        informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();
+        try {
+            informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
 
         EditText txtnome = findViewById(R.id.inputNome);
