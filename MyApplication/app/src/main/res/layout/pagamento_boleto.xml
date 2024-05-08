@@ -71,7 +71,7 @@
                     app:srcCompat="@drawable/circulo_cinza" />
 
                 <Button
-                    android:id="@+id/btnGerarBoleto"
+                    android:id="@+id/btnDoarDinheito"
                     android:layout_width="244dp"
                     android:layout_height="43dp"
                     android:layout_marginTop="20dp"
@@ -83,7 +83,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
                 <Button
-                    android:id="@+id/btncopyBoleto"
+                    android:id="@+id/btnDoarObj"
                     android:layout_width="244dp"
                     android:layout_height="43dp"
                     android:layout_marginBottom="84dp"

@@ -2975,6 +2975,7 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable capa_more_infos
 drawable cartao
 drawable circulo_cinza
+drawable circulo_verdeclaro
 drawable copy
 drawable cursos_vector
 drawable design_fab_background
@@ -3026,6 +3027,8 @@ drawable icon_missions
 drawable icon_shop
 drawable icon_time_event
 drawable icon_voluntario
+drawable icone_doacao_dinheiro
+drawable icone_doacao_obj
 drawable iconevent
 drawable iconperfil
 drawable igreja_vector
@@ -3213,6 +3216,7 @@ id asConfigured
 id async
 id auto
 id autoComplete
+id autoCompleteTextView
 id autoCompleteToEnd
 id autoCompleteToStart
 id barrier
@@ -3233,10 +3237,10 @@ id btn50
 id btn80
 id btnBoleto
 id btnCartao
-id btnGerarBoleto
+id btnDoarDinheito
+id btnDoarObj
 id btnPix
 id btncontinuar
-id btncopyBoleto
 id btnperfil
 id btnvertodos
 id button
@@ -3291,6 +3295,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id cvc
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3409,7 +3414,6 @@ id inputCPF
 id inputEmail
 id inputIdade
 id inputNome
-id input_validade
 id invisible
 id inward
 id italic
@@ -3515,15 +3519,15 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
-id nome_titular
 id nomeevento
+id nometitular
 id none
 id normal
 id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id numero_cartao
+id numerocartao
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3563,6 +3567,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id radioButton
+id radioButton2
+id radioButton3
 id ratio
 id rdioAnualmente
 id rdioMensalmente
@@ -3640,6 +3646,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id switch1
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3680,6 +3687,7 @@ id textView21
 id textView22
 id textView23
 id textView24
+id textView25
 id textView26
 id textView29
 id textView3
@@ -3727,6 +3735,7 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id view
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3881,6 +3890,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout direcionamento_doacao
 layout doar_pevento
 layout eventos_adapter
 layout header_menu
@@ -3942,6 +3952,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout pagamento_boleto
+layout pagamento_cartao
 layout pagamento_evento
 layout participar_evento
 layout select_dialog_item_material

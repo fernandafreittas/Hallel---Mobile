@@ -30,6 +30,7 @@ drawable botton_valores
 drawable capa_more_infos
 drawable cartao
 drawable circulo_cinza
+drawable circulo_verdeclaro
 drawable copy
 drawable cursos_vector
 drawable ellipse_92
@@ -64,6 +65,8 @@ drawable icon_missions
 drawable icon_shop
 drawable icon_time_event
 drawable icon_voluntario
+drawable icone_doacao_dinheiro
+drawable icone_doacao_obj
 drawable iconevent
 drawable iconperfil
 drawable igreja_vector
@@ -91,6 +94,7 @@ id PsSenha
 id TxtEmail
 id TxtNome
 id TxtSenha
+id autoCompleteTextView
 id btn100
 id btn20
 id btn30
@@ -98,10 +102,10 @@ id btn50
 id btn80
 id btnBoleto
 id btnCartao
-id btnGerarBoleto
+id btnDoarDinheito
+id btnDoarObj
 id btnPix
 id btncontinuar
-id btncopyBoleto
 id btnperfil
 id btnvertodos
 id button
@@ -117,6 +121,7 @@ id buttonMissoes
 id buttonSemanal
 id buttonVoluntario
 id buttoncursos
+id cvc
 id editText
 id editTextNumber
 id editTextNumber2
@@ -150,7 +155,6 @@ id inputCPF
 id inputEmail
 id inputIdade
 id inputNome
-id input_validade
 id main
 id main_header_layout
 id mostraConfirmarSenha
@@ -168,16 +172,19 @@ id nav_home9
 id nav_login
 id nav_logout
 id navigation_bar
-id nome_titular
 id nomeevento
-id numero_cartao
+id nometitular
+id numerocartao
 id radioButton
+id radioButton2
+id radioButton3
 id rdioAnualmente
 id rdioMensalmente
 id rdioPontualmente
 id recyclerView
 id sairButton
 id scrollView2
+id switch1
 id textTituloEvento
 id textVi4
 id textView
@@ -197,6 +204,7 @@ id textView21
 id textView22
 id textView23
 id textView24
+id textView25
 id textView26
 id textView29
 id textView3
@@ -213,6 +221,7 @@ id textView8
 id textView9
 id titleParticipar
 id txtErro
+id view
 id welcomehallel
 id welcomehallell
 layout activity_cadastro
@@ -220,10 +229,12 @@ layout activity_login
 layout activity_main
 layout activity_more_infos
 layout activity_vizualiza_eventos
+layout direcionamento_doacao
 layout doar_pevento
 layout eventos_adapter
 layout header_menu
 layout pagamento_boleto
+layout pagamento_cartao
 layout pagamento_evento
 layout participar_evento
 layout ser_voluntario

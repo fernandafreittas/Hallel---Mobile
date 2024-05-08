@@ -2974,6 +2974,7 @@ int drawable btn_radio_on_to_off_mtrl_animation 0x7f08008d
 int drawable capa_more_infos 0x7f08008e
 int drawable cartao 0x7f08011f
 int drawable circulo_cinza 0x7f080120
+int drawable circulo_verdeclaro 0x7f080124
 int drawable copy 0x7f080121
 int drawable cursos_vector 0x7f08008f
 int drawable design_fab_background 0x7f080090
@@ -3025,6 +3026,8 @@ int drawable icon_missions 0x7f0800bc
 int drawable icon_shop 0x7f0800bd
 int drawable icon_time_event 0x7f0800be
 int drawable icon_voluntario 0x7f0800bf
+int drawable icone_doacao_dinheiro 0x7f080125
+int drawable icone_doacao_obj 0x7f080126
 int drawable iconevent 0x7f0800c0
 int drawable iconperfil 0x7f0800c1
 int drawable igreja_vector 0x7f0800c2
@@ -3212,6 +3215,7 @@ int id asConfigured 0x7f0a0059
 int id async 0x7f0a005a
 int id auto 0x7f0a005b
 int id autoComplete 0x7f0a005c
+int id autoCompleteTextView 0x7f0a02a7
 int id autoCompleteToEnd 0x7f0a005d
 int id autoCompleteToStart 0x7f0a005e
 int id barrier 0x7f0a005f
@@ -3232,10 +3236,10 @@ int id btn50 0x7f0a0286
 int id btn80 0x7f0a0287
 int id btnBoleto 0x7f0a0269
 int id btnCartao 0x7f0a026a
-int id btnGerarBoleto 0x7f0a0280
+int id btnDoarDinheito 0x7f0a0297
+int id btnDoarObj 0x7f0a0298
 int id btnPix 0x7f0a026b
 int id btncontinuar 0x7f0a028e
-int id btncopyBoleto 0x7f0a0291
 int id btnperfil 0x7f0a006d
 int id btnvertodos 0x7f0a006e
 int id button 0x7f0a0070
@@ -3290,6 +3294,7 @@ int id currentState 0x7f0a00a2
 int id custom 0x7f0a00a3
 int id customPanel 0x7f0a00a4
 int id cut 0x7f0a00a5
+int id cvc 0x7f0a029a
 int id date_picker_actions 0x7f0a00a6
 int id decelerate 0x7f0a00a7
 int id decelerateAndComplete 0x7f0a00a8
@@ -3408,7 +3413,6 @@ int id inputCPF 0x7f0a0113
 int id inputEmail 0x7f0a0114
 int id inputIdade 0x7f0a0115
 int id inputNome 0x7f0a0116
-int id input_validade 0x7f0a0117
 int id invisible 0x7f0a0118
 int id inward 0x7f0a0119
 int id italic 0x7f0a011a
@@ -3514,15 +3518,15 @@ int id neverCompleteToEnd 0x7f0a017d
 int id neverCompleteToStart 0x7f0a017e
 int id noScroll 0x7f0a017f
 int id noState 0x7f0a0180
-int id nome_titular 0x7f0a0181
 int id nomeevento 0x7f0a0182
+int id nometitular 0x7f0a029c
 int id none 0x7f0a0183
 int id normal 0x7f0a0184
 int id north 0x7f0a0185
 int id notification_background 0x7f0a0186
 int id notification_main_column 0x7f0a0187
 int id notification_main_column_container 0x7f0a0188
-int id numero_cartao 0x7f0a0189
+int id numerocartao 0x7f0a029d
 int id off 0x7f0a018a
 int id on 0x7f0a018b
 int id onInterceptTouchReturnSwipe 0x7f0a018c
@@ -3562,6 +3566,8 @@ int id progress_circular 0x7f0a01ad
 int id progress_horizontal 0x7f0a01ae
 int id radio 0x7f0a01af
 int id radioButton 0x7f0a0273
+int id radioButton2 0x7f0a01b1
+int id radioButton3 0x7f0a029e
 int id ratio 0x7f0a01b2
 int id rdioAnualmente 0x7f0a0294
 int id rdioMensalmente 0x7f0a0295
@@ -3639,6 +3645,7 @@ int id stretch 0x7f0a01f8
 int id submenuarrow 0x7f0a01f9
 int id submit_area 0x7f0a01fa
 int id supportScrollUp 0x7f0a01fb
+int id switch1 0x7f0a029f
 int id tabMode 0x7f0a01fc
 int id tag_accessibility_actions 0x7f0a01fd
 int id tag_accessibility_clickable_spans 0x7f0a01fe
@@ -3679,6 +3686,7 @@ int id textView21 0x7f0a0222
 int id textView22 0x7f0a0223
 int id textView23 0x7f0a0224
 int id textView24 0x7f0a0225
+int id textView25 0x7f0a0275
 int id textView26 0x7f0a0276
 int id textView29 0x7f0a0277
 int id textView3 0x7f0a0226
@@ -3726,6 +3734,7 @@ int id unlabeled 0x7f0a0250
 int id up 0x7f0a0251
 int id useLogo 0x7f0a0252
 int id vertical_only 0x7f0a0253
+int id view 0x7f0a0254
 int id view_offset_helper 0x7f0a0256
 int id view_transition 0x7f0a0257
 int id view_tree_lifecycle_owner 0x7f0a0258
@@ -3880,6 +3889,7 @@ int layout design_navigation_menu 0x7f0d002d
 int layout design_navigation_menu_item 0x7f0d002e
 int layout design_text_input_end_icon 0x7f0d002f
 int layout design_text_input_start_icon 0x7f0d0030
+int layout direcionamento_doacao 0x7f0d0075
 int layout doar_pevento 0x7f0d0031
 int layout eventos_adapter 0x7f0d0032
 int layout header_menu 0x7f0d0033
@@ -3941,6 +3951,7 @@ int layout notification_template_icon_group 0x7f0d006a
 int layout notification_template_part_chronometer 0x7f0d006b
 int layout notification_template_part_time 0x7f0d006c
 int layout pagamento_boleto 0x7f0d0074
+int layout pagamento_cartao 0x7f0d0076
 int layout pagamento_evento 0x7f0d006d
 int layout participar_evento 0x7f0d006e
 int layout select_dialog_item_material 0x7f0d006f

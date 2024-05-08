@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private ImageButton btnPerfil;
     private Button btnVerEventos;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        NavigationView navigationView = findViewById(R.id.navigation_bar);
+        navigationView = findViewById(R.id.navigation_bar);
         navigationView.setNavigationItemSelectedListener(this);
         btnPerfil = findViewById(R.id.btnperfil);
         navigationView.setVisibility(View.GONE);
@@ -82,9 +82,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         int id = item.getItemId();
 
         if (id == R.id.sairButton){
-
             navigationView.setVisibility(View.GONE);
-
+            return true; // Consuma o evento de seleção do item
         }
 
         return false;

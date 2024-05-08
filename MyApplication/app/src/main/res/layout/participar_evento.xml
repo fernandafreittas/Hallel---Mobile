@@ -189,7 +189,7 @@
                     app:layout_constraintVertical_bias="0.109" />
 
                 <EditText
-                    android:id="@+id/nome_titular"
+                    android:id="@+id/nometitular"
                     android:layout_width="336dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -204,7 +204,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <EditText
-                    android:id="@+id/numero_cartao"
+                    android:id="@+id/numerocartao"
                     android:layout_width="336dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -216,7 +216,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/imageView9"
                     app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintStart_toStartOf="@+id/imageView9"
-                    app:layout_constraintTop_toBottomOf="@+id/nome_titular"
+                    app:layout_constraintTop_toBottomOf="@+id/nometitular"
                     app:layout_constraintVertical_bias="0.15" />
 
                 <TextView
@@ -231,11 +231,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.117"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/numero_cartao"
+                    app:layout_constraintTop_toBottomOf="@+id/numerocartao"
                     app:layout_constraintVertical_bias="0.196" />
 
                 <EditText
-                    android:id="@+id/input_validade"
+                    android:id="@+id/cvc"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -260,7 +260,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.455"
                     app:layout_constraintStart_toEndOf="@+id/textView17"
-                    app:layout_constraintTop_toBottomOf="@+id/numero_cartao"
+                    app:layout_constraintTop_toBottomOf="@+id/numerocartao"
                     app:layout_constraintVertical_bias="0.193" />
 
                 <EditText
@@ -273,7 +273,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.526"
-                    app:layout_constraintStart_toEndOf="@+id/input_validade"
+                    app:layout_constraintStart_toEndOf="@+id/cvc"
                     app:layout_constraintTop_toBottomOf="@+id/textView18"
                     app:layout_constraintVertical_bias="0.15" />
 
@@ -291,7 +291,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.439"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_validade"
+                    app:layout_constraintTop_toBottomOf="@+id/cvc"
                     app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
