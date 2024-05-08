@@ -189,6 +189,7 @@
                     android:layout_marginTop="195dp"
                     android:background="@drawable/fundo_cards"
                     android:drawableTop="@drawable/boleto"
+                    android:onClick="btnBoleto"
                     android:paddingTop="25dp"
                     android:text="boleto"
                     android:textColor="@color/cordetextohallel"

@@ -15,6 +15,7 @@ public class MoreInfosActivity extends AppCompatActivity {
 
     private Button button4;
     private Button buttonVoluntario;
+    private Button buttonDoar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,14 @@ public class MoreInfosActivity extends AppCompatActivity {
         });
 
         buttonVoluntario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MoreInfosActivity.this,FormVoluntarioActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonDoar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MoreInfosActivity.this,FormVoluntarioActivity.class);

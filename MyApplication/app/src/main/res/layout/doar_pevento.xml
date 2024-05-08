@@ -36,7 +36,7 @@
                     app:layout_constraintHorizontal_bias="0.457"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView15"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="0.151" />
 
                 <TextView
                     android:id="@+id/titleParticipar"
@@ -55,37 +55,15 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.031" />
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
-                    android:text="Desejo doar objetos/alimentos"
-                    android:textColor="@color/cordetextohallel"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleParticipar" />
-
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="383dp"
-                    android:layout_height="25dp"
-                    android:text="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "
-                    android:textColor="#BAD1C4"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
                 <ImageView
                     android:id="@+id/imageView6"
-                    android:layout_width="388dp"
-                    android:layout_height="147dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_width="389dp"
+                    android:layout_height="154dp"
+                    android:layout_marginTop="44dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.478"
+                    app:layout_constraintHorizontal_bias="0.454"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView20"
+                    app:layout_constraintTop_toBottomOf="@+id/titleParticipar"
                     app:srcCompat="@drawable/fundo_cards" />
 
                 <TextView
@@ -99,56 +77,23 @@
                     app:layout_constraintStart_toStartOf="@+id/imageView6"
                     app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
-                <CheckBox
-                    android:id="@+id/checkBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:fontFamily="@font/inter_semibold"
-                    android:text="Semanalmente"
-                    android:textColor="@color/cortexto2"
-                    app:layout_constraintStart_toStartOf="@+id/imageView6"
-                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-                <CheckBox
-                    android:id="@+id/checkBox2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/inter_semibold"
-                    android:text="Mensalmente"
-                    android:textColor="@color/cortexto2"
-                    app:layout_constraintStart_toEndOf="@+id/checkBox"
-                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
-
-                <CheckBox
-                    android:id="@+id/checkBox3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/inter_semibold"
-                    android:text="Anualmente"
-                    android:textColor="@color/cortexto2"
-                    app:layout_constraintStart_toEndOf="@+id/checkBox2"
-                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
-
                 <TextView
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="20dp"
                     android:text="Escolher dia do mês para renovação:"
                     android:textColor="@color/cordetextohallel"
                     app:layout_constraintStart_toStartOf="@+id/imageView6"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+                    app:layout_constraintTop_toBottomOf="@+id/rdioMensalmente" />
 
                 <EditText
                     android:id="@+id/editTextNumber"
                     android:layout_width="165dp"
                     android:layout_height="28dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="7dp"
                     android:background="@drawable/input_text_cartao"
                     android:ems="10"
                     android:inputType="number"
@@ -289,6 +234,40 @@
                     android:inputType="numberDecimal"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView15"
                     app:layout_constraintStart_toStartOf="@+id/imageView15" />
+
+                <RadioButton
+                    android:id="@+id/rdioPontualmente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Pontualmente"
+                    android:textColor="#005424"
+                    app:layout_constraintStart_toStartOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+                <RadioButton
+                    android:id="@+id/rdioMensalmente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="37dp"
+                    android:text="Mensalmente"
+                    android:textColor="#005424"
+                    app:layout_constraintStart_toEndOf="@+id/rdioPontualmente"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+                <RadioButton
+                    android:id="@+id/rdioAnualmente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="37dp"
+                    android:text="Anualmente"
+                    android:textColor="#005424"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                    app:layout_constraintStart_toEndOf="@+id/rdioMensalmente"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

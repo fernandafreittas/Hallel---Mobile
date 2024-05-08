@@ -3265,9 +3265,6 @@ id center_vertical
 id chain
 id chain2
 id chains
-id checkBox
-id checkBox2
-id checkBox3
 id checkbox
 id checked
 id chronometer
@@ -3566,8 +3563,10 @@ id progress_circular
 id progress_horizontal
 id radio
 id radioButton
-id radioButton2
 id ratio
+id rdioAnualmente
+id rdioMensalmente
+id rdioPontualmente
 id rectangles
 id recyclerView
 id report_drawn

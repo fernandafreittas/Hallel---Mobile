@@ -117,9 +117,6 @@ id buttonMissoes
 id buttonSemanal
 id buttonVoluntario
 id buttoncursos
-id checkBox
-id checkBox2
-id checkBox3
 id editText
 id editTextNumber
 id editTextNumber2
@@ -175,7 +172,9 @@ id nome_titular
 id nomeevento
 id numero_cartao
 id radioButton
-id radioButton2
+id rdioAnualmente
+id rdioMensalmente
+id rdioPontualmente
 id recyclerView
 id sairButton
 id scrollView2

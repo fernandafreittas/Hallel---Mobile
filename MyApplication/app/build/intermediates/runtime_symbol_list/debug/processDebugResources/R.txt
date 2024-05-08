@@ -3264,9 +3264,6 @@ int id center_vertical 0x7f0a0088
 int id chain 0x7f0a0089
 int id chain2 0x7f0a008a
 int id chains 0x7f0a008b
-int id checkBox 0x7f0a0288
-int id checkBox2 0x7f0a0289
-int id checkBox3 0x7f0a028a
 int id checkbox 0x7f0a008c
 int id checked 0x7f0a008d
 int id chronometer 0x7f0a008e
@@ -3565,8 +3562,10 @@ int id progress_circular 0x7f0a01ad
 int id progress_horizontal 0x7f0a01ae
 int id radio 0x7f0a01af
 int id radioButton 0x7f0a0273
-int id radioButton2 0x7f0a01b1
 int id ratio 0x7f0a01b2
+int id rdioAnualmente 0x7f0a0294
+int id rdioMensalmente 0x7f0a0295
+int id rdioPontualmente 0x7f0a0296
 int id rectangles 0x7f0a01b3
 int id recyclerView 0x7f0a01b4
 int id report_drawn 0x7f0a01b5
