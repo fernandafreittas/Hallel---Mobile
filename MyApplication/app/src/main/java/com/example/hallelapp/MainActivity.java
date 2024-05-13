@@ -336,7 +336,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         MenuItem deslogar = headerView.findViewById(R.id.nav_logout);
 
-        ImageView imagemPerfil = headerView.findViewById(R.id.imageView5);
+
 
 
 
@@ -344,6 +344,12 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                 this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+
+
+
+
+
 
         sairButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -358,6 +364,12 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
                 drawerLayout.closeDrawers();
                 Intent intent = new Intent(MainActivity.this, PerfilActivity.class);
+
+                if(perfilResponse != null){
+
+                intent.putExtra("informacoesPerfil", perfilResponse);
+
+                }
                 startActivity(intent);
             }
         });
