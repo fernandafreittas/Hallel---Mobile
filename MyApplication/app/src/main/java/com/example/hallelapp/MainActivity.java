@@ -27,6 +27,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.hallelapp.activity.LoginActivity;
+import com.example.hallelapp.activity.LoginAdmActiviy;
 import com.example.hallelapp.activity.MoreInfosActivity;
 
 import com.example.hallelapp.activity.VizualizaEventosActivity;
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         ImageButton botaoAvancaEvento = findViewById(R.id.imageButton3);
         ImageButton botaoRetrocederEvento = findViewById(R.id.imageButton2);
         Button login = findViewById(R.id.buttonDoacao);
+        Button loginADM = findViewById(R.id.button);
 
 
 
@@ -402,6 +404,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             }
         });
 
+        loginADM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginAdmActiviy.class);
+                startActivity(intent);
+            }
+        });
+
         //ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
           //  Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             //v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -410,6 +420,10 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
 
     }
+
+
+
+
 
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 

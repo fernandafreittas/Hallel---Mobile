@@ -1,6 +1,5 @@
 package com.example.hallelapp.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,31 +19,27 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.hallelapp.R;
-import com.example.hallelapp.databinding.ActivityLoginBinding;
-import com.example.hallelapp.databinding.ActivityMainBinding;
+import com.example.hallelapp.htpp.HttpAdm;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.model.Membro;
+import com.example.hallelapp.payload.requerimento.AdministradorLoginRequest;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
+import com.example.hallelapp.payload.resposta.AuthenticationResponse;
 import com.example.hallelapp.payload.resposta.LoginResponse;
 import com.example.hallelapp.tools.AESExample;
 import com.google.gson.Gson;
 
 import java.io.IOException;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginAdmActiviy extends AppCompatActivity {
 
-    //	"email":"lolo93@gmail.com",
-    //	"senha":"lolo123"
-
-    private ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_login_adm_activiy);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -55,9 +50,9 @@ public class LoginActivity extends AppCompatActivity {
         Button buttonlogin = findViewById(R.id.BtnCriarConta);
         EditText txtEmail = findViewById(R.id.TxtEmail);
         EditText textSenha = findViewById(R.id.TxtSenha);
-        CheckBox lembreDeMim = findViewById(R.id.LembreMe);
         ImageButton imageButton = findViewById(R.id.mostraSenha);
-        TextView criarConta = findViewById(R.id.textCriarconta);
+
+
 
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -75,31 +70,28 @@ public class LoginActivity extends AppCompatActivity {
                 String senha = textSenha.getText().toString();
 
                 if (email != null && senha != null) {
-                    LoginRequest loginRequest = new LoginRequest(email, senha);
-                    HttpMain httpMain = new HttpMain();
-                    httpMain.login(loginRequest, new HttpMain.HttpCallback() {
-                        @Override
+                    AdministradorLoginRequest admLoginRequest = new AdministradorLoginRequest(email, senha);
+                    HttpAdm httpAdm = new HttpAdm();
+                    httpAdm.RealizarLogin(admLoginRequest, new HttpAdm.HttpCallback() {
+
+                    @Override
                         public void onSuccess(String response) {
                             System.out.println(response);
 
-                            LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
+                          AuthenticationResponse authenticationResponse = new Gson().fromJson(response, AuthenticationResponse.class);
 
 
                             Log.d("JSON_RESPONSE", response);
 
 
-
-
-                                SalvarDados(loginResponse,lembreDeMim.isChecked(), senha);
+                            System.out.println(authenticationResponse.toString());
 
 
 
-                            InformacoesDaSessao informacoesDaSessao = new InformacoesDaSessao();
-                            informacoesDaSessao.setToken(loginResponse.getToken());
-                            Membro membro = loginResponse.getMembro();
-                            informacoesDaSessao.setId(membro.getId());
+                        Intent intent = new Intent(LoginAdmActiviy.this, MainAdmActivity.class);
+                        intent.putExtra("informaçõesADM", authenticationResponse);
+                        startActivity(intent);
 
-                            finish();
 
                         }
 
@@ -115,53 +107,10 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-        criarConta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
     }
 
-    private void SalvarDados(LoginResponse loginResponse, Boolean lembreDeMin, String senhaLogin) {
-        Membro membro = loginResponse.getMembro();
 
-        String id = membro.getId();
-        String token = loginResponse.getToken();
-        String login = membro.getEmail();
-        String senha = senhaLogin;
-
-
-
-        try {
-            // Criptografar email e senha
-            String emailCriptografado = AESExample.criptografar(login);
-            String senhaCriptografada = AESExample.criptografar(senha);
-
-            SharedPreferences sharedPref = getSharedPreferences(
-                    getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putString("id", id);
-            editor.putString("token", token);
-            editor.putBoolean("lembreDeMin", lembreDeMin);
-
-            // Salvar as informações criptografadas
-            editor.putString("informacao1", emailCriptografado);
-            editor.putString("informacao2", senhaCriptografada);
-
-            System.out.println("criptografado :"+senhaCriptografada);
-
-            editor.apply();
-        } catch (Exception e) {
-            e.printStackTrace();
-            // Lidar com erros de criptografia aqui
-        }
-
-    }
 
 
     private void togglePasswordVisibility(EditText editText) {
@@ -176,10 +125,6 @@ public class LoginActivity extends AppCompatActivity {
         editText.setSelection(cursorPosition);
 
     }
-
-
-
-
 
 
 

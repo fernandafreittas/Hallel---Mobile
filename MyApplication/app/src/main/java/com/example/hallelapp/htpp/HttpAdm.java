@@ -4,8 +4,10 @@ import android.util.Log;
 
 import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.AdministradorLoginRequest;
+import com.example.hallelapp.payload.requerimento.EventosRequest;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
+import com.example.hallelapp.payload.resposta.AuthenticationResponse;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -28,7 +30,7 @@ public class HttpAdm {
         void onFailure(IOException e);
     }
 
-    public void RealizarLogin(final AdministradorLoginRequest administradorLoginRequest, final HttpMembro.HttpCallback callback
+    public void RealizarLogin(final AdministradorLoginRequest administradorLoginRequest, final HttpAdm.HttpCallback callback
     ) {
 
 
@@ -68,6 +70,96 @@ public class HttpAdm {
             }
         });
     }
+
+
+    public void criarEevnto(final EventosRequest eventosRequest, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(eventosRequest);
+        String url = UrlBase + "/eventos/create";
+
+        Log.d("HttpADM", "url: " + url);
+        Log.d("HttpADM", eventosRequest.toString());
+
+        token =authenticationResponse.getToken();
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
+    public void ListLocaisEventos( AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+
+        String url = UrlBase + "/locais";
+
+        Log.d("HttpADM", "url: " + url);
+
+
+        token =authenticationResponse.getToken();
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+
 
 
 }

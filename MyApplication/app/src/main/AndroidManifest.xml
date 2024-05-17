@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.hallelapp" >
+    package="com.example.hallelapp">
     <!-- permisão para usar a internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,31 +15,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true"
-
-
-        tools:targetApi="31" >
-
+        tools:targetApi="31">
+        <activity
+            android:name=".activity.CreateEventosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EventosAdmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainAdmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginAdmActiviy"
+            android:exported="false" />
         <activity
             android:name=".activity.ParticiparDeEventos"
             android:exported="false" />
-
-
-
-
-
-        <activity android:name=".activity.PerfilActivity"
-            android:exported="false"/>
-
-        <activity android:name=".activity.FormVoluntarioActivity"
-            android:exported="false"/>
-
+        <activity
+            android:name=".activity.PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormVoluntarioActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.MoreInfosActivity"
             android:exported="false" />
         <activity
             android:name=".activity.VizualizaEventosActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.CadastroActivity"
             android:exported="false" />
@@ -48,7 +51,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
