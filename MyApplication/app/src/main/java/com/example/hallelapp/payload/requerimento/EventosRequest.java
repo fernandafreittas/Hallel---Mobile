@@ -139,4 +139,24 @@ public class EventosRequest {
     public void setValorDescontoAssociado(Double valorDescontoAssociado) {
         ValorDescontoAssociado = valorDescontoAssociado;
     }
+
+    @Override
+    public String toString() {
+        return "EventosRequest{" +
+                "descricao='" + descricao + '\'' +
+                ", titulo='" + titulo + '\'' +
+                ", date=" + date +
+                ", localEventoRequest=" + localEventoRequest +
+                ", localEvento=" + localEvento +
+                ", horario='" + horario + '\'' +
+                ", imagem='" + imagem + '\'' +
+                ", palestrantes=" + palestrantes +
+                ", pagamentoEntradaEventoList=" + pagamentoEntradaEventoList +
+                ", destaque=" + destaque +
+                ", contribuicaoEventosList=" + contribuicaoEventosList +
+                ", valorDoEvento=" + valorDoEvento +
+                ", ValorDescontoMembro=" + ValorDescontoMembro +
+                ", ValorDescontoAssociado=" + ValorDescontoAssociado +
+                '}';
+    }
 }

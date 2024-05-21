@@ -72,7 +72,7 @@ public class HttpAdm {
     }
 
 
-    public void criarEevnto(final EventosRequest eventosRequest, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    public void criarEvento(final EventosRequest eventosRequest, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
     ) {
 
 

@@ -234,6 +234,18 @@
 
 
 
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewColoborador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toTopOf="@+id/button9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49"
+                    tools:listitem="@layout/item_recycle" />
+
                 <Button
                     android:id="@+id/button9"
                     android:layout_width="174dp"
@@ -249,16 +261,7 @@
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="394dp"
-                    android:layout_height="90dp"
-                    app:layout_constraintBottom_toTopOf="@+id/button9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.47"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView49"
-                    app:layout_constraintVertical_bias="0.321"
-                    tools:listitem="@layout/item_recycle" />
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

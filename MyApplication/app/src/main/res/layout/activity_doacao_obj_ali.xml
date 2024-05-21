@@ -37,7 +37,7 @@
                     app:layout_constraintVertical_bias="0.161" />
 
                 <TextView
-                    android:id="@+id/textView52"
+                    android:id="@+id/texQuantidade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
@@ -52,7 +52,7 @@
                     app:layout_constraintVertical_bias="0.36" />
 
                 <EditText
-                    android:id="@+id/editTextNumber"
+                    android:id="@+id/editTextQuantidade"
                     android:layout_width="65dp"
                     android:layout_height="26dp"
                     android:background="@drawable/fundo_edit_text"
@@ -66,7 +66,7 @@
                     app:layout_constraintVertical_bias="0.454" />
 
                 <ImageView
-                    android:id="@+id/imageView21"
+                    android:id="@+id/imageViewDoacaoAlimentos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
@@ -112,7 +112,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/button10" />
 
                 <TextView
-                    android:id="@+id/textView51"
+                    android:id="@+id/textDoacaoAlimento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
@@ -155,7 +155,7 @@
                     app:srcCompat="@drawable/fundo_donation_obj" />
 
                 <ImageView
-                    android:id="@+id/imageView22"
+                    android:id="@+id/image22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView21"
@@ -252,13 +252,7 @@
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="1003dp" />
+
 
     <Button
         android:id="@+id/btnContinuar"
