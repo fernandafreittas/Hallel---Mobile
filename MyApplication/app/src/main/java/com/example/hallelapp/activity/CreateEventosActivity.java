@@ -184,9 +184,7 @@ public class CreateEventosActivity extends AppCompatActivity {
                     String formattedDate = sdfOutput.format(data); // Formata a data para o formato compatível com a API
                     data = sdfOutput.parse(formattedDate); // Parse a data formatada para Date
                 } catch (ParseException e) {
-                    // Informe ao usuário que a data inserida está em um formato inválido
-                    Toast.makeText(context, "Formato de data inválido. Use o formato dd/MM/yyyy.", Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
+
                 }
 
 // Agora, você pode definir a data no objeto eventosRequest
@@ -221,12 +219,30 @@ public class CreateEventosActivity extends AppCompatActivity {
 
                         System.out.println(eventosRequest.toString());
 
-                        Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                        finish();
+
+
                     }
 
                     @Override
                     public void onFailure(IOException e) {
-                        Toast.makeText(context, "Erro ao criar evento", Toast.LENGTH_SHORT).show();
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(context, "Erro ao criar evento", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+
                     }
                 });
 
