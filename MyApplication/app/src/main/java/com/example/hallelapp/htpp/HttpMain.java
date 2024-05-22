@@ -1,7 +1,10 @@
 package com.example.hallelapp.htpp;
 
+import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.CadastroRequest;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
+import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
+import com.example.hallelapp.payload.requerimento.SeVoluntariarEventoReq;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -21,6 +24,7 @@ import okhttp3.Response;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
+import android.util.Log;
 
 
 public class HttpMain {
@@ -29,13 +33,17 @@ public class HttpMain {
     // estou colocando o ip do meu computador pois se eu colocar local host
     // ele irá procurar dentro do celular emulado e não da maquina
 
+    //fernanda
+   // private static final String UrlBase = "http://10.100.85.80:8080/api/";
+
+    //lolo
+    private static final String UrlBase = "http://192.168.1.4:8080/api/";
+
     //fernanda casa
 
+   // private static final String UrlBase = "http://192.168.100.36:8080/api/";
 
 
-    //lorenzo
-    private static final String UrlBase = "http://192.168.100.36:8080/api/";
-    private static final String UrlAdm = "administrador/";
 
     public static final MediaType JSON = MediaType.get("application/json");
 
@@ -100,6 +108,8 @@ public class HttpMain {
         }.execute();
     }
 
+//realiza o login e traz as informações de login
+
     public void login(final LoginRequest loginRequest ,  final HttpCallback callback){
         new AsyncTask<Void,Void,String>() {
             @SuppressLint("StaticFieldLeak")
@@ -156,12 +166,7 @@ public class HttpMain {
     }
 
 
-
-
-
-
-
-
+//lista os eventos
     public void ListAllEventos(final HttpCallback callback) {
         OkHttpClient client = new OkHttpClient();
 
@@ -192,6 +197,139 @@ public class HttpMain {
             }
         });
     }
+
+    public void ParticiparDeEvento(final ParticiparEventosRequest participarEventosRequest, final HttpCallback callback){
+
+        new AsyncTask<Void,Void,String>() {
+            @SuppressLint("StaticFieldLeak")
+            @Override
+            protected String doInBackground(Void... voids) {
+                    OkHttpClient client = new OkHttpClient();
+                    Gson gson = new Gson();
+                    String json = gson.toJson(participarEventosRequest);
+                    String url = UrlBase + "home/eventos/participarEvento";
+
+                    System.out.println("url :" +url);
+                    System.out.println(participarEventosRequest.toString());
+
+
+                    RequestBody body = RequestBody.create(json,JSON);
+
+                    Request request = new Request.Builder()
+                            .url(url)
+                            .post(body)
+                            .build();
+
+                    try {
+
+                        Response response = client.newCall(request).execute();
+                        if(response.isSuccessful()){
+                            return response.body().toString();
+                        }else{
+                            return null;
+                        }
+
+                    }catch (IOException e){
+                        e.printStackTrace();
+                        return null;
+                    }
+
+            }
+
+            @Override
+            protected void onPostExecute(String result) {
+                if(result!=null){
+                    System.out.println("Deu certo");
+                    callback.onSuccess(result);
+                }else {
+                    callback.onFailure(new IOException("erro ao realizar requisição"));
+                }
+            }
+        }.execute();
+
+
+    }
+
+
+    public void SeVoluntariarEmEvento(final SeVoluntariarEventoReq seVoluntariarEventoReq
+            , final HttpMembro.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(seVoluntariarEventoReq);
+        String url = UrlBase + "home/eventos/seVoluntariar";
+
+        Log.d("HttpMembro", "url: " + url);
+        Log.d("HttpMembro", seVoluntariarEventoReq.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
+    public void ListValoresEvento(String idEvento, final HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+
+
+
+        String url = UrlBase + "home/"+idEvento+"/listValoresEvento";
+
+        System.out.println(url);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get() // Especifica que é uma requisição GET
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+
+
+
+
 
 
 

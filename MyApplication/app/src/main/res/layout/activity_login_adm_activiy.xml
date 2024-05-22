@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LoginActivity"
+    tools:context=".activity.LoginAdmActiviy"
     android:orientation="vertical"
     >
 
@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Login de administrador"
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -90,17 +90,6 @@
             android:src="@drawable/olhosenha" />
     </FrameLayout>
 
-    <CheckBox
-        android:id="@+id/LembreMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lembre-me"
-        android:textStyle="bold"
-        android:textColor="#002711"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20sp"
-        />
 
     <Button
         android:id="@+id/BtnCriarConta"
@@ -114,53 +103,6 @@
         android:backgroundTint="#002711"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Esqueci minha senha"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/verde" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="40dp">
-
-        <TextView
-            android:id="@+id/textCriarconta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            android:text="Criar conta"
-            android:textColor="@color/verde"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="100dp"
-            android:src="@drawable/termosdeuso"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Termos de uso"
-            android:textColor="@color/verde"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
 
 
 </LinearLayout>

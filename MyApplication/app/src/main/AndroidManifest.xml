@@ -16,23 +16,33 @@
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity android:name=".activity.PerfilActivity"
-            android:exported="false"/>
-        <activity android:name=".activity.FormVoluntarioActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".activity.CreateEventosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EventosAdmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainAdmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginAdmActiviy"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ParticiparDeEventos"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormVoluntarioActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.MoreInfosActivity"
             android:exported="false" />
         <activity
             android:name=".activity.VizualizaEventosActivity"
             android:exported="false" />
-        <activity
-            android:name=".activity.VizualizarEventosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.login.VizualizarEventosActivity"
-            android:exported="false"
-            android:label="@string/title_activity_vizualizar_eventos" />
         <activity
             android:name=".activity.CadastroActivity"
             android:exported="false" />

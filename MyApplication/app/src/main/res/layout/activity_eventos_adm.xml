@@ -2,8 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.EventosAdmActivity">
+
 
     <TextView
         android:id="@+id/textView32"
@@ -196,4 +199,10 @@
         app:layout_constraintStart_toEndOf="@+id/buttonEventosCadastrados"
         app:layout_constraintTop_toBottomOf="@+id/buttonDonationObj"
         app:layout_constraintVertical_bias="0.571" />
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

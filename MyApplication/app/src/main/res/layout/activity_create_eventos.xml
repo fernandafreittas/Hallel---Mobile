@@ -2,8 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.CreateEventosActivity">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -202,8 +205,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView47"
                     app:layout_constraintVertical_bias="0.109" />
 
-                <EditText
-                    android:id="@+id/editText3"
+                <AutoCompleteTextView
+                    android:id="@+id/txtEndereco"
                     android:layout_width="365dp"
                     android:layout_height="35dp"
                     android:background="@drawable/input_text"
@@ -212,7 +215,7 @@
                     app:layout_constraintHorizontal_bias="0.347"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView48"
-                    app:layout_constraintVertical_bias="0.072" />
+                    app:layout_constraintVertical_bias="0.073" />
 
                 <TextView
                     android:id="@+id/textView49"
@@ -226,10 +229,22 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.09"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText3"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
                     app:layout_constraintVertical_bias="0.093" />
 
 
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewColoborador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toTopOf="@+id/button9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49"
+                    tools:listitem="@layout/item_recycle" />
 
                 <Button
                     android:id="@+id/button9"
@@ -246,16 +261,7 @@
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="394dp"
-                    android:layout_height="90dp"
-                    app:layout_constraintBottom_toTopOf="@+id/button9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.47"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView49"
-                    app:layout_constraintVertical_bias="0.321"
-                    tools:listitem="@layout/item_recycle" />
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -263,6 +269,10 @@
         </LinearLayout>
 
     </ScrollView>
+
+
+
+
 
 
 
