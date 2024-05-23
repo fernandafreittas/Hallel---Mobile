@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/titleParticipar"
+                    android:id="@+id/titlePagamento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
@@ -50,7 +50,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.131"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleParticipar"
+                    app:layout_constraintTop_toBottomOf="@+id/titlePagamento"
                     app:layout_constraintVertical_bias="0.046" />
 
                 <TextView
@@ -65,7 +65,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.101"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleParticipar"
+                    app:layout_constraintTop_toBottomOf="@+id/titlePagamento"
                     app:layout_constraintVertical_bias="0.197" />
 
                 <EditText
@@ -111,7 +111,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.098"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleParticipar"
+                    app:layout_constraintTop_toBottomOf="@+id/titlePagamento"
                     app:layout_constraintVertical_bias="0.315" />
 
                 <TextView
@@ -126,7 +126,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.11"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleParticipar"
+                    app:layout_constraintTop_toBottomOf="@+id/titlePagamento"
                     app:layout_constraintVertical_bias="0.432" />
 
                 <EditText
@@ -173,7 +173,7 @@
                     app:srcCompat="@drawable/fundo_card_participar"></ImageView>
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/addCartao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
@@ -189,7 +189,7 @@
                     app:layout_constraintVertical_bias="0.109" />
 
                 <EditText
-                    android:id="@+id/nometitular"
+                    android:id="@+id/nometitularcartao"
                     android:layout_width="336dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -200,11 +200,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.533"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/addCartao"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <EditText
-                    android:id="@+id/numerocartao"
+                    android:id="@+id/numerocartaocartao"
                     android:layout_width="336dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -216,11 +216,11 @@
                     app:layout_constraintEnd_toEndOf="@+id/imageView9"
                     app:layout_constraintHorizontal_bias="0.495"
                     app:layout_constraintStart_toStartOf="@+id/imageView9"
-                    app:layout_constraintTop_toBottomOf="@+id/nometitular"
+                    app:layout_constraintTop_toBottomOf="@+id/nometitularcartao"
                     app:layout_constraintVertical_bias="0.15" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView17cartao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
@@ -231,11 +231,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.117"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/numerocartao"
+                    app:layout_constraintTop_toBottomOf="@+id/numerocartaocartao"
                     app:layout_constraintVertical_bias="0.196" />
 
                 <EditText
-                    android:id="@+id/cvc"
+                    android:id="@+id/cvccartao"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -245,11 +245,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.118"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView17"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17cartao"
                     app:layout_constraintVertical_bias="0.142" />
 
                 <TextView
-                    android:id="@+id/textView18"
+                    android:id="@+id/textView18cartao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
@@ -259,12 +259,12 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.455"
-                    app:layout_constraintStart_toEndOf="@+id/textView17"
-                    app:layout_constraintTop_toBottomOf="@+id/numerocartao"
+                    app:layout_constraintStart_toEndOf="@+id/textView17cartao"
+                    app:layout_constraintTop_toBottomOf="@+id/numerocartaocartao"
                     app:layout_constraintVertical_bias="0.193" />
 
                 <EditText
-                    android:id="@+id/editTextNumber2"
+                    android:id="@+id/editTextNumber2cartao"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -273,12 +273,12 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.526"
-                    app:layout_constraintStart_toEndOf="@+id/cvc"
-                    app:layout_constraintTop_toBottomOf="@+id/textView18"
+                    app:layout_constraintStart_toEndOf="@+id/cvccartao"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18cartao"
                     app:layout_constraintVertical_bias="0.15" />
 
                 <Button
-                    android:id="@+id/btncontinuar"
+                    android:id="@+id/btncontinuarcartao"
                     android:layout_width="129dp"
                     android:layout_height="36dp"
                     android:layout_marginTop="20sp"
@@ -291,7 +291,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.439"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cvc"
+                    app:layout_constraintTop_toBottomOf="@+id/cvccartao"
                     app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

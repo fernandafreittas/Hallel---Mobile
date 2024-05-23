@@ -3216,7 +3216,7 @@ id asConfigured
 id async
 id auto
 id autoComplete
-id autoCompleteTextView
+id autoCompleteTextViewcartao
 id autoCompleteToEnd
 id autoCompleteToStart
 id barrier
@@ -3240,7 +3240,7 @@ id btnCartao
 id btnDoarDinheito
 id btnDoarObj
 id btnPix
-id btncontinuar
+id btncontinuarcartao
 id btnperfil
 id btnvertodos
 id button
@@ -3295,7 +3295,7 @@ id currentState
 id custom
 id customPanel
 id cut
-id cvc
+id cvccartao
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3332,7 +3332,7 @@ id east
 id edge
 id editText
 id editTextNumber
-id editTextNumber2
+id editTextNumber2cartao
 id edit_query
 id elastic
 id embed
@@ -3520,14 +3520,14 @@ id neverCompleteToStart
 id noScroll
 id noState
 id nomeevento
-id nometitular
+id nometitularcartao
 id none
 id normal
 id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id numerocartao
+id numerocartaocartao
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3567,8 +3567,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id radioButton
-id radioButton2
-id radioButton3
+id radioButton2cartao
+id radioButton3cartao
 id ratio
 id rdioAnualmente
 id rdioMensalmente

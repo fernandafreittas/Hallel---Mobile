@@ -94,7 +94,7 @@ id PsSenha
 id TxtEmail
 id TxtNome
 id TxtSenha
-id autoCompleteTextView
+id autoCompleteTextViewcartao
 id btn100
 id btn20
 id btn30
@@ -105,7 +105,7 @@ id btnCartao
 id btnDoarDinheito
 id btnDoarObj
 id btnPix
-id btncontinuar
+id btncontinuarcartao
 id btnperfil
 id btnvertodos
 id button
@@ -121,10 +121,10 @@ id buttonMissoes
 id buttonSemanal
 id buttonVoluntario
 id buttoncursos
-id cvc
+id cvccartao
 id editText
 id editTextNumber
-id editTextNumber2
+id editTextNumber2cartao
 id imageButton2
 id imageButton3
 id imageView
@@ -173,11 +173,11 @@ id nav_login
 id nav_logout
 id navigation_bar
 id nomeevento
-id nometitular
-id numerocartao
+id nometitularcartao
+id numerocartaocartao
 id radioButton
-id radioButton2
-id radioButton3
+id radioButton2cartao
+id radioButton3cartao
 id rdioAnualmente
 id rdioMensalmente
 id rdioPontualmente

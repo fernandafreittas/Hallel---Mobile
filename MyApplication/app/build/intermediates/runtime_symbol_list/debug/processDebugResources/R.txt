@@ -3215,7 +3215,7 @@ int id asConfigured 0x7f0a0059
 int id async 0x7f0a005a
 int id auto 0x7f0a005b
 int id autoComplete 0x7f0a005c
-int id autoCompleteTextView 0x7f0a02a7
+int id autoCompleteTextViewcartao 0x7f0a02a8
 int id autoCompleteToEnd 0x7f0a005d
 int id autoCompleteToStart 0x7f0a005e
 int id barrier 0x7f0a005f
@@ -3239,7 +3239,7 @@ int id btnCartao 0x7f0a026a
 int id btnDoarDinheito 0x7f0a0297
 int id btnDoarObj 0x7f0a0298
 int id btnPix 0x7f0a026b
-int id btncontinuar 0x7f0a028e
+int id btncontinuarcartao 0x7f0a02a9
 int id btnperfil 0x7f0a006d
 int id btnvertodos 0x7f0a006e
 int id button 0x7f0a0070
@@ -3294,7 +3294,7 @@ int id currentState 0x7f0a00a2
 int id custom 0x7f0a00a3
 int id customPanel 0x7f0a00a4
 int id cut 0x7f0a00a5
-int id cvc 0x7f0a029a
+int id cvccartao 0x7f0a02aa
 int id date_picker_actions 0x7f0a00a6
 int id decelerate 0x7f0a00a7
 int id decelerateAndComplete 0x7f0a00a8
@@ -3331,7 +3331,7 @@ int id east 0x7f0a00c6
 int id edge 0x7f0a00c7
 int id editText 0x7f0a026e
 int id editTextNumber 0x7f0a028b
-int id editTextNumber2 0x7f0a00cb
+int id editTextNumber2cartao 0x7f0a02ab
 int id edit_query 0x7f0a00cf
 int id elastic 0x7f0a00d0
 int id embed 0x7f0a00d1
@@ -3519,14 +3519,14 @@ int id neverCompleteToStart 0x7f0a017e
 int id noScroll 0x7f0a017f
 int id noState 0x7f0a0180
 int id nomeevento 0x7f0a0182
-int id nometitular 0x7f0a029c
+int id nometitularcartao 0x7f0a02ac
 int id none 0x7f0a0183
 int id normal 0x7f0a0184
 int id north 0x7f0a0185
 int id notification_background 0x7f0a0186
 int id notification_main_column 0x7f0a0187
 int id notification_main_column_container 0x7f0a0188
-int id numerocartao 0x7f0a029d
+int id numerocartaocartao 0x7f0a02ad
 int id off 0x7f0a018a
 int id on 0x7f0a018b
 int id onInterceptTouchReturnSwipe 0x7f0a018c
@@ -3566,8 +3566,8 @@ int id progress_circular 0x7f0a01ad
 int id progress_horizontal 0x7f0a01ae
 int id radio 0x7f0a01af
 int id radioButton 0x7f0a0273
-int id radioButton2 0x7f0a01b1
-int id radioButton3 0x7f0a029e
+int id radioButton2cartao 0x7f0a02ae
+int id radioButton3cartao 0x7f0a02af
 int id ratio 0x7f0a01b2
 int id rdioAnualmente 0x7f0a0294
 int id rdioMensalmente 0x7f0a0295

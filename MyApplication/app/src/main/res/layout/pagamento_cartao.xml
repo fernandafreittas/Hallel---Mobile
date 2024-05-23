@@ -19,12 +19,13 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vpcart"
                 android:layout_width="match_parent"
                 android:layout_height="739dp"
                 android:background="#FFFFFF">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/addCartao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
@@ -38,10 +39,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/switch1" />
+                    app:layout_constraintTop_toBottomOf="@+id/switchautomatico" />
 
                 <EditText
-                    android:id="@+id/nometitular"
+                    android:id="@+id/nometitularcartao"
                     android:layout_width="335dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -52,11 +53,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.533"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/addCartao"
                     app:layout_constraintVertical_bias="0.064" />
 
                 <EditText
-                    android:id="@+id/numerocartao"
+                    android:id="@+id/numerocart"
                     android:layout_width="335dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -65,12 +66,13 @@
                     android:inputType="number"
                     android:paddingStart="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nometitular"
+                    app:layout_constraintTop_toBottomOf="@+id/nometitularcartao"
                     app:layout_constraintVertical_bias="0.082"
-                    tools:layout_editor_absoluteX="41dp" />
+                    tools:layout_editor_absoluteX="41dp"
+                    tools:ignore="MissingConstraints" />
 
                 <EditText
-                    android:id="@+id/editTextNumber2"
+                    android:id="@+id/editTextNumber2cartao"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -79,12 +81,12 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.528"
-                    app:layout_constraintStart_toEndOf="@+id/cvc"
-                    app:layout_constraintTop_toBottomOf="@+id/textView18"
+                    app:layout_constraintStart_toEndOf="@+id/cvccartao"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18cartao"
                     app:layout_constraintVertical_bias="0.04" />
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/textView17cartao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
@@ -95,11 +97,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.117"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/numerocartao"
+                    app:layout_constraintTop_toBottomOf="@+id/numerocartaocartao"
                     app:layout_constraintVertical_bias="0.087" />
 
                 <EditText
-                    android:id="@+id/cvc"
+                    android:id="@+id/cvccartao"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
@@ -109,11 +111,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.118"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView17"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17cartao"
                     app:layout_constraintVertical_bias="0.04" />
 
                 <TextView
-                    android:id="@+id/textView18"
+                    android:id="@+id/textView18cartao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_semibold"
@@ -123,12 +125,12 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.44"
-                    app:layout_constraintStart_toEndOf="@+id/textView17"
-                    app:layout_constraintTop_toBottomOf="@+id/numerocartao"
+                    app:layout_constraintStart_toEndOf="@+id/textView17cartao"
+                    app:layout_constraintTop_toBottomOf="@+id/numerocart"
                     app:layout_constraintVertical_bias="0.087" />
 
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
+                    android:id="@+id/autoCompleteTextViewcartao"
                     android:layout_width="335dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="116dp"
@@ -137,10 +139,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.526"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/numerocartao" />
+                    app:layout_constraintTop_toBottomOf="@+id/numerocart" />
 
                 <Button
-                    android:id="@+id/btncontinuar"
+                    android:id="@+id/btncontinuarcartao"
                     android:layout_width="129dp"
                     android:layout_height="36dp"
                     android:layout_marginBottom="52dp"
@@ -152,11 +154,11 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewcartao"
                     app:layout_constraintVertical_bias="1.0" />
 
                 <TextView
-                    android:id="@+id/titleParticipar"
+                    android:id="@+id/titlePagamento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
@@ -180,10 +182,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.516"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleParticipar" />
+                    app:layout_constraintTop_toBottomOf="@+id/titlePagamento" />
 
                 <TextView
-                    android:id="@+id/textView25"
+                    android:id="@+id/selforama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -196,7 +198,7 @@
                     app:layout_constraintTop_toTopOf="@+id/view" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radiocartaocredt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -210,7 +212,7 @@
                     app:layout_constraintTop_toTopOf="@+id/view" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/radiocartaodebt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -220,11 +222,11 @@
                     android:text="Cartão de débito"
                     android:textColor="@color/cordetextohallel"
                     android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/radioButton2"
+                    app:layout_constraintStart_toEndOf="@+id/radiocartaocredt"
                     app:layout_constraintTop_toTopOf="@+id/view" />
 
                 <Switch
-                    android:id="@+id/switch1"
+                    android:id="@+id/switchautomatico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
