@@ -44,21 +44,25 @@ public class EventosRecycle extends RecyclerView.Adapter<EventosRecycle.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         AllEventosListResponse evento = eventos.get(position);
 
-
         holder.textTitulo.setText(evento.getTitulo());
-
 
         String suaStringBase64 = evento.getImagem();
 
-    // Obter a parte da string que contém os dados em base64
-        String[] partes = suaStringBase64.split(",");
-        String dadosBase64 = partes[1];
+        // Verificar se a string não é nula e contém a vírgula
+        if (suaStringBase64 != null && suaStringBase64.contains(",")) {
+            // Obter a parte da string que contém os dados em base64
+            String[] partes = suaStringBase64.split(",");
+            if (partes.length > 1) {
+                String dadosBase64 = partes[1];
 
-    // Decodificar a string base64 em uma imagem Bitmap
-        byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                // Decodificar a string base64 em uma imagem Bitmap
+                byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
-        holder.imageEvento.setImageBitmap(decodedByte);
+                holder.imageEvento.setImageBitmap(decodedByte);
+            }
+        }
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,8 +72,8 @@ public class EventosRecycle extends RecyclerView.Adapter<EventosRecycle.MyViewHo
                 }
             }
         });
-
     }
+
 
     @Override
     public int getItemCount() {
