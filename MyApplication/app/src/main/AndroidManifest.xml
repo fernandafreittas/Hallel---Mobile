@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.VizualizarEventosEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EditEventoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CreateEventosActivity"
             android:exported="false" />
         <activity

@@ -31,6 +31,9 @@ public class EventosAdmActivity extends AppCompatActivity {
 
         Button btnAddEvento = findViewById(R.id.buttonAddEvento);
 
+        Button btnEditEvento = findViewById(R.id.buttonEditEvento);
+
+
 
         btnAddEvento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +43,18 @@ public class EventosAdmActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+        btnEditEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventosAdmActivity.this, VizualizarEventosEditActivity.class);
+                intent.putExtra("informaçõesADM", authenticationResponse);
+                startActivity(intent);
+            }
+        });
+
 
 
 
