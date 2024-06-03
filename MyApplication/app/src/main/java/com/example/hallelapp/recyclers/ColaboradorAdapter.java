@@ -80,6 +80,13 @@ public class ColaboradorAdapter extends RecyclerView.Adapter<ColaboradorAdapter.
         return colaboradores;
     }
 
+    public void adicionaColaboradores (List<String> listcolaboradores){
+
+        colaboradores.clear();
+        colaboradores.addAll(listcolaboradores);
+        notifyDataSetChanged();
+    }
+
     static class ColaboradorViewHolder extends RecyclerView.ViewHolder {
 
         EditText editText;

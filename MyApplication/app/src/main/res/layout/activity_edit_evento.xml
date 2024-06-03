@@ -205,17 +205,18 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView47"
                         app:layout_constraintVertical_bias="0.109" />
 
-                    <EditText
-                        android:id="@+id/editText3"
-                        android:layout_width="315dp"
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txtEndereco"
+                        android:layout_width="365dp"
                         android:layout_height="35dp"
                         android:background="@drawable/input_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.177"
+                        app:layout_constraintHorizontal_bias="0.347"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView48"
-                        app:layout_constraintVertical_bias="0.068" />
+                        app:layout_constraintVertical_bias="0.073" />
 
                     <TextView
                         android:id="@+id/textView49"
@@ -229,7 +230,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.09"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/editText3"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
                         app:layout_constraintVertical_bias="0.093" />
 
 
@@ -243,6 +244,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView49"
                         tools:listitem="@layout/item_recycle" />
+
 
 
 
@@ -286,22 +288,21 @@
                         app:layout_constraintStart_toEndOf="@+id/inputDate" />
 
                     <Button
-                        android:id="@+id/editDesc"
+                        android:id="@+id/editAddress"
                         android:layout_width="41dp"
                         android:layout_height="40dp"
-                        android:layout_marginBottom="324dp"
                         android:background="@drawable/icon_edit_event"
-                        app:layout_constraintBottom_toTopOf="@+id/editAddress"
+                        app:layout_constraintBottom_toTopOf="@+id/txtEndereco"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.272"
-                        app:layout_constraintStart_toEndOf="@+id/inputDescricao" />
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/inputDescricao"
+                        app:layout_constraintTop_toBottomOf="@+id/inputTime" />
 
                     <Button
                         android:id="@+id/editHour"
                         android:layout_width="41dp"
                         android:layout_height="40dp"
                         android:background="@drawable/icon_edit_event"
-                        app:layout_constraintBottom_toTopOf="@+id/editText3"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/inputTime"
@@ -309,14 +310,13 @@
                         app:layout_constraintVertical_bias="0.19" />
 
                     <Button
-                        android:id="@+id/editAddress"
+                        android:id="@+id/editDesc"
                         android:layout_width="41dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="196dp"
                         android:background="@drawable/icon_edit_event"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.578"
-                        app:layout_constraintStart_toEndOf="@+id/editText3"
+                        app:layout_constraintStart_toEndOf="@+id/inputDescricao"
                         app:layout_constraintTop_toBottomOf="@+id/inputNome" />
 
 
