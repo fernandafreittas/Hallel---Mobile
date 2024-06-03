@@ -33,6 +33,8 @@ public class MainAdmActivity extends AppCompatActivity {
 
         Button btnEventos = findViewById(R.id.btnEventos);
 
+        Button btnMembros  = findViewById(R.id.btnmembros);
+
 
 
 
@@ -43,6 +45,15 @@ public class MainAdmActivity extends AppCompatActivity {
                 intent.putExtra("informaçõesADM", authenticationResponse);
                 startActivity(intent);
 
+            }
+        });
+
+        btnMembros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainAdmActivity.this, ListMemberActivity.class);
+                intent.putExtra("informaçõesADM", authenticationResponse);
+                startActivity(intent);
             }
         });
 

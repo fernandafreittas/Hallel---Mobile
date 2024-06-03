@@ -23,10 +23,10 @@ public class HttpAdm {
     private String token;
 
     //lorenzo
-    //private static final String UrlBase = "http://192.168.1.4:8080/api/administrador";
+    private static final String UrlBase = "http://192.168.1.4:8080/api/administrador";
 
     //fernanda
-    private static final String UrlBase = "http://192.168.100.36:8080/api/administrador";
+  //  private static final String UrlBase = "http://192.168.100.36:8080/api/administrador";
 
     public static final MediaType JSON = MediaType.get("application/json");
 
@@ -256,6 +256,54 @@ public class HttpAdm {
             }
         });
     }
+
+
+    public void ListMembros( AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+
+        String url = UrlBase + "/membros";
+
+        Log.d("HttpADM", "url: " + url);
+
+
+        token =authenticationResponse.getToken();
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+
+
+
 
 
 

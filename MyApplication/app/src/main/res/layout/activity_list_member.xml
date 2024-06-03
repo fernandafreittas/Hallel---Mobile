@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.ListMemberActivity"
+    >
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -25,32 +27,6 @@
             android:textColor="@color/cortexto2"
             android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_semibold"
-            android:padding="8dp"
-            android:text="Fernanda Souza de Freitas"
-            android:textColor="@color/cordetextohallel"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_semibold"
-            android:padding="8dp"
-            android:text="Gisele Saraiva Vieira"
-            android:textColor="@color/cordetextohallel"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_semibold"
-            android:padding="8dp"
-            android:text="Lorenzo Aviz dos Santos"
-            android:textColor="@color/cordetextohallel"
-            android:textStyle="bold" />
 
     </TableLayout>
 
