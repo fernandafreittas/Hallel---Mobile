@@ -8,12 +8,24 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_dialog_custom.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_custom.xml"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_logout.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_logout.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fechar_header.png.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fechar_header.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_adm_doacaoalimento.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_adm_doacaoalimento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_image_75.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\image_75.png"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_foto_do_evento_more_info.png.flat",
@@ -24,12 +36,16 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icone_doacao_dinheiro.png"
     },
     {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_voluntario.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_voluntario.png"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_more_infos.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_more_infos.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_voluntario.png.flat",
-        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_voluntario.png"
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_direcionamento_doacao.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_direcionamento_doacao.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_shop.xml.flat",
@@ -68,6 +84,10 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\logohallel.png"
     },
     {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_image_74.png.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\image_74.png"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_frame_35.png.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\frame_35.png"
     },
@@ -80,12 +100,12 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\font\\inter.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_add.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\add.xml"
-    },
-    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_botton_valores.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\botton_valores.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_add.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\add.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_login.xml.flat",
@@ -128,16 +148,20 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/drawable_pagamento_feito.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/pagamento_feito.png"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_cards.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_cards.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\menu_main_menu.xml.flat",
-        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\menu\\main_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_circulo_cinza.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\circulo_cinza.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\menu_main_menu.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\menu\\main_menu.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_date_week.xml.flat",
@@ -146,6 +170,10 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_header_menu.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\header_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_dialog_errocadastro.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_errocadastro.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_hour_event.png.flat",
@@ -174,6 +202,10 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_ellipse_92.png.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\ellipse_92.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_fundo_filtro.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/fundo_filtro.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_pagamento_cartao.xml.flat",
@@ -234,6 +266,10 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_frame_1.png.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\frame_1.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_dialog_pagamentosucesso.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/dialog_pagamentosucesso.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_agenda_vector.png.flat",
@@ -312,6 +348,14 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\pix_icon_198027_2_1.png"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/layout_pagamento_boleto.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/pagamento_boleto.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_dialog_errologin.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/dialog_errologin.xml"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icone_doacao_obj.png.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icone_doacao_obj.png"
     },
@@ -344,6 +388,10 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/drawable_erroatention.png.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/erroatention.png"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_button_verde.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_button_verde.xml"
     },
@@ -354,6 +402,10 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_more_info_text.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_more_info_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_direcionamento_doacao.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_direcionamento_doacao.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_background_edittext.xml.flat",
@@ -388,6 +440,14 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\font\\inter_semibold.xml"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/layout_pagamento_evento.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/pagamento_evento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_dialog_cadastrosucesso.xml.flat",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_cadastrosucesso.xml"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_verdepag.xml.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_verdepag.xml"
     },
@@ -418,6 +478,10 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_dialog_erropagamento.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/dialog_erropagamento.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_circulo_verdeclaro.xml.flat",

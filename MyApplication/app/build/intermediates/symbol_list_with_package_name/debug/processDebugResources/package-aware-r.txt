@@ -2984,6 +2984,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ellipse_92
+drawable erroatention
 drawable fechar_header
 drawable foto_de_perfil
 drawable foto_do_evento_more_info
@@ -2997,6 +2998,7 @@ drawable fundo_card_participar
 drawable fundo_cards
 drawable fundo_desc_info
 drawable fundo_desc_moreinfo
+drawable fundo_filtro
 drawable fundo_more_info_text
 drawable fundo_verdepag
 drawable headerbottom
@@ -3032,6 +3034,8 @@ drawable icone_doacao_obj
 drawable iconevent
 drawable iconperfil
 drawable igreja_vector
+drawable image_74
+drawable image_75
 drawable img_arraial
 drawable img_fundo
 drawable input_text
@@ -3112,6 +3116,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable olhosenha
+drawable pagamento_feito
 drawable pix_icon_198027_2_1
 drawable resource__
 drawable termosdeuso
@@ -3202,6 +3207,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addCartao
 id alertTitle
 id aligned
 id all
@@ -3235,12 +3241,19 @@ id btn20
 id btn30
 id btn50
 id btn80
+id btnAz
 id btnBoleto
 id btnCartao
+id btnDialogPagErro
 id btnDoarDinheito
 id btnDoarObj
+id btnOrdemCronologica
+id btnPagSucesso
 id btnPix
+id btnZa
 id btncontinuarcartao
+id btndialogCadsuc
+id btndialogLogsuc
 id btnperfil
 id btnvertodos
 id button
@@ -3396,6 +3409,7 @@ id imageView19
 id imageView2
 id imageView20
 id imageView21
+id imageView22
 id imageView3
 id imageView4
 id imageView5
@@ -3404,6 +3418,11 @@ id imageView7
 id imageView8
 id imageView9
 id imagemEvento
+id imgLogErr
+id imgPagErr
+id imgPagSucesso
+id imgcaderr
+id imgcadsucesso
 id imgevento
 id immediateStop
 id included
@@ -3527,6 +3546,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numerocart
 id numerocartaocartao
 id off
 id on
@@ -3567,8 +3587,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id radioButton
-id radioButton2cartao
-id radioButton3cartao
+id radiocartaocredt
+id radiocartaodebt
 id ratio
 id rdioAnualmente
 id rdioMensalmente
@@ -3608,6 +3628,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id selforama
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3645,9 +3666,11 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id subnfo
 id supportScrollUp
-id switch1
+id switchautomatico
 id tabMode
+id tableLayoutDoacao
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3678,8 +3701,8 @@ id textView13
 id textView14
 id textView15
 id textView16
-id textView17
-id textView18
+id textView17cartao
+id textView18cartao
 id textView19
 id textView2
 id textView20
@@ -3687,7 +3710,6 @@ id textView21
 id textView22
 id textView23
 id textView24
-id textView25
 id textView26
 id textView29
 id textView3
@@ -3714,8 +3736,8 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
-id titleParticipar
 id title_template
+id titledoacao
 id toggle
 id top
 id topPanel
@@ -3744,6 +3766,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id vpcart
 id welcomehallel
 id welcomehallell
 id west
@@ -3869,7 +3892,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_adm_doacaoalimento
 layout activity_cadastro
+layout activity_direcionamento_doacao
 layout activity_login
 layout activity_main
 layout activity_more_infos
@@ -3890,7 +3915,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout direcionamento_doacao
+layout dialog_cadastrosucesso
+layout dialog_errocadastro
+layout dialog_errologin
+layout dialog_erropagamento
+layout dialog_pagamentosucesso
 layout doar_pevento
 layout eventos_adapter
 layout header_menu
