@@ -35,6 +35,8 @@ public class MainAdmActivity extends AppCompatActivity {
 
         Button btnMembros  = findViewById(R.id.btnmembros);
 
+        Button btnAssociado = findViewById(R.id.btnAssociados);
+
 
 
 
@@ -56,6 +58,17 @@ public class MainAdmActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnAssociado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainAdmActivity.this, ListAssociadoActivity.class);
+                intent.putExtra("informaçõesADM", authenticationResponse);
+                startActivity(intent);
+            }
+        });
+
+
 
 
 
