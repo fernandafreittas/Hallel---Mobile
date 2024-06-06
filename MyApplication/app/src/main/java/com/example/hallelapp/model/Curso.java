@@ -1,8 +1,9 @@
 package com.example.hallelapp.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Curso {
+public class Curso implements Serializable {
 
     private String id;
     private String nome;

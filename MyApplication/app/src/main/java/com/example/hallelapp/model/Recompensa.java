@@ -1,6 +1,8 @@
 package com.example.hallelapp.model;
 
-public class Recompensa {
+import java.io.Serializable;
+
+public class Recompensa implements Serializable {
     private String nome;
     private String descricao;
     private Boolean isObjeto;

@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
 
-public class EntradasFinanceiro implements Comparable<EntradasFinanceiro>{
+public class EntradasFinanceiro implements Comparable<EntradasFinanceiro> {
     private String id;
     private CodigoEntradaFinanceiro codigo;
     private Date date;

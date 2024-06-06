@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.AdministradorLoginRequest;
+import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
 import com.example.hallelapp.payload.requerimento.EventosRequest;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
@@ -12,6 +13,8 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -24,6 +27,11 @@ public class HttpAdm {
 
     //lorenzo
     private static final String UrlBase = "http://192.168.1.4:8080/api/administrador";
+
+    private static final String UrlBaseMembro = "http://192.168.1.4:8080/api/";
+
+    private static final String UrlBaseAssociado = "http://192.168.1.4:8080/api/associado/";
+
 
     //fernanda
   //  private static final String UrlBase = "http://192.168.100.36:8080/api/administrador";
@@ -345,9 +353,93 @@ public class HttpAdm {
 
 
 
+    public void listarPagamentoAssociadoPerfilByMesAndAnoADM (String idAssociado,String mes ,String ano,
+                                                           AuthenticationResponse authenticationResponse , final HttpMain.HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+
+        token = authenticationResponse.getToken();
+
+
+        String url = UrlBaseAssociado + "perfil/pagamento/" + idAssociado + "?mes=" + mes + "&ano=" + ano;
+
+        System.out.println(url);
+
+        System.out.println(token);
+
+        System.out.println();
 
 
 
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println(responseBody);
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+    public void BuscarIdAssociadoADM (BuscarIdAssociadoReq buscarIdAssociadoReq,
+                                   AuthenticationResponse authenticationResponse , final HttpMain.HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+
+        token = authenticationResponse.getToken();
+
+        Gson gson = new Gson();
+        String json = gson.toJson(buscarIdAssociadoReq);
+
+        String url = UrlBaseMembro + "membros/buscarAssociadoEmail";
+
+        System.out.println(url);
+
+        System.out.println(token);
+
+        System.out.println(buscarIdAssociadoReq.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println(responseBody);
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
 
 
 

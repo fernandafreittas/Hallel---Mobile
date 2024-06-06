@@ -1,6 +1,8 @@
 package com.example.hallelapp.model;
 
-public class AtividadesCurso {
+import java.io.Serializable;
+
+public class AtividadesCurso implements Serializable {
 
     private String tituloAtividade;
     private String descricaoAtividade;

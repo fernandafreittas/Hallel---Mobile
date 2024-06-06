@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.DadosAssociadoActivity"
+    >
 
     <TextView
         android:id="@+id/textView65"
@@ -208,7 +210,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_extrabold"
-        android:text="Ativo"
+        android:text="Pago"
         android:textColor="@color/verde"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView19associado"
@@ -231,7 +233,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView19associado"
         app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toEndOf="@+id/textView38associado"
-        app:layout_constraintTop_toBottomOf="@+id/textView37associado"
+
         app:layout_constraintVertical_bias="0.746" />
 
     <TextView
@@ -240,14 +242,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/inter_extrabold"
-        android:text="Expirado"
+        android:text="Não pago"
         android:textColor="@color/red_exp"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView19associado"
         app:layout_constraintEnd_toEndOf="@+id/imageView19associado"
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toEndOf="@+id/textView38associado"
-        app:layout_constraintTop_toBottomOf="@+id/textView37associado"
+
         app:layout_constraintVertical_bias="0.746" />
 
     <TextView
