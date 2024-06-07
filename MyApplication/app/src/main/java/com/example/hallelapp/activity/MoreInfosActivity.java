@@ -31,6 +31,7 @@ public class MoreInfosActivity extends AppCompatActivity {
 
     private Button button4;
     private Button buttonVoluntario;
+    private Button buttonDoar;
 
     ValoresEventoResponse valoresEventoResponse;
 
@@ -177,6 +178,7 @@ public class MoreInfosActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 }

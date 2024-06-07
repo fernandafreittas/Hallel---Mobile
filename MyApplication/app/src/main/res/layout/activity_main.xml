@@ -136,6 +136,7 @@
                     android:layout_height="26dp"
                     android:background="@drawable/fundo_button"
                     android:fontFamily="@font/inter_semibold"
+                    android:onClick="btnvertodos"
                     android:text="Ver todos"
                     android:textColor="#003617"
                     android:textSize="12sp"
