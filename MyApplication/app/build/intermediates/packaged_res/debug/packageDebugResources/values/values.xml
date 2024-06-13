@@ -16,14 +16,19 @@
     </string-array>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/inter</item>
+        <item>@font/inter_extrabold</item>
         <item>@font/inter_semibold</item>
     </array>
     <color name="black">#FF000000</color>
+    <color name="cinza">#4A4A4A</color>
     <color name="cor_de_texto_fraca">#668774</color>
     <color name="cordetextohallel">#005424</color>
     <color name="cortexto2">#003617</color>
+    <color name="red_exp">#C43C0C</color>
+    <color name="teste"/>
     <color name="verde">#005424</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="yelow_pendente">#E47004</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="action_settings">Settings</string>
@@ -50,6 +55,7 @@
     <style name="Base.Theme.HallelApp" parent="Theme.AppCompat.Light.NoActionBar">
         
         
+
     </style>
     <style name="Theme.HallelApp" parent="Base.Theme.HallelApp"/>
 </resources>

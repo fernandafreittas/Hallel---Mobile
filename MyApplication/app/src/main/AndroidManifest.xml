@@ -65,8 +65,19 @@
             android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.DirecionamentoDoacaoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.DoacaoDeObjetosAlimentosActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

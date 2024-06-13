@@ -31,6 +31,39 @@
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.hallelapp.activity.DadosAssociadoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.ListAssociadoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.ListMemberActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.VizualizarEventosEditActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.EditEventoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.CreateEventosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.EventosAdmActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.MainAdmActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.LoginAdmActiviy"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.ParticiparDeEventos"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.PerfilActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.FormVoluntarioActivity"
             android:exported="false" />
         <activity
@@ -40,17 +73,16 @@
             android:name="com.example.hallelapp.activity.VizualizaEventosActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.hallelapp.activity.VizualizarEventosActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.hallelapp.ui.login.VizualizarEventosActivity"
-            android:exported="false"
-            android:label="@string/title_activity_vizualizar_eventos" />
-        <activity
             android:name="com.example.hallelapp.activity.CadastroActivity"
             android:exported="false" />
         <activity
             android:name="com.example.hallelapp.activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.DirecionamentoDoacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.DoacaoDeObjetosAlimentosActivity"
             android:exported="false" />
         <activity
             android:name="com.example.hallelapp.MainActivity"
@@ -61,6 +93,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

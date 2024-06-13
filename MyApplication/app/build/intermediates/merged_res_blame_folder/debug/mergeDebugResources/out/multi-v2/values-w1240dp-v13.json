@@ -4,7 +4,7 @@
             "outputFile": "com.example.hallelapp-mergeDebugResources-32:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\mb\\Hallel-Mobile\\MyApplication\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "F:\\Hallel-Mobile\\MyApplication\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
