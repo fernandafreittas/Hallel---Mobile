@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="250dp"
+        android:background="@drawable/fundo_card_event_arq"
+        app:cardBackgroundColor="#C0C0C0"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="175dp"
+            android:layout_height="142dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
+
+            <ImageView
+                android:id="@+id/imagemEvento"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textTituloEventoArq"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Evento Hallel"
+            android:textColor="@color/verde"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonDesarquivar"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/fundo_butto_desarquivar"
+            android:paddingBottom="10sp"
+            android:text="Desarquivar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonDeleteArq"
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/rectangle_501"
+            android:drawableStart="@drawable/vector_crash"
+            android:paddingLeft="19dp"
+            android:paddingBottom="7dp" />
+
+        <TextView
+            android:id="@+id/textView83"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/inter"
+            android:text="12/06/2024"
+            android:textColor="@color/cordetextohallel" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
