@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     int indexArray = 0;
 
+    private TextView nomeEvento;
+
+
     PerfilResponse perfilResponse;
 
     @Override
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnPerfil = findViewById(R.id.btnperfil);
         navigationView.setVisibility(View.GONE);
         btnVerEventos = findViewById(R.id.btnvertodos);
+        nomeEvento = findViewById(R.id.nomeevento);
         ImageView imagemEventos = findViewById(R.id.imgevento);
         ImageButton botaoAvancaEvento = findViewById(R.id.imageButton3);
         ImageButton botaoRetrocederEvento = findViewById(R.id.imageButton2);
@@ -160,6 +165,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
                         imagemEventos.setImageBitmap(decodedByte);
+                        nomeEvento.setText(evento.getTitulo());
                     });
                 }).start();
             }
@@ -206,6 +212,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
                 imagemEventos.setImageBitmap(decodedByte);
+                nomeEvento.setText(evento.getTitulo());
             });
         });
 
@@ -226,6 +233,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
                 imagemEventos.setImageBitmap(decodedByte);
+                nomeEvento.setText(evento.getTitulo());
             });
         });
 
