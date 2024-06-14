@@ -431,6 +431,9 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--Quando o usuário não estiver logado, utilizar:
+    app:headerLayout="@layout/header_menu_off"-->
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_bar"
         android:layout_width="332dp"
@@ -438,5 +441,6 @@
         android:layout_gravity="end"
         app:headerLayout="@layout/header_menu"
         app:menu="@menu/main_menu" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
