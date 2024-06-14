@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="#EEF7F0" />
-            <corners android:radius="10dp" />
-            <stroke
-                android:width="3dp"
-                android:color="#004F22" />
-        </shape>
-    </item>
+    <!-- Default state -->
+    <item android:drawable="@drawable/button_default" android:state_enabled="true"/>
+
+    <!-- Pressed state -->
+    <item android:drawable="@drawable/button_pressed" android:state_pressed="true"/>
 </selector>
