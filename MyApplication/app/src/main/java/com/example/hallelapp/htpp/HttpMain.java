@@ -45,6 +45,10 @@ public class HttpMain {
 
 
 
+    //private static final String UrlBase = "http://10.100.85.80:8080/api/";
+    //private static final String UrlAdm = "administrador/";
+
+
     public static final MediaType JSON = MediaType.get("application/json");
 
 

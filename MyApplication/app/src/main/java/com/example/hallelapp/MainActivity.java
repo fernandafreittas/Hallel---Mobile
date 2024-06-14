@@ -168,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onFailure(IOException e) {
                 System.out.println("Erro na requisição de eventos");
             }
+
         });
 
         // Requisição para API - Pega as informações do membro
