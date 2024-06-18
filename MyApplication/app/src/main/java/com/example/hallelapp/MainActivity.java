@@ -196,45 +196,50 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Configura os botões de navegação de eventos
         botaoAvancaEvento.setOnClickListener(v -> {
-            if (indexArray < responseEventos.size() - 1) {
-                indexArray++;
-            } else {
-                indexArray = 0;
+            if (responseEventos != null && !responseEventos.isEmpty()) {
+                if (indexArray < responseEventos.size() - 1) {
+                    indexArray++;
+                } else {
+                    indexArray = 0;
+                }
+
+                AllEventosListResponse evento = responseEventos.get(indexArray);
+                runOnUiThread(() -> {
+                    String StringBase64 = evento.getImagem();
+                    String[] partes = StringBase64.split(",");
+                    String dadosBase64 = partes.length > 1 ? partes[1] : partes[0];
+
+
+                    byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                    imagemEventos.setImageBitmap(decodedByte);
+                    nomeEvento.setText(evento.getTitulo());
+                });
             }
-
-            AllEventosListResponse evento = responseEventos.get(indexArray);
-            runOnUiThread(() -> {
-                String StringBase64 = evento.getImagem();
-                String[] partes = StringBase64.split(",");
-                String dadosBase64 = partes[1];
-
-                byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
-                imagemEventos.setImageBitmap(decodedByte);
-                nomeEvento.setText(evento.getTitulo());
-            });
         });
 
         botaoRetrocederEvento.setOnClickListener(v -> {
-            if (indexArray > 0) {
-                indexArray--;
-            } else {
-                indexArray = responseEventos.size() - 1;
+            if (responseEventos != null && !responseEventos.isEmpty()) {
+                if (indexArray > 0) {
+                    indexArray--;
+                } else {
+                    indexArray = responseEventos.size() - 1;
+                }
+
+                AllEventosListResponse evento = responseEventos.get(indexArray);
+                runOnUiThread(() -> {
+                    String StringBase64 = evento.getImagem();
+                    String[] partes = StringBase64.split(",");
+                    String dadosBase64 = partes.length > 1 ? partes[1] : partes[0];
+
+                    byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                    imagemEventos.setImageBitmap(decodedByte);
+                    nomeEvento.setText(evento.getTitulo());
+                });
             }
-
-            AllEventosListResponse evento = responseEventos.get(indexArray);
-            runOnUiThread(() -> {
-                String StringBase64 = evento.getImagem();
-                String[] partes = StringBase64.split(",");
-                String dadosBase64 = partes[1];
-
-                byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
-                imagemEventos.setImageBitmap(decodedByte);
-                nomeEvento.setText(evento.getTitulo());
-            });
         });
 
         // Configura a navegação do drawer
