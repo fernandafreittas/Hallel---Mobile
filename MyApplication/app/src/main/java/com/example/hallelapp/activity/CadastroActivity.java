@@ -34,11 +34,6 @@ public class CadastroActivity extends AppCompatActivity {
             return insets;
         });
 
-
-
-
-
-
         HttpMain requisicao = new HttpMain();
 
         //componentes
@@ -51,9 +46,6 @@ public class CadastroActivity extends AppCompatActivity {
         ImageButton mostrasenha = findViewById(R.id.mostraSenha);
         ImageButton mostraConfirmaSenha = findViewById(R.id.mostraConfirmarSenha);
         TextView fazerLogin = findViewById(R.id.fazerLogin);
-
-
-
 
         //mostra a senha
         mostrasenha.setOnClickListener(new View.OnClickListener() {

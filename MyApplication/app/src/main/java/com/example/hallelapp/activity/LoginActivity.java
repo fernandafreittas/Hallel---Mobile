@@ -1,11 +1,13 @@
 package com.example.hallelapp.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -38,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     //	"senha":"lolo123"
 
     private ActivityLoginBinding binding;
+    private AlertDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
         buttonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showLoadingDialog();
                 String email = txtEmail.getText().toString();
                 String senha = textSenha.getText().toString();
 
@@ -81,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(String response) {
                             System.out.println(response);
-
+                            hideLoadingDialog();
                             LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
 
 
@@ -177,10 +181,21 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    private void showLoadingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
 
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
 
-
-
-
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
+    }
 
 }

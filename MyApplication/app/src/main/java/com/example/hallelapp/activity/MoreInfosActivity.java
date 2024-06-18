@@ -1,12 +1,14 @@
 package com.example.hallelapp.activity;
 
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Base64;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -31,6 +33,7 @@ public class MoreInfosActivity extends AppCompatActivity {
 
     private Button button4;
     private Button buttonVoluntario;
+    private AlertDialog loadingDialog;
 
     ValoresEventoResponse valoresEventoResponse;
 
@@ -58,6 +61,8 @@ public class MoreInfosActivity extends AppCompatActivity {
 
         HttpMain requisicao = new HttpMain();
 
+        showLoadingDialog();
+
         requisicao.ListValoresEvento(evento.getId(), new HttpMain.HttpCallback() {
             @Override
             public void onSuccess(String response) {
@@ -70,6 +75,7 @@ public class MoreInfosActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        hideLoadingDialog();
                         // Aqui você pode acessar valoresEventoResponse e realizar as operações necessárias
                         if (valoresEventoResponse.getValorEvento() != null && valoresEventoResponse.getValorDescontoMembro() != null
                         && valoresEventoResponse.getValorDescontoAssociado() != null) {
@@ -85,7 +91,12 @@ public class MoreInfosActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(IOException e) {
-
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        hideLoadingDialog();
+                    }
+                });
             }
         });
 
@@ -179,4 +190,22 @@ public class MoreInfosActivity extends AppCompatActivity {
         });
 
     }
+
+    private void showLoadingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
+
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
+
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
+    }
+
 }

@@ -1,7 +1,9 @@
 package com.example.hallelapp.activity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -28,9 +30,8 @@ public class VizualizarEventosEditActivity extends AppCompatActivity {
 
 
     ActivityVizualizaEventosBinding binding;
-
+    private AlertDialog loadingDialog;
     List<AllEventosListResponse> responseEventos;
-
     AuthenticationResponse authenticationResponse;
 
     @Override
@@ -54,6 +55,7 @@ public class VizualizarEventosEditActivity extends AppCompatActivity {
 
         HttpMain requisicao = new HttpMain();
 
+        showLoadingDialog();
         requisicao.ListAllEventos(new HttpMain.HttpCallback() {
 
             @Override
@@ -62,6 +64,7 @@ public class VizualizarEventosEditActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        hideLoadingDialog();
                         Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
                         List<AllEventosListResponse> responseEventos2 = new Gson().fromJson(response, listType);
                         responseEventos = responseEventos2;
@@ -83,6 +86,7 @@ public class VizualizarEventosEditActivity extends AppCompatActivity {
             public void onFailure(IOException e) {
                 System.out.println("teste3");
                 // Lida com a falha na requisição
+                hideLoadingDialog();
                 // Por exemplo, você pode exibir uma mensagem de erro para o usuário
             }
         });
@@ -116,7 +120,21 @@ public class VizualizarEventosEditActivity extends AppCompatActivity {
         });
     }
 
+    private void showLoadingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
 
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
 
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
+    }
 
 }
