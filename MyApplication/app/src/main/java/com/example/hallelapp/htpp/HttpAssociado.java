@@ -73,9 +73,34 @@ public class HttpAssociado {
         });
     }
 
+    public void listarTodosAssociados(InformacoesDaSessao informacoesDaSessao, final HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
 
+        token = informacoesDaSessao.getToken();
 
+        String url = UrlBase + "listAll";
 
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
 
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
 
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
 }
