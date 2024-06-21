@@ -24,7 +24,9 @@
     <color name="cor_de_texto_fraca">#668774</color>
     <color name="cordetextohallel">#005424</color>
     <color name="cortexto2">#003617</color>
+    <color name="progress_bar_foreground">#FF0000</color>
     <color name="red_exp">#C43C0C</color>
+    <color name="semi_transparent">#80000000</color>
     <color name="teste"/>
     <color name="verde">#005424</color>
     <color name="white">#FFFFFFFF</color>
@@ -56,6 +58,9 @@
         
         
 
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/cordetextohallel</item>
     </style>
     <style name="Theme.HallelApp" parent="Base.Theme.HallelApp"/>
 </resources>

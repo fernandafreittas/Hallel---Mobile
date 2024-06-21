@@ -77,17 +77,13 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-<<<<<<< HEAD
         </activity>
 
         <activity
             android:name=".activity.SplashActivity"
             android:theme="@style/SplashTheme"
             android:exported="true">
-=======
 
-
->>>>>>> 02935c3e4a690f617f89e7573bff441dc15698ec
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

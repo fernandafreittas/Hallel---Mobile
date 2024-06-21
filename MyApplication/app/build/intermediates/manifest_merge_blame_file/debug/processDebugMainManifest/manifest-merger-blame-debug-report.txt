@@ -9,243 +9,252 @@
 9        android:targetSdkVersion="34" />
 10    <!-- permisão para usar a internet -->
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:6:5-67
-11-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:6:22-64
+11-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:6:22-64
 12
 13    <permission
-13-->[androidx.core:core:1.9.0] C:\Users\RAINNER\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+13-->[androidx.core:core:1.9.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 14        android:name="com.example.hallelapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.9.0] C:\Users\RAINNER\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+14-->[androidx.core:core:1.9.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.9.0] C:\Users\RAINNER\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+15-->[androidx.core:core:1.9.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 16
 17    <uses-permission android:name="com.example.hallelapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.9.0] C:\Users\RAINNER\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.9.0] C:\Users\RAINNER\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+17-->[androidx.core:core:1.9.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:8:5-91:19
+19-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:8:5-97:19
 20        android:allowBackup="true"
-20-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:9:9-35
+20-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:9:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.9.0] C:\Users\RAINNER\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+21-->[androidx.core:core:1.9.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\bcfa8773da39279b33a6087aa08754d2\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:10:9-65
+22-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:10:9-65
 23        android:debuggable="true"
 24        android:extractNativeLibs="false"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:11:9-54
+25-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:11:9-54
 26        android:icon="@mipmap/ic_launcher"
-26-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:12:9-43
+26-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:12:9-43
 27        android:label="@string/app_name"
-27-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:13:9-41
+27-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:13:9-41
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:14:9-54
+28-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:14:9-54
 29        android:supportsRtl="true"
-29-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:15:9-35
+29-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:15:9-35
 30        android:testOnly="true"
 31        android:theme="@style/Theme.HallelApp"
-31-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:16:9-47
+31-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:16:9-47
 32        android:usesCleartextTraffic="true" >
-32-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:17:9-44
+32-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:17:9-44
 33        <activity
-33-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:19:9-21:40
+33-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:19:9-21:40
 34            android:name="com.example.hallelapp.activity.DadosAssociadoActivity"
-34-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:20:13-60
+34-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:20:13-60
 35            android:exported="false" />
-35-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:21:13-37
+35-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:21:13-37
 36        <activity
-36-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:22:9-24:40
+36-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:22:9-24:40
 37            android:name="com.example.hallelapp.activity.ListAssociadoActivity"
-37-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:23:13-59
+37-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:23:13-59
 38            android:exported="false" />
-38-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:24:13-37
+38-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:24:13-37
 39        <activity
-39-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:25:9-27:40
+39-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:25:9-27:40
 40            android:name="com.example.hallelapp.activity.ListMemberActivity"
-40-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:26:13-56
+40-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:26:13-56
 41            android:exported="false" />
-41-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:27:13-37
+41-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:27:13-37
 42        <activity
-42-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:28:9-30:40
+42-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:28:9-30:40
 43            android:name="com.example.hallelapp.activity.VizualizarEventosEditActivity"
-43-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:29:13-67
+43-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:29:13-67
 44            android:exported="false" />
-44-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:30:13-37
+44-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:30:13-37
 45        <activity
-45-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:31:9-33:40
+45-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:31:9-33:40
 46            android:name="com.example.hallelapp.activity.EditEventoActivity"
-46-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:32:13-56
+46-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:32:13-56
 47            android:exported="false" />
-47-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:33:13-37
+47-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:33:13-37
 48        <activity
-48-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:34:9-36:40
+48-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:34:9-36:40
 49            android:name="com.example.hallelapp.activity.CreateEventosActivity"
-49-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:35:13-59
+49-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:35:13-59
 50            android:exported="false" />
-50-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:36:13-37
+50-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:36:13-37
 51        <activity
-51-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:37:9-39:40
+51-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:37:9-39:40
 52            android:name="com.example.hallelapp.activity.EventosAdmActivity"
-52-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:38:13-56
+52-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:38:13-56
 53            android:exported="false" />
-53-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:39:13-37
+53-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:39:13-37
 54        <activity
-54-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:40:9-42:40
+54-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:40:9-42:40
 55            android:name="com.example.hallelapp.activity.MainAdmActivity"
-55-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:41:13-53
+55-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:41:13-53
 56            android:exported="false" />
-56-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:42:13-37
+56-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:42:13-37
 57        <activity
-57-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:43:9-45:40
+57-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:43:9-45:40
 58            android:name="com.example.hallelapp.activity.LoginAdmActiviy"
-58-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:44:13-53
+58-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:44:13-53
 59            android:exported="false" />
-59-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:45:13-37
+59-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:45:13-37
 60        <activity
-60-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:46:9-48:40
+60-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:46:9-48:40
 61            android:name="com.example.hallelapp.activity.ParticiparDeEventos"
-61-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:47:13-57
+61-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:47:13-57
 62            android:exported="false" />
-62-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:48:13-37
+62-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:48:13-37
 63        <activity
-63-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:49:9-51:40
+63-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:49:9-51:40
 64            android:name="com.example.hallelapp.activity.PerfilActivity"
-64-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:50:13-52
+64-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:50:13-52
 65            android:exported="false" />
-65-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:51:13-37
+65-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:51:13-37
 66        <activity
-66-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:52:9-54:40
+66-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:52:9-54:40
 67            android:name="com.example.hallelapp.activity.FormVoluntarioActivity"
-67-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:53:13-60
+67-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:53:13-60
 68            android:exported="false" />
-68-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:54:13-37
+68-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:54:13-37
 69        <activity
-69-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:55:9-57:40
+69-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:55:9-57:40
 70            android:name="com.example.hallelapp.activity.MoreInfosActivity"
-70-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:56:13-55
+70-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:56:13-55
 71            android:exported="false" />
-71-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:57:13-37
+71-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:57:13-37
 72        <activity
-72-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:58:9-60:40
+72-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:58:9-60:40
 73            android:name="com.example.hallelapp.activity.VizualizaEventosActivity"
-73-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:59:13-62
+73-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:59:13-62
 74            android:exported="false" />
-74-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:60:13-37
+74-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:60:13-37
 75        <activity
-75-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:61:9-63:40
+75-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:61:9-63:40
 76            android:name="com.example.hallelapp.activity.CadastroActivity"
-76-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:62:13-54
+76-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:62:13-54
 77            android:exported="false" />
-77-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:63:13-37
+77-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:63:13-37
 78        <activity
-78-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:64:9-66:40
+78-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:64:9-66:40
 79            android:name="com.example.hallelapp.activity.LoginActivity"
-79-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:65:13-51
+79-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:65:13-51
 80            android:exported="false" />
-80-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:66:13-37
+80-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:66:13-37
 81        <activity
-81-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:67:9-69:40
+81-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:68:9-70:40
 82            android:name="com.example.hallelapp.activity.DirecionamentoDoacaoActivity"
-82-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:68:13-66
+82-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:69:13-66
 83            android:exported="false" />
-83-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:69:13-37
+83-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:70:13-37
 84        <activity
-84-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:71:9-73:40
+84-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:72:9-74:40
 85            android:name="com.example.hallelapp.activity.DoacaoDeObjetosAlimentosActivity"
-85-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:72:13-70
+85-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:73:13-70
 86            android:exported="false" />
-86-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:73:13-37
+86-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:74:13-37
 87        <activity
-87-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:76:9-86:20
+87-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:77:9-80:20
 88            android:name="com.example.hallelapp.MainActivity"
-88-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:77:13-41
+88-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:78:13-41
 89            android:exported="true" >
-89-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:78:13-36
-90            <intent-filter>
-90-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:81:13-85:29
-91                <action android:name="android.intent.action.MAIN" />
-91-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:82:17-69
-91-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:82:25-66
-92
-93                <category android:name="android.intent.category.LAUNCHER" />
-93-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:84:17-77
-93-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:84:27-74
-94            </intent-filter>
-95        </activity>
-96
-97        <meta-data
-97-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:88:9-90:57
-98            android:name="preloaded_fonts"
-98-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:89:13-43
-99            android:resource="@array/preloaded_fonts" />
-99-->F:\Hallel-Mobile\MyApplication\app\src\main\AndroidManifest.xml:90:13-54
-100
-101        <provider
-101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\RAINNER\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-102            android:name="androidx.startup.InitializationProvider"
-102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\RAINNER\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-103            android:authorities="com.example.hallelapp.androidx-startup"
-103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\RAINNER\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-104            android:exported="false" >
-104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\RAINNER\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-105            <meta-data
-105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\RAINNER\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-106                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\RAINNER\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-107                android:value="androidx.startup" />
-107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\RAINNER\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-108            <meta-data
-108-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\RAINNER\.gradle\caches\transforms-3\f6c2de9acde016a0e02e09af3a46f049\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-109                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-109-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\RAINNER\.gradle\caches\transforms-3\f6c2de9acde016a0e02e09af3a46f049\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-110                android:value="androidx.startup" />
-110-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\RAINNER\.gradle\caches\transforms-3\f6c2de9acde016a0e02e09af3a46f049\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
-111            <meta-data
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-112                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-113                android:value="androidx.startup" />
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-114        </provider>
-115
-116        <receiver
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-117            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-118            android:directBootAware="false"
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-119            android:enabled="true"
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-120            android:exported="true"
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-121            android:permission="android.permission.DUMP" >
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-122            <intent-filter>
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-123                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-124            </intent-filter>
-125            <intent-filter>
-125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-126                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-127            </intent-filter>
-128            <intent-filter>
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-129                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-130            </intent-filter>
-131            <intent-filter>
-131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-132                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\RAINNER\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-133            </intent-filter>
-134        </receiver>
-135    </application>
-136
-137</manifest>
+89-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:79:13-36
+90        </activity>
+91        <activity
+91-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:82:9-92:20
+92            android:name="com.example.hallelapp.activity.SplashActivity"
+92-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:83:13-52
+93            android:exported="true"
+93-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:85:13-36
+94            android:theme="@style/SplashTheme" >
+94-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:84:13-47
+95            <intent-filter>
+95-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:87:13-91:29
+96                <action android:name="android.intent.action.MAIN" />
+96-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:88:17-69
+96-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:88:25-66
+97
+98                <category android:name="android.intent.category.LAUNCHER" />
+98-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:90:17-77
+98-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:90:27-74
+99            </intent-filter>
+100        </activity>
+101
+102        <meta-data
+102-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:94:9-96:57
+103            android:name="preloaded_fonts"
+103-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:95:13-43
+104            android:resource="@array/preloaded_fonts" />
+104-->C:\Users\Fernanda Freitas\Desktop\Projetos\Hallel Mobile\MyApplication\app\src\main\AndroidManifest.xml:96:13-54
+105
+106        <provider
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+107            android:name="androidx.startup.InitializationProvider"
+107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+108            android:authorities="com.example.hallelapp.androidx-startup"
+108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+109            android:exported="false" >
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+110            <meta-data
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+111                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+112                android:value="androidx.startup" />
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\97146aabe689799f110347538a13f571\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+113            <meta-data
+113-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\f6c2de9acde016a0e02e09af3a46f049\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+114                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+114-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\f6c2de9acde016a0e02e09af3a46f049\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+115                android:value="androidx.startup" />
+115-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\f6c2de9acde016a0e02e09af3a46f049\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+116            <meta-data
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+117                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+118                android:value="androidx.startup" />
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+119        </provider>
+120
+121        <receiver
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+122            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+123            android:directBootAware="false"
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+124            android:enabled="true"
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+125            android:exported="true"
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+126            android:permission="android.permission.DUMP" >
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+128                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+129            </intent-filter>
+130            <intent-filter>
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+131                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+132            </intent-filter>
+133            <intent-filter>
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+134                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+135            </intent-filter>
+136            <intent-filter>
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+137                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Fernanda Freitas\.gradle\caches\transforms-3\7b1d0a40c3c2c7fa91ae8ef605d997c4\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+138            </intent-filter>
+139        </receiver>
+140    </application>
+141
+142</manifest>
