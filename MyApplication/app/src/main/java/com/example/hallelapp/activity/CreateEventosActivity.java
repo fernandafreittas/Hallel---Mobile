@@ -175,19 +175,25 @@ public class CreateEventosActivity extends AppCompatActivity {
 
                 String dataString = txtData.getText().toString();
 
+
+
                 SimpleDateFormat sdfInput = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss a", Locale.ENGLISH); // Formato da string recebida
                 SimpleDateFormat sdfOutput = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX"); // Formato compatível com a API
 
                 Date data = null;
+
                 try {
+                    System.out.println("oi");
+
                     data = sdfInput.parse(dataString); // Parse a data no formato recebido
                     String formattedDate = sdfOutput.format(data); // Formata a data para o formato compatível com a API
                     data = sdfOutput.parse(formattedDate); // Parse a data formatada para Date
+                    System.out.println("data"+data);
                 } catch (ParseException e) {
 
                 }
 
-                // Agora, você pode definir a data no objeto eventosRequest
+                System.out.println("data"+data);
                 eventosRequest.setDate(data);
 
                 eventosRequest.setHorario(txtHorario.getText().toString());
@@ -209,6 +215,8 @@ public class CreateEventosActivity extends AppCompatActivity {
 
                 eventosRequest.setLocalEventoRequest(localEventoLocalizacaoRequest);
 
+
+                System.out.println(eventosRequest.toString());
                 requisicao.criarEvento(eventosRequest, authenticationResponse, new HttpAdm.HttpCallback() {
                     @Override
                     public void onSuccess(String response) {

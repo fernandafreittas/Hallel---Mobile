@@ -166,14 +166,31 @@ public class PerfilActivity extends AppCompatActivity {
                        runOnUiThread(new Runnable() {
                            @Override
                            public void run() {
-                               nomePagador.setText(perfilResponse.getNome());
-                               Date dataPagamentoDate = pagamentoAssociadoPerfilResponse.getDate();
-                               SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyyy");
-                               String dataFormatada = formatoData.format(dataPagamentoDate);
-                               dataPagamento.setText(dataFormatada);
-                               formaDePagamento.setText(pagamentoAssociadoPerfilResponse.getMetodoPag().toString());
 
-                           }
+
+                               if (pagamentoAssociadoPerfilResponse != null) {
+
+                                   nomePagador.setText(perfilResponse.getNome());
+                                   Date dataPagamentoDate = pagamentoAssociadoPerfilResponse.getDate();
+                                   SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyyy");
+                                   String dataFormatada = formatoData.format(dataPagamentoDate);
+                                   dataPagamento.setText(dataFormatada);
+                                   formaDePagamento.setText(pagamentoAssociadoPerfilResponse.getMetodoPag().toString());
+
+                               }else {
+
+                                   nomePagador.setText("nenhum pagamento realizado");
+                                   dataPagamento.setText("");
+                                   formaDePagamento.setText("");
+                               }
+
+
+
+
+
+
+
+                       }
                        });
 
 

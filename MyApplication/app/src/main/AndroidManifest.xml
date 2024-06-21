@@ -17,6 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.DadosAssociadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ListAssociadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ListMemberActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.VizualizarEventosEditActivity"
             android:exported="false" />
         <activity
@@ -57,14 +66,28 @@
             android:exported="false" />
 
         <activity
+            android:name=".activity.DirecionamentoDoacaoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.DoacaoDeObjetosAlimentosActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
+<<<<<<< HEAD
         </activity>
 
         <activity
             android:name=".activity.SplashActivity"
             android:theme="@style/SplashTheme"
             android:exported="true">
+=======
+
+
+>>>>>>> 02935c3e4a690f617f89e7573bff441dc15698ec
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

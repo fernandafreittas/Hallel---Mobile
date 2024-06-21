@@ -28,7 +28,8 @@ public class FormVoluntarioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ser_voluntario);
+
+        setContentView(R.layout.activity_servoluntario);
 
         HttpMain requisicao = new HttpMain();
 
@@ -40,7 +41,7 @@ public class FormVoluntarioActivity extends AppCompatActivity {
         EditText txtTelefone = findViewById(R.id.inputIdade);
         EditText txtPreferencia = findViewById(R.id.editText);
         RadioButton rbtnPreferencia = findViewById(R.id.radioButton);
-        Button btnConfirmar = findViewById(R.id.button5);
+        Button btnConfirmar = findViewById(R.id.btncontinuarcartao);
 
         SeVoluntariarEventoReq seVoluntariarEventoReq = new SeVoluntariarEventoReq();
 

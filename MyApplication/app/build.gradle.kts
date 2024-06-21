@@ -58,6 +58,9 @@ dependencies {
     implementation(libs.annotation)
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
+    implementation ("com.fasterxml.jackson.core:jackson-databind:2.14.2")
+
+    //
 
 
     testImplementation(libs.junit)

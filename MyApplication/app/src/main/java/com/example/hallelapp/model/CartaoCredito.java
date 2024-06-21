@@ -1,8 +1,9 @@
 package com.example.hallelapp.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CartaoCredito {
+public class CartaoCredito implements Serializable {
     private String numeroCartao;
     private Date dataValidadeCartao;
     private Integer cvc;

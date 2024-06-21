@@ -2,6 +2,8 @@ package com.example.hallelapp.htpp;
 
 import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.CadastroRequest;
+import com.example.hallelapp.payload.requerimento.DoacaoDinheiroEventoReq;
+import com.example.hallelapp.payload.requerimento.DoacaoObjetosEventosReq;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
 import com.example.hallelapp.payload.requerimento.SeVoluntariarEventoReq;
@@ -37,11 +39,11 @@ public class HttpMain {
    // private static final String UrlBase = "http://10.100.85.80:8080/api/";
 
     //lolo
-    //private static final String UrlBase = "http://192.168.1.4:8080/api/";
+    private static final String UrlBase = "http://192.168.1.4:8080/api/";
 
     //fernanda casa
 
-    private static final String UrlBase = "http://192.168.100.36:8080/api/";
+    //private static final String UrlBase = "http://192.168.100.36:8080/api/";
 
 
 
@@ -330,6 +332,86 @@ public class HttpMain {
     }
 
 
+
+    public void DoarDinheiroEvento(String idEvento, DoacaoDinheiroEventoReq doacaoDinheiroEventoReq, final HttpCallback callback) {
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(doacaoDinheiroEventoReq);
+
+        String url = UrlBase + "home/"+idEvento+"/DoacaoDinheiro";
+
+
+        Log.d("HttpMembro", "url: " + url);
+        Log.d("HttpMembro", doacaoDinheiroEventoReq.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        System.out.println(url);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body) // Especifica que é uma requisição GET
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+
+    public void DoarObjetoEvento(String idEvento, DoacaoObjetosEventosReq doacaoObjetosEventosReq, final HttpCallback callback) {
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(doacaoObjetosEventosReq);
+
+        String url = UrlBase + "home/"+idEvento+"/DoacaoObjeto";
+
+
+        Log.d("HttpMembro", "url: " + url);
+        Log.d("HttpMembro", doacaoObjetosEventosReq.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        System.out.println(url);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body) // Especifica que é uma requisição GET
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
 
 
 

@@ -35,6 +35,7 @@ public class MoreInfosActivity extends AppCompatActivity {
     private Button buttonVoluntario;
     private AlertDialog loadingDialog;
 
+
     ValoresEventoResponse valoresEventoResponse;
 
     @Override
@@ -54,6 +55,8 @@ public class MoreInfosActivity extends AppCompatActivity {
         TextView txtValorSemDesconto = findViewById(R.id.textView22);
         TextView txtValorDescontoMembro = findViewById(R.id.textView24);
         TextView txtValoreDescontoAssociado = findViewById(R.id.textView26);
+        buttonVoluntario = findViewById(R.id.buttonVoluntario);
+        Button btnDoar = findViewById(R.id.buttonDoar);
 
 
         // Recuperar o objeto evento da intent
@@ -158,7 +161,6 @@ public class MoreInfosActivity extends AppCompatActivity {
             }
         });
 
-        buttonVoluntario = findViewById(R.id.buttonVoluntario);
 
 
         button4.setOnClickListener(new View.OnClickListener() {
@@ -188,6 +190,17 @@ public class MoreInfosActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnDoar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MoreInfosActivity.this,DirecionamentoDoacaoActivity.class);
+                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 

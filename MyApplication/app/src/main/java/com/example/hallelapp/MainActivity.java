@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         // declaração dos componentes
+
         navigationView = findViewById(R.id.navigation_bar);
         navigationView.setNavigationItemSelectedListener(this);
         btnPerfil = findViewById(R.id.btnperfil);
@@ -94,12 +95,40 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         obterInformacoesDaSecao = new ObterInformacoesDaSecao(this);
 
+
         // Verifica se há dados criptografados antes de tentar descriptografar
         try {
             informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();
         } catch (Exception e) {
             informacoesDeLogin = new InformacoesDaSessao();
-        }
+
+        btnVerEventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MoreInfosActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (navigationView.getVisibility() == View.VISIBLE) {
+                    navigationView.setVisibility(View.GONE);
+                } else {
+                    navigationView.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+
+
 
         System.out.println(informacoesDeLogin.toString());
 
@@ -293,6 +322,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return false;
     }
 
+
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -301,4 +331,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
 }

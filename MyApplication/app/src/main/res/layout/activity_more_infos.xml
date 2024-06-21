@@ -54,7 +54,6 @@
                     android:elevation="2dp"
                     android:fontFamily="@font/inter_semibold"
                     android:text="Evento Hallel"
-                    android:textAlignment="center"
                     android:textColor="@color/cortexto2"
                     android:textSize="28sp"
                     app:layout_constraintBottom_toBottomOf="@id/imageView8"
@@ -275,6 +274,7 @@
                     android:drawableStart="@drawable/vector_doacao"
                     android:drawableEnd="@drawable/resource__"
                     android:fontFamily="@font/inter_semibold"
+                    android:onClick="buttonDoar"
                     android:paddingStart="30sp"
                     android:paddingEnd="30sp"
                     android:text="Faça uma doação ao evento"
@@ -283,10 +283,10 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.508"
+                    app:layout_constraintHorizontal_bias="0.516"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button3"
-                    app:layout_constraintVertical_bias="0.181" />
+                    app:layout_constraintVertical_bias="0.014" />
 
                 <Button
                     android:id="@+id/buttonVoluntario"

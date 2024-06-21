@@ -170,7 +170,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.666"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText2"
+                    app:layout_constraintTop_toBottomOf="@+id/inputEndereço"
                     app:srcCompat="@drawable/fundo_card_participar">
 
                 </ImageView>
@@ -207,14 +207,7 @@
                     app:layout_constraintVertical_bias="0.127" />
 
 
-                <EditText
-                    android:id="@+id/inputEndereço"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Endereço"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+
 
                 <EditText
                     android:id="@+id/numero_cartao"
@@ -323,7 +316,7 @@
                     app:layout_constraintVertical_bias="0.1" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/inputEndereço"
                     android:layout_width="336dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="28dp"
