@@ -31,6 +31,9 @@
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.hallelapp.activity.FormDoacoesActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.DadosAssociadoActivity"
             android:exported="false" />
         <activity
@@ -43,11 +46,22 @@
             android:name="com.example.hallelapp.activity.VizualizarEventosEditActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.hallelapp.activity.DoarParaEventoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.PagamentoEventoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.PagamentoCartaoActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.EditEventoActivity"
             android:exported="false" />
         <activity
             android:name="com.example.hallelapp.activity.CreateEventosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
         <activity
             android:name="com.example.hallelapp.activity.EventosAdmActivity"
             android:exported="false" />
@@ -83,7 +97,8 @@
             android:exported="false" />
         <activity
             android:name="com.example.hallelapp.activity.DoacaoDeObjetosAlimentosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.example.hallelapp.MainActivity"
             android:exported="true" >

@@ -99,9 +99,10 @@ public class VizualizaEventosActivity extends AppCompatActivity {
             public void onItemClick(View view, int position) {
 
                 System.out.println(position);
-                AllEventosListResponse evento = responseEventos.get(position);
+
+                int evento = position;
                 Intent intent = new Intent(VizualizaEventosActivity.this, MoreInfosActivity.class);
-                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                intent.putExtra("position", position); // Adiciona o objeto evento como um extra
                 startActivity(intent);
 
             }

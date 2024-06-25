@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,17 +22,34 @@ import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.example.hallelapp.payload.resposta.ValoresEventoResponse;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 public class MoreInfosActivity extends AppCompatActivity {
 
     private Button button4;
     private Button buttonVoluntario;
 
+    private ImageView imageEvento;
+    private TextView tituloEvento;
+    private TextView descricaoEvento;
+    private TextView enderecoEvento;
+    private TextView dataEvento;
+    private TextView horarioEvento;
+    private TextView palestrantesEvento;
+    private TextView txtValorSemDesconto;
+    private TextView txtValorDescontoMembro;
+    private TextView txtValoreDescontoAssociado;
+    private Button btnParticparEvento;
+    private Button btnDoar;
+
+
+    List<AllEventosListResponse> responseEventos;
+    AllEventosListResponse evento;
 
     ValoresEventoResponse valoresEventoResponse;
 
@@ -41,116 +59,55 @@ public class MoreInfosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_more_infos);
 
         button4 = findViewById(R.id.button4);
-        ImageView imageEvento = findViewById(R.id.imageView7);
-        TextView tituloEvento = findViewById(R.id.textView5);
-        TextView descricaoEvento = findViewById(R.id.textView6);
-        TextView enderecoEvento = findViewById(R.id.textView8);
-        TextView dataEvento = findViewById(R.id.textView9);
-        TextView horarioEvento = findViewById(R.id.textView10);
-        TextView palestrantesEvento = findViewById(R.id.textView12);
-        Button btnParticparEvento = findViewById(R.id.button3);
-        TextView txtValorSemDesconto = findViewById(R.id.textView22);
-        TextView txtValorDescontoMembro = findViewById(R.id.textView24);
-        TextView txtValoreDescontoAssociado = findViewById(R.id.textView26);
         buttonVoluntario = findViewById(R.id.buttonVoluntario);
-        Button btnDoar = findViewById(R.id.buttonDoar);
-
-
-        // Recuperar o objeto evento da intent
-        AllEventosListResponse evento = (AllEventosListResponse) getIntent().getSerializableExtra("evento");
+        imageEvento = findViewById(R.id.imageView7);
+        tituloEvento = findViewById(R.id.textView5);
+        descricaoEvento = findViewById(R.id.textView6);
+        enderecoEvento = findViewById(R.id.textView8);
+        dataEvento = findViewById(R.id.textView9);
+        horarioEvento = findViewById(R.id.textView10);
+        palestrantesEvento = findViewById(R.id.textView12);
+        btnParticparEvento = findViewById(R.id.button3);
+        txtValorSemDesconto = findViewById(R.id.textView22);
+        txtValorDescontoMembro = findViewById(R.id.textView24);
+        txtValoreDescontoAssociado = findViewById(R.id.textView26);
+        btnDoar = findViewById(R.id.buttonDoar);
 
         HttpMain requisicao = new HttpMain();
 
-        requisicao.ListValoresEvento(evento.getId(), new HttpMain.HttpCallback() {
+        requisicao.ListAllEventos(new HttpMain.HttpCallback() {
             @Override
             public void onSuccess(String response) {
-                Gson gson = new Gson();
-                ValoresEventoResponse valoresEventoResponse2 = gson.fromJson(response, ValoresEventoResponse.class);
-                valoresEventoResponse = valoresEventoResponse2;
-                System.out.println(valoresEventoResponse.toString());
-
-                // Coloque a lógica que depende de valoresEventoResponse aqui dentro
+                // Processar a resposta em um thread de fundo
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        // Aqui você pode acessar valoresEventoResponse e realizar as operações necessárias
-                        if (valoresEventoResponse.getValorEvento() != null && valoresEventoResponse.getValorDescontoMembro() != null
-                        && valoresEventoResponse.getValorDescontoAssociado() != null) {
-                            txtValorSemDesconto.setText(String.valueOf(valoresEventoResponse.getValorEvento()));
-                            txtValorDescontoMembro.setText(String.valueOf(valoresEventoResponse.getValorEvento() - valoresEventoResponse.getValorDescontoMembro()));
-                            txtValoreDescontoAssociado.setText(String.valueOf(valoresEventoResponse.getValorEvento() - valoresEventoResponse.getValorDescontoAssociado()));
-                        } else {
-                            // Trate o caso em que valoresEventoResponse é nulo
-                        }
+                        Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
+                        List<AllEventosListResponse> responseEventos2 = new Gson().fromJson(response, listType);
+                        responseEventos = responseEventos2;
+
+                        int posicao = (int) getIntent().getSerializableExtra("position");
+                        // Recuperar o objeto evento da lista
+                        evento = responseEventos.get(posicao);
+
+                        // Após obter o evento, carregue os detalhes na UI
+                        loadEventDetails();
                     }
                 });
             }
 
             @Override
             public void onFailure(IOException e) {
-
+                // Lida com a falha na requisição
+                // Por exemplo, você pode exibir uma mensagem de erro para o usuário
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(MoreInfosActivity.this, "Falha ao carregar detalhes do evento.", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
-
-
-
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                String StringBase64 = evento.getImagem();
-
-                // Obter a parte da string que contém os dados em base64
-                String[] partes = StringBase64.split(",");
-                String dadosBase64 = partes[1];
-
-                // Decodificar a string base64 em uma imagem Bitmap
-                byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
-                imageEvento.setImageBitmap(decodedByte);
-                tituloEvento.setText(evento.getTitulo());
-                descricaoEvento.setText(evento.getDescricao());
-                LocalEvento localEvento = evento.getLocalEvento();
-                enderecoEvento.setText(localEvento.getLocalizacao());
-
-
-
-
-                // Criando um objeto Date
-                Date data = evento.getDate();
-
-                // Criando um formato desejado para a data
-                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-
-                // Convertendo o objeto Date em uma string no formato especificado
-                String dataString = formato.format(data);
-
-                dataEvento.setText(dataString);
-                horarioEvento.setText(evento.getHorario());
-
-                List<String> palestrantes = evento.getPalestrantes();
-
-                StringBuilder palestrantesString = new StringBuilder();
-
-                for (String palestrante : palestrantes) {
-                    //
-                    palestrantesString.append(palestrante).append(", ");
-                }
-
-
-                if (palestrantesString.length() > 0) {
-                    palestrantesString.delete(palestrantesString.length() - 2, palestrantesString.length());
-                }
-
-                String palestrantesConcatenados = palestrantesString.toString();
-
-                palestrantesEvento.setText(palestrantesConcatenados);
-
-
-            }
-        });
-
-
 
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,36 +117,100 @@ public class MoreInfosActivity extends AppCompatActivity {
             }
         });
 
-
         btnParticparEvento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MoreInfosActivity.this, ParticiparDeEventos.class);
-                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
-                startActivity(intent);
+                if (evento != null) {
+                    Intent intent = new Intent(MoreInfosActivity.this, ParticiparDeEventos.class);
+                    intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MoreInfosActivity.this, "Evento não disponível. Tente novamente mais tarde.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
 
         buttonVoluntario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MoreInfosActivity.this,FormVoluntarioActivity.class);
-                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
-                startActivity(intent);
+                if (evento != null) {
+                    Intent intent = new Intent(MoreInfosActivity.this, FormVoluntarioActivity.class);
+                    intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MoreInfosActivity.this, "Evento não disponível. Tente novamente mais tarde.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         btnDoar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MoreInfosActivity.this,DirecionamentoDoacaoActivity.class);
-                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
-                startActivity(intent);
+                if (evento != null) {
+                    Intent intent = new Intent(MoreInfosActivity.this, FormDoacoesActivity.class);
+                    intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MoreInfosActivity.this, "Evento não disponível. Tente novamente mais tarde.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
 
+    private void loadEventDetails() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (evento != null) {
+                    String StringBase64 = evento.getImagem();
 
+                    // Obter a parte da string que contém os dados em base64
+                    String[] partes = StringBase64.split(",");
+                    String dadosBase64 = partes[1];
 
+                    // Decodificar a string base64 em uma imagem Bitmap
+                    byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                    imageEvento.setImageBitmap(decodedByte);
+                    tituloEvento.setText(evento.getTitulo());
+                    descricaoEvento.setText(evento.getDescricao());
+                    LocalEvento localEvento = evento.getLocalEvento();
+                    enderecoEvento.setText(localEvento.getLocalizacao());
+
+                    // Criando um objeto Date
+                    Date data = evento.getDate();
+
+                    // Criando um formato desejado para a data
+                    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+
+                    // Convertendo o objeto Date em uma string no formato especificado
+                    String dataString = formato.format(data);
+
+                    dataEvento.setText(dataString);
+                    horarioEvento.setText(evento.getHorario());
+
+                    List<String> palestrantes = evento.getPalestrantes();
+
+                    StringBuilder palestrantesString = new StringBuilder();
+
+                    for (String palestrante : palestrantes) {
+                        palestrantesString.append(palestrante).append(", ");
+                    }
+
+                    if (palestrantesString.length() > 0) {
+                        palestrantesString.delete(palestrantesString.length() - 2, palestrantesString.length());
+                    }
+
+                    String palestrantesConcatenados = palestrantesString.toString();
+
+                    palestrantesEvento.setText(palestrantesConcatenados);
+
+                } else {
+                    Toast.makeText(MoreInfosActivity.this, "Evento não disponível. Tente novamente mais tarde.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
+

@@ -14,6 +14,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -168,9 +169,14 @@ public class HttpMain {
     }
 
 
-//lista os eventos
+
+    // Método para listar todos os eventos
     public void ListAllEventos(final HttpCallback callback) {
-        OkHttpClient client = new OkHttpClient();
+        OkHttpClient client = new OkHttpClient.Builder()
+                .connectTimeout(30, TimeUnit.SECONDS) // Tempo de conexão
+                .writeTimeout(30, TimeUnit.SECONDS) // Tempo de escrita
+                .readTimeout(30, TimeUnit.SECONDS) // Tempo de leitura
+                .build();
 
         String url = UrlBase + "home/eventos/listar";
         Request request = new Request.Builder()
@@ -193,6 +199,7 @@ public class HttpMain {
                     callback.onFailure(new IOException("Erro ao realizar requisição"));
                 }
             }
+
             @Override
             public void onFailure(Call call, IOException e) {
                 callback.onFailure(e);
@@ -200,57 +207,7 @@ public class HttpMain {
         });
     }
 
-    public void ParticiparDeEvento(final ParticiparEventosRequest participarEventosRequest, final HttpCallback callback){
 
-        new AsyncTask<Void,Void,String>() {
-            @SuppressLint("StaticFieldLeak")
-            @Override
-            protected String doInBackground(Void... voids) {
-                    OkHttpClient client = new OkHttpClient();
-                    Gson gson = new Gson();
-                    String json = gson.toJson(participarEventosRequest);
-                    String url = UrlBase + "home/eventos/participarEvento";
-
-                    System.out.println("url :" +url);
-                    System.out.println(participarEventosRequest.toString());
-
-
-                    RequestBody body = RequestBody.create(json,JSON);
-
-                    Request request = new Request.Builder()
-                            .url(url)
-                            .post(body)
-                            .build();
-
-                    try {
-
-                        Response response = client.newCall(request).execute();
-                        if(response.isSuccessful()){
-                            return response.body().toString();
-                        }else{
-                            return null;
-                        }
-
-                    }catch (IOException e){
-                        e.printStackTrace();
-                        return null;
-                    }
-
-            }
-
-            @Override
-            protected void onPostExecute(String result) {
-                if(result!=null){
-                    System.out.println("Deu certo");
-                    callback.onSuccess(result);
-                }else {
-                    callback.onFailure(new IOException("erro ao realizar requisição"));
-                }
-            }
-        }.execute();
-
-
-    }
 
 
     public void SeVoluntariarEmEvento(final SeVoluntariarEventoReq seVoluntariarEventoReq
@@ -331,11 +288,15 @@ public class HttpMain {
 
     public void DoarDinheiroEvento(String idEvento, DoacaoDinheiroEventoReq doacaoDinheiroEventoReq, final HttpCallback callback) {
 
+
+
+        String url = UrlBase + "home/"+idEvento+"/"+doacaoDinheiroEventoReq.getCartaoCredito().getDataValidadeCartao()+"/DoacaoDinheiroMobile";
+
+        doacaoDinheiroEventoReq.getCartaoCredito().setDataValidadeCartao(null);
+
         OkHttpClient client = new OkHttpClient();
         Gson gson = new Gson();
         String json = gson.toJson(doacaoDinheiroEventoReq);
-
-        String url = UrlBase + "home/"+idEvento+"/DoacaoDinheiro";
 
 
         Log.d("HttpMembro", "url: " + url);
@@ -370,13 +331,13 @@ public class HttpMain {
 
 
 
-    public void DoarObjetoEvento(String idEvento, DoacaoObjetosEventosReq doacaoObjetosEventosReq, final HttpCallback callback) {
+    public void DoarObjetoEvento(String idEvento, List<DoacaoObjetosEventosReq> doacaoObjetosEventosReq, final HttpCallback callback) {
 
         OkHttpClient client = new OkHttpClient();
         Gson gson = new Gson();
         String json = gson.toJson(doacaoObjetosEventosReq);
 
-        String url = UrlBase + "home/"+idEvento+"/DoacaoObjeto";
+        String url = UrlBase + "home/"+idEvento+"/DoacoesObjetos";
 
 
         Log.d("HttpMembro", "url: " + url);
@@ -409,6 +370,48 @@ public class HttpMain {
         });
     }
 
+
+    public void ParticiparDeEvento(final ParticiparEventosRequest participarEventosRequest, final HttpCallback callback){
+
+
+        String url = UrlBase + "home/eventos/"+participarEventosRequest.getCartaoCredito().getDataValidadeCartao()+"/participarEventoMobile";
+
+        participarEventosRequest.getCartaoCredito().setDataValidadeCartao(null);
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(participarEventosRequest);
+
+
+        Log.d("HttpMembro", "url: " + url);
+        Log.d("HttpMembro", participarEventosRequest.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        System.out.println(url);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body) // Especifica que é uma requisição GET
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
 
 
 

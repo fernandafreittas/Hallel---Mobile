@@ -1,15 +1,23 @@
 package com.example.hallelapp.payload.requerimento;
 
-public class DoacaoDinheiroEventoReq {
+import com.example.hallelapp.model.CartaoCredito;
+
+import java.io.Serializable;
+
+public class DoacaoDinheiroEventoReq implements Serializable {
 
     private String emailDoador;
     private Double valorDoado;
     private String formaDePagamento;
     private String nomeDoador;
+
+    private CartaoCredito cartaoCredito;
+
     private Boolean Mensalmente;
     private Boolean Anualmente;
-    private String dia;
 
+
+    private String dia;
 
     public String getEmailDoador() {
         return emailDoador;
@@ -43,6 +51,14 @@ public class DoacaoDinheiroEventoReq {
         this.nomeDoador = nomeDoador;
     }
 
+    public CartaoCredito getCartaoCredito() {
+        return cartaoCredito;
+    }
+
+    public void setCartaoCredito(CartaoCredito cartaoCredito) {
+        this.cartaoCredito = cartaoCredito;
+    }
+
     public Boolean getMensalmente() {
         return Mensalmente;
     }
@@ -74,6 +90,7 @@ public class DoacaoDinheiroEventoReq {
                 ", valorDoado=" + valorDoado +
                 ", formaDePagamento='" + formaDePagamento + '\'' +
                 ", nomeDoador='" + nomeDoador + '\'' +
+                ", cartaoCredito=" + cartaoCredito.toString() +
                 ", Mensalmente=" + Mensalmente +
                 ", Anualmente=" + Anualmente +
                 ", dia='" + dia + '\'' +

@@ -20,6 +20,8 @@ public class DirecionamentoDoacaoActivity extends AppCompatActivity {
 
         // Recuperar o objeto evento da intent
         AllEventosListResponse evento = (AllEventosListResponse) getIntent().getSerializableExtra("evento");
+        String nome = (String) getIntent().getSerializableExtra("nome");
+        String email = (String) getIntent().getSerializableExtra("email");
 
         Button btnDoacoaDinheiro = findViewById(R.id.btnDoarDinheito);
         Button btnDoacoaObjeto = findViewById(R.id.btnDoarObj);
@@ -30,6 +32,8 @@ public class DirecionamentoDoacaoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(DirecionamentoDoacaoActivity.this,DoarParaEventoActivity.class);
                 intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                intent.putExtra("nome", nome);
+                intent.putExtra("email", email);
                 startActivity(intent);
             }
         });
@@ -39,6 +43,8 @@ public class DirecionamentoDoacaoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(DirecionamentoDoacaoActivity.this,DoacaoDeObjetosAlimentosActivity.class);
                 intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                intent.putExtra("nome", nome);
+                intent.putExtra("email", email);
                 startActivity(intent);
             }
         });

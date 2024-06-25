@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class CartaoCredito implements Serializable {
     private String numeroCartao;
-    private Date dataValidadeCartao;
+    private String dataValidadeCartao;
     private Integer cvc;
     private String nomeTitular;
     private String endereco;
@@ -18,11 +18,12 @@ public class CartaoCredito implements Serializable {
         this.numeroCartao = numeroCartao;
     }
 
-    public Date getDataValidadeCartao() {
+
+    public String getDataValidadeCartao() {
         return dataValidadeCartao;
     }
 
-    public void setDataValidadeCartao(Date dataValidadeCartao) {
+    public void setDataValidadeCartao(String dataValidadeCartao) {
         this.dataValidadeCartao = dataValidadeCartao;
     }
 

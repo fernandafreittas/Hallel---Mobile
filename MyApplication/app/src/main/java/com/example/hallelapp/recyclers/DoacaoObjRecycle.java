@@ -1,14 +1,18 @@
-
 package com.example.hallelapp.recyclers;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.hallelapp.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,8 +34,41 @@ public class DoacaoObjRecycle extends RecyclerView.Adapter<DoacaoObjRecycle.Doac
     @Override
     public void onBindViewHolder(@NonNull DoacaoViewHolder holder, int position) {
         DoacaoItem currentItem = doacaoItems.get(position);
+
         holder.editTextItem.setText(currentItem.getItem());
         holder.editTextQuantity.setText(currentItem.getQuantity());
+
+        // Listener para o campo do item
+        holder.editTextItem.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                currentItem.setItem(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        // Listener para o campo de quantidade
+        holder.editTextQuantity.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                currentItem.setQuantity(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
         holder.buttonAddObj.setOnClickListener(v -> addItem(holder.getAdapterPosition()));
         holder.buttonDeleteObj.setOnClickListener(v -> removeItem(holder.getAdapterPosition()));
@@ -67,7 +104,7 @@ public class DoacaoObjRecycle extends RecyclerView.Adapter<DoacaoObjRecycle.Doac
         public DoacaoViewHolder(@NonNull View itemView) {
             super(itemView);
             editTextItem = itemView.findViewById(R.id.editText5);
-            editTextQuantity = itemView.findViewById(R.id.editText6); // Adjust the ID according to your layout
+            editTextQuantity = itemView.findViewById(R.id.editText6);
             buttonAddObj = itemView.findViewById(R.id.buttonAddObj);
             buttonDeleteObj = itemView.findViewById(R.id.buttonDeleteObj);
         }

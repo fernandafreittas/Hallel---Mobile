@@ -140,10 +140,6 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fechar_header.png"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_doacao_obj_ali.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_doacao_obj_ali.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_capa_more_infos.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\capa_more_infos.png"
     },
@@ -158,6 +154,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_item_recycle_donation_obj.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\item_recycle_donation_obj.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_form_doacoes.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_form_doacoes.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_eventos_adm_donation2.png.flat",
@@ -500,6 +500,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_main_adm.xml"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_pagamento_cartao.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_pagamento_cartao.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_backgroundbutton.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\backgroundbutton.xml"
     },
@@ -620,12 +624,12 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\back_pagamento_feito_via.png"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_igreja_vector.png.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\igreja_vector.png"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_pagamento_cartao.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_pagamento_cartao.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_igreja_vector.png.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\igreja_vector.png"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_edit_text.png.flat",

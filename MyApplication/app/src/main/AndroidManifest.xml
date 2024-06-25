@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.FormDoacoesActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DadosAssociadoActivity"
             android:exported="false" />
         <activity
@@ -28,12 +31,31 @@
         <activity
             android:name=".activity.VizualizarEventosEditActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".activity.DoarParaEventoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.PagamentoEventoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.PagamentoCartaoActivity"
+            android:exported="false" />
+
         <activity
             android:name=".activity.EditEventoActivity"
             android:exported="false" />
+
         <activity
             android:name=".activity.CreateEventosActivity"
-            android:exported="false" />
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false"
+            >
+        </activity>
+
+
         <activity
             android:name=".activity.EventosAdmActivity"
             android:exported="false" />
@@ -67,17 +89,15 @@
         <activity
             android:name=".activity.DirecionamentoDoacaoActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.DoacaoDeObjetosAlimentosActivity"
-            android:exported="false" />
-
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:exported="false"
+            />
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

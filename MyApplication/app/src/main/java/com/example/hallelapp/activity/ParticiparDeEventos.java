@@ -94,21 +94,31 @@ public class ParticiparDeEventos extends AppCompatActivity {
                 cartaoCredito.setNomeTitular(txtNomeTitular.getText().toString());
                 cartaoCredito.setNumeroCartao(txtNumeroCartao.getText().toString());
 
-                SimpleDateFormat dateFormat = new SimpleDateFormat("MM/yyyy");
 
-                // Obtém a string da data de validade do seu texto
-                String dataValidadeString = txtValidade.getText().toString();
 
-                // Tenta analisar a string de data em um objeto Date
-                try {
-                    Date dataValidade = dateFormat.parse(dataValidadeString);
-                    // Define a data de validade no objeto cartaoCredito
-                    cartaoCredito.setDataValidadeCartao(dataValidade);
+                // Supondo que validade.getText().toString() retorna a data no formato mm/yy
+                String validade2 = txtValidade.getText().toString(); // Exemplo: "05/24"
 
-                } catch (ParseException e) {
-                    // Se houver um erro ao analisar a data, trate-o adequadamente
-                    e.printStackTrace();
-                }
+// Adiciona o dia "01" no início da string
+                String dataString = "01/" + validade2;
+
+// Separa os componentes da data
+                String[] dataParts = dataString.split("/");
+
+// Formata a data no formato dd/mm/yyyy
+                dataString = dataParts[0] + "/" + dataParts[1] + "/20" + dataParts[2];
+
+                System.out.println(dataString );
+
+
+                dataString = dataString.replace("/","-");
+                System.out.println("dataString: " + dataString);
+
+
+
+                cartaoCredito.setDataValidadeCartao(dataString);
+
+
                 cartaoCredito.setEndereco(txtEndereco.getText().toString());
                 participarEventosRequest.setCartaoCredito(cartaoCredito);
 
@@ -118,23 +128,7 @@ public class ParticiparDeEventos extends AppCompatActivity {
                 System.out.println("tokeeeeeeen : "+informacoesDeLogin.getToken());
                 System.out.println(participarEventosRequest.toString());
 
-                if(informacoesDeLogin.getToken()!=""){
-                    requisicaoMembro.participarDeEvento(participarEventosRequest, informacoesDeLogin, new HttpMembro.HttpCallback() {
-                        @Override
-                        public void onSuccess(String response) {
 
-                            System.out.println("deu certo membro !");
-
-                            Intent intent = new Intent(ParticiparDeEventos.this, MainActivity.class);
-                            startActivity(intent);
-                        }
-
-                        @Override
-                        public void onFailure(IOException e) {
-                            System.out.println("deu errado membro !");
-                        }
-                    });
-                }else {
                     requisicao.ParticiparDeEvento(participarEventosRequest, new HttpMain.HttpCallback() {
                         @Override
                         public void onSuccess(String response) {
@@ -149,7 +143,7 @@ public class ParticiparDeEventos extends AppCompatActivity {
                             System.out.println("deu errado  !");
                         }
                     });
-                }
+
 
 
 
