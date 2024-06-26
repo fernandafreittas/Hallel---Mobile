@@ -330,6 +330,48 @@ public class HttpMain {
     }
 
 
+    public void DoarDinheiroEventoPixBoleto(String idEvento, DoacaoDinheiroEventoReq doacaoDinheiroEventoReq, final HttpCallback callback) {
+
+
+
+        String url = UrlBase + "home/"+idEvento+"/DoacaoDinheiro";
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(doacaoDinheiroEventoReq);
+
+
+        Log.d("HttpMembro", "url: " + url);
+        Log.d("HttpMembro", doacaoDinheiroEventoReq.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        System.out.println(url);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body) // Especifica que é uma requisição GET
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
 
     public void DoarObjetoEvento(String idEvento, List<DoacaoObjetosEventosReq> doacaoObjetosEventosReq, final HttpCallback callback) {
 

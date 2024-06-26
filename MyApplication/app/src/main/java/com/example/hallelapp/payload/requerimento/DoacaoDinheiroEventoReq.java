@@ -90,7 +90,7 @@ public class DoacaoDinheiroEventoReq implements Serializable {
                 ", valorDoado=" + valorDoado +
                 ", formaDePagamento='" + formaDePagamento + '\'' +
                 ", nomeDoador='" + nomeDoador + '\'' +
-                ", cartaoCredito=" + cartaoCredito.toString() +
+                ", cartaoCredito=" + cartaoCredito +
                 ", Mensalmente=" + Mensalmente +
                 ", Anualmente=" + Anualmente +
                 ", dia='" + dia + '\'' +

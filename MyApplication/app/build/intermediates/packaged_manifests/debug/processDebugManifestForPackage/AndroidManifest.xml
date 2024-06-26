@@ -55,6 +55,9 @@
             android:name="com.example.hallelapp.activity.PagamentoCartaoActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.hallelapp.activity.PagamentoBoletoActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.EditEventoActivity"
             android:exported="false" />
         <activity

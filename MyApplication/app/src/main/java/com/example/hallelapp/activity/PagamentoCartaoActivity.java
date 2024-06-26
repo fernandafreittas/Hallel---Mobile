@@ -123,7 +123,7 @@ public class PagamentoCartaoActivity  extends AppCompatActivity {
                         System.out.println(doacaoDinheiroEventoReq.toString());
                         System.out.println("deu certo");
                         Intent intent = new Intent(PagamentoCartaoActivity.this, MainActivity.class);
-
+                        startActivity(intent);
                     }
 
                     @Override

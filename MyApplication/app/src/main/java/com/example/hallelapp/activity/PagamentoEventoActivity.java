@@ -26,6 +26,8 @@ public class PagamentoEventoActivity extends AppCompatActivity {
 
         Button alterarValor = findViewById(R.id.button5);
         Button btnCartao = findViewById(R.id.btnCartao);
+        Button btnBoleto = findViewById(R.id.btnBoleto);
+        Button btnPix = findViewById(R.id.btnPix);
         TextView doador = findViewById(R.id.textView31);
         TextView valor = findViewById(R.id.textView35);
 
@@ -48,6 +50,16 @@ public class PagamentoEventoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PagamentoEventoActivity.this,PagamentoCartaoActivity.class);
+                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                intent.putExtra("doacao", doacaoDinheiroEventoReq);
+                startActivity(intent);
+            }
+        });
+
+        btnBoleto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PagamentoEventoActivity.this,PagamentoBoletoActivity.class);
                 intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
                 intent.putExtra("doacao", doacaoDinheiroEventoReq);
                 startActivity(intent);

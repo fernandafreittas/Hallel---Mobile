@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_create_eventos.xml.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_create_eventos.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_add.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\add.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_create_eventos.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_create_eventos.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_adm_doacaoalimento.xml.flat",
@@ -500,10 +500,6 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_main_adm.xml"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_pagamento_cartao.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_pagamento_cartao.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_backgroundbutton.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\backgroundbutton.xml"
     },
@@ -686,6 +682,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_headercolor.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\headercolor.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_pagamento_boleto.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_pagamento_boleto.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_ic_launcher_background.xml.flat",

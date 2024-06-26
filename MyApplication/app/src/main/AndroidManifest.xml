@@ -45,6 +45,12 @@
             android:exported="false" />
 
         <activity
+            android:name=".activity.PagamentoBoletoActivity"
+            android:exported="false" />
+
+
+
+        <activity
             android:name=".activity.EditEventoActivity"
             android:exported="false" />
 
