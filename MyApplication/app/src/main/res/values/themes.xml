@@ -7,4 +7,8 @@
     </style>
 
     <style name="Theme.HallelApp" parent="Base.Theme.HallelApp" />
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/cordetextohallel</item>
+    </style>
 </resources>

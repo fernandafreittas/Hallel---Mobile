@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hallel Mobile.iml" filepath="$PROJECT_DIR$/.idea/Hallel Mobile.iml" />
+=======
       <module fileurl="file://$PROJECT_DIR$/.idea/Hallel-Mobile.iml" filepath="$PROJECT_DIR$/.idea/Hallel-Mobile.iml" />
+>>>>>>> 02935c3e4a690f617f89e7573bff441dc15698ec
     </modules>
   </component>
 </project>

@@ -1,7 +1,9 @@
 package com.example.hallelapp.activity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,16 +23,17 @@ import java.io.IOException;
 
 public class FormVoluntarioActivity extends AppCompatActivity {
 
+    private AlertDialog loadingDialog;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_servoluntario);
 
-        HttpMain requisição = new HttpMain();
+        HttpMain requisicao = new HttpMain();
 
         AllEventosListResponse evento = (AllEventosListResponse) getIntent().getSerializableExtra("evento");
-
 
         EditText txtNome = findViewById(R.id.inputNome);
         EditText txtEmail = findViewById(R.id.inputEmail);
@@ -38,15 +41,14 @@ public class FormVoluntarioActivity extends AppCompatActivity {
         EditText txtTelefone = findViewById(R.id.inputIdade);
         EditText txtPreferencia = findViewById(R.id.editText);
         RadioButton rbtnPreferencia = findViewById(R.id.radioButton);
-        Button btnconfimar = findViewById(R.id.btncontinuarcartao);
+        Button btnConfirmar = findViewById(R.id.btncontinuarcartao);
 
         SeVoluntariarEventoReq seVoluntariarEventoReq = new SeVoluntariarEventoReq();
 
-
-        btnconfimar.setOnClickListener(new View.OnClickListener() {
+        btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                showLoadingDialog();
                 seVoluntariarEventoReq.setIdEvento(evento.getId());
                 seVoluntariarEventoReq.setNome(txtNome.getText().toString());
                 seVoluntariarEventoReq.setEmail(txtEmail.getText().toString());
@@ -54,45 +56,45 @@ public class FormVoluntarioActivity extends AppCompatActivity {
                 seVoluntariarEventoReq.setNumeroDeTelefone(txtTelefone.getText().toString());
                 seVoluntariarEventoReq.setPreferencia(txtPreferencia.getText().toString());
 
-
-                if(rbtnPreferencia.isChecked()){
+                if (rbtnPreferencia.isChecked()) {
                     seVoluntariarEventoReq.setPreferencia("Não tenho preferência");
                 }
 
-                requisição.SeVoluntariarEmEvento(seVoluntariarEventoReq, new HttpMembro.HttpCallback() {
+                requisicao.SeVoluntariarEmEvento(seVoluntariarEventoReq, new HttpMembro.HttpCallback() {
                     @Override
                     public void onSuccess(String response) {
-                        System.out.println( seVoluntariarEventoReq.toString());
-
+                        System.out.println(seVoluntariarEventoReq.toString());
                         System.out.println("deu certo !");
-
+                        hideLoadingDialog();
                         Intent intent = new Intent(FormVoluntarioActivity.this, MainActivity.class);
                         startActivity(intent);
+                        finish();
                     }
 
                     @Override
                     public void onFailure(IOException e) {
-                        System.out.println("deu errado  !");
+                        System.out.println("deu errado !");
+                        hideLoadingDialog();
                     }
                 });
-
-
-
             }
         });
-
-
-
-
-        setContentView(R.layout.activity_servoluntario);
-
     }
 
+    private void showLoadingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
 
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
 
-
-
-
-
-
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
+    }
 }

@@ -10,4 +10,6 @@
     <color name="yelow_pendente">#E47004</color>
     <color name="red_exp">#C43C0C</color>
     <color name="cinza">#4A4A4A</color>
+    <color name="semi_transparent">#80000000</color>
+    <color name="progress_bar_foreground">#FF0000</color>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.hallelapp.activity;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -54,13 +56,13 @@ public class CreateEventosActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ColaboradorAdapter colaboradorAdapter;
+    private AlertDialog loadingDialog;
 
     List<LocalEvento> locais;
     String[] localizacoesArray;
     int indice;
 
     Context context = this;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +83,6 @@ public class CreateEventosActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         colaboradorAdapter = new ColaboradorAdapter(this);
         recyclerView.setAdapter(colaboradorAdapter);
-
-
-
 
         Button adicionaFoto = findViewById(R.id.button2);
         EditText txtNomeEvento = findViewById(R.id.inputNome);
@@ -167,6 +166,7 @@ public class CreateEventosActivity extends AppCompatActivity {
         salvarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showLoadingDialog();
 
                 // Lógica para salvar os detalhes do evento
                 eventosRequest.setTitulo(txtNomeEvento.getText().toString());
@@ -194,18 +194,13 @@ public class CreateEventosActivity extends AppCompatActivity {
                 }
 
                 System.out.println("data"+data);
-
-// Agora, você pode definir a data no objeto eventosRequest
                 eventosRequest.setDate(data);
 
                 eventosRequest.setHorario(txtHorario.getText().toString());
 
-
                 LocalEvento local = locais.get(indice);
 
                 eventosRequest.setLocalEvento(local);
-
-
 
                 // Lógica para salvar colaboradores/palestrantes
                 List<String> colaboradores = colaboradorAdapter.getColaboradores();
@@ -218,7 +213,6 @@ public class CreateEventosActivity extends AppCompatActivity {
                 localEventoLocalizacaoRequest.setLocalizacao(local.getLocalizacao());
                 localEventoLocalizacaoRequest.setId(local.getId());
 
-
                 eventosRequest.setLocalEventoRequest(localEventoLocalizacaoRequest);
 
 
@@ -226,41 +220,43 @@ public class CreateEventosActivity extends AppCompatActivity {
                 requisicao.criarEvento(eventosRequest, authenticationResponse, new HttpAdm.HttpCallback() {
                     @Override
                     public void onSuccess(String response) {
-
                         System.out.println(eventosRequest.toString());
 
-
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
-                            }
+                        runOnUiThread(() -> {
+                            Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
+                            hideLoadingDialog();
                         });
 
                         finish();
-
-
                     }
 
                     @Override
                     public void onFailure(IOException e) {
-
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Toast.makeText(context, "Erro ao criar evento", Toast.LENGTH_SHORT).show();
-                            }
+                        runOnUiThread(() -> {
+                            Toast.makeText(context, "Erro ao criar evento", Toast.LENGTH_SHORT).show();
+                            hideLoadingDialog();
                         });
-
-
                     }
                 });
-
-
-
             }
         });
+    }
 
+    private void showLoadingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
+
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
+
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
     }
 
     public String bitmapToBase64(Bitmap bitmap) {
@@ -271,4 +267,3 @@ public class CreateEventosActivity extends AppCompatActivity {
     }
 
 }
-

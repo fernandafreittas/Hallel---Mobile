@@ -1,7 +1,9 @@
 package com.example.hallelapp.activity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -29,6 +31,7 @@ public class VizualizaEventosActivity extends AppCompatActivity {
 
     ActivityVizualizaEventosBinding binding;
     List<AllEventosListResponse> responseEventos;
+    private AlertDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,8 @@ public class VizualizaEventosActivity extends AppCompatActivity {
 
         HttpMain requisicao = new HttpMain();
 
+        showLoadingDialog();
+
         requisicao.ListAllEventos(new HttpMain.HttpCallback() {
 
             @Override
@@ -55,6 +60,7 @@ public class VizualizaEventosActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        hideLoadingDialog();
                         Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
                         List<AllEventosListResponse> responseEventos2 = new Gson().fromJson(response, listType);
                         responseEventos = responseEventos2;
@@ -75,6 +81,7 @@ public class VizualizaEventosActivity extends AppCompatActivity {
             @Override
             public void onFailure(IOException e) {
                 System.out.println("teste3");
+                hideLoadingDialog();
                 // Lida com a falha na requisição
                 // Por exemplo, você pode exibir uma mensagem de erro para o usuário
             }
@@ -83,8 +90,6 @@ public class VizualizaEventosActivity extends AppCompatActivity {
 
 
     }
-
-
 
     private void recicleView(List<AllEventosListResponse> responseEventos) {
         binding.recyclerView.setLayoutManager(new GridLayoutManager(this,2));
@@ -109,5 +114,21 @@ public class VizualizaEventosActivity extends AppCompatActivity {
         });
     }
 
+    private void showLoadingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
+
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
+
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
+    }
 
 }

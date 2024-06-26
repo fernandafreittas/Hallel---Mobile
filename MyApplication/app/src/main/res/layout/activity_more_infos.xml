@@ -37,6 +37,7 @@
                     android:id="@+id/imageView8"
                     android:layout_width="match_parent"
                     android:layout_height="1156dp"
+
                     android:elevation="1dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +54,6 @@
                     android:elevation="2dp"
                     android:fontFamily="@font/inter_semibold"
                     android:text="Evento Hallel"
-                    android:textAlignment="center"
                     android:textColor="@color/cortexto2"
                     android:textSize="28sp"
                     app:layout_constraintBottom_toBottomOf="@id/imageView8"
@@ -283,11 +283,10 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintHorizontal_bias="0.516"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button3"
-                    app:layout_constraintVertical_bias="0.187" />
-
+                    app:layout_constraintVertical_bias="0.014" />
 
                 <Button
                     android:id="@+id/buttonVoluntario"

@@ -105,6 +105,11 @@
         <activity
             android:name="com.example.hallelapp.MainActivity"
             android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.hallelapp.activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
