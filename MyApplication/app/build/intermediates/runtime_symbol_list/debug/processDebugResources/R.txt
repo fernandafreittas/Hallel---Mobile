@@ -2961,6 +2961,7 @@ int drawable baseline_arrow_back_ios_24 0x7f080082
 int drawable baseline_arrow_forward_ios_24 0x7f080083
 int drawable baseline_subdirectory_arrow_left_24 0x7f080084
 int drawable bckgd_alterar_infos 0x7f080085
+int drawable bckground_pix 0x7f080130
 int drawable bol 0x7f080086
 int drawable boleto 0x7f080087
 int drawable boleto_gerado 0x7f08012c
@@ -2979,6 +2980,7 @@ int drawable capa_more_infos 0x7f080091
 int drawable cartao 0x7f080092
 int drawable circulo_cinza 0x7f080093
 int drawable circulo_verdeclaro 0x7f080094
+int drawable conf 0x7f080131
 int drawable copy 0x7f080095
 int drawable cursos_vector 0x7f080096
 int drawable design_fab_background 0x7f080097
@@ -3121,6 +3123,7 @@ int drawable notify_panel_notification_icon_bg 0x7f08011d
 int drawable olhosenha 0x7f08011e
 int drawable pagamento_feito 0x7f08012b
 int drawable pix_icon_198027_2_1 0x7f08011f
+int drawable rectangle_270 0x7f080132
 int drawable resource__ 0x7f080120
 int drawable termosdeuso 0x7f080121
 int drawable test_level_drawable 0x7f080122
@@ -3137,6 +3140,7 @@ int id BOTTOM_END 0x7f0a0001
 int id BOTTOM_START 0x7f0a0002
 int id BtnCriarConta 0x7f0a0003
 int id CTRL 0x7f0a0004
+int id CodPix 0x7f0a02f4
 int id FUNCTION 0x7f0a0005
 int id LembreMe 0x7f0a0006
 int id META 0x7f0a0007
@@ -3153,6 +3157,7 @@ int id TOP_START 0x7f0a0011
 int id TxtEmail 0x7f0a0012
 int id TxtNome 0x7f0a0013
 int id TxtSenha 0x7f0a0014
+int id Vencimentotxt 0x7f0a02f5
 int id accelerate 0x7f0a0015
 int id accessibility_action_clickable_span 0x7f0a0016
 int id accessibility_custom_action_0 0x7f0a0017
@@ -3249,6 +3254,7 @@ int id btnAzDinheiro 0x7f0a028a
 int id btnBoleto 0x7f0a0070
 int id btnCartao 0x7f0a0071
 int id btnDialogPagErro 0x7f0a027f
+int id btnDialogPedVolunt 0x7f0a02f6
 int id btnDoarDinheito 0x7f0a0072
 int id btnDoarObj 0x7f0a0073
 int id btnOrdemCronologica 0x7f0a0280
@@ -3259,6 +3265,7 @@ int id btnValor 0x7f0a028c
 int id btnZa 0x7f0a0282
 int id btnZaDinheiro 0x7f0a028d
 int id btncontinuarform 0x7f0a028e
+int id btncopiarPix 0x7f0a02f7
 int id btndialogCadsuc 0x7f0a0076
 int id btndialogCodsuc 0x7f0a029e
 int id btndialogDelErr 0x7f0a029f
@@ -3279,7 +3286,6 @@ int id btndialogeventodesarq 0x7f0a02ad
 int id btndialoglocaldel 0x7f0a02ae
 int id btndialognao 0x7f0a02af
 int id btndialognaolocal 0x7f0a02b0
-int id btndialogpagamentoerro 0x7f0a02f0
 int id btndialogperfilS 0x7f0a02b1
 int id btndialogsim 0x7f0a02b2
 int id btndialogsimlocal 0x7f0a02b3
@@ -3346,6 +3352,7 @@ int id decelerateAndComplete 0x7f0a00b0
 int id decor_content_parent 0x7f0a00b1
 int id default_activity_button 0x7f0a00b2
 int id deltaRelative 0x7f0a00b3
+int id demonstracao 0x7f0a02f8
 int id dependency_ordering 0x7f0a00b4
 int id design_bottom_sheet 0x7f0a00b5
 int id design_menu_item_action_area 0x7f0a00b6
@@ -3426,6 +3433,7 @@ int id image 0x7f0a0101
 int id imageButton2 0x7f0a0102
 int id imageButton3 0x7f0a0103
 int id imageView 0x7f0a0104
+int id imageView10 0x7f0a0105
 int id imageView11 0x7f0a0106
 int id imageView12 0x7f0a0107
 int id imageView13 0x7f0a0108
@@ -3440,9 +3448,13 @@ int id imageView20 0x7f0a0110
 int id imageView21 0x7f0a0111
 int id imageView22 0x7f0a0284
 int id imageView22Dinheiro 0x7f0a028f
+int id imageView23 0x7f0a02f9
+int id imageView25 0x7f0a02fa
+int id imageView25aa 0x7f0a02fb
 int id imageView3 0x7f0a0112
 int id imageView4 0x7f0a0113
 int id imageView5 0x7f0a0114
+int id imageView6 0x7f0a0115
 int id imageView7 0x7f0a0116
 int id imageView8 0x7f0a0117
 int id imageView9 0x7f0a0118
@@ -3463,6 +3475,7 @@ int id imgPagErr 0x7f0a0286
 int id imgPagSucesso 0x7f0a0287
 int id imgParticipacaoConcluida 0x7f0a02c2
 int id imgParticipacaoErr 0x7f0a02c3
+int id imgPedVolunt 0x7f0a02fc
 int id imgPerfilEErr 0x7f0a02c4
 int id imgcaderr 0x7f0a011a
 int id imgcadsucesso 0x7f0a011b
@@ -3474,7 +3487,6 @@ int id imgeventoDel 0x7f0a02c8
 int id imgeventoEd 0x7f0a02c9
 int id imgeventodesarq 0x7f0a02ca
 int id imglocaldel 0x7f0a02cb
-int id imgpagamentoErr 0x7f0a02f1
 int id imgperfilsucesso 0x7f0a02cc
 int id immediateStop 0x7f0a011d
 int id included 0x7f0a011e
@@ -3760,17 +3772,28 @@ int id textView 0x7f0a0229
 int id textView10 0x7f0a022a
 int id textView11 0x7f0a022b
 int id textView12 0x7f0a022c
+int id textView13 0x7f0a022d
 int id textView13form 0x7f0a0297
+int id textView14 0x7f0a022e
 int id textView14form 0x7f0a0298
+int id textView15 0x7f0a022f
 int id textView15form 0x7f0a0299
 int id textView16form 0x7f0a029a
+int id textView17a 0x7f0a02fd
 int id textView17cartao 0x7f0a0231
+int id textView17valor 0x7f0a02fe
 int id textView18cartao 0x7f0a0232
+int id textView19 0x7f0a0233
 int id textView19form 0x7f0a029b
 int id textView2 0x7f0a0234
 int id textView20 0x7f0a0235
+int id textView21 0x7f0a0236
+int id textView22 0x7f0a0237
+int id textView23 0x7f0a0238
 int id textView24 0x7f0a0239
+int id textView25 0x7f0a02ff
 int id textView26 0x7f0a023a
+int id textView27 0x7f0a0300
 int id textView29 0x7f0a023b
 int id textView3 0x7f0a023c
 int id textView31 0x7f0a023d
@@ -3789,6 +3812,7 @@ int id textView4Edevento 0x7f0a02e1
 int id textView4LocalEditado 0x7f0a02e2
 int id textView4ParticipacaoConcluida 0x7f0a02e4
 int id textView4ParticipacaoErr 0x7f0a02e5
+int id textView4PedVolunt 0x7f0a0301
 int id textView4PerfilE 0x7f0a02e6
 int id textView4editarLocalerr 0x7f0a02e7
 int id textView4eventoArq 0x7f0a02e8
@@ -3797,7 +3821,6 @@ int id textView4eventoDel 0x7f0a02ea
 int id textView4eventoEd 0x7f0a02eb
 int id textView4eventodesarq 0x7f0a02ec
 int id textView4localdel 0x7f0a02ed
-int id textView4pagamentoerro 0x7f0a02f3
 int id textView4perfilS 0x7f0a02ee
 int id textView5 0x7f0a0243
 int id textView6 0x7f0a0244
@@ -3986,6 +4009,7 @@ int layout activity_more_infos 0x7f0d0020
 int layout activity_pagamento_boleto 0x7f0d0080
 int layout activity_pagamento_cartao 0x7f0d0081
 int layout activity_pagamento_evento 0x7f0d0082
+int layout activity_pagamento_pix 0x7f0d009e
 int layout activity_participar_evento 0x7f0d0083
 int layout activity_servoluntario 0x7f0d0084
 int layout activity_visualizar_eventoscadastrados 0x7f0d0086
@@ -4018,7 +4042,6 @@ int layout dialog_erro_doacao 0x7f0d008d
 int layout dialog_erro_editarevento 0x7f0d008e
 int layout dialog_erro_editarlocal 0x7f0d008f
 int layout dialog_erro_editarperfil 0x7f0d0090
-int layout dialog_erro_pagamento 0x7f0d0091
 int layout dialog_erro_participarevento 0x7f0d0092
 int layout dialog_errocadastro 0x7f0d0033
 int layout dialog_errocodigo_barras 0x7f0d0093
@@ -4033,6 +4056,7 @@ int layout dialog_localdeletado_sucesso 0x7f0d0099
 int layout dialog_localeditado_sucesso 0x7f0d009a
 int layout dialog_pagamentosucesso 0x7f0d007c
 int layout dialog_particevento_concluida 0x7f0d009b
+int layout dialog_pedido_servoluntario 0x7f0d009f
 int layout dialog_perfil_editadosucesso 0x7f0d009c
 int layout eventos_adapter 0x7f0d0035
 int layout eventoscadastrados_adapter 0x7f0d009d

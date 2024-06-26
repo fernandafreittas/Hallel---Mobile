@@ -25,6 +25,7 @@ drawable baseline_arrow_back_ios_24
 drawable baseline_arrow_forward_ios_24
 drawable baseline_subdirectory_arrow_left_24
 drawable bckgd_alterar_infos
+drawable bckground_pix
 drawable bol
 drawable boleto
 drawable boleto_gerado
@@ -35,6 +36,7 @@ drawable capa_more_infos
 drawable cartao
 drawable circulo_cinza
 drawable circulo_verdeclaro
+drawable conf
 drawable copy
 drawable cursos_vector
 drawable ellipse_92
@@ -88,6 +90,7 @@ drawable missoes_vector
 drawable olhosenha
 drawable pagamento_feito
 drawable pix_icon_198027_2_1
+drawable rectangle_270
 drawable resource__
 drawable termosdeuso
 drawable teste
@@ -97,12 +100,14 @@ drawable vector_doacao
 font inter
 font inter_semibold
 id BtnCriarConta
+id CodPix
 id LembreMe
 id PsConfirmarSenha
 id PsSenha
 id TxtEmail
 id TxtNome
 id TxtSenha
+id Vencimentotxt
 id addCartao
 id autoCompleteTextViewcartao
 id btn100
@@ -115,6 +120,7 @@ id btnAzDinheiro
 id btnBoleto
 id btnCartao
 id btnDialogPagErro
+id btnDialogPedVolunt
 id btnDoarDinheito
 id btnDoarObj
 id btnOrdemCronologica
@@ -125,6 +131,7 @@ id btnValor
 id btnZa
 id btnZaDinheiro
 id btncontinuarform
+id btncopiarPix
 id btndialogCadsuc
 id btndialogCodsuc
 id btndialogDelErr
@@ -145,7 +152,6 @@ id btndialogeventodesarq
 id btndialoglocaldel
 id btndialognao
 id btndialognaolocal
-id btndialogpagamentoerro
 id btndialogperfilS
 id btndialogsim
 id btndialogsimlocal
@@ -167,11 +173,13 @@ id buttonSemanal
 id buttonVoluntario
 id buttoncursos
 id cvccartao
+id demonstracao
 id editText
 id editTextNumber2cartao
 id imageButton2
 id imageButton3
 id imageView
+id imageView10
 id imageView11
 id imageView12
 id imageView13
@@ -186,9 +194,13 @@ id imageView20
 id imageView21
 id imageView22
 id imageView22Dinheiro
+id imageView23
+id imageView25
+id imageView25aa
 id imageView3
 id imageView4
 id imageView5
+id imageView6
 id imageView7
 id imageView8
 id imageView9
@@ -209,6 +221,7 @@ id imgPagErr
 id imgPagSucesso
 id imgParticipacaoConcluida
 id imgParticipacaoErr
+id imgPedVolunt
 id imgPerfilEErr
 id imgcaderr
 id imgcadsucesso
@@ -220,7 +233,6 @@ id imgeventoDel
 id imgeventoEd
 id imgeventodesarq
 id imglocaldel
-id imgpagamentoErr
 id imgperfilsucesso
 id inptValor
 id inputCPFform
@@ -278,17 +290,28 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView13
 id textView13form
+id textView14
 id textView14form
+id textView15
 id textView15form
 id textView16form
+id textView17a
 id textView17cartao
+id textView17valor
 id textView18cartao
+id textView19
 id textView19form
 id textView2
 id textView20
+id textView21
+id textView22
+id textView23
 id textView24
+id textView25
 id textView26
+id textView27
 id textView29
 id textView3
 id textView31
@@ -307,6 +330,7 @@ id textView4Edevento
 id textView4LocalEditado
 id textView4ParticipacaoConcluida
 id textView4ParticipacaoErr
+id textView4PedVolunt
 id textView4PerfilE
 id textView4editarLocalerr
 id textView4eventoArq
@@ -315,7 +339,6 @@ id textView4eventoDel
 id textView4eventoEd
 id textView4eventodesarq
 id textView4localdel
-id textView4pagamentoerro
 id textView4perfilS
 id textView5
 id textView6
@@ -342,6 +365,7 @@ layout activity_more_infos
 layout activity_pagamento_boleto
 layout activity_pagamento_cartao
 layout activity_pagamento_evento
+layout activity_pagamento_pix
 layout activity_participar_evento
 layout activity_servoluntario
 layout activity_visualizar_eventoscadastrados
@@ -358,7 +382,6 @@ layout dialog_erro_doacao
 layout dialog_erro_editarevento
 layout dialog_erro_editarlocal
 layout dialog_erro_editarperfil
-layout dialog_erro_pagamento
 layout dialog_erro_participarevento
 layout dialog_errocadastro
 layout dialog_errocodigo_barras
@@ -373,6 +396,7 @@ layout dialog_localdeletado_sucesso
 layout dialog_localeditado_sucesso
 layout dialog_pagamentosucesso
 layout dialog_particevento_concluida
+layout dialog_pedido_servoluntario
 layout dialog_perfil_editadosucesso
 layout eventos_adapter
 layout eventoscadastrados_adapter
