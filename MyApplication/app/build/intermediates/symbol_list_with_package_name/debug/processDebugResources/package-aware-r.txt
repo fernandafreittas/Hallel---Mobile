@@ -2974,6 +2974,7 @@ drawable baseline_arrow_back_ios_24
 drawable baseline_arrow_forward_ios_24
 drawable baseline_subdirectory_arrow_left_24
 drawable bckgd_alterar_infos
+drawable bckground_pix
 drawable bol
 drawable boleto
 drawable borda_button
@@ -2994,6 +2995,7 @@ drawable capa_more_infos
 drawable cartao
 drawable circulo_cinza
 drawable circulo_verdeclaro
+drawable conf
 drawable copy
 drawable cursos_vector
 drawable delete_obj
@@ -3168,6 +3170,7 @@ drawable olhosenha
 drawable pagamento_feito
 drawable pix_icon_198027_2_1
 drawable plus_vector
+drawable rectangle_270
 drawable rectangle_501
 drawable resource__
 drawable termosdeuso
@@ -3194,6 +3197,7 @@ id BOTTOM_END
 id BOTTOM_START
 id BtnCriarConta
 id CTRL
+id CodPix
 id FUNCTION
 id LembreMe
 id META
@@ -3210,6 +3214,7 @@ id TOP_START
 id TxtEmail
 id TxtNome
 id TxtSenha
+id Vencimentotxt
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3323,6 +3328,7 @@ id btnZa
 id btnZaDinheiro
 id btncontinuarcartao
 id btncontinuarform
+id btncopiarPix
 id btndialogCadsuc
 id btndialogLogsuc
 id btnmembros
@@ -3423,6 +3429,7 @@ id decor_content_parent
 id default_activity_button
 id deletar
 id deltaRelative
+id demonstracao
 id dependency_ordering
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -3539,6 +3546,7 @@ id imageView22Dinheiro
 id imageView23
 id imageView24
 id imageView25
+id imageView25aa
 id imageView26
 id imageView27
 id imageView28
@@ -3884,7 +3892,9 @@ id textView15form
 id textView16
 id textView16form
 id textView17
+id textView17a
 id textView17cartao
+id textView17valor
 id textView18
 id textView18cartao
 id textView19
@@ -4169,6 +4179,7 @@ layout activity_more_infos
 layout activity_pagamento_boleto
 layout activity_pagamento_cartao
 layout activity_pagamento_evento
+layout activity_pagamento_pix
 layout activity_participantes_list
 layout activity_participar_de_eventos
 layout activity_perfil

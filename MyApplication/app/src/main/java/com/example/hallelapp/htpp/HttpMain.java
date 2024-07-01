@@ -212,6 +212,42 @@ public class HttpMain {
     }
 
 
+    public void ListEventosArquivados(final HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient.Builder()
+                .connectTimeout(30, TimeUnit.SECONDS) // Tempo de conexão
+                .writeTimeout(30, TimeUnit.SECONDS) // Tempo de escrita
+                .readTimeout(30, TimeUnit.SECONDS) // Tempo de leitura
+                .build();
+
+        String url = UrlBase + "home/eventos/listar";
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+
+                    // Informe o tipo genérico para converter a lista corretamente
+                    Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
+                    List<AllEventosListResponse> responseEventos = new Gson().fromJson(responseBody, listType);
+
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição"));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
 
 
     public void SeVoluntariarEmEvento(final SeVoluntariarEventoReq seVoluntariarEventoReq

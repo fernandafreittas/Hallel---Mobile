@@ -66,6 +66,18 @@ public class PagamentoEventoActivity extends AppCompatActivity {
             }
         });
 
+        btnPix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PagamentoEventoActivity.this,PagamentoPixActivity.class);
+                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                intent.putExtra("doacao", doacaoDinheiroEventoReq);
+                startActivity(intent);
+            }
+        });
+
+
+
 
     }
 

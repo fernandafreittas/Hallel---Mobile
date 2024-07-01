@@ -48,6 +48,16 @@
             android:name=".activity.PagamentoBoletoActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".activity.PagamentoPixActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".activity.EventosArquivadosActivity"
+            android:exported="false" />
+
+
 
 
         <activity

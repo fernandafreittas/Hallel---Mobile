@@ -58,6 +58,9 @@
             android:name="com.example.hallelapp.activity.PagamentoBoletoActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.hallelapp.activity.PagamentoPixActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.EditEventoActivity"
             android:exported="false" />
         <activity
