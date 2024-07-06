@@ -2,6 +2,9 @@ package com.example.hallelapp.recyclers;
 
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,17 +15,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallelapp.R;
+import com.example.hallelapp.model.EventoArquivado;
+import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventosArquivadosRecycle extends RecyclerView.Adapter<EventosArquivadosRecycle.ViewHolder> {
 
-    private List<MyItem> itemList;
+    private List<EventoArquivado> itemList;
     private Context context;
+    private OnEventoArquivadoClickListener listener;
 
-    public EventosArquivadosRecycle(Context context, List<MyItem> itemList) {
+    public EventosArquivadosRecycle(Context context, List<EventoArquivado> itemList, OnEventoArquivadoClickListener listener) {
         this.context = context;
         this.itemList = itemList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -34,18 +43,46 @@ public class EventosArquivadosRecycle extends RecyclerView.Adapter<EventosArquiv
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        MyItem item = itemList.get(position);
+        EventoArquivado item = itemList.get(position);
 
-        holder.imageView.setImageResource(item.getImageResourceId());
-        holder.textViewTitle.setText(item.getTitle());
-        holder.textViewDate.setText(item.getDate());
+        String suaStringBase64 = item.getImagem();
+
+        // Verificar se a string não é nula e contém a vírgula
+        if (suaStringBase64 != null && suaStringBase64.contains(",")) {
+            // Obter a parte da string que contém os dados em base64
+            String[] partes = suaStringBase64.split(",");
+            if (partes.length > 1) {
+                String dadosBase64 = partes[1];
+
+                // Decodificar a string base64 em uma imagem Bitmap
+                byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                holder.imageView.setImageBitmap(decodedByte);
+            }
+        }
+
+        holder.textViewTitle.setText(item.getTitulo());
+
+        // Cria um objeto SimpleDateFormat com o formato desejado
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+        // Converte a data para uma string
+        String formattedDate = sdf.format(item.getDate());
+
+        // Define o texto no TextView
+        holder.textViewDate.setText(formattedDate);
 
         holder.buttonDesarquivar.setOnClickListener(v -> {
-            // Handle Desarquivar button click
+            if (listener != null) {
+                listener.onDesarquivarClick(item);
+            }
         });
 
         holder.buttonDelete.setOnClickListener(v -> {
-            // Handle Delete button click
+            if (listener != null) {
+                listener.onDeleteClick(item);
+            }
         });
     }
 
@@ -74,30 +111,6 @@ public class EventosArquivadosRecycle extends RecyclerView.Adapter<EventosArquiv
     }
 
 
-// Model Class
 
 
-    public static class MyItem {
-        private int imageResourceId;
-        private String title;
-        private String date;
-
-        public MyItem(int imageResourceId, String title, String date) {
-            this.imageResourceId = imageResourceId;
-            this.title = title;
-            this.date = date;
-        }
-
-        public int getImageResourceId() {
-            return imageResourceId;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public String getDate() {
-            return date;
-        }
-    }
 }

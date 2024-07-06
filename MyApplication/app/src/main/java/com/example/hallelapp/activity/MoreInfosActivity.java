@@ -167,12 +167,21 @@ public class MoreInfosActivity extends AppCompatActivity {
         runOnUiThread(() -> {
             if (evento != null) {
                 String StringBase64 = evento.getImagem();
-                String[] partes = StringBase64.split(",");
-                String dadosBase64 = partes[1];
-                byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                if (StringBase64 != null && !StringBase64.isEmpty()) {
+                    String[] partes = StringBase64.split(",");
+                    if (partes.length > 1) {
+                        String dadosBase64 = partes[1];
+                        byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
-                imageEvento.setImageBitmap(decodedByte);
+                        imageEvento.setImageBitmap(decodedByte);
+                    } else {
+                        Toast.makeText(MoreInfosActivity.this, "Erro ao processar imagem do evento.", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(MoreInfosActivity.this, "Imagem do evento não disponível.", Toast.LENGTH_SHORT).show();
+                }
+
                 tituloEvento.setText(evento.getTitulo());
                 descricaoEvento.setText(evento.getDescricao());
                 LocalEvento localEvento = evento.getLocalEvento();
@@ -202,6 +211,7 @@ public class MoreInfosActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void showLoadingDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

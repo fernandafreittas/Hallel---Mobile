@@ -20,6 +20,9 @@ public class EventosAdmActivity extends AppCompatActivity {
 
     private AlertDialog loadingDialog;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,10 @@ public class EventosAdmActivity extends AppCompatActivity {
 
         Button btnAddEvento = findViewById(R.id.buttonAddEvento);
         Button btnEditEvento = findViewById(R.id.buttonEditEvento);
+        Button btnEventosArquivados = findViewById(R.id.buttonEventosArquivados);
+        Button btnEventosVoluntarios = findViewById(R.id.buttonEventosVoluntarios);
+        Button btnLocais = findViewById(R.id.buttonEventosLocais);
+
 
         btnAddEvento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +64,43 @@ public class EventosAdmActivity extends AppCompatActivity {
                 hideLoadingDialog();
             }
         });
+
+        btnEventosArquivados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLoadingDialog();
+                Intent intent = new Intent(EventosAdmActivity.this, EventosArquivadosActivity.class);
+                intent.putExtra("informaçõesADM", authenticationResponse);
+                startActivity(intent);
+                hideLoadingDialog();
+            }
+        });
+
+        btnEventosVoluntarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLoadingDialog();
+                Intent intent = new Intent(EventosAdmActivity.this, VizualizarEventosVoluntario.class);
+                intent.putExtra("informaçõesADM", authenticationResponse);
+                startActivity(intent);
+                hideLoadingDialog();
+            }
+        });
+
+        btnLocais.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLoadingDialog();
+                Intent intent = new Intent(EventosAdmActivity.this, ListLocaisActivity.class);
+                intent.putExtra("informaçõesADM", authenticationResponse);
+                startActivity(intent);
+                hideLoadingDialog();
+            }
+        });
+
+
+
+
     }
 
     private void showLoadingDialog() {

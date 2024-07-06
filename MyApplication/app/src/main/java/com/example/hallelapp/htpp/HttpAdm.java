@@ -8,10 +8,15 @@ import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
 import com.example.hallelapp.payload.requerimento.EventosRequest;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
+import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.example.hallelapp.payload.resposta.AuthenticationResponse;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -86,14 +91,14 @@ public class HttpAdm {
     }
 
 
-    public void criarEvento(final EventosRequest eventosRequest, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    public void criarEvento(String data,final EventosRequest eventosRequest, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
     ) {
 
 
         OkHttpClient client = new OkHttpClient();
         Gson gson = new Gson();
         String json = gson.toJson(eventosRequest);
-        String url = UrlBase + "/eventos/create";
+        String url = UrlBase + "/eventos/"+data+"/create";
 
         Log.d("HttpADM", "url: " + url);
 
@@ -175,6 +180,51 @@ public class HttpAdm {
             }
         });
     }
+
+    public void CreateLocaisEventos( AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+
+        String url = UrlBase + "/locais";
+
+        Log.d("HttpADM", "url: " + url);
+
+
+        token =authenticationResponse.getToken();
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+
 
     public void ListInformacoesEventoById(String id, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
     ) {
@@ -350,6 +400,48 @@ public class HttpAdm {
         });
     }
 
+    public void ListVoluntarios(String idEventos, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+
+        String url = UrlBase + "/eventos/"+idEventos+"/listVoluntarios";
+
+        Log.d("HttpADM", "url: " + url);
+
+
+        token =authenticationResponse.getToken();
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
 
 
 
@@ -440,6 +532,157 @@ public class HttpAdm {
             }
         });
     }
+
+
+
+    public void ListEventosArquivados(AuthenticationResponse authenticationResponse,final HttpMain.HttpCallback callback) {
+
+
+
+
+        OkHttpClient client = new OkHttpClient.Builder().build();
+
+
+        token = authenticationResponse.getToken();
+
+        String url = UrlBase + "/eventos/arquivados";
+
+        System.out.println(url);
+
+        System.out.println(token);
+
+        System.out.println();
+
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+
+                    // Informe o tipo genérico para converter a lista corretamente
+                    Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
+                    List<AllEventosListResponse> responseEventos = new Gson().fromJson(responseBody, listType);
+
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição"));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+    public void DesarquivaEvento(String idEvento,AuthenticationResponse authenticationResponse,final HttpMain.HttpCallback callback) {
+
+
+
+
+        OkHttpClient client = new OkHttpClient.Builder().build();
+
+
+        token = authenticationResponse.getToken();
+
+        String url = UrlBase + "/eventos/"+idEvento+"/desarquivar";
+
+        System.out.println(url);
+
+        System.out.println(token);
+
+        System.out.println();
+
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println(responseBody);
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+    public void DeletarEvento(String idEvento,AuthenticationResponse authenticationResponse,final HttpMain.HttpCallback callback) {
+
+
+
+
+        OkHttpClient client = new OkHttpClient.Builder().build();
+
+
+        token = authenticationResponse.getToken();
+
+        String url = UrlBase + "/eventos/"+idEvento+"/delete";
+
+        System.out.println(url);
+
+        System.out.println(token);
+
+        System.out.println();
+
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println(responseBody);
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+
+
+
 
 
 

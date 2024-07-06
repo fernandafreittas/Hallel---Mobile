@@ -3353,7 +3353,6 @@ id buttonAzAssociados
 id buttonAzParticipantes
 id buttonAzVoluntarios
 id buttonDeleteArq
-id buttonDeleteLocal
 id buttonDeleteLocalEdit
 id buttonDeleteObj
 id buttonDesarquivar
@@ -4171,6 +4170,7 @@ layout activity_form_doacoes
 layout activity_list_associado
 layout activity_list_locais
 layout activity_list_member
+layout activity_list_voluntarios_evento
 layout activity_login
 layout activity_login_adm_activiy
 layout activity_main

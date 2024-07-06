@@ -3352,7 +3352,6 @@ int id buttonAzAssociados 0x7f0a009a
 int id buttonAzParticipantes 0x7f0a009b
 int id buttonAzVoluntarios 0x7f0a009c
 int id buttonDeleteArq 0x7f0a009d
-int id buttonDeleteLocal 0x7f0a009e
 int id buttonDeleteLocalEdit 0x7f0a009f
 int id buttonDeleteObj 0x7f0a00a0
 int id buttonDesarquivar 0x7f0a00a1
@@ -4170,6 +4169,7 @@ int layout activity_form_doacoes 0x7f0d0029
 int layout activity_list_associado 0x7f0d002a
 int layout activity_list_locais 0x7f0d002b
 int layout activity_list_member 0x7f0d002c
+int layout activity_list_voluntarios_evento 0x7f0d0097
 int layout activity_login 0x7f0d002d
 int layout activity_login_adm_activiy 0x7f0d002e
 int layout activity_main 0x7f0d002f
