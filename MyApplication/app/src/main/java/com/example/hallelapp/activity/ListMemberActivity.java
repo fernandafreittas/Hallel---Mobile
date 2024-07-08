@@ -1,9 +1,11 @@
 package com.example.hallelapp.activity;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -37,6 +39,7 @@ public class ListMemberActivity extends AppCompatActivity {
     Context context = this;
 
     List<String> listaDeNomes;
+    private AlertDialog loadingDialog;
 
 
     @Override
@@ -56,11 +59,12 @@ public class ListMemberActivity extends AppCompatActivity {
         Button btnAZ = findViewById(R.id.buttonAz);
         Button btnZA = findViewById(R.id.buttonZa);
 
-
+        showLoadingDialog();
         requisicao.ListMembros(authenticationResponse, new HttpAdm.HttpCallback() {
             @Override
             public void onSuccess(String response) {
                 System.out.println(response);
+                hideLoadingDialog();
                 Type listType = new TypeToken<List<MembroResponse>>() {}.getType();
                 List<MembroResponse> responseMembro = new Gson().fromJson(response, listType);
 
@@ -176,10 +180,22 @@ public class ListMemberActivity extends AppCompatActivity {
 
             }
         });
+    }
 
+    private void showLoadingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
 
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
 
-
-
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
     }
 }

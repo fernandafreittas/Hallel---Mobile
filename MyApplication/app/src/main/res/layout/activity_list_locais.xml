@@ -65,128 +65,26 @@
         app:layout_constraintVertical_bias="0.035" />
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="407dp"
+        android:layout_height="433dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView73">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <TableLayout
-            android:id="@+id/tableLayoutLocais"
-            android:layout_width="372dp"
-            android:layout_height="385dp"
-            android:background="@drawable/background_edittext"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.487"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonAddLocal"
-            app:layout_constraintVertical_bias="0.621">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_local_list_recycle">
 
-            <TableRow>
+            </androidx.recyclerview.widget.RecyclerView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/inter_semibold"
-                    android:maxWidth="200dp"
-                    android:maxLines="1"
-                    android:padding="8dp"
-                    android:singleLine="true"
-                    android:text="Rua das Andorinhas, 80, Centro"
-                    android:textColor="@color/cordetextohallel"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/buttonEditLocal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:background="@drawable/fundo_edit_local"
-                    android:text="Editar"
-                    android:textAllCaps="false"
-                    android:textColor="@color/cortexto2"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/buttonDeleteLocal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:background="@drawable/button_crash"
-                    android:textAllCaps="false" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/inter_semibold"
-                    android:maxWidth="200dp"
-                    android:maxLines="1"
-                    android:padding="8dp"
-                    android:singleLine="true"
-                    android:text="Avenida Djalma Batista, Flores, Manaus"
-                    android:textColor="@color/cordetextohallel"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/fundo_edit_local"
-                    android:text="Editar"
-                    android:textAllCaps="false"
-                    android:textColor="@color/cortexto2"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/button_crash"
-                    android:textAllCaps="false" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/inter_semibold"
-                    android:maxWidth="200dp"
-                    android:maxLines="1"
-                    android:padding="8dp"
-                    android:singleLine="true"
-                    android:text="Lorenzo Aviz dos Santos"
-                    android:textColor="@color/cordetextohallel"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:background="@drawable/fundo_edit_local"
-                    android:text="Editar"
-                    android:textAllCaps="false"
-                    android:textColor="@color/cortexto2"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:background="@drawable/button_crash"
-                    android:textAllCaps="false" />
-            </TableRow>
-
-        </TableLayout>
-
-
-    </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
 

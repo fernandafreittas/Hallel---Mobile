@@ -1,4 +1,4 @@
-#Fri Jun 21 12:19:19 AMT 2024
+#Fri Jun 21 14:27:25 AMT 2024
 base.0=C\:\\Users\\Fernanda Freitas\\Desktop\\Projetos\\Hallel Mobile\\MyApplication\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Fernanda Freitas\\Desktop\\Projetos\\Hallel Mobile\\MyApplication\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\Fernanda Freitas\\Desktop\\Projetos\\Hallel Mobile\\MyApplication\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex

@@ -32,16 +32,16 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_vizualiza_eventos.xml"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_participar_de_eventos.xml",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_participar_de_eventos.xml"
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_direcionamento_doacao.xml",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_direcionamento_doacao.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_participantes_list.xml",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_participantes_list.xml"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_direcionamento_doacao.xml",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_direcionamento_doacao.xml"
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_participar_de_eventos.xml",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_participar_de_eventos.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\eventos_arq_adapter.xml",
@@ -52,12 +52,12 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_locais.xml"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_errologin.xml",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_errologin.xml"
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_list_associado.xml",
+        "source": "com.example.hallelapp-main-36:/layout/activity_list_associado.xml"
     },
     {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_main.xml",
-        "source": "com.example.hallelapp-main-36:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_errologin.xml",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_errologin.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_pagamento_cartao.xml",

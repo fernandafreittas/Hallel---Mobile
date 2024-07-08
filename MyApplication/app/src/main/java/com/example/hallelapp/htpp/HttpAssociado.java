@@ -19,10 +19,10 @@ public class HttpAssociado {
     private String token;
 
     //lorenzo
-    private static final String UrlBase = "http://192.168.1.4:8080/api/associado/";
+    //private static final String UrlBase = "http://192.168.1.4:8080/api/associado/";
 
     //fernanda
-    //private static final String UrlBase = "http://192.168.100.36:8080/api/associado/";
+    private static final String UrlBase = "http://192.168.100.36:8080/api/associado/";
     public static final MediaType JSON = MediaType.get("application/json");
 
     // Interface para tratar da conexão da Api caso seja bem sucedida ou dê erro

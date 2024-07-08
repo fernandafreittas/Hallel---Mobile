@@ -96,6 +96,10 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_eventos_adm_arquivados.png"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_list_associado.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_list_associado.xml"
+    },
+    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_eventos_adm_cadastrados.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_eventos_adm_cadastrados.png"
     },
@@ -758,10 +762,6 @@
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_backgroundtxt.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\backgroundtxt.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_main.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_header_adm.png.flat",

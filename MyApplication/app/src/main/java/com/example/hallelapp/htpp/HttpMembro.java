@@ -21,7 +21,10 @@ import okhttp3.Response;
 public class HttpMembro {
 
     private String token;
-    private static final String UrlBase = "http://192.168.1.4:8080/api/";
+    //private static final String UrlBase = "http://192.168.1.4:8080/api/";
+
+    //fernanda
+    private static final String UrlBase = "http://10.100.85.80:8080/api/";
     public static final MediaType JSON = MediaType.get("application/json");
 
     // Interface para tratar da conexão da Api caso seja bem sucedida ou dê erro
