@@ -6,6 +6,7 @@ import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.AdministradorLoginRequest;
 import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
 import com.example.hallelapp.payload.requerimento.EventosRequest;
+import com.example.hallelapp.payload.requerimento.LocalEventoReq;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
 import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
@@ -31,11 +32,11 @@ public class HttpAdm {
     private String token;
 
     //lorenzo
-    private static final String UrlBase = "http://192.168.1.4:8080/api/administrador";
+    private static final String UrlBase = "http://192.168.1.7:8080/api/administrador";
 
-    private static final String UrlBaseMembro = "http://192.168.1.4:8080/api/";
+    private static final String UrlBaseMembro = "http://192.168.1.7:8080/api/";
 
-    private static final String UrlBaseAssociado = "http://192.168.1.4:8080/api/associado/";
+    private static final String UrlBaseAssociado = "http://192.168.1.7:8080/api/associado/";
 
 
     //fernanda
@@ -143,6 +144,8 @@ public class HttpAdm {
     ) {
 
 
+
+
         OkHttpClient client = new OkHttpClient();
 
         String url = UrlBase + "/locais";
@@ -181,23 +184,29 @@ public class HttpAdm {
         });
     }
 
-    public void CreateLocaisEventos( AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    public void CreateLocaisEventos(LocalEventoReq localEventoReq, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
     ) {
 
 
         OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(localEventoReq);
 
-        String url = UrlBase + "/locais";
+
+
+        String url = UrlBase + "/locais/create";
 
         Log.d("HttpADM", "url: " + url);
 
 
         token =authenticationResponse.getToken();
 
+        RequestBody body = RequestBody.create(json, JSON);
+
 
         Request request = new Request.Builder()
                 .url(url)
-                .get()
+                .post(body)
                 .addHeader("Authorization", "Bearer " + token)
                 .build();
 

@@ -1,4 +1,5 @@
 package com.example.hallelapp.activity;
+import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -23,6 +26,7 @@ import com.example.hallelapp.R;
 import com.example.hallelapp.databinding.ActivityListLocaisBinding;
 import com.example.hallelapp.htpp.HttpAdm;
 import com.example.hallelapp.model.LocalEvento;
+import com.example.hallelapp.payload.requerimento.LocalEventoReq;
 import com.example.hallelapp.payload.resposta.AuthenticationResponse;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -39,6 +43,8 @@ public class ListLocaisActivity extends AppCompatActivity {
     HttpAdm requisicao;
     List<LocalEvento> locais;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +53,17 @@ public class ListLocaisActivity extends AppCompatActivity {
         binding = ActivityListLocaisBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        Context context = this;
 
         authenticationResponse = (AuthenticationResponse) getIntent().getSerializableExtra("informaçõesADM");
         requisicao = new HttpAdm();
         showLoadingDialog();
+
+
+        EditText txtEndereco = findViewById(R.id.inputEndereco);
+        Button btnAddLocal = findViewById(R.id.buttonAddLocal);
+
+
 
         requisicao.ListLocaisEventos(authenticationResponse, new HttpAdm.HttpCallback() {
             @Override
@@ -68,6 +81,40 @@ public class ListLocaisActivity extends AppCompatActivity {
                 // Lida com a falha
             }
         });
+
+        btnAddLocal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLoadingDialog();
+
+                LocalEventoReq localEventoReq = new LocalEventoReq();
+                localEventoReq.setLocalizacao(txtEndereco.getText().toString());
+
+                requisicao.CreateLocaisEventos(localEventoReq, authenticationResponse, new HttpAdm.HttpCallback() {
+                    @Override
+                    public void onSuccess(String response) {
+                        hideLoadingDialog();
+                        runOnUiThread(() -> {
+                            Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
+                            hideLoadingDialog();
+                        });
+
+                        finish();
+
+                    }
+
+                    @Override
+                    public void onFailure(IOException e) {
+
+                    }
+                });
+
+
+
+            }
+        });
+
+
     }
 
     private void showLoadingDialog() {
