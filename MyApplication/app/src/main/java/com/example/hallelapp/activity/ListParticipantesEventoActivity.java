@@ -152,7 +152,7 @@ public class ListParticipantesEventoActivity  extends AppCompatActivity {
                 // Adicionar novamente o TextView estático
                 TextView staticTextView = new TextView(ListParticipantesEventoActivity.this);
                 staticTextView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
-                staticTextView.setText("Nome do participante");
+                staticTextView.setText("Nome dos participante");
                 staticTextView.setTextColor(getResources().getColor(R.color.cortexto2)); // Defina a cor do texto conforme necessário
                 staticTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
                 staticTextView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
