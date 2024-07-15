@@ -1,26 +1,19 @@
 package com.example.hallelapp.activity;
+
 import android.content.Context;
-import android.graphics.Typeface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallelapp.R;
 import com.example.hallelapp.databinding.ActivityListLocaisBinding;
@@ -28,14 +21,16 @@ import com.example.hallelapp.htpp.HttpAdm;
 import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.payload.requerimento.LocalEventoReq;
 import com.example.hallelapp.payload.resposta.AuthenticationResponse;
+import com.example.hallelapp.recyclers.LocalRecycle;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ListLocaisActivity extends AppCompatActivity {
+public class ListLocaisActivity extends AppCompatActivity implements LocalRecycle.OnItemClickListener {
 
     AuthenticationResponse authenticationResponse;
     ActivityListLocaisBinding binding;
@@ -43,7 +38,8 @@ public class ListLocaisActivity extends AppCompatActivity {
     HttpAdm requisicao;
     List<LocalEvento> locais;
 
-
+    private RecyclerView recyclerView;
+    private LocalRecycle adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,26 +55,43 @@ public class ListLocaisActivity extends AppCompatActivity {
         requisicao = new HttpAdm();
         showLoadingDialog();
 
-
         EditText txtEndereco = findViewById(R.id.inputEndereco);
         Button btnAddLocal = findViewById(R.id.buttonAddLocal);
 
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        locais = new ArrayList<>();
+        adapter = new LocalRecycle(this, locais, this);
+        recyclerView.setAdapter(adapter);
 
         requisicao.ListLocaisEventos(authenticationResponse, new HttpAdm.HttpCallback() {
             @Override
             public void onSuccess(String response) {
                 // Deserializa a resposta e prepara os dados
                 Type listType = new TypeToken<List<LocalEvento>>() {}.getType();
-                locais = new Gson().fromJson(response, listType);
+                final List<LocalEvento> locaisResponse = new Gson().fromJson(response, listType);
 
-                // Popula a TableLayout com os locais
-                runOnUiThread(() -> populateTableLayout());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        locais.clear();
+                        locais.addAll(locaisResponse);
+                        adapter.notifyDataSetChanged();
+                        hideLoadingDialog();
+                    }
+                });
             }
 
             @Override
             public void onFailure(IOException e) {
-                // Lida com a falha
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        hideLoadingDialog();
+                        Toast.makeText(context, "Erro ao carregar os locais", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
@@ -95,26 +108,21 @@ public class ListLocaisActivity extends AppCompatActivity {
                     public void onSuccess(String response) {
                         hideLoadingDialog();
                         runOnUiThread(() -> {
-                            Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
-                            hideLoadingDialog();
+                            Toast.makeText(context, "Local criado com sucesso", Toast.LENGTH_SHORT).show();
+                            finish(); // Talvez queira recarregar os dados ao invés de finalizar a atividade
                         });
-
-                        finish();
-
                     }
 
                     @Override
                     public void onFailure(IOException e) {
-
+                        runOnUiThread(() -> {
+                            hideLoadingDialog();
+                            Toast.makeText(context, "Erro ao criar o local", Toast.LENGTH_SHORT).show();
+                        });
                     }
                 });
-
-
-
             }
         });
-
-
     }
 
     private void showLoadingDialog() {
@@ -134,68 +142,49 @@ public class ListLocaisActivity extends AppCompatActivity {
         }
     }
 
-    private void populateTableLayout() {
-        TableLayout tableLayout = findViewById(R.id.tableLayoutLocais);
+    @Override
+    public void onEditClick(int position) {
+        // Handle edit action
+        LocalEvento local = locais.get(position);
 
-        for (LocalEvento local : locais) {
-            TableRow tableRow = new TableRow(this);
 
-            // Configurando o TextView
-            TextView textView = new TextView(this);
-            textView.setText(local.getLocalizacao());
-            textView.setLayoutParams(new TableRow.LayoutParams(
-                    0, // width
-                    TableRow.LayoutParams.WRAP_CONTENT, // height
-                    1 // weight
-            ));
-            textView.setEllipsize(TextUtils.TruncateAt.END);
-            textView.setMaxLines(1);
-            textView.setPadding(8, 8, 8, 8);
-            textView.setTextColor(getResources().getColor(R.color.cordetextohallel));
-            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
-            textView.setTypeface(ResourcesCompat.getFont(this, R.font.inter_semibold), Typeface.BOLD);
-            tableRow.addView(textView);
-
-            // Configurando o botão Editar
-            Button editButton = new Button(this);
-            editButton.setText("Editar");
-            editButton.setLayoutParams(new TableRow.LayoutParams(
-                    TableRow.LayoutParams.WRAP_CONTENT,
-                    dpToPx(30)
-            ));
-            editButton.setTextColor(getResources().getColor(R.color.cortexto2));
-            editButton.setBackground(getResources().getDrawable(R.drawable.fundo_edit_local));
-            editButton.setOnClickListener(v -> editLocal(local));
-            tableRow.addView(editButton);
-
-            // Configurando o botão Deletar
-            Button deleteButton = new Button(this);
-            deleteButton.setText("Deletar");
-            deleteButton.setLayoutParams(new TableRow.LayoutParams(
-                    TableRow.LayoutParams.WRAP_CONTENT,
-                    dpToPx(40)
-            ));
-            deleteButton.setTextColor(getResources().getColor(R.color.cortexto2));
-            deleteButton.setBackground(getResources().getDrawable(R.drawable.button_crash));
-            deleteButton.setOnClickListener(v -> deleteLocal(local));
-            tableRow.addView(deleteButton);
-
-            tableLayout.addView(tableRow);
-        }
-
+        showLoadingDialog();
+        Intent intent = new Intent(ListLocaisActivity.this, EditLocalActivity.class);
+        intent.putExtra("informaçõesADM", authenticationResponse);
+        intent.putExtra("local", local);
+        startActivity(intent);
         hideLoadingDialog();
+
+
     }
 
-    private int dpToPx(int dp) {
-        float density = getResources().getDisplayMetrics().density;
-        return Math.round(dp * density);
-    }
+    @Override
+    public void onDeleteClick(int position) {
+        // Handle delete action
 
-    private void editLocal(LocalEvento local) {
-        // Implementa a lógica de edição do local
-    }
+        LocalEvento local = locais.get(position);
 
-    private void deleteLocal(LocalEvento local) {
-        // Implementa a lógica de deleção do local
+        requisicao.DeleteLocaisEventos(local, authenticationResponse, new HttpAdm.HttpCallback() {
+            @Override
+            public void onSuccess(String response) {
+
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        locais.remove(position);
+                        adapter.notifyItemRemoved(position);
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(IOException e) {
+
+            }
+        });
+
+
+
     }
 }

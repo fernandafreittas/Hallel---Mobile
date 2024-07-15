@@ -218,7 +218,7 @@ id buttonAzAssociados
 id buttonAzParticipantes
 id buttonAzVoluntarios
 id buttonDeleteArq
-id buttonDeleteLocalEdit
+id buttonDeleteLocal
 id buttonDeleteObj
 id buttonDesarquivar
 id buttonDoacao
@@ -386,8 +386,6 @@ id tableLayout
 id tableLayoutAssociados
 id tableLayoutDoacao
 id tableLayoutDoacaoDinheiro
-id tableLayoutEditLocais
-id tableLayoutLocais
 id tableLayoutParticipantes
 id tableLayoutVoluntarios
 id telefoneuser
@@ -494,6 +492,7 @@ id textView81
 id textView83
 id textView9
 id textViewArq
+id textViewLocal
 id textViewOff
 id textViewValores
 id textVoluntario
@@ -551,9 +550,11 @@ layout eventos_adapter
 layout eventos_arq_adapter
 layout header_menu
 layout header_menu_off
+layout item_local_list_recycle
 layout item_recycle
 layout item_recycle_donation_obj
 layout loading_screen
+layout local_edit_recycle
 layout splash_screen
 menu main_menu
 mipmap ic_launcher

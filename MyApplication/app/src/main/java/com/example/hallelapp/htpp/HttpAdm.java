@@ -3,6 +3,7 @@ package com.example.hallelapp.htpp;
 import android.util.Log;
 
 import com.example.hallelapp.model.InformacoesDaSessao;
+import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.payload.requerimento.AdministradorLoginRequest;
 import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
 import com.example.hallelapp.payload.requerimento.EventosRequest;
@@ -32,6 +33,7 @@ public class HttpAdm {
     private String token;
 
     //lorenzo
+
     private static final String UrlBase = "http://192.168.1.7:8080/api/administrador";
 
     private static final String UrlBaseMembro = "http://192.168.1.7:8080/api/";
@@ -39,8 +41,15 @@ public class HttpAdm {
     private static final String UrlBaseAssociado = "http://192.168.1.7:8080/api/associado/";
 
 
+
     //fernanda
-  //  private static final String UrlBase = "http://192.168.100.36:8080/api/administrador";
+
+    /*
+    private static final String UrlBase = "http://192.168.100.36:8080/api/administrador";
+    private static final String UrlBaseMembro = "http://192.168.100.36:8080/api/";
+    private static final String UrlBaseAssociado = "http://192.168.100.36:8080/api/associado/";;
+*/
+
 
     public static final MediaType JSON = MediaType.get("application/json");
 
@@ -232,6 +241,101 @@ public class HttpAdm {
         });
     }
 
+
+    public void EditLocaisEventos(LocalEventoReq localEventoReq,String id, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
+        String json = gson.toJson(localEventoReq);
+
+
+
+        String url = UrlBase + "/locais/"+id+"/edit";
+
+        Log.d("HttpADM", "url: " + url);
+
+
+        token =authenticationResponse.getToken();
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .put(body)
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
+    public void DeleteLocaisEventos(LocalEvento localEvento, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+
+
+
+
+        String url = UrlBase + "/locais/"+localEvento.getId()+"/delete";
+
+        Log.d("HttpADM", "url: " + url);
+
+
+        token =authenticationResponse.getToken();
+
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .delete()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
 
 
 
@@ -451,6 +555,48 @@ public class HttpAdm {
         });
     }
 
+
+    public void ListParticipantesEvento(String idEventos, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
+    ) {
+
+
+        OkHttpClient client = new OkHttpClient();
+
+        String url = UrlBase + "/eventos/"+idEventos+"/get/participantes";
+
+        Log.d("HttpADM", "url: " + url);
+
+
+        token =authenticationResponse.getToken();
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+
+                System.out.println("deu errado");
+
+                callback.onFailure(e);
+            }
+        });
+    }
 
 
 

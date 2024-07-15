@@ -76,6 +76,15 @@
             android:name="com.example.hallelapp.activity.ListLocaisActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.hallelapp.activity.EditLocalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.VizualizarEventosParticipantes"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.ListParticipantesEventoActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.CreateEventosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

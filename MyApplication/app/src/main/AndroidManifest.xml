@@ -65,6 +65,21 @@
             android:exported="false" />
 
         <activity
+            android:name=".activity.EditLocalActivity"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name=".activity.VizualizarEventosParticipantes"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.ListParticipantesEventoActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".activity.CreateEventosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize"></activity>

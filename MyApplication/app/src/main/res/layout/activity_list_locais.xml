@@ -67,8 +67,8 @@
         app:layout_constraintVertical_bias="0.035" />
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="407dp"
+        android:layout_height="433dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,19 +78,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <TableLayout
-                android:id="@+id/tableLayoutLocais"
-                android:layout_width="372dp"
-                android:layout_height="385dp"
-                android:background="@drawable/background_edittext"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.487"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonAddLocal"
-                app:layout_constraintVertical_bias="0.621">
-            </TableLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_local_list_recycle">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
         </LinearLayout>
+
     </ScrollView>
 
     <TextView
