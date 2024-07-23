@@ -3409,6 +3409,7 @@ int id counterclockwise 0x7f0a00d9
 int id cpfParticipante 0x7f0a00da
 int id cpfUser 0x7f0a00db
 int id cpfassociado 0x7f0a00dc
+int id cpfmembro 0x7f0a0342
 int id cradle 0x7f0a00dd
 int id currentState 0x7f0a00de
 int id custom 0x7f0a00df
@@ -3416,6 +3417,7 @@ int id customPanel 0x7f0a00e0
 int id cut 0x7f0a00e1
 int id cvccartao 0x7f0a00e2
 int id dataNascAssociado 0x7f0a00e3
+int id dataNascMembro 0x7f0a0343
 int id date_picker_actions 0x7f0a00e4
 int id decelerate 0x7f0a00e5
 int id decelerateAndComplete 0x7f0a00e6
@@ -3468,6 +3470,7 @@ int id editTextNumber2cartao 0x7f0a0114
 int id edit_query 0x7f0a0115
 int id elastic 0x7f0a0116
 int id emailAssociado 0x7f0a0117
+int id emailMembro 0x7f0a0344
 int id emailParticipante 0x7f0a0118
 int id emailuser 0x7f0a0119
 int id embed 0x7f0a011a
@@ -3686,6 +3689,7 @@ int id neverCompleteToStart 0x7f0a01ee
 int id noScroll 0x7f0a01ef
 int id noState 0x7f0a01f0
 int id nomeCompletoAssociado 0x7f0a01f1
+int id nomeCompletoMembro 0x7f0a0345
 int id nomePagador 0x7f0a01f2
 int id nomePagadorassociado 0x7f0a01f3
 int id nomeParticipante 0x7f0a01f4
@@ -3700,6 +3704,7 @@ int id notification_background 0x7f0a01fc
 int id notification_main_column 0x7f0a01fd
 int id notification_main_column_container 0x7f0a01fe
 int id numeroTelAssociado 0x7f0a01ff
+int id numeroTelMembro 0x7f0a0346
 int id numeroTelefone 0x7f0a0200
 int id numero_cartao 0x7f0a0201
 int id numerocart 0x7f0a0202
@@ -3841,7 +3846,6 @@ int id tableLayoutAssociados 0x7f0a0289
 int id tableLayoutDoacao 0x7f0a028a
 int id tableLayoutDoacaoDinheiro 0x7f0a028b
 int id tableLayoutEditLocais 0x7f0a028c
-int id tableLayoutLocais 0x7f0a028d
 int id tableLayoutParticipantes 0x7f0a028e
 int id tableLayoutVoluntarios 0x7f0a028f
 int id tag_accessibility_actions 0x7f0a0290
@@ -3952,8 +3956,10 @@ int id textView73 0x7f0a02f8
 int id textView74 0x7f0a02f9
 int id textView75 0x7f0a02fa
 int id textView76 0x7f0a02fb
+int id textView76cpfmembro 0x7f0a0347
 int id textView77 0x7f0a02fc
 int id textView78 0x7f0a02fd
+int id textView78membrodn 0x7f0a0348
 int id textView79 0x7f0a02fe
 int id textView8 0x7f0a02ff
 int id textView80 0x7f0a0300
@@ -3961,8 +3967,11 @@ int id textView81 0x7f0a0301
 int id textView83 0x7f0a0302
 int id textView9 0x7f0a0303
 int id textViewArq 0x7f0a0304
+int id textViewEmailmembro 0x7f0a0349
 int id textViewOff 0x7f0a0305
 int id textViewValores 0x7f0a0306
+int id textViewnomecompleto 0x7f0a034a
+int id textViewnumerotelefone 0x7f0a034b
 int id textVoluntario 0x7f0a0307
 int id text_input_end_icon 0x7f0a0308
 int id text_input_error_icon 0x7f0a0309
@@ -4141,6 +4150,7 @@ int layout activity_adm_doacaodinheiro 0x7f0d001d
 int layout activity_cadastro 0x7f0d001e
 int layout activity_create_eventos 0x7f0d001f
 int layout activity_dados_associado 0x7f0d0020
+int layout activity_dados_membro 0x7f0d0095
 int layout activity_dados_participante 0x7f0d0021
 int layout activity_direcionamento_doacao 0x7f0d0022
 int layout activity_doacao_obj_ali 0x7f0d0023
@@ -4192,6 +4202,7 @@ int layout eventos_adapter 0x7f0d0050
 int layout eventos_arq_adapter 0x7f0d0051
 int layout header_menu 0x7f0d0052
 int layout header_menu_off 0x7f0d0053
+int layout item_local_list_recycle 0x7f0d0096
 int layout item_recycle 0x7f0d0054
 int layout item_recycle_donation_obj 0x7f0d0055
 int layout loading_screen 0x7f0d0056

@@ -25,7 +25,7 @@
                 android:background="#FFFFFF">
 
                 <TableLayout
-                    android:id="@+id/tableLayoutDoacao"
+                    android:id="@+id/tableLayoutDoacaoDinheiro"
                     android:layout_width="341dp"
                     android:layout_height="559dp"
                     android:background="@drawable/background_edittext"
@@ -35,42 +35,121 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.908">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter"
-                        android:padding="8dp"
-                        android:text="Nome do membro"
-                        android:textColor="@color/cortexto2"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:padding="8dp"
-                        android:text="Silvio Silva Vieira"
-                        android:textColor="@color/cordetextohallel"
-                        android:textStyle="bold" />
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:padding="8dp"
+                            android:text="Doador"
+                            android:textColor="@color/cortexto2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:padding="8dp"
+                            android:text="Objeto"
+                            android:textColor="@color/cortexto2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:padding="8dp"
+                            android:text="Quantidade"
+                            android:textColor="@color/cortexto2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </TableRow>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:padding="8dp"
-                        android:text="Gisele Saraiva Vieira"
-                        android:textColor="@color/cordetextohallel"
-                        android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:padding="8dp"
-                        android:text="Lorenzo Aviz dos Santos"
-                        android:textColor="@color/cordetextohallel"
-                        android:textStyle="bold" />
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Fernanda Freitas"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold"
+                            android:maxLength="19"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Carrinho"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="5"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Gisele Saraiva Vieira"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold"
+                            android:maxLength="15"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Boneca"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="19"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Lorenzo Aviz dos Santos"
+                            android:maxLength="19"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Arroz"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="12"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                    </TableRow>
 
                 </TableLayout>
 

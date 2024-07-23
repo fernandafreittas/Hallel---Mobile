@@ -3410,6 +3410,7 @@ id counterclockwise
 id cpfParticipante
 id cpfUser
 id cpfassociado
+id cpfmembro
 id cradle
 id currentState
 id custom
@@ -3417,6 +3418,7 @@ id customPanel
 id cut
 id cvccartao
 id dataNascAssociado
+id dataNascMembro
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3469,6 +3471,7 @@ id editTextNumber2cartao
 id edit_query
 id elastic
 id emailAssociado
+id emailMembro
 id emailParticipante
 id emailuser
 id embed
@@ -3687,6 +3690,7 @@ id neverCompleteToStart
 id noScroll
 id noState
 id nomeCompletoAssociado
+id nomeCompletoMembro
 id nomePagador
 id nomePagadorassociado
 id nomeParticipante
@@ -3701,6 +3705,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id numeroTelAssociado
+id numeroTelMembro
 id numeroTelefone
 id numero_cartao
 id numerocart
@@ -3842,7 +3847,6 @@ id tableLayoutAssociados
 id tableLayoutDoacao
 id tableLayoutDoacaoDinheiro
 id tableLayoutEditLocais
-id tableLayoutLocais
 id tableLayoutParticipantes
 id tableLayoutVoluntarios
 id tag_accessibility_actions
@@ -3953,8 +3957,10 @@ id textView73
 id textView74
 id textView75
 id textView76
+id textView76cpfmembro
 id textView77
 id textView78
+id textView78membrodn
 id textView79
 id textView8
 id textView80
@@ -3962,8 +3968,11 @@ id textView81
 id textView83
 id textView9
 id textViewArq
+id textViewEmailmembro
 id textViewOff
 id textViewValores
+id textViewnomecompleto
+id textViewnumerotelefone
 id textVoluntario
 id text_input_end_icon
 id text_input_error_icon
@@ -4142,6 +4151,7 @@ layout activity_adm_doacaodinheiro
 layout activity_cadastro
 layout activity_create_eventos
 layout activity_dados_associado
+layout activity_dados_membro
 layout activity_dados_participante
 layout activity_direcionamento_doacao
 layout activity_doacao_obj_ali
@@ -4193,6 +4203,7 @@ layout eventos_adapter
 layout eventos_arq_adapter
 layout header_menu
 layout header_menu_off
+layout item_local_list_recycle
 layout item_recycle
 layout item_recycle_donation_obj
 layout loading_screen
