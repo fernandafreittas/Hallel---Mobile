@@ -25,7 +25,7 @@
                 android:background="#FFFFFF">
 
                 <TableLayout
-                    android:id="@+id/tableLayoutDoacaoDinheiro"
+                    android:id="@+id/tableLayoutDoacao"
                     android:layout_width="341dp"
                     android:layout_height="559dp"
                     android:background="@drawable/background_edittext"
@@ -60,7 +60,16 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/inter"
                             android:padding="8dp"
-                            android:text="Quantidade"
+                            android:text="Quanti..."
+                            android:textColor="@color/cortexto2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter"
+                            android:padding="8dp"
+                            android:text="Recebido"
                             android:textColor="@color/cortexto2"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -76,7 +85,7 @@
                             android:text="Fernanda Freitas"
                             android:textColor="@color/cordetextohallel"
                             android:textStyle="bold"
-                            android:maxLength="19"/>
+                            android:maxLength="12"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -93,6 +102,14 @@
                             android:text="5"
                             android:textColor="@color/cordetextohallel"
                             android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Sim"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
                     </TableRow>
 
                     <TableRow>
@@ -104,7 +121,7 @@
                             android:text="Gisele Saraiva Vieira"
                             android:textColor="@color/cordetextohallel"
                             android:textStyle="bold"
-                            android:maxLength="15"/>
+                            android:maxLength="12"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -121,6 +138,14 @@
                             android:text="19"
                             android:textColor="@color/cordetextohallel"
                             android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Não"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
                     </TableRow>
 
                     <TableRow>
@@ -130,7 +155,7 @@
                             android:fontFamily="@font/inter_semibold"
                             android:padding="8dp"
                             android:text="Lorenzo Aviz dos Santos"
-                            android:maxLength="19"
+                            android:maxLength="12"
                             android:textColor="@color/cordetextohallel"
                             android:textStyle="bold" />
                         <TextView
@@ -147,6 +172,14 @@
                             android:fontFamily="@font/inter_semibold"
                             android:padding="8dp"
                             android:text="12"
+                            android:textColor="@color/cordetextohallel"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="8dp"
+                            android:text="Sim"
                             android:textColor="@color/cordetextohallel"
                             android:textStyle="bold" />
                     </TableRow>
