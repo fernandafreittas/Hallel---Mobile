@@ -56,6 +56,7 @@ drawable edit_vector
 drawable elipse_perfil_capa
 drawable ellipse_92
 drawable erroatention
+drawable event_list_vector
 drawable fechar_header
 drawable foto_de_perfil
 drawable foto_de_perfil2
@@ -127,9 +128,11 @@ drawable img_fundo
 drawable input_text
 drawable input_text_cartao
 drawable line_75
+drawable login_adm_vector
 drawable logohallel
 drawable logohallelpng
 drawable missoes_vector
+drawable my_donation
 drawable olhosenha
 drawable pagamento_feito
 drawable pix_icon_198027_2_1
@@ -331,6 +334,9 @@ id mostraConfirmarSenha
 id mostraSenha
 id nav_home
 id nav_home10
+id nav_home11
+id nav_home12
+id nav_home13
 id nav_home2
 id nav_home3
 id nav_home4

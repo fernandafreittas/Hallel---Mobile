@@ -1,35 +1,31 @@
 [
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_capa_more_infos.png.flat",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\capa_more_infos.png"
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_button_verde.xml.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_button_verde.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_more_infos.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_more_infos.xml"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_button_verde.xml.flat",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_button_verde.xml"
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_capa_more_infos.png.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\capa_more_infos.png"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_button_adm.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_button_adm.png"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\font_inter_extrabold.xml.flat",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\font\\inter_extrabold.xml"
-    },
-    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_input_text.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\input_text.xml"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_loading_screen.xml.flat",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\loading_screen.xml"
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\font_inter_extrabold.xml.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\font\\inter_extrabold.xml"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_adm_doacaoalimento.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_adm_doacaoalimento.xml"
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_loading_screen.xml.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\loading_screen.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_logohallel.png.flat",
@@ -116,6 +112,10 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\eventos_arq_adapter.xml"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/menu_main_menu.xml.flat",
+        "source": "com.example.hallelapp-main-36:/menu/main_menu.xml"
+    },
+    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -134,10 +134,6 @@
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_item_recycle.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\item_recycle.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_list_locais.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_list_locais.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_filtro.xml.flat",
@@ -190,6 +186,10 @@
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_voluntario.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_voluntario.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/drawable_my_donation.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/my_donation.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_background_edittext.xml.flat",
@@ -304,12 +304,12 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\button_adicionar_name.png"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_vector_doacao.png.flat",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\vector_doacao.png"
-    },
-    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_vector_arquivados.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\vector_arquivados.png"
+    },
+    {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_vector_doacao.png.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\vector_doacao.png"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_edit_locais.xml.flat",
@@ -384,12 +384,12 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\image_74.png"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_act.xml.flat",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_act.xml"
-    },
-    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_borda_button.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\borda_button.png"
+    },
+    {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_act.xml.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_act.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_donation_obj.png.flat",
@@ -484,10 +484,6 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\olhosenha.png"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_adm_doacaodinheiro.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_adm_doacaodinheiro.xml"
-    },
-    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_header_menu_off.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\header_menu_off.xml"
     },
@@ -516,6 +512,10 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_doar_pevento.xml"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/drawable_login_adm_vector.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/login_adm_vector.xml"
+    },
+    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_doacao_obj_ali.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_doacao_obj_ali.xml"
     },
@@ -536,20 +536,16 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_eventos_adm_donation1.png"
     },
     {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_list_locais.xml.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_locais.xml"
+    },
+    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_edit_text.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_edit_text.png"
-    },
-    {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_list_locais.xml.flat",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_locais.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-debug-34:/layout_item_local_list_recycle.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/item_local_list_recycle.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_boleto.png.flat",
@@ -564,8 +560,16 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\baseline_arrow_back_ios_24.xml"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/drawable_event_list_vector.xml.flat",
+        "source": "com.example.hallelapp-main-36:/drawable/event_list_vector.xml"
+    },
+    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_delete_obj.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\delete_obj.png"
+    },
+    {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_dados_membro.xml.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_dados_membro.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_adm_doacaoalimento.xml.flat",
@@ -606,6 +610,10 @@
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_headerbottom.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\headerbottom.png"
+    },
+    {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_item_local_list_recycle.xml.flat",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\item_local_list_recycle.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -786,9 +794,5 @@
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_agenda_perfil.png.flat",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\agenda_perfil.png"
-    },
-    {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_dados_membro.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_dados_membro.xml"
     }
 ]

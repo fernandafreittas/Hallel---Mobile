@@ -47,6 +47,17 @@
             android:icon="@drawable/icon_shop"
             android:title="Loja" />
 
+        <item
+            android:id="@+id/nav_home12"
+            android:icon="@drawable/event_list_vector"
+            android:title="Eventos que participo" />
+
+        <item
+            android:id="@+id/nav_home13"
+            android:icon="@drawable/my_donation"
+            android:title="Minhas doações" />
+
+
     </group>
 
     <group android:checkableBehavior="single">
@@ -58,6 +69,12 @@
                     android:id="@+id/nav_login"
                     android:icon="@drawable/add"
                     android:title="Adicionar conta" />
+
+                <item
+                    android:id="@+id/nav_home11"
+                    android:icon="@drawable/login_adm_vector"
+                    android:title="Login administrador" />
+
                 <item
                     android:id="@+id/nav_logout"
                     android:icon="@drawable/icon_logout"

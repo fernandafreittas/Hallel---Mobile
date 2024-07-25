@@ -33,14 +33,14 @@ public class HttpMain {
 
 
     // estou colocando o ip do meu computador pois se eu colocar local host
-    // ele irá procurar dentro do celular emulado e não da maquina
+    // ele irá procurar dentro do celular emulador e não da maquina
 
     //lolo
     //private static final String UrlBase = "http://192.168.1.4:8080/api/";
 
     //fernanda casa
 
-    private static final String UrlBase = "http://10.100.82.4:8080/api/";
+    private static final String UrlBase = "http://192.168.100.36:8080/api/";
 
     //private static final String UrlBase = "http://10.100.85.80:8080/api/";
     //private static final String UrlAdm = "administrador/";

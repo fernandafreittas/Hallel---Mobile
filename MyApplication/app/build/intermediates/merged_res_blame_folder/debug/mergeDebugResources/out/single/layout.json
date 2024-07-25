@@ -32,12 +32,12 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_cadastrosucesso.xml"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_perfil.xml",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_perfil.xml"
-    },
-    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_cadastro.xml",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_cadastro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_perfil.xml",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_perfil.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_more_infos.xml",
@@ -96,10 +96,6 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_vizualizar_eventos_edit.xml"
     },
     {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_dados_membro.xml",
-        "source": "com.example.hallelapp-main-36:/layout/activity_dados_membro.xml"
-    },
-    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_eventos_adm.xml",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_eventos_adm.xml"
     },
@@ -110,14 +106,6 @@
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_doar_pevento.xml",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_doar_pevento.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/item_local_list_recycle.xml",
-        "source": "com.example.hallelapp-main-36:/layout/item_local_list_recycle.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_list_locais.xml",
-        "source": "com.example.hallelapp-main-36:/layout/activity_list_locais.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_dados_associado.xml",
@@ -140,8 +128,16 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_locais.xml"
     },
     {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_dados_membro.xml",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_dados_membro.xml"
+    },
+    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_login.xml",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\item_local_list_recycle.xml",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\item_local_list_recycle.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\splash_screen.xml",
@@ -168,12 +164,12 @@
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\eventos_adapter.xml"
     },
     {
-        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\header_menu_off.xml",
-        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\header_menu_off.xml"
-    },
-    {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_list_member.xml",
         "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_member.xml"
+    },
+    {
+        "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\header_menu_off.xml",
+        "source": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\header_menu_off.xml"
     },
     {
         "merged": "C:\\Users\\Fernanda Freitas\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\item_recycle_donation_obj.xml",
