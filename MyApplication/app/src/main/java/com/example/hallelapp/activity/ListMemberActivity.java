@@ -2,6 +2,7 @@ package com.example.hallelapp.activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -33,14 +34,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ListMemberActivity extends AppCompatActivity {
 
+public class ListMemberActivity extends AppCompatActivity {
 
     Context context = this;
 
-    List<String> listaDeNomes;
+    List<MembroResponse> listaDeMembros;
     private AlertDialog loadingDialog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +48,8 @@ public class ListMemberActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_list_member);
 
-
         AuthenticationResponse authenticationResponse = (AuthenticationResponse) getIntent().getSerializableExtra("informaçõesADM");
-
-
         HttpAdm requisicao = new HttpAdm();
-
 
         TableLayout tableLayout = findViewById(R.id.tableLayout);
         Button btnAZ = findViewById(R.id.buttonAz);
@@ -66,18 +62,14 @@ public class ListMemberActivity extends AppCompatActivity {
                 System.out.println(response);
                 hideLoadingDialog();
                 Type listType = new TypeToken<List<MembroResponse>>() {}.getType();
-                List<MembroResponse> responseMembro = new Gson().fromJson(response, listType);
-
+                listaDeMembros = new Gson().fromJson(response, listType);
 
                 List<String> nomesDosMembros = new ArrayList<>();
-
-                for (MembroResponse membro : responseMembro) {
+                for (MembroResponse membro : listaDeMembros) {
                     nomesDosMembros.add(membro.getNome());
                 }
 
-                listaDeNomes = nomesDosMembros;
-
-                // Agora você tem uma lista de nomes de membros
+                // Agora você tem uma lista de objetos MembroResponse e uma lista de nomes dos membros
                 System.out.println("Nomes dos membros:");
                 for (String nome : nomesDosMembros) {
                     System.out.println(nome);
@@ -86,33 +78,46 @@ public class ListMemberActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                for (String membro : nomesDosMembros) {
-                    TextView textView = new TextView(context);
-                    textView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
-                    textView.setText(membro);
-                    textView.setTextColor(getResources().getColor(R.color.cordetextohallel)); // Defina a cor do texto conforme necessário
-                    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
-                    textView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
-                    textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold)); // Defina o tipo de fonte conforme necessário
-                    tableLayout.addView(textView);
-                }
+                        for (String nome : nomesDosMembros) {
+                            TextView textView = new TextView(context);
+                            textView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+                            textView.setText(nome);
+                            textView.setTextColor(getResources().getColor(R.color.cordetextohallel));
+                            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+                            textView.setPadding(8, 8, 8, 8);
+                            textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold));
+
+                            // Adicione o OnClickListener
+                            textView.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    for (MembroResponse membro : listaDeMembros) {
+                                        if (membro.getNome().equals(nome)) {
+                                            Intent intent = new Intent(ListMemberActivity.this, InformacoesDoMembroActivity.class);
+                                            intent.putExtra("membro", membro); // Passa o objeto membro
+                                            startActivity(intent);
+                                            break;
+                                        }
+                                    }
+                                }
+                            });
+
+                            tableLayout.addView(textView);
+                        }
                     }
                 });
-
             }
 
             @Override
             public void onFailure(IOException e) {
-
+                hideLoadingDialog();
+                // Tratar falhas de rede aqui
             }
         });
-
 
         btnAZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 // Limpar todas as visualizações
                 tableLayout.removeAllViews();
 
@@ -120,34 +125,40 @@ public class ListMemberActivity extends AppCompatActivity {
                 TextView staticTextView = new TextView(ListMemberActivity.this);
                 staticTextView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
                 staticTextView.setText("Nome do membro");
-                staticTextView.setTextColor(getResources().getColor(R.color.cortexto2)); // Defina a cor do texto conforme necessário
-                staticTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
-                staticTextView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
-                staticTextView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_extrabold)); // Defina o tipo de fonte conforme necessário
+                staticTextView.setTextColor(getResources().getColor(R.color.cortexto2));
+                staticTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+                staticTextView.setPadding(8, 8, 8, 8);
+                staticTextView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_extrabold));
                 tableLayout.addView(staticTextView);
 
-                Collections.sort(listaDeNomes);
+                Collections.sort(listaDeMembros, (a, b) -> a.getNome().compareTo(b.getNome()));
 
+                for (MembroResponse membro : listaDeMembros) {
+                    TextView textView = new TextView(context);
+                    textView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+                    textView.setText(membro.getNome());
+                    textView.setTextColor(getResources().getColor(R.color.cordetextohallel));
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+                    textView.setPadding(8, 8, 8, 8);
+                    textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold));
 
-                        for (String membro : listaDeNomes) {
-                            TextView textView = new TextView(context);
-                            textView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
-                            textView.setText(membro);
-                            textView.setTextColor(getResources().getColor(R.color.cordetextohallel)); // Defina a cor do texto conforme necessário
-                            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
-                            textView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
-                            textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold)); // Defina o tipo de fonte conforme necessário
-                            tableLayout.addView(textView);
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(ListMemberActivity.this, InformacoesDoMembroActivity.class);
+                            intent.putExtra("membro", membro); // Passa o objeto membro
+                            startActivity(intent);
                         }
+                    });
 
-
+                    tableLayout.addView(textView);
+                }
             }
         });
 
         btnZA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 // Limpar todas as visualizações
                 tableLayout.removeAllViews();
 
@@ -155,29 +166,34 @@ public class ListMemberActivity extends AppCompatActivity {
                 TextView staticTextView = new TextView(ListMemberActivity.this);
                 staticTextView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
                 staticTextView.setText("Nome do membro");
-                staticTextView.setTextColor(getResources().getColor(R.color.cortexto2)); // Defina a cor do texto conforme necessário
-                staticTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
-                staticTextView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
-                staticTextView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_extrabold)); // Defina o tipo de fonte conforme necessário
+                staticTextView.setTextColor(getResources().getColor(R.color.cortexto2));
+                staticTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+                staticTextView.setPadding(8, 8, 8, 8);
+                staticTextView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_extrabold));
                 tableLayout.addView(staticTextView);
 
+                Collections.sort(listaDeMembros, (a, b) -> b.getNome().compareTo(a.getNome()));
 
-                Collections.sort(listaDeNomes);
-                Collections.sort(listaDeNomes, Collections.reverseOrder());
-
-
-                for (String membro : listaDeNomes) {
+                for (MembroResponse membro : listaDeMembros) {
                     TextView textView = new TextView(context);
                     textView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
-                    textView.setText(membro);
-                    textView.setTextColor(getResources().getColor(R.color.cordetextohallel)); // Defina a cor do texto conforme necessário
-                    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
-                    textView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
-                    textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold)); // Defina o tipo de fonte conforme necessário
+                    textView.setText(membro.getNome());
+                    textView.setTextColor(getResources().getColor(R.color.cordetextohallel));
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+                    textView.setPadding(8, 8, 8, 8);
+                    textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold));
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(ListMemberActivity.this, InformacoesDoMembroActivity.class);
+                            intent.putExtra("membro", membro); // Passa o objeto membro
+                            startActivity(intent);
+                        }
+                    });
+
                     tableLayout.addView(textView);
                 }
-
-
             }
         });
     }
@@ -199,3 +215,4 @@ public class ListMemberActivity extends AppCompatActivity {
         }
     }
 }
+

@@ -3414,12 +3414,14 @@ int id counterclockwise 0x7f0a00dc
 int id cpfParticipante 0x7f0a00dd
 int id cpfUser 0x7f0a00de
 int id cpfassociado 0x7f0a00df
+int id cpfmembro 0x7f0a0350
 int id cradle 0x7f0a00e0
 int id currentState 0x7f0a00e1
 int id custom 0x7f0a00e2
 int id customPanel 0x7f0a00e3
 int id cut 0x7f0a00e4
 int id dataNascAssociado 0x7f0a00e5
+int id dataNascMembro 0x7f0a0351
 int id date_picker_actions 0x7f0a00e6
 int id decelerate 0x7f0a00e7
 int id decelerateAndComplete 0x7f0a00e8
@@ -3471,6 +3473,7 @@ int id editTextDateassociado 0x7f0a0115
 int id edit_query 0x7f0a0116
 int id elastic 0x7f0a0117
 int id emailAssociado 0x7f0a0118
+int id emailMembro 0x7f0a0352
 int id emailParticipante 0x7f0a0119
 int id emailuser 0x7f0a011a
 int id embed 0x7f0a011b
@@ -3696,6 +3699,7 @@ int id neverCompleteToStart 0x7f0a01f6
 int id noScroll 0x7f0a01f7
 int id noState 0x7f0a01f8
 int id nomeCompletoAssociado 0x7f0a01f9
+int id nomeCompletoMembro 0x7f0a0353
 int id nomePagador 0x7f0a01fa
 int id nomePagadorassociado 0x7f0a01fb
 int id nomeParticipante 0x7f0a01fc
@@ -3710,6 +3714,7 @@ int id notification_background 0x7f0a0204
 int id notification_main_column 0x7f0a0205
 int id notification_main_column_container 0x7f0a0206
 int id numeroTelAssociado 0x7f0a0207
+int id numeroTelMembro 0x7f0a0354
 int id numeroTelefone 0x7f0a0208
 int id numero_cartao 0x7f0a0209
 int id numerocart 0x7f0a020a
@@ -3965,8 +3970,10 @@ int id textView73 0x7f0a0304
 int id textView74 0x7f0a0305
 int id textView75 0x7f0a0306
 int id textView76 0x7f0a0307
+int id textView76cpfmembro 0x7f0a0355
 int id textView77 0x7f0a0308
 int id textView78 0x7f0a0309
+int id textView78membrodn 0x7f0a0356
 int id textView79 0x7f0a030a
 int id textView8 0x7f0a030b
 int id textView80 0x7f0a030c
@@ -3974,9 +3981,12 @@ int id textView81 0x7f0a030d
 int id textView83 0x7f0a030e
 int id textView9 0x7f0a030f
 int id textViewArq 0x7f0a0310
+int id textViewEmailmembro 0x7f0a0357
 int id textViewLocal 0x7f0a034f
 int id textViewOff 0x7f0a0311
 int id textViewValores 0x7f0a0312
+int id textViewnomecompleto 0x7f0a0358
+int id textViewnumerotelefone 0x7f0a0359
 int id textVoluntario 0x7f0a0313
 int id text_input_end_icon 0x7f0a0314
 int id text_input_error_icon 0x7f0a0315
@@ -4156,6 +4166,7 @@ int layout activity_adm_doacaodinheiro 0x7f0d001d
 int layout activity_cadastro 0x7f0d001e
 int layout activity_create_eventos 0x7f0d001f
 int layout activity_dados_associado 0x7f0d0020
+int layout activity_dados_membro 0x7f0d009a
 int layout activity_dados_participante 0x7f0d0021
 int layout activity_direcionamento_doacao 0x7f0d0022
 int layout activity_doacao_obj_ali 0x7f0d0023
@@ -4166,6 +4177,7 @@ int layout activity_eventos_adm 0x7f0d0027
 int layout activity_eventos_arquivados 0x7f0d0028
 int layout activity_form_doacoes 0x7f0d0029
 int layout activity_list_associado 0x7f0d002a
+int layout activity_list_doacao_objetos_alimentos 0x7f0d009b
 int layout activity_list_locais 0x7f0d002b
 int layout activity_list_member 0x7f0d002c
 int layout activity_list_voluntarios_evento 0x7f0d002d

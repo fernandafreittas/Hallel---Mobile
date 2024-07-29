@@ -60,10 +60,6 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\splash_screen.xml"
     },
     {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_participantes_list.xml",
-        "source": "com.example.hallelapp-main-36:/layout/activity_participantes_list.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_pagamento_evento.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_pagamento_evento.xml"
     },
@@ -96,8 +92,20 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_create_eventos.xml"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_list_doacao_objetos_alimentos.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_doacao_objetos_alimentos.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_dados_membro.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_dados_membro.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_dados_associado.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_dados_associado.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "com.example.hallelapp-main-36:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_errocadastro.xml",

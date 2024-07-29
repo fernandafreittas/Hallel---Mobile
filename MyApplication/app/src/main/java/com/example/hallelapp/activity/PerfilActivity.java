@@ -15,12 +15,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallelapp.R;
+import com.example.hallelapp.htpp.HttpAdm;
 import com.example.hallelapp.htpp.HttpAssociado;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.htpp.HttpMembro;
 import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.model.StatusMembro;
 import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
+import com.example.hallelapp.payload.resposta.AuthenticationResponse;
 import com.example.hallelapp.payload.resposta.PagamentoAssociadoPerfilResponse;
 import com.example.hallelapp.payload.resposta.PerfilResponse;
 import com.example.hallelapp.tools.ObterInformacoesDaSecao;
@@ -45,6 +47,7 @@ public class PerfilActivity extends AppCompatActivity {
         HttpMembro requestMembro = new HttpMembro();
         HttpAssociado requestAssociado = new HttpAssociado();
         obterInformacoesDaSecao = new ObterInformacoesDaSecao(this);
+
 
         try {
             informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();

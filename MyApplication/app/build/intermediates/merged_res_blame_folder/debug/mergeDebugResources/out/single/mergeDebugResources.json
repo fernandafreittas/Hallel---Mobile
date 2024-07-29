@@ -44,12 +44,12 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_branco_com_sombra.png"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_image_75.png.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\image_75.png"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_button_crash.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\button_crash.png"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_image_75.png.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\image_75.png"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_login_adm_activiy.xml.flat",
@@ -128,16 +128,16 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\boleto.png"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_participar_de_eventos.xml.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_participar_de_eventos.xml"
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_camping.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_camping.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_dialog_pagamentosucesso.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_pagamentosucesso.xml"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_camping.xml.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\icon_camping.xml"
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_participar_de_eventos.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_participar_de_eventos.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_filtro.xml.flat",
@@ -172,12 +172,12 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_more_info_text.xml"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_circulo_verdeclaro.xml.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\circulo_verdeclaro.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_edit_local.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\fundo_edit_local.png"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_circulo_verdeclaro.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\circulo_verdeclaro.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_desc_info.png.flat",
@@ -186,6 +186,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_doacao_obj_ali.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_doacao_obj_ali.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_list_doacao_objetos_alimentos.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_doacao_objetos_alimentos.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_dados_participante.xml.flat",
@@ -256,12 +260,12 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\foto_de_perfil.png"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_background_perfil_button.xml.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\background_perfil_button.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_testeiconhome.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\testeiconhome.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_background_perfil_button.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\background_perfil_button.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_icon_edit_event.png.flat",
@@ -424,10 +428,6 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\gift.png"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_participantes_list.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_participantes_list.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_pagamento_feito.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\pagamento_feito.png"
     },
@@ -438,6 +438,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_doar_pevento.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_doar_pevento.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_dados_membro.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_dados_membro.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_frame_voluntario.png.flat",
@@ -792,16 +796,20 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\headercolor.png"
     },
     {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_main.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_resource__.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\resource__.png"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\font_inter_extrabold.xml.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\font\\inter_extrabold.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\layout_activity_adm_doacaodinheiro.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_adm_doacaodinheiro.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\font_inter_extrabold.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\font\\inter_extrabold.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_borda_button.png.flat",

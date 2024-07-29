@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.ListDoacaoObjetosAlimentos"
+            android:exported="false" />
+        <activity
             android:name=".activity.ListVoluntariosEventoActivity"
             android:exported="false" />
         <activity
@@ -55,34 +58,34 @@
         <activity
             android:name=".activity.EditEventoActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.VizualizarEventosVoluntario"
             android:exported="false" />
-
         <activity
             android:name=".activity.ListLocaisActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.EditLocalActivity"
             android:exported="false" />
-
-
-
         <activity
             android:name=".activity.VizualizarEventosParticipantes"
             android:exported="false" />
-
         <activity
             android:name=".activity.ListParticipantesEventoActivity"
             android:exported="false" />
-
-
+        <activity
+            android:name=".activity.InformacoesDoMembroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ListDoacoesDinheirEvento"
+            android:exported="false" />
+        <activity
+            android:name=".activity.VizualizarEventosDoacao"
+            android:exported="false" />
         <activity
             android:name=".activity.CreateEventosActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activity.EventosAdmActivity"
             android:exported="false" />
@@ -108,6 +111,10 @@
             android:name=".activity.VizualizaEventosActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.VizualizarEventosDoacaoObjetos"
+            android:exported="false" />
+
+        <activity
             android:name=".activity.CadastroActivity"
             android:exported="false" />
         <activity
@@ -120,9 +127,12 @@
             android:name=".activity.DoacaoDeObjetosAlimentosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.SplashActivity"
             android:exported="true"

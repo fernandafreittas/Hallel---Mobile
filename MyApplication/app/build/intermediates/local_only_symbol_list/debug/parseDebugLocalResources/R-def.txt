@@ -246,7 +246,9 @@ id buttoncursos
 id cpfParticipante
 id cpfUser
 id cpfassociado
+id cpfmembro
 id dataNascAssociado
+id dataNascMembro
 id deletar
 id demonstracao
 id destaqueEvento
@@ -262,6 +264,7 @@ id editText6
 id editTextDate
 id editTextDateassociado
 id emailAssociado
+id emailMembro
 id emailParticipante
 id emailuser
 id fazerLogin
@@ -350,6 +353,7 @@ id nav_login
 id nav_logout
 id navigation_bar
 id nomeCompletoAssociado
+id nomeCompletoMembro
 id nomePagador
 id nomePagadorassociado
 id nomeParticipante
@@ -358,6 +362,7 @@ id nome_usuarioMain
 id nomeevento
 id nometitularcartao
 id numeroTelAssociado
+id numeroTelMembro
 id numeroTelefone
 id numero_cartao
 id numerocart
@@ -483,8 +488,10 @@ id textView73
 id textView74
 id textView75
 id textView76
+id textView76cpfmembro
 id textView77
 id textView78
+id textView78membrodn
 id textView79
 id textView8
 id textView80
@@ -492,9 +499,12 @@ id textView81
 id textView83
 id textView9
 id textViewArq
+id textViewEmailmembro
 id textViewLocal
 id textViewOff
 id textViewValores
+id textViewnomecompleto
+id textViewnumerotelefone
 id textVoluntario
 id titleParticipar
 id titledoacao
@@ -512,6 +522,7 @@ layout activity_adm_doacaodinheiro
 layout activity_cadastro
 layout activity_create_eventos
 layout activity_dados_associado
+layout activity_dados_membro
 layout activity_dados_participante
 layout activity_direcionamento_doacao
 layout activity_doacao_obj_ali
@@ -522,6 +533,7 @@ layout activity_eventos_adm
 layout activity_eventos_arquivados
 layout activity_form_doacoes
 layout activity_list_associado
+layout activity_list_doacao_objetos_alimentos
 layout activity_list_locais
 layout activity_list_member
 layout activity_list_voluntarios_evento

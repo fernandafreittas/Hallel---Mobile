@@ -21,6 +21,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.hallelapp.MainActivity;
 import com.example.hallelapp.R;
 import com.example.hallelapp.databinding.ActivityLoginBinding;
 import com.example.hallelapp.databinding.ActivityMainBinding;
@@ -103,7 +104,9 @@ public class LoginActivity extends AppCompatActivity {
                             Membro membro = loginResponse.getMembro();
                             informacoesDaSessao.setId(membro.getId());
 
-                            finish();
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            intent.putExtra("logadoRecentemente", 1);
+                            startActivity(intent);
 
                         }
 

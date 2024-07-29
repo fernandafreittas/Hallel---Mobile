@@ -3,9 +3,11 @@ package com.example.hallelapp.payload.resposta;
 import com.example.hallelapp.model.Roles;
 import com.example.hallelapp.model.StatusMembro;
 
+import java.io.Serializable;
+import java.util.Date;
 import java.util.Set;
 
-public class MembroResponse {
+public class MembroResponse implements Serializable {
 
 
     private String id;
@@ -17,16 +19,9 @@ public class MembroResponse {
     private Integer idade;
     private String imagem;
 
-    public MembroResponse(String id, String nome, String email, StatusMembro statusMembro, Set<Roles> roles, String cpf, Integer idade, String imagem) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.statusMembro = statusMembro;
-        this.roles = roles;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.imagem = imagem;
-    }
+    private String telefone;
+
+    private Date dataNascimento;
 
     public String getId() {
         return id;
@@ -92,6 +87,22 @@ public class MembroResponse {
         this.imagem = imagem;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
     @Override
     public String toString() {
         return "MembroResponse{" +
@@ -103,6 +114,8 @@ public class MembroResponse {
                 ", cpf='" + cpf + '\'' +
                 ", idade=" + idade +
                 ", imagem='" + imagem + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", dataNascimento=" + dataNascimento +
                 '}';
     }
 }

@@ -31,6 +31,9 @@
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.hallelapp.activity.ListDoacaoObjetosAlimentos"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.ListVoluntariosEventoActivity"
             android:exported="false" />
         <activity
@@ -85,6 +88,15 @@
             android:name="com.example.hallelapp.activity.ListParticipantesEventoActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.hallelapp.activity.InformacoesDoMembroActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.ListDoacoesDinheirEvento"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.VizualizarEventosDoacao"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.CreateEventosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
@@ -111,6 +123,9 @@
             android:exported="false" />
         <activity
             android:name="com.example.hallelapp.activity.VizualizaEventosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hallelapp.activity.VizualizarEventosDoacaoObjetos"
             android:exported="false" />
         <activity
             android:name="com.example.hallelapp.activity.CadastroActivity"

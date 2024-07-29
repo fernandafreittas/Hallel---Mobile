@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
@@ -53,6 +56,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    // Declaração de componentes da interface
     private ImageButton btnPerfil;
     private Button btnVerEventos;
     private DrawerLayout drawerLayout;
@@ -61,17 +65,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final int idSair = R.id.sairButton;
 
     List<AllEventosListResponse> responseEventos;
-
     InformacoesDaSessao informacoesDeLogin;
-
     ObterInformacoesDaSecao obterInformacoesDaSecao;
-
     int indexArray = 0;
-
     private TextView nomeEvento;
-
-
     PerfilResponse perfilResponse;
+
+    int logadoRecentemente;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +80,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // declaração dos componentes
-
+        // Inicialização dos componentes da interface
         navigationView = findViewById(R.id.navigation_bar);
         navigationView.setNavigationItemSelectedListener(this);
         btnPerfil = findViewById(R.id.btnperfil);
@@ -90,63 +90,57 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ImageView imagemEventos = findViewById(R.id.imgevento);
         ImageButton botaoAvancaEvento = findViewById(R.id.imageButton3);
         ImageButton botaoRetrocederEvento = findViewById(R.id.imageButton2);
-        Button login = findViewById(R.id.buttonDoacao);
         Button loginADM = findViewById(R.id.button);
 
+
+
+        // Verifica se o extra "logadoRecentemente" não é nulo antes de fazer o cast
+        if (getIntent().getSerializableExtra("logadoRecentemente") != null) {
+             logadoRecentemente = (int) getIntent().getSerializableExtra("logadoRecentemente");
+            // Use logadoRecentemente conforme necessário
+        } else {
+            // Trate o caso onde "logadoRecentemente" é nulo
+            Log.e("MainActivity", "logadoRecentemente é nulo!");
+            // Defina um valor padrão ou tome outra ação adequada
+            int logadoRecentemente = 0;
+        }
+
+
+        // Configuração do DrawerLayout
+        drawerLayout = findViewById(R.id.drawer_layout);
+        View headerView = navigationView.getHeaderView(0);
+
+
+        //inicialização do objeto obterInformacoesDaSecao
         obterInformacoesDaSecao = new ObterInformacoesDaSecao(this);
 
-
-        // Verifica se há dados criptografados antes de tentar descriptografar
+        // Verifica e obtém dados de login salvos
         try {
             informacoesDeLogin = obterInformacoesDaSecao.obterDadosSalvos();
         } catch (Exception e) {
             informacoesDeLogin = new InformacoesDaSessao();
+        }
 
-        btnVerEventos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MoreInfosActivity.class);
-                startActivity(intent);
+        // Configuração dos botões
+        btnVerEventos.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MoreInfosActivity.class);
+            startActivity(intent);
+        });
+
+        btnPerfil.setOnClickListener(v -> {
+            if (navigationView.getVisibility() == View.VISIBLE) {
+                navigationView.setVisibility(View.GONE);
+            } else {
+                navigationView.setVisibility(View.VISIBLE);
             }
         });
 
-        btnPerfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (navigationView.getVisibility() == View.VISIBLE) {
-                    navigationView.setVisibility(View.GONE);
-                } else {
-                    navigationView.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-/*
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-=======
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawer_layout), (v, insets) -> {
->>>>>>> 5d7cea3f0799b11ca3e4334519d86ae0e29c51eb
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });*/
-    }
-
-
-
-        System.out.println(informacoesDeLogin.toString());
-
-        // Verifica se o "Lembre de Mim" é falso
-        if (informacoesDeLogin != null && informacoesDeLogin.getLembreDeMin() != null && !informacoesDeLogin.getLembreDeMin()) {
-            SharedPreferences sharedPref = getSharedPreferences(
-                    getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putString("id", null);
-            editor.putString("token", null);
-            editor.putString("informacao1", null);
-            editor.putString("informacao2", null);
-            editor.apply();
+        // Verifica se "Lembre de Mim" é falso e limpa os dados de login
+        if (informacoesDeLogin != null && informacoesDeLogin.getLembreDeMin() != null && !informacoesDeLogin.getLembreDeMin() && logadoRecentemente != 1) {
+            limparDados();
+            informacoesDeLogin.setInformacao1(null);
+            informacoesDeLogin.setInformacao2(null);
+            System.out.println("limpeza");
         }
 
         // Objetos para consumir rotas da API
@@ -156,28 +150,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Renova o token
         if (informacoesDeLogin.getInformacao1() != null && informacoesDeLogin.getInformacao2() != null) {
             LoginRequest loginRequest = new LoginRequest(informacoesDeLogin.getInformacao1(), informacoesDeLogin.getInformacao2());
-            System.out.println(loginRequest.toString());
-
             requisicao.login(loginRequest, new HttpMain.HttpCallback() {
                 @Override
                 public void onSuccess(String response) {
                     LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
-
-                    SharedPreferences sharedPref = getSharedPreferences(
-                            getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-                    System.out.println("Renovação do token: " + loginResponse.getToken());
+                    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putString("token", loginResponse.getToken());
                     editor.apply();
-
                     informacoesDeLogin.setToken(loginResponse.getToken());
+
+                    // Atualiza a interface com as informações de perfil
+                    AppCompatTextView txtNome = headerView.findViewById(R.id.textView);
+                    AppCompatTextView txtEmail = headerView.findViewById(R.id.textView3);
+                    AppCompatImageView imgPerfil = headerView.findViewById(R.id.imageView5);
+
+                    if (perfilResponse != null) {
+                        txtNome.setText(perfilResponse.getNome());
+                        txtEmail.setText(perfilResponse.getEmail());
+                        if (perfilResponse.getImage() != null) {
+                            String suaStringBase64 = perfilResponse.getImage();
+                            String[] partes = suaStringBase64.split(",");
+                            String dadosBase64 = partes[1];
+                            byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                            imgPerfil.setImageBitmap(decodedByte);
+                        }
+                    }
                 }
 
                 @Override
                 public void onFailure(IOException e) {
-                    // Handle failure
+
+                    atualizarInterfaceDeslogado();
+
+
                 }
             });
+        }else{
+           atualizarInterfaceDeslogado();
         }
 
         // Requisição para API - Pega os eventos que estão na API
@@ -186,21 +197,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onSuccess(String response) {
                 new Thread(() -> {
                     Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
-                    List<AllEventosListResponse> responseEventos2 = new Gson().fromJson(response, listType);
-                    responseEventos = responseEventos2;
-                    AllEventosListResponse evento = responseEventos.get(0);
+                    responseEventos = new Gson().fromJson(response, listType);
 
-                    runOnUiThread(() -> {
-                        String StringBase64 = evento.getImagem();
-                        String[] partes = StringBase64.split(",");
-                        String dadosBase64 = partes[1];
+                    if (responseEventos != null && !responseEventos.isEmpty()) {
+                        AllEventosListResponse evento = responseEventos.get(0);
 
-                        byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
-                        imagemEventos.setImageBitmap(decodedByte);
-                        nomeEvento.setText(evento.getTitulo());
-                    });
+                        runOnUiThread(() -> {
+                            String StringBase64 = evento.getImagem();
+                            String[] partes = StringBase64.split(",");
+                            String dadosBase64 = partes[1];
+                            byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                            imagemEventos.setImageBitmap(decodedByte);
+                            nomeEvento.setText(evento.getTitulo());
+                        });
+                    } else {
+                        runOnUiThread(() -> {
+                            // Trate o caso em que não há eventos
+                            nomeEvento.setText("Nenhum evento disponível");
+                        });
+                    }
                 }).start();
             }
 
@@ -208,8 +224,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onFailure(IOException e) {
                 System.out.println("Erro na requisição de eventos");
             }
-
         });
+
 
         // Requisição para API - Pega as informações do membro
         if (informacoesDeLogin.getToken() != null) {
@@ -218,17 +234,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 public void onSuccess(String response) {
                     Gson gson = new Gson();
                     perfilResponse = gson.fromJson(response, PerfilResponse.class);
-                    System.out.println(perfilResponse.toString());
                 }
 
                 @Override
                 public void onFailure(IOException e) {
-                    // Handle failure
+                    // Lida com falhas na obtenção do perfil
                 }
             });
         }
 
-        // Configura os botões de navegação de eventos
         botaoAvancaEvento.setOnClickListener(v -> {
             if (responseEventos != null && !responseEventos.isEmpty()) {
                 if (indexArray < responseEventos.size() - 1) {
@@ -236,17 +250,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 } else {
                     indexArray = 0;
                 }
-
                 AllEventosListResponse evento = responseEventos.get(indexArray);
                 runOnUiThread(() -> {
                     String StringBase64 = evento.getImagem();
                     String[] partes = StringBase64.split(",");
                     String dadosBase64 = partes.length > 1 ? partes[1] : partes[0];
-
-
                     byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
                     Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
                     imagemEventos.setImageBitmap(decodedByte);
                     nomeEvento.setText(evento.getTitulo());
                 });
@@ -260,26 +270,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 } else {
                     indexArray = responseEventos.size() - 1;
                 }
-
                 AllEventosListResponse evento = responseEventos.get(indexArray);
                 runOnUiThread(() -> {
                     String StringBase64 = evento.getImagem();
                     String[] partes = StringBase64.split(",");
                     String dadosBase64 = partes.length > 1 ? partes[1] : partes[0];
-
                     byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
                     Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
                     imagemEventos.setImageBitmap(decodedByte);
                     nomeEvento.setText(evento.getTitulo());
                 });
             }
         });
 
-        // Configura a navegação do drawer
-        drawerLayout = findViewById(R.id.drawer_layout);
-        View headerView = navigationView.getHeaderView(0);
 
+        // Configura o botão de sair e visualizar perfil no drawer
         AppCompatImageButton sairButton = headerView.findViewById(R.id.sairButton);
         AppCompatButton verPerfil = headerView.findViewById(R.id.buttonVerPerfil);
         MenuItem deslogar = headerView.findViewById(R.id.nav_logout);
@@ -307,11 +312,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         btnPerfil.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
 
-        login.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(intent);
-        });
-
         loginADM.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, LoginAdmActiviy.class);
             startActivity(intent);
@@ -324,9 +324,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.sairButton) {
             navigationView.setVisibility(View.GONE);
         }
+        if (id == R.id.nav_logout) {
+            logout();
+        }
+        if (id == R.id.nav_login) {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Remove todas as atividades anteriores
+            startActivity(intent);
+            finish(); // Finaliza a MainActivity
+        }
         return false;
     }
 
+    private void logout() {
+        // Limpa as informações de login salvas
+        SharedPreferences sharedPref = getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.clear(); // Remove todas as informações salvas
+        editor.apply();
+
+        // Volta para a tela de login
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Remove todas as atividades anteriores
+        startActivity(intent);
+        finish(); // Finaliza a MainActivity
+    }
 
     @Override
     public void onBackPressed() {
@@ -337,4 +360,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+    private void limparDados(){
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("id", null);
+        editor.putString("token", null);
+        editor.putString("informacao1", null);
+        editor.putString("informacao2", null);
+        editor.apply();
+    }
+
+
+
+    private void atualizarInterfaceDeslogado() {
+        navigationView.removeHeaderView(navigationView.getHeaderView(0));
+        navigationView.inflateHeaderView(R.layout.header_menu_off);
+
+        // Configure aqui os componentes da header para o estado deslogado
+        View headerView = navigationView.getHeaderView(0);
+        Button btnLogin = headerView.findViewById(R.id.buttonFazerLogin);
+        ImageButton btnSair = headerView.findViewById(R.id.sairButtonOff);
+        btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Remove todas as atividades anteriores
+            startActivity(intent);
+            finish(); // Finaliza a MainActivity
+        });
+        btnSair.setOnClickListener(v -> drawerLayout.closeDrawers());
+
+    }
+
+
+
 }
+
