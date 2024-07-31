@@ -109,6 +109,7 @@ id TxtNome
 id TxtSenha
 id Vencimentotxt
 id addCartao
+id addCartaoserass
 id autoCompleteTextViewcartao
 id btn100
 id btn20
@@ -131,6 +132,7 @@ id btnValor
 id btnZa
 id btnZaDinheiro
 id btncontinuarform
+id btncontinuarformserass
 id btncopiarPix
 id btndialogCadsuc
 id btndialogCodsuc
@@ -173,9 +175,11 @@ id buttonSemanal
 id buttonVoluntario
 id buttoncursos
 id cvccartao
+id cvccartaoserass
 id demonstracao
 id editText
 id editTextNumber2cartao
+id editTextNumber2cartaoserass
 id imageButton2
 id imageButton3
 id imageView
@@ -204,6 +208,7 @@ id imageView6
 id imageView7
 id imageView8
 id imageView9
+id imageView9serass
 id imagemEvento
 id imagemEventocad
 id imgCertezaDelevento
@@ -236,9 +241,13 @@ id imglocaldel
 id imgperfilsucesso
 id inptValor
 id inputCPFform
+id inputCPFformserass
 id inputEmailform
+id inputEmailformserass
 id inputIdadeform
+id inputIdadeformserass
 id inputNomeform
+id inputNomeformserass
 id main
 id main_header_layout
 id mostraConfirmarSenha
@@ -258,6 +267,7 @@ id nav_logout
 id navigation_bar
 id nomeevento
 id nometitularcartao
+id nometitularcartaoserass
 id numerocart
 id numerocartaocartao
 id radioButton
@@ -292,15 +302,21 @@ id textView11
 id textView12
 id textView13
 id textView13form
+id textView13formserass
 id textView14
 id textView14form
+id textView14formserass
 id textView15
 id textView15form
+id textView15formserass
 id textView16form
+id textView16formserass
 id textView17a
 id textView17cartao
+id textView17cartaoserass
 id textView17valor
 id textView18cartao
+id textView18cartaoserass
 id textView19
 id textView19form
 id textView2
@@ -348,6 +364,7 @@ id textView9
 id textViewcad
 id titledoacaoDinheiro
 id titledoacaoform
+id titleserass
 id txtErro
 id view
 id vpcart
@@ -367,6 +384,7 @@ layout activity_pagamento_cartao
 layout activity_pagamento_evento
 layout activity_pagamento_pix
 layout activity_participar_evento
+layout activity_ser_associado
 layout activity_servoluntario
 layout activity_visualizar_eventoscadastrados
 layout activity_vizualiza_eventos

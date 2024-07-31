@@ -4,16 +4,16 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_doar_pevento.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_eventoeditado_sucesso.xml",
-        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_eventoeditado_sucesso.xml"
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_deletarlocal.xml",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_erro_deletarlocal.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_deletarevento.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_erro_deletarevento.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_deletarlocal.xml",
-        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_erro_deletarlocal.xml"
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_eventoeditado_sucesso.xml",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_eventoeditado_sucesso.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_editarevento.xml",
@@ -22,10 +22,6 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_particevento_concluida.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_particevento_concluida.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/dialog_pedido_servoluntario.xml",
-        "source": "com.example.hallelapp-main-36:/layout/dialog_pedido_servoluntario.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\pagamento_boleto.xml",
@@ -56,12 +52,16 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_adm_doacaoalimento.xml"
     },
     {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\eventos_adapter.xml",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\eventos_adapter.xml"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_perfil_editadosucesso.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_perfil_editadosucesso.xml"
     },
     {
-        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\eventos_adapter.xml",
-        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\eventos_adapter.xml"
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_ser_associado.xml",
+        "source": "com.example.hallelapp-main-36:/layout/activity_ser_associado.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_participarevento.xml",
@@ -90,6 +90,10 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_errologin.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_errologin.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_pagamento_pix.xml",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_pagamento_pix.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_pagamento_boleto.xml",
@@ -144,10 +148,6 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_custom.xml"
     },
     {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_pagamento_pix.xml",
-        "source": "com.example.hallelapp-main-36:/layout/activity_pagamento_pix.xml"
-    },
-    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_cadastro.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_cadastro.xml"
     },
@@ -164,6 +164,10 @@
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_eventoarquivado_sucesso.xml"
     },
     {
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_pagamento_cartao.xml",
+        "source": "com.example.hallelapp-main-36:/layout/activity_pagamento_cartao.xml"
+    },
+    {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_form_doacao.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_form_doacao.xml"
     },
@@ -174,6 +178,10 @@
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_vizualiza_eventos.xml",
         "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_vizualiza_eventos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_pedido_servoluntario.xml",
+        "source": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_pedido_servoluntario.xml"
     },
     {
         "merged": "C:\\Users\\Gisele Vieira\\OneDrive\\Documents\\Hallel-Mobile\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_adm_doacaodinheiro.xml",

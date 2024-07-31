@@ -3217,6 +3217,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addCartao
+id addCartaoserass
 id alertTitle
 id aligned
 id all
@@ -3266,6 +3267,7 @@ id btnValor
 id btnZa
 id btnZaDinheiro
 id btncontinuarform
+id btncontinuarformserass
 id btncopiarPix
 id btndialogCadsuc
 id btndialogCodsuc
@@ -3347,6 +3349,7 @@ id custom
 id customPanel
 id cut
 id cvccartao
+id cvccartaoserass
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3384,6 +3387,7 @@ id east
 id edge
 id editText
 id editTextNumber2cartao
+id editTextNumber2cartaoserass
 id edit_query
 id elastic
 id embed
@@ -3459,6 +3463,7 @@ id imageView6
 id imageView7
 id imageView8
 id imageView9
+id imageView9serass
 id imagemEvento
 id imagemEventocad
 id imgCertezaDelevento
@@ -3495,9 +3500,13 @@ id indeterminate
 id info
 id inptValor
 id inputCPFform
+id inputCPFformserass
 id inputEmailform
+id inputEmailformserass
 id inputIdadeform
+id inputIdadeformserass
 id inputNomeform
+id inputNomeformserass
 id invisible
 id inward
 id italic
@@ -3605,6 +3614,7 @@ id noScroll
 id noState
 id nomeevento
 id nometitularcartao
+id nometitularcartaoserass
 id none
 id normal
 id north
@@ -3775,15 +3785,21 @@ id textView11
 id textView12
 id textView13
 id textView13form
+id textView13formserass
 id textView14
 id textView14form
+id textView14formserass
 id textView15
 id textView15form
+id textView15formserass
 id textView16form
+id textView16formserass
 id textView17a
 id textView17cartao
+id textView17cartaoserass
 id textView17valor
 id textView18cartao
+id textView18cartaoserass
 id textView19
 id textView19form
 id textView2
@@ -3844,6 +3860,7 @@ id titleDividerNoCustom
 id title_template
 id titledoacaoDinheiro
 id titledoacaoform
+id titleserass
 id toggle
 id top
 id topPanel
@@ -4012,6 +4029,7 @@ layout activity_pagamento_cartao
 layout activity_pagamento_evento
 layout activity_pagamento_pix
 layout activity_participar_evento
+layout activity_ser_associado
 layout activity_servoluntario
 layout activity_visualizar_eventoscadastrados
 layout activity_vizualiza_eventos

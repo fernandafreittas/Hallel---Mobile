@@ -3216,6 +3216,7 @@ int id actions 0x7f0a004b
 int id activity_chooser_view_content 0x7f0a004c
 int id add 0x7f0a004d
 int id addCartao 0x7f0a004e
+int id addCartaoserass 0x7f0a0302
 int id alertTitle 0x7f0a004f
 int id aligned 0x7f0a0050
 int id all 0x7f0a0051
@@ -3265,6 +3266,7 @@ int id btnValor 0x7f0a028c
 int id btnZa 0x7f0a0282
 int id btnZaDinheiro 0x7f0a028d
 int id btncontinuarform 0x7f0a028e
+int id btncontinuarformserass 0x7f0a0303
 int id btncopiarPix 0x7f0a02f7
 int id btndialogCadsuc 0x7f0a0076
 int id btndialogCodsuc 0x7f0a029e
@@ -3346,6 +3348,7 @@ int id custom 0x7f0a00aa
 int id customPanel 0x7f0a00ab
 int id cut 0x7f0a00ac
 int id cvccartao 0x7f0a00ad
+int id cvccartaoserass 0x7f0a0304
 int id date_picker_actions 0x7f0a00ae
 int id decelerate 0x7f0a00af
 int id decelerateAndComplete 0x7f0a00b0
@@ -3383,6 +3386,7 @@ int id east 0x7f0a00ce
 int id edge 0x7f0a00cf
 int id editText 0x7f0a00d0
 int id editTextNumber2cartao 0x7f0a00d2
+int id editTextNumber2cartaoserass 0x7f0a0305
 int id edit_query 0x7f0a00d3
 int id elastic 0x7f0a00d4
 int id embed 0x7f0a00d5
@@ -3458,6 +3462,7 @@ int id imageView6 0x7f0a0115
 int id imageView7 0x7f0a0116
 int id imageView8 0x7f0a0117
 int id imageView9 0x7f0a0118
+int id imageView9serass 0x7f0a0306
 int id imagemEvento 0x7f0a0119
 int id imagemEventocad 0x7f0a02b6
 int id imgCertezaDelevento 0x7f0a02b7
@@ -3494,9 +3499,13 @@ int id indeterminate 0x7f0a011f
 int id info 0x7f0a0120
 int id inptValor 0x7f0a0121
 int id inputCPFform 0x7f0a0290
+int id inputCPFformserass 0x7f0a0307
 int id inputEmailform 0x7f0a0291
+int id inputEmailformserass 0x7f0a0308
 int id inputIdadeform 0x7f0a0292
+int id inputIdadeformserass 0x7f0a0309
 int id inputNomeform 0x7f0a0293
+int id inputNomeformserass 0x7f0a030a
 int id invisible 0x7f0a0126
 int id inward 0x7f0a0127
 int id italic 0x7f0a0128
@@ -3604,6 +3613,7 @@ int id noScroll 0x7f0a018d
 int id noState 0x7f0a018e
 int id nomeevento 0x7f0a018f
 int id nometitularcartao 0x7f0a0190
+int id nometitularcartaoserass 0x7f0a030b
 int id none 0x7f0a0191
 int id normal 0x7f0a0192
 int id north 0x7f0a0193
@@ -3774,15 +3784,21 @@ int id textView11 0x7f0a022b
 int id textView12 0x7f0a022c
 int id textView13 0x7f0a022d
 int id textView13form 0x7f0a0297
+int id textView13formserass 0x7f0a030c
 int id textView14 0x7f0a022e
 int id textView14form 0x7f0a0298
+int id textView14formserass 0x7f0a030d
 int id textView15 0x7f0a022f
 int id textView15form 0x7f0a0299
+int id textView15formserass 0x7f0a030e
 int id textView16form 0x7f0a029a
+int id textView16formserass 0x7f0a030f
 int id textView17a 0x7f0a02fd
 int id textView17cartao 0x7f0a0231
+int id textView17cartaoserass 0x7f0a0310
 int id textView17valor 0x7f0a02fe
 int id textView18cartao 0x7f0a0232
+int id textView18cartaoserass 0x7f0a0311
 int id textView19 0x7f0a0233
 int id textView19form 0x7f0a029b
 int id textView2 0x7f0a0234
@@ -3843,6 +3859,7 @@ int id titleDividerNoCustom 0x7f0a0253
 int id title_template 0x7f0a0255
 int id titledoacaoDinheiro 0x7f0a029c
 int id titledoacaoform 0x7f0a029d
+int id titleserass 0x7f0a0312
 int id toggle 0x7f0a0256
 int id top 0x7f0a0257
 int id topPanel 0x7f0a0258
@@ -4011,6 +4028,7 @@ int layout activity_pagamento_cartao 0x7f0d0081
 int layout activity_pagamento_evento 0x7f0d0082
 int layout activity_pagamento_pix 0x7f0d009e
 int layout activity_participar_evento 0x7f0d0083
+int layout activity_ser_associado 0x7f0d00a0
 int layout activity_servoluntario 0x7f0d0084
 int layout activity_visualizar_eventoscadastrados 0x7f0d0086
 int layout activity_vizualiza_eventos 0x7f0d0021
