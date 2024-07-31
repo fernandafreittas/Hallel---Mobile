@@ -204,12 +204,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                         runOnUiThread(() -> {
                             String StringBase64 = evento.getImagem();
-                            String[] partes = StringBase64.split(",");
-                            String dadosBase64 = partes[1];
-                            byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                            imagemEventos.setImageBitmap(decodedByte);
-                            nomeEvento.setText(evento.getTitulo());
+                            if (StringBase64 != null && !StringBase64.isEmpty()) {
+                                String[] partes = StringBase64.split(",");
+                                if (partes.length > 1) {
+                                    String dadosBase64 = partes[1];
+                                    byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                                    imagemEventos.setImageBitmap(decodedByte);
+                                    nomeEvento.setText(evento.getTitulo());
+                                } else {
+                                    // Trate o caso onde a String não está no formato esperado
+                                    imagemEventos.setImageBitmap(null);
+                                    nomeEvento.setText(evento.getTitulo());
+                                }
+                            } else {
+                                // Trate o caso onde a imagem é nula ou vazia
+                                imagemEventos.setImageBitmap(null);
+                                nomeEvento.setText(evento.getTitulo());
+                            }
                         });
                     } else {
                         runOnUiThread(() -> {
@@ -253,12 +265,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 AllEventosListResponse evento = responseEventos.get(indexArray);
                 runOnUiThread(() -> {
                     String StringBase64 = evento.getImagem();
-                    String[] partes = StringBase64.split(",");
-                    String dadosBase64 = partes.length > 1 ? partes[1] : partes[0];
-                    byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                    imagemEventos.setImageBitmap(decodedByte);
-                    nomeEvento.setText(evento.getTitulo());
+                    if (StringBase64 != null && !StringBase64.isEmpty()) {
+                        String[] partes = StringBase64.split(",");
+                        if (partes.length > 1) {
+                            String dadosBase64 = partes[1];
+                            byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                            imagemEventos.setImageBitmap(decodedByte);
+                            nomeEvento.setText(evento.getTitulo());
+                        } else {
+                            // Trate o caso onde a String não está no formato esperado
+                            imagemEventos.setImageBitmap(null);
+                            nomeEvento.setText(evento.getTitulo());
+                        }
+                    } else {
+                        // Trate o caso onde a imagem é nula ou vazia
+                        imagemEventos.setImageBitmap(null);
+                        nomeEvento.setText(evento.getTitulo());
+                    }
                 });
             }
         });
@@ -273,15 +297,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 AllEventosListResponse evento = responseEventos.get(indexArray);
                 runOnUiThread(() -> {
                     String StringBase64 = evento.getImagem();
-                    String[] partes = StringBase64.split(",");
-                    String dadosBase64 = partes.length > 1 ? partes[1] : partes[0];
-                    byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                    imagemEventos.setImageBitmap(decodedByte);
-                    nomeEvento.setText(evento.getTitulo());
+                    if (StringBase64 != null && !StringBase64.isEmpty()) {
+                        String[] partes = StringBase64.split(",");
+                        if (partes.length > 1) {
+                            String dadosBase64 = partes[1];
+                            byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                            imagemEventos.setImageBitmap(decodedByte);
+                            nomeEvento.setText(evento.getTitulo());
+                        } else {
+                            // Trate o caso onde a String não está no formato esperado
+                            imagemEventos.setImageBitmap(null);
+                            nomeEvento.setText(evento.getTitulo());
+                        }
+                    } else {
+                        // Trate o caso onde a imagem é nula ou vazia
+                        imagemEventos.setImageBitmap(null);
+                        nomeEvento.setText(evento.getTitulo());
+                    }
                 });
             }
         });
+
 
 
         // Configura o botão de sair e visualizar perfil no drawer

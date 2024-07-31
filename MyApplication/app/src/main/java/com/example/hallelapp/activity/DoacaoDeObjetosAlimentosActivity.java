@@ -1,6 +1,7 @@
 // DoacaoDeObjetosAlimentosActivity.java
 package com.example.hallelapp.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hallelapp.MainActivity;
 import com.example.hallelapp.R;
 import com.example.hallelapp.htpp.HttpMain;
 import com.example.hallelapp.payload.requerimento.DoacaoObjetosEventosReq;
@@ -77,6 +79,9 @@ public class DoacaoDeObjetosAlimentosActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(String response) {
                         System.out.println("Deu certo a doacao");
+                        Intent intent = new Intent(DoacaoDeObjetosAlimentosActivity.this,MainActivity.class);
+
+                        startActivity(intent);
                     }
 
                     @Override
