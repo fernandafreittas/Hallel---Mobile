@@ -137,6 +137,9 @@
             android:name="com.example.hallelapp.activity.DirecionamentoDoacaoActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.hallelapp.activity.DadosDoacaoObjActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.DoacaoDeObjetosAlimentosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />

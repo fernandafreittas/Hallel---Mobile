@@ -35,8 +35,42 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.908">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:padding="8dp"
+                        android:text="Nome do membro"
+                        android:textColor="@color/cortexto2"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:padding="8dp"
+                        android:text="Silvio Silva Vieira"
+                        android:textColor="@color/cordetextohallel"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:padding="8dp"
+                        android:text="Gisele Saraiva Vieira"
+                        android:textColor="@color/cordetextohallel"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:padding="8dp"
+                        android:text="Lorenzo Aviz dos Santos"
+                        android:textColor="@color/cordetextohallel"
+                        android:textStyle="bold" />
 
                 </TableLayout>
 
@@ -77,6 +111,7 @@
                     android:fontFamily="@font/inter_semibold"
                     android:text="A - Z"
                     android:textColor="@color/cordetextohallel"
+
                     app:layout_constraintBottom_toBottomOf="@+id/imageView22Dinheiro"
                     app:layout_constraintStart_toStartOf="@+id/imageView22Dinheiro"
                     app:layout_constraintTop_toTopOf="@+id/imageView22Dinheiro" />
@@ -88,6 +123,7 @@
                     android:layout_marginStart="64dp"
                     android:background="#00FFFFFF"
                     android:fontFamily="@font/inter_semibold"
+
                     android:text="Z - A"
                     android:textColor="@color/cordetextohallel"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView22Dinheiro"
@@ -102,6 +138,7 @@
                     android:layout_marginStart="116dp"
                     android:background="#00FFFFFF"
                     android:fontFamily="@font/inter_semibold"
+
                     android:text="VALOR"
                     android:textColor="@color/cordetextohallel"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView22Dinheiro"
@@ -118,10 +155,12 @@
                     android:background="#00FFFFFF"
                     android:fontFamily="@font/inter_semibold"
                     android:text="Ordem cronológica"
+
                     android:textColor="@color/cordetextohallel"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView22Dinheiro"
                     app:layout_constraintEnd_toEndOf="@+id/imageView22Dinheiro"
                     app:layout_constraintTop_toTopOf="@+id/imageView22Dinheiro" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

@@ -28,6 +28,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_participar_de_eventos.xml"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dados_doacao_obj.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dados_doacao_obj.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_participantes_list.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_participantes_list.xml"
     },
@@ -84,6 +88,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\dialog_pagamentosucesso.xml"
     },
     {
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_adm_doacaodinheiro.xml",
+        "source": "com.example.hallelapp-main-36:/layout/activity_adm_doacaodinheiro.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_list_locais.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_list_locais.xml"
     },
@@ -102,10 +110,6 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_dados_associado.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_dados_associado.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_main.xml",
-        "source": "com.example.hallelapp-main-36:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_errocadastro.xml",
@@ -160,12 +164,12 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_pagamento_cartao.xml"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\item_local_list_recycle.xml",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\item_local_list_recycle.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_voluntarios_list.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_voluntarios_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\item_local_list_recycle.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\item_local_list_recycle.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_edit_locais.xml",

@@ -2,10 +2,13 @@ package com.example.hallelapp.htpp;
 
 import android.util.Log;
 
+import com.example.hallelapp.model.DoacaoObjetosEventos;
 import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.payload.requerimento.AdministradorLoginRequest;
+import com.example.hallelapp.payload.requerimento.AlteraRecebimentoRequest;
 import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
+import com.example.hallelapp.payload.requerimento.DoacaoObjetosEventosReq;
 import com.example.hallelapp.payload.requerimento.EventosRequest;
 import com.example.hallelapp.payload.requerimento.LocalEventoReq;
 import com.example.hallelapp.payload.requerimento.LoginRequest;
@@ -919,6 +922,56 @@ public class HttpAdm {
     }
 
 
+    public void AlteraRecebimentoObjeto (AlteraRecebimentoRequest alteraRecebimentoRequest, String id,
+                                         AuthenticationResponse authenticationResponse , final HttpMain.HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+
+        token = authenticationResponse.getToken();
+
+        Gson gson = new Gson();
+        String json = gson.toJson(alteraRecebimentoRequest);
+
+        System.out.println("json:"+json);
+
+        String url = UrlBase +"/eventos/"+id+"/AlteraRecebimentoObjeto";
+
+        System.out.println(url);
+
+        System.out.println(token);
+
+        System.out.println(alteraRecebimentoRequest.toString());
+
+        Log.d("HttpADM", "url: " + url);
+
+
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println(responseBody);
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
 
 
 

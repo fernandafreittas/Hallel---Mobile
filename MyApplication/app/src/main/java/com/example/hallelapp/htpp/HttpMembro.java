@@ -26,7 +26,11 @@ public class HttpMembro {
 
 
     //fernanda
+
  //   private static final String UrlBase = "http://10.100.85.80:8080/api/";
+
+
+//    private static final String UrlBase = "http://192.168.100.36:8080/api/";
 
     public static final MediaType JSON = MediaType.get("application/json");
 

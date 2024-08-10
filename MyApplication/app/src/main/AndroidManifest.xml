@@ -123,6 +123,11 @@
         <activity
             android:name=".activity.DirecionamentoDoacaoActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".activity.DadosDoacaoObjActivity"
+            android:exported="false" />
+
         <activity
             android:name=".activity.DoacaoDeObjetosAlimentosActivity"
             android:exported="false"

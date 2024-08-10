@@ -2,6 +2,7 @@ package com.example.hallelapp.activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -15,15 +16,11 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.hallelapp.R;
 import com.example.hallelapp.htpp.HttpAdm;
 import com.example.hallelapp.payload.resposta.AllEventosListResponse;
 import com.example.hallelapp.payload.resposta.AuthenticationResponse;
-import com.example.hallelapp.payload.resposta.DoacaoDinheiroEventoResponse;
 import com.example.hallelapp.payload.resposta.DoacaoObjetosEventosResponse;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -40,6 +37,9 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
     List<String> listaDeNomes;
     private AlertDialog loadingDialog;
 
+    AuthenticationResponse authenticationResponse2;
+    AllEventosListResponse evento2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +48,10 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
 
         AuthenticationResponse authenticationResponse = (AuthenticationResponse) getIntent().getSerializableExtra("informaçõesADM");
         AllEventosListResponse evento = (AllEventosListResponse) getIntent().getSerializableExtra("evento");
+
+        authenticationResponse2 = authenticationResponse;
+        evento2 = evento;
+
 
         HttpAdm requisicao = new HttpAdm();
 
@@ -132,6 +136,7 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
         });
     }
 
+
     private void populateTable(TableLayout tableLayout, List<DoacaoObjetosEventosResponse> doacoes) {
 
         // Adiciona a linha de cabeçalho
@@ -158,9 +163,8 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
         headerQuantidade.setTypeface(ResourcesCompat.getFont(this, R.font.inter), Typeface.BOLD);
         headerQuantidade.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
 
-
         TextView headerFoiRecebido = new TextView(this);
-        headerFoiRecebido.setText("Quanti...");
+        headerFoiRecebido.setText("Recebido");
         headerFoiRecebido.setPadding(8, 8, 8, 8);
         headerFoiRecebido.setTextColor(getResources().getColor(R.color.cortexto2));
         headerFoiRecebido.setTypeface(ResourcesCompat.getFont(this, R.font.inter), Typeface.BOLD);
@@ -173,10 +177,12 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
 
         tableLayout.addView(headerRow);
 
-
         // Adiciona as linhas de doações
         for (DoacaoObjetosEventosResponse doacao : doacoes) {
             TableRow tableRow = new TableRow(this);
+
+            System.out.println(doacao.toString());
+
 
             TextView nomeDoador = new TextView(this);
             nomeDoador.setText(doacao.getNomeDoador());
@@ -185,10 +191,23 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
             nomeDoador.setTypeface(ResourcesCompat.getFont(this, R.font.inter_semibold));
 
             TextView objetoDoado = new TextView(this);
-            objetoDoado.setText( doacao.getNomeDoObjeto());
+            objetoDoado.setText(doacao.getNomeDoObjeto());
             objetoDoado.setPadding(8, 8, 8, 8);
             objetoDoado.setTextColor(getResources().getColor(R.color.cordetextohallel));
             objetoDoado.setTypeface(ResourcesCompat.getFont(this, R.font.inter_semibold));
+
+            // Adiciona o OnClickListener ao objetoDoado
+            objetoDoado.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ListDoacaoObjetosAlimentos.this, DadosDoacaoObjActivity.class);
+                    intent.putExtra("doacaoObjeto", doacao);
+                    intent.putExtra("evento", evento2);
+                    intent.putExtra("informaçõesADM",authenticationResponse2);
+
+                    startActivity(intent);
+                }
+            });
 
             TextView quantidade = new TextView(this);
             quantidade.setText(String.valueOf(doacao.getQuantidade()));
@@ -196,15 +215,14 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
             quantidade.setTextColor(getResources().getColor(R.color.cordetextohallel));
             quantidade.setTypeface(ResourcesCompat.getFont(this, R.font.inter_semibold));
 
-
             TextView Recebido = new TextView(this);
 
-            if(doacao.isRecebido()) {
+            if (doacao.isRecebido()) {
                 Recebido.setText("sim");
                 Recebido.setPadding(8, 8, 8, 8);
                 Recebido.setTextColor(getResources().getColor(R.color.cordetextohallel));
                 Recebido.setTypeface(ResourcesCompat.getFont(this, R.font.inter_semibold));
-            }else {
+            } else {
                 Recebido.setText("não");
                 Recebido.setPadding(8, 8, 8, 8);
                 Recebido.setTextColor(getResources().getColor(R.color.cordetextohallel));
@@ -218,11 +236,8 @@ public class ListDoacaoObjetosAlimentos extends AppCompatActivity {
 
             tableLayout.addView(tableRow);
         }
-
-
-
-
     }
+
 
     private void showLoadingDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

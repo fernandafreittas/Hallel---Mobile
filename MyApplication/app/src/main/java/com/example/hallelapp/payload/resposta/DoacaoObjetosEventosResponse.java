@@ -1,8 +1,9 @@
 package com.example.hallelapp.payload.resposta;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class DoacaoObjetosEventosResponse {
+public class DoacaoObjetosEventosResponse implements Serializable {
 
 
     private String id;
@@ -10,7 +11,8 @@ public class DoacaoObjetosEventosResponse {
     private Integer quantidade;
     private String nomeDoador;
     private Date dataDoacao;
-    private boolean isRecebido;
+    private boolean recebido;
+    private String emailDoador;
 
     public String getId() {
         return id;
@@ -53,11 +55,19 @@ public class DoacaoObjetosEventosResponse {
     }
 
     public boolean isRecebido() {
-        return isRecebido;
+        return recebido;
     }
 
     public void setRecebido(boolean recebido) {
-        isRecebido = recebido;
+        this.recebido = recebido;
+    }
+
+    public String getEmailDoador() {
+        return emailDoador;
+    }
+
+    public void setEmailDoador(String emailDoador) {
+        this.emailDoador = emailDoador;
     }
 
     @Override
@@ -68,7 +78,8 @@ public class DoacaoObjetosEventosResponse {
                 ", quantidade=" + quantidade +
                 ", nomeDoador='" + nomeDoador + '\'' +
                 ", dataDoacao=" + dataDoacao +
-                ", isRecebido=" + isRecebido +
+                ", isRecebido=" + recebido +
+                ", emailDoador='" + emailDoador + '\'' +
                 '}';
     }
 }

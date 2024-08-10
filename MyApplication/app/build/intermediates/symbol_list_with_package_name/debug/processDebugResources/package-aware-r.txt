@@ -3008,6 +3008,7 @@ drawable edit_vector
 drawable elipse_perfil_capa
 drawable ellipse_92
 drawable erroatention
+drawable event_list_vector
 drawable fechar_header
 drawable foto_de_perfil
 drawable foto_de_perfil2
@@ -3091,6 +3092,8 @@ drawable img_fundo
 drawable input_text
 drawable input_text_cartao
 drawable line_75
+drawable line__dados_doacao
+drawable login_adm_vector
 drawable logohallel
 drawable logohallelpng
 drawable m3_appbar_background
@@ -3153,6 +3156,7 @@ drawable mtrl_switch_thumb_unchecked_pressed
 drawable mtrl_switch_track
 drawable mtrl_switch_track_decoration
 drawable mtrl_tabs_default_indicator
+drawable my_donation
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -3554,6 +3558,7 @@ id imageView27
 id imageView28
 id imageView29
 id imageView3
+id imageView30
 id imageView4
 id imageView5
 id imageView5Off
@@ -3579,14 +3584,19 @@ id inputCVC
 id inputDate
 id inputDescricao
 id inputEmail
+id inputEmailDoador
 id inputEmailform
 id inputEndereco
 id inputEnderecoEdit
 id inputEndereço
 id inputIdade
 id inputIdadeform
+id inputItemDoado
 id inputNome
+id inputNomeDoador
 id inputNomeform
+id inputNumeroCelular
+id inputSexoDoador
 id inputTime
 id input_cvc
 id input_endereco
@@ -3676,6 +3686,9 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id nav_home
 id nav_home10
+id nav_home11
+id nav_home12
+id nav_home13
 id nav_home2
 id nav_home3
 id nav_home4
@@ -3848,6 +3861,7 @@ id submenuarrow
 id submit_area
 id subnfo
 id supportScrollUp
+id switch1
 id switchautomatico
 id tabMode
 id tableLayout
@@ -3979,8 +3993,18 @@ id textView79
 id textView8
 id textView80
 id textView81
+id textView82
 id textView83
+id textView84
+id textView85
+id textView87
+id textView89
 id textView9
+id textView91
+id textView93
+id textView94
+id textView96
+id textView97
 id textViewArq
 id textViewEmailmembro
 id textViewLocal
@@ -4199,6 +4223,7 @@ layout activity_vizualiza_eventos
 layout activity_vizualizar_eventos_edit
 layout activity_voluntarios_list
 layout custom_dialog
+layout dados_doacao_obj
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
