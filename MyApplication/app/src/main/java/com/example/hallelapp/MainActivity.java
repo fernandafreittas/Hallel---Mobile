@@ -30,6 +30,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.hallelapp.activity.DirecionamentoDoacaoUser;
 import com.example.hallelapp.activity.LoginActivity;
 import com.example.hallelapp.activity.LoginAdmActiviy;
 import com.example.hallelapp.activity.MoreInfosActivity;
@@ -326,6 +327,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         AppCompatButton verPerfil = headerView.findViewById(R.id.buttonVerPerfil);
         MenuItem deslogar = headerView.findViewById(R.id.nav_logout);
 
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -370,6 +372,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
             finish(); // Finaliza a MainActivity
         }
+
+        if (id == R.id.nav_home13) {
+            drawerLayout.closeDrawers();
+            Intent intent = new Intent(MainActivity.this, DirecionamentoDoacaoUser.class);
+            if (perfilResponse != null) {
+                intent.putExtra("informacoesPerfil", perfilResponse);
+            }
+            startActivity(intent);
+        }
+
+
         return false;
     }
 

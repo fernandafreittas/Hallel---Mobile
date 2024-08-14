@@ -133,7 +133,15 @@
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
 
+        <activity
+            android:name=".activity.UserListDoacaoDinheiro"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
 
+        <activity
+            android:name=".activity.DirecionamentoDoacaoUser"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
 
         <activity
             android:name=".MainActivity"
