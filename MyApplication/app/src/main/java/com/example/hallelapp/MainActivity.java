@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ImageView imagemEventos = findViewById(R.id.imgevento);
         ImageButton botaoAvancaEvento = findViewById(R.id.imageButton3);
         ImageButton botaoRetrocederEvento = findViewById(R.id.imageButton2);
-        Button loginADM = findViewById(R.id.button);
 
 
 
@@ -351,10 +350,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         btnPerfil.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
 
-        loginADM.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, LoginAdmActiviy.class);
-            startActivity(intent);
-        });
+
     }
 
     @Override
@@ -371,6 +367,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Remove todas as atividades anteriores
             startActivity(intent);
             finish(); // Finaliza a MainActivity
+        }
+
+        if (id == R.id.nav_home11) {
+            Intent intent = new Intent(MainActivity.this, LoginAdmActiviy.class);
+            startActivity(intent);
         }
 
         if (id == R.id.nav_home13) {

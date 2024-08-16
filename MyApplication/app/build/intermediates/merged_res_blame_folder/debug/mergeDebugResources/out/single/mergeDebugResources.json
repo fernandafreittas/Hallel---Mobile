@@ -592,10 +592,6 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/layout_activity_user_doacaodinheiro.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/activity_user_doacaodinheiro.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -646,6 +642,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_acampamento_vector.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\drawable\\acampamento_vector.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_activity_create_eventos.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/activity_create_eventos.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-debug-34:\\drawable_fundo_desc_moreinfo.xml.flat",

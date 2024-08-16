@@ -99,7 +99,7 @@
         <activity
             android:name="com.example.hallelapp.activity.CreateEventosActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.EventosAdmActivity"
             android:exported="false" />
@@ -140,11 +140,18 @@
             android:name="com.example.hallelapp.activity.DadosDoacaoObjActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.hallelapp.activity.DadosDoacaoDinheiroActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.hallelapp.activity.DoacaoDeObjetosAlimentosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.example.hallelapp.activity.UserListDoacaoDinheiro"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.example.hallelapp.activity.UserListDoacaoObjetos"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity

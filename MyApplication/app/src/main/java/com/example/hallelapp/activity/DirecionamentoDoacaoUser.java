@@ -40,19 +40,17 @@ public class DirecionamentoDoacaoUser extends AppCompatActivity {
             }
         });
 
-        /*
+
         btnDoacoaObjeto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DirecionamentoDoacaoUser.this,DoacaoDeObjetosAlimentosActivity.class);
-                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
-                intent.putExtra("nome", nome);
-                intent.putExtra("email", email);
+                Intent intent = new Intent(DirecionamentoDoacaoUser.this, UserListDoacaoObjetos.class);
+                intent.putExtra("informacoesPerfil", perfilResponse);
                 startActivity(intent);
             }
         });
 
-*/
+
 
 
     }

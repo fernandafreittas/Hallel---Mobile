@@ -2,6 +2,7 @@ package com.example.hallelapp.activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -201,6 +202,17 @@ public class ListDoacoesDinheirEvento extends AppCompatActivity {
             formaDePagamento.setPadding(8, 8, 8, 8);
             formaDePagamento.setTextColor(getResources().getColor(R.color.cordetextohallel));
             formaDePagamento.setTypeface(ResourcesCompat.getFont(this, R.font.inter_semibold));
+
+            valorDoado.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ListDoacoesDinheirEvento.this, DadosDoacaoDinheiroActivity.class);
+                    intent.putExtra("doacaoDinheiro", doacao);
+                    startActivity(intent);
+                }
+            });
+
+
 
             tableRow.addView(nomeDoador);
             tableRow.addView(valorDoado);

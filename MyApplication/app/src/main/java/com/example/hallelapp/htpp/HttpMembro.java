@@ -207,6 +207,45 @@ public class HttpMembro {
         });
     }
 
+    public void ListDoacoaObjetoUser (String email, InformacoesDaSessao informacoesDaSessao , final HttpMain.HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+        token = informacoesDaSessao.getToken();
+
+        // Criar um mapa ou uma classe para o payload
+        Map<String, String> payload = new HashMap<>();
+        payload.put("email", email);
+
+        Gson gson = new Gson();
+        String json = gson.toJson(payload); // Converte o mapa em JSON
+
+        String url = UrlBase + "eventos/listDoacoesObjetoUser";
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    callback.onSuccess(responseBody);
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
+
 
 
 

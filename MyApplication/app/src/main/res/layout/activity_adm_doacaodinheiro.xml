@@ -35,42 +35,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.908">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter"
-                        android:padding="8dp"
-                        android:text="Nome do membro"
-                        android:textColor="@color/cortexto2"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:padding="8dp"
-                        android:text="Silvio Silva Vieira"
-                        android:textColor="@color/cordetextohallel"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:padding="8dp"
-                        android:text="Gisele Saraiva Vieira"
-                        android:textColor="@color/cordetextohallel"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:padding="8dp"
-                        android:text="Lorenzo Aviz dos Santos"
-                        android:textColor="@color/cordetextohallel"
-                        android:textStyle="bold" />
 
                 </TableLayout>
 

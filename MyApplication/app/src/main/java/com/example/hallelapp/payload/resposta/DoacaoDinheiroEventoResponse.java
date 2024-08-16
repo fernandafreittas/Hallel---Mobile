@@ -1,8 +1,9 @@
 package com.example.hallelapp.payload.resposta;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class DoacaoDinheiroEventoResponse {
+public class DoacaoDinheiroEventoResponse implements Serializable {
 
     private String id;
     private String formaDePagamento;

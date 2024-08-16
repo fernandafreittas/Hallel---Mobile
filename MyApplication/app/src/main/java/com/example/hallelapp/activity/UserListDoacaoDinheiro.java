@@ -70,7 +70,7 @@ public class UserListDoacaoDinheiro extends AppCompatActivity {
 
 
         showLoadingDialog();
-        requisicao.ListDoacoaUser(perfilResponse.getEmail(), informacoesDeLogin, new HttpMain.HttpCallback() {
+        requisicao.ListDoacoaObjetoUser(perfilResponse.getEmail(), informacoesDeLogin, new HttpMain.HttpCallback() {
             @Override
             public void onSuccess(String response) {
                 System.out.println(response);

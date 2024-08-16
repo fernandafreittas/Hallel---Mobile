@@ -60,6 +60,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_more_infos.xml"
     },
     {
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_create_eventos.xml",
+        "source": "com.example.hallelapp-main-36:/layout/activity_create_eventos.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\splash_screen.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\splash_screen.xml"
     },
@@ -74,10 +78,6 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_servoluntario.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-main-36:\\layout\\activity_servoluntario.xml"
-    },
-    {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/activity_user_doacaodinheiro.xml",
-        "source": "com.example.hallelapp-main-36:/layout/activity_user_doacaodinheiro.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.4\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_main_adm.xml",
