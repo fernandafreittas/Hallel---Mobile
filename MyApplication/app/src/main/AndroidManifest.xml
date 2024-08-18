@@ -86,6 +86,7 @@
             android:name=".activity.CreateEventosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name=".activity.EventosAdmActivity"
             android:exported="false" />

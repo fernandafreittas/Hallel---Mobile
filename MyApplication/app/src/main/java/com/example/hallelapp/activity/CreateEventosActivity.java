@@ -75,6 +75,8 @@ public class CreateEventosActivity extends AppCompatActivity {
         AuthenticationResponse authenticationResponse = (AuthenticationResponse) getIntent().getSerializableExtra("informaçõesADM");
         EventosRequest eventosRequest = new EventosRequest();
 
+
+
         recyclerView = findViewById(R.id.recyclerViewColoborador);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         colaboradorAdapter = new ColaboradorAdapter(this);
