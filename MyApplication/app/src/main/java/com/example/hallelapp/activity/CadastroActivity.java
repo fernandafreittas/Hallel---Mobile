@@ -74,9 +74,8 @@ public class CadastroActivity extends AppCompatActivity {
 
                     @Override
                     public void onSuccess(String response) {
-                        System.out.println("teste2");
-                        // Lida com a resposta bem-sucedida
-                        // Por exemplo, você pode processar os eventos recebidos ou atualizar a interface do usuário
+                        Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override

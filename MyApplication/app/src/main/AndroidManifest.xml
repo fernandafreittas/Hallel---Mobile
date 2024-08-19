@@ -24,10 +24,14 @@
             android:exported="false" />
         <activity
             android:name=".activity.FormDoacoesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.DadosAssociadoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.ListAssociadoActivity"
             android:exported="false" />
@@ -39,22 +43,32 @@
             android:exported="false" />
         <activity
             android:name=".activity.DoarParaEventoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.PagamentoEventoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.PagamentoCartaoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.PagamentoBoletoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.PagamentoPixActivity"
             android:exported="false" />
         <activity
             android:name=".activity.EventosArquivadosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.EditEventoActivity"
             android:exported="false" />
@@ -66,7 +80,9 @@
             android:exported="false" />
         <activity
             android:name=".activity.EditLocalActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.VizualizarEventosParticipantes"
             android:exported="false" />
@@ -92,35 +108,57 @@
             android:exported="false" />
         <activity
             android:name=".activity.MainAdmActivity"
-            android:exported="false" />
+            android:exported="false"
+
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.LoginAdmActiviy"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.ParticiparDeEventos"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.PerfilActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.FormVoluntarioActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+
+            />
         <activity
             android:name=".activity.MoreInfosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.VizualizaEventosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.VizualizarEventosDoacaoObjetos"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
 
         <activity
             android:name=".activity.CadastroActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".activity.DirecionamentoDoacaoActivity"
             android:exported="false" />
