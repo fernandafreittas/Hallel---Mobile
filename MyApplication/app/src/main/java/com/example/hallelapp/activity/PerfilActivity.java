@@ -110,6 +110,9 @@ public class PerfilActivity extends AppCompatActivity {
 
         BuscarIdAssociadoReq buscarIdAssociadoReq = new BuscarIdAssociadoReq(perfilResponse.getEmail());
         requestMembro.BuscarIdAssociado(buscarIdAssociadoReq, informacoesDeLogin, new HttpMain.HttpCallback() {
+
+
+
             @Override
             public void onSuccess(String response) {
                 idAssociado = response;

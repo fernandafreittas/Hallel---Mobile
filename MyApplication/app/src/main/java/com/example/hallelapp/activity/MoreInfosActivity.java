@@ -196,12 +196,18 @@ public class MoreInfosActivity extends AppCompatActivity {
                 List<String> palestrantes = evento.getPalestrantes();
                 StringBuilder palestrantesString = new StringBuilder();
 
-                for (String palestrante : palestrantes) {
-                    palestrantesString.append(palestrante).append(", ");
-                }
+                if (palestrantes != null) {
+                    for (String palestrante : palestrantes) {
+                        palestrantesString.append(palestrante).append(", ");
+                    }
 
-                if (palestrantesString.length() > 0) {
-                    palestrantesString.delete(palestrantesString.length() - 2, palestrantesString.length());
+                    if (palestrantesString.length() > 0) {
+                        palestrantesString.delete(palestrantesString.length() - 2, palestrantesString.length());
+                    }
+
+                    palestrantesEvento.setText(palestrantesString.toString());
+                } else {
+                    palestrantesEvento.setText("Nenhum palestrante disponível");
                 }
 
                 palestrantesEvento.setText(palestrantesString.toString());

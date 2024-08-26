@@ -44,6 +44,7 @@ public class EventosAdmActivity extends AppCompatActivity {
         Button btnParticipantes = findViewById(R.id.buttonParticipantes);
         Button btnDoacoesDinheiro = findViewById(R.id.buttonDonationMoney);
         Button btnDoacoesObjetos = findViewById(R.id.buttonDonationObj);
+        Button btnEventosCadatrados = findViewById(R.id.buttonEventosCadastrados);
 
         btnAddEvento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +134,19 @@ public class EventosAdmActivity extends AppCompatActivity {
                 hideLoadingDialog();
             }
         });
+
+
+        btnEventosCadatrados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLoadingDialog();
+                Intent intent = new Intent(EventosAdmActivity.this, EventosCadastradosActivity.class);
+                intent.putExtra("informaçõesADM", authenticationResponse);
+                startActivity(intent);
+                hideLoadingDialog();
+            }
+        });
+
 
 
 

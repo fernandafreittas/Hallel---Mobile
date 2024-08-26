@@ -3573,6 +3573,7 @@ id imageView7
 id imageView8
 id imageView9
 id imagemEvento
+id imagemEventocad
 id imgLogErr
 id imgPagErr
 id imgPagSucesso
@@ -3791,6 +3792,7 @@ id ratio
 id rectangles
 id recyclerView
 id recyclerViewColoborador
+id recyclerViewcad
 id report_drawn
 id reverseSawtooth
 id right
@@ -3906,6 +3908,7 @@ id textSpacerNoTitle
 id textStart
 id textTituloEvento
 id textTituloEventoArq
+id textTituloEventocad
 id textTop
 id textVi4
 id textView
@@ -4036,6 +4039,7 @@ id textViewEmailmembro
 id textViewLocal
 id textViewOff
 id textViewValores
+id textViewcad
 id textViewnomecompleto
 id textViewnumerotelefone
 id textVoluntario
@@ -4248,6 +4252,7 @@ layout activity_participar_de_eventos
 layout activity_perfil
 layout activity_servoluntario
 layout activity_user_doacaodinheiro
+layout activity_visualizar_eventoscadastrados
 layout activity_vizualiza_eventos
 layout activity_vizualizar_eventos_edit
 layout activity_voluntarios_list
@@ -4276,6 +4281,7 @@ layout dialog_erropagamento
 layout dialog_pagamentosucesso
 layout eventos_adapter
 layout eventos_arq_adapter
+layout eventoscadastrados_adapter
 layout header_menu
 layout header_menu_off
 layout item_local_list_recycle

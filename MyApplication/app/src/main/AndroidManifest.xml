@@ -104,6 +104,13 @@
             android:windowSoftInputMode="adjustPan" />
 
         <activity
+            android:name=".activity.EventosCadastradosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+
+
+        <activity
             android:name=".activity.EventosAdmActivity"
             android:exported="false" />
         <activity

@@ -93,16 +93,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ImageButton botaoRetrocederEvento = findViewById(R.id.imageButton2);
 
 
-
         // Verifica se o extra "logadoRecentemente" não é nulo antes de fazer o cast
         if (getIntent().getSerializableExtra("logadoRecentemente") != null) {
-             logadoRecentemente = (int) getIntent().getSerializableExtra("logadoRecentemente");
+            logadoRecentemente = (int) getIntent().getSerializableExtra("logadoRecentemente");
             // Use logadoRecentemente conforme necessário
         } else {
             // Trate o caso onde "logadoRecentemente" é nulo
             Log.e("MainActivity", "logadoRecentemente é nulo!");
             // Defina um valor padrão ou tome outra ação adequada
-            int logadoRecentemente = 0;
+            logadoRecentemente = 0;
         }
 
 
@@ -153,6 +152,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             requisicao.login(loginRequest, new HttpMain.HttpCallback() {
                 @Override
                 public void onSuccess(String response) {
+                    System.out.println("deu certo informações de login");
+
                     LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
                     SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPref.edit();
@@ -187,8 +188,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 }
             });
-        }else{
-           atualizarInterfaceDeslogado();
+        } else {
+            atualizarInterfaceDeslogado();
         }
 
         // Requisição para API - Pega os eventos que estão na API
@@ -196,7 +197,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onSuccess(String response) {
                 new Thread(() -> {
-                    Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
+                    Type listType = new TypeToken<List<AllEventosListResponse>>() {
+                    }.getType();
                     responseEventos = new Gson().fromJson(response, listType);
 
                     if (responseEventos != null && !responseEventos.isEmpty()) {
@@ -241,9 +243,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Requisição para API - Pega as informações do membro
         if (informacoesDeLogin.getToken() != null) {
+
+
+
+
+
+            System.out.println(informacoesDeLogin.getToken());
+            System.out.println(informacoesDeLogin.toString());
             requisicaoMembro.InformacoesDePerfil(informacoesDeLogin, new HttpMain.HttpCallback() {
                 @Override
                 public void onSuccess(String response) {
+                    System.out.println("deu certo informações de perfil");
                     Gson gson = new Gson();
                     perfilResponse = gson.fromJson(response, PerfilResponse.class);
                 }
@@ -253,7 +263,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     // Lida com falhas na obtenção do perfil
                 }
             });
-        }
+
+    }
 
         botaoAvancaEvento.setOnClickListener(v -> {
             if (responseEventos != null && !responseEventos.isEmpty()) {

@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             Log.d("JSON_RESPONSE", response);
 
-
+                            System.out.println(loginResponse.toString());
 
 
                                 SalvarDados(loginResponse,lembreDeMim.isChecked(), senha);
