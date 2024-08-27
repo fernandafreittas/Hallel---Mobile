@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Cor de Fundo -->
     <solid android:color="#FFFFFF" />
+
+    <!-- Bordas -->
     <stroke
         android:width="3dp"
         android:color="#004F22" />
-    <corners android:radius="4dp" />
+
+    <!-- Bordas Arredondadas -->
+    <corners android:radius="8dp" /> <!-- Ajuste o valor do radius para o arredondamento desejado -->
+
 </shape>
