@@ -109,6 +109,10 @@
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
+            android:name="com.example.hallelapp.activity.EventosCadastradosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
             android:name="com.example.hallelapp.activity.EventosAdmActivity"
             android:exported="false" />
         <activity

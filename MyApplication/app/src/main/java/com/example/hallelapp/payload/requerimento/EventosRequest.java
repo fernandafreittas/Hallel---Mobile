@@ -4,7 +4,6 @@ import com.example.hallelapp.model.ContribuicaoEvento;
 import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.model.LocalEventoLocalizacaoRequest;
 import com.example.hallelapp.model.PagamentoEntradaEvento;
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 import java.util.List;
@@ -25,8 +24,8 @@ public class EventosRequest {
     private Boolean destaque;
     private List<ContribuicaoEvento> contribuicaoEventosList;
     private Double valorDoEvento;
-    private Double ValorDescontoMembro;
-    private Double ValorDescontoAssociado;
+    private Double valorDescontoMembro;
+    private Double valorDescontoAssociado;
 
 
 
@@ -128,19 +127,19 @@ public class EventosRequest {
     }
 
     public Double getValorDescontoMembro() {
-        return ValorDescontoMembro;
+        return valorDescontoMembro;
     }
 
     public void setValorDescontoMembro(Double valorDescontoMembro) {
-        ValorDescontoMembro = valorDescontoMembro;
+        this.valorDescontoMembro = valorDescontoMembro;
     }
 
     public Double getValorDescontoAssociado() {
-        return ValorDescontoAssociado;
+        return valorDescontoAssociado;
     }
 
     public void setValorDescontoAssociado(Double valorDescontoAssociado) {
-        ValorDescontoAssociado = valorDescontoAssociado;
+        this.valorDescontoAssociado = valorDescontoAssociado;
     }
 
     @Override
@@ -158,8 +157,8 @@ public class EventosRequest {
                 ", destaque=" + destaque +
                 ", contribuicaoEventosList=" + contribuicaoEventosList +
                 ", valorDoEvento=" + valorDoEvento +
-                ", ValorDescontoMembro=" + ValorDescontoMembro +
-                ", ValorDescontoAssociado=" + ValorDescontoAssociado +
+                ", ValorDescontoMembro=" + valorDescontoMembro +
+                ", ValorDescontoAssociado=" + valorDescontoAssociado +
                 '}';
     }
 }

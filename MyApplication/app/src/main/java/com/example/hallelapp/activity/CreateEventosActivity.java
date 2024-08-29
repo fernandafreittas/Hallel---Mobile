@@ -9,6 +9,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -57,6 +59,9 @@ public class CreateEventosActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ColaboradorAdapter colaboradorAdapter;
     private AlertDialog loadingDialog;
+    private Double valorDoEvento;
+    private Double valorDescontoMembro;
+    private Double valorDescontoAssociado;
 
     List<LocalEvento> locais;
     String[] localizacoesArray;
@@ -88,7 +93,18 @@ public class CreateEventosActivity extends AppCompatActivity {
         Switch destacarEvento = findViewById(R.id.destaqueEvento);
         EditText txtData = findViewById(R.id.inputDate);
         EditText txtHorario = findViewById(R.id.inputTime);
+        EditText txtValor = findViewById(R.id.editTextNumberedit);
+        EditText txtDescontoMembro = findViewById(R.id.editTextNumber2);
+        EditText txtDescontoAssociado = findViewById(R.id.editTextNumber3edit);
         AutoCompleteTextView txtEndereco = findViewById(R.id.txtEndereco);
+        Button salvarButton = findViewById(R.id.button9);
+
+
+        //formata os editText
+        setupCurrencyFormatting(txtValor);
+        setupCurrencyFormatting(txtDescontoMembro);
+        setupCurrencyFormatting(txtDescontoAssociado);
+
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -160,60 +176,66 @@ public class CreateEventosActivity extends AppCompatActivity {
             }
         });
 
-        Button salvarButton = findViewById(R.id.button9);
+
         salvarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showLoadingDialog();
 
-                // Lógica para salvar os detalhes do evento
+                // Obtenha o texto dos EditText e remova a formatação
+                String valorEventoTexto = txtValor.getText().toString().replace("R$", "").replace(",", ".");
+                String valorDescontoMembroTexto = txtDescontoMembro.getText().toString().replace("R$", "").replace(",", ".");
+                String valorDescontoAssociadoTexto = txtDescontoAssociado.getText().toString().replace("R$", "").replace(",", ".");
+
+                // Converta para Double e atribua às variáveis
+                valorDoEvento = Double.parseDouble(valorEventoTexto);
+                valorDescontoMembro = Double.parseDouble(valorDescontoMembroTexto);
+                valorDescontoAssociado = Double.parseDouble(valorDescontoAssociadoTexto);
+
+
+                System.out.println("Valor do Evento: " + valorDoEvento);
+                System.out.println("Valor Desconto Membro: " + valorDescontoMembro);
+                System.out.println("Valor Desconto Associado: " + valorDescontoAssociado);
+
+
+                eventosRequest.setValorDoEvento(valorDoEvento);
+                eventosRequest.setValorDescontoMembro(valorDescontoMembro);
+                eventosRequest.setValorDescontoAssociado(valorDescontoAssociado);
+
+
+                // Continue com a lógica existente para salvar os detalhes do evento
                 eventosRequest.setTitulo(txtNomeEvento.getText().toString());
                 eventosRequest.setDescricao(txtDescricao.getText().toString());
                 eventosRequest.setDestaque(destacarEvento.isChecked());
 
-
-
+                // Continue com a lógica existente para processar outros campos e salvar o evento
                 String dataString = txtData.getText().toString();
-                dataString = dataString.replace("/","-");
-                System.out.println("dataString: " + dataString);
-
-
-
+                dataString = dataString.replace("/", "-");
                 Date data = null;
-
                 eventosRequest.setDate(data);
-
                 eventosRequest.setHorario(txtHorario.getText().toString());
-
                 LocalEvento local = locais.get(indice);
-
                 eventosRequest.setLocalEvento(local);
 
                 // Lógica para salvar colaboradores/palestrantes
                 List<String> colaboradores = colaboradorAdapter.getColaboradores();
-                // Adicione a lógica para salvar os colaboradores/palestrantes
-
                 eventosRequest.setPalestrantes(colaboradores);
-                System.out.println(eventosRequest.toString());
 
                 LocalEventoLocalizacaoRequest localEventoLocalizacaoRequest = new LocalEventoLocalizacaoRequest();
                 localEventoLocalizacaoRequest.setLocalizacao(local.getLocalizacao());
                 localEventoLocalizacaoRequest.setId(local.getId());
-
                 eventosRequest.setLocalEventoRequest(localEventoLocalizacaoRequest);
 
 
-                System.out.println(eventosRequest.toString());
-                requisicao.criarEvento(dataString,eventosRequest, authenticationResponse, new HttpAdm.HttpCallback() {
+
+
+                requisicao.criarEvento(dataString, eventosRequest, authenticationResponse, new HttpAdm.HttpCallback() {
                     @Override
                     public void onSuccess(String response) {
-                        System.out.println(eventosRequest.toString());
-
                         runOnUiThread(() -> {
                             Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
                             hideLoadingDialog();
                         });
-
                         finish();
                     }
 
@@ -252,5 +274,44 @@ public class CreateEventosActivity extends AppCompatActivity {
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         return "data:image/jpeg;base64," + Base64.encodeToString(byteArray, Base64.DEFAULT);
     }
+
+    private void setupCurrencyFormatting(EditText editText) {
+        editText.addTextChangedListener(new TextWatcher() {
+            private String current = "";
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!s.toString().equals(current)) {
+                    editText.removeTextChangedListener(this);
+
+                    String cleanString = s.toString().replaceAll("[R$,]", "").replace(".", "");
+                    double parsed;
+                    try {
+                        parsed = Double.parseDouble(cleanString);
+                    } catch (NumberFormatException e) {
+                        parsed = 0.00;
+                    }
+
+                    String formatted = String.format(Locale.getDefault(), "%.2f", parsed / 100);
+
+                    current = "R$ " + formatted.replace(".", ",");
+                    editText.setText(current);
+                    editText.setSelection(current.length());
+
+                    editText.addTextChangedListener(this);
+                }
+            }
+        });
+    }
+
+
 
 }

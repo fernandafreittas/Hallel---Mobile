@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,7 +8,9 @@
     tools:context=".activity.CreateEventosActivity">
 
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -205,8 +207,8 @@
 
                 <AutoCompleteTextView
                     android:id="@+id/txtEndereco"
-                    android:layout_width="365dp"
-                    android:layout_height="35dp"
+                    android:layout_width="373dp"
+                    android:layout_height="36dp"
                     android:background="@drawable/input_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -215,10 +217,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView48"
                     app:layout_constraintVertical_bias="0.042" />
 
+
                 <TextView
-                    android:id="@+id/textView49"
+                    android:id="@+id/textView49edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/inter_semibold"
                     android:text="Colaboradores e palestrantes:"
                     android:textColor="@color/cortexto2"
@@ -227,20 +231,20 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.09"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
-                    app:layout_constraintVertical_bias="0.093" />
-
+                    app:layout_constraintTop_toBottomOf="@+id/imageView24edit"
+                    app:layout_constraintVertical_bias="0.062" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewColoborador"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:nestedScrollingEnabled="false"
                     app:layout_constraintBottom_toTopOf="@+id/button9"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView49"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49edit"
                     app:layout_constraintVertical_bias="0.073"
                     tools:itemCount="1"
                     tools:listitem="@layout/item_recycle" />
@@ -259,14 +263,102 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView49"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49edit"
                     app:layout_constraintVertical_bias="0.861" />
+
+                <TextView
+                    android:id="@+id/textadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="36dp"
+                    android:text="Definir valor do evento:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEndereco" />
+
+                <EditText
+                    android:id="@+id/editTextNumberedit"
+                    android:layout_width="186dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@drawable/input_text"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintStart_toEndOf="@+id/textadd"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEndereco" />
+
+                <ImageView
+                    android:id="@+id/imageView24edit"
+                    android:layout_width="0dp"
+                    android:layout_height="128dp"
+                    android:layout_marginTop="24dp"
+                    android:background="#22C1C1C1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textadd" />
+
+                <TextView
+                    android:id="@+id/texttadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Definir desconto para membro:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/imageView24edit"
+                    app:layout_constraintTop_toTopOf="@+id/imageView24edit" />
+
+                <TextView
+                    android:id="@+id/textView18edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="84dp"
+                    android:text="Definir desconto para associado:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/imageView24edit"
+                    app:layout_constraintTop_toTopOf="@+id/imageView24edit" />
+
+                <EditText
+                    android:id="@+id/editTextNumber2"
+                    android:layout_width="126dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/input_text_cartao"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintStart_toEndOf="@+id/texttadd"
+                    app:layout_constraintTop_toTopOf="@+id/imageView24edit" />
+
+                <EditText
+                    android:id="@+id/editTextNumber3edit"
+                    android:layout_width="121dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/input_text_cartao"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView24edit"
+                    app:layout_constraintStart_toEndOf="@+id/textView18edit"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+                    app:layout_constraintVertical_bias="0.527" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
+    </ScrollView>
 
 
 
@@ -274,5 +366,4 @@
 
 
 
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

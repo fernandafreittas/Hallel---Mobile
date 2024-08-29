@@ -124,6 +124,8 @@ public class HttpAdm {
 
         RequestBody body = RequestBody.create(json, JSON);
 
+        System.out.println(json);
+
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)

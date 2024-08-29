@@ -8,6 +8,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -64,6 +66,9 @@ public class EditEventoActivity extends AppCompatActivity {
     List<LocalEvento> locais;
     String[] localizacoesArray;
     int indice;
+    private Double valorDoEvento;
+    private Double valorDescontoMembro;
+    private Double valorDescontoAssociado;
 
     Context context = this;
 
@@ -103,12 +108,23 @@ public class EditEventoActivity extends AppCompatActivity {
         Button editHora = findViewById(R.id.editHour);
         Button editEnder = findViewById(R.id.editAddress);
         Button salvarButton = findViewById(R.id.button9);
+        EditText txtValor = findViewById(R.id.editTextNumberedit);
+        EditText txtDescontoMembro = findViewById(R.id.editTextNumber2);
+        EditText txtDescontoAssociado = findViewById(R.id.editTextNumber3edit);
+        Button editValor = findViewById(R.id.button7);
+        Button editDescontoMembro = findViewById(R.id.button8);
+        Button editDescontoAssociado = findViewById(R.id.button10);
+
+
 
         txtNomeEvento.setEnabled(false);
         txtDescricao.setEnabled(false);
         txtData.setEnabled(false);
         txtHorario.setEnabled(false);
         txtEndereco.setEnabled(false);
+        txtValor.setEnabled(false);
+        txtDescontoMembro.setEnabled(false);
+        txtDescontoAssociado.setEnabled(false);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -214,10 +230,18 @@ public class EditEventoActivity extends AppCompatActivity {
                     txtData.setText(dataFormatada);
                     txtHorario.setText(eventosRequest.getHorario());
                     txtEndereco.setText(eventosRequest.getLocalEvento().getLocalizacao());
+                    txtValor.setText(eventosRequest.getValorDoEvento()+"");
+                    txtDescontoMembro.setText(eventosRequest.getValorDescontoMembro()+"");
+                    txtDescontoAssociado.setText(eventosRequest.getValorDescontoAssociado()+"");
+
+                    //formata os editText
+                    setupCurrencyFormatting(txtValor);
+                    setupCurrencyFormatting(txtDescontoMembro);
+                    setupCurrencyFormatting(txtDescontoAssociado);
 
                     System.out.println("palestrantes " + eventosRequest.getPalestrantes());
 
-                    if (eventosRequest.getPalestrantes() != null) {
+                    if (eventosRequest.getPalestrantes() != null && eventosRequest.getPalestrantes().size() != 0) {
                         colaboradorAdapter.adicionaColaboradores(eventosRequest.getPalestrantes());
                     }
                 });
@@ -265,10 +289,52 @@ public class EditEventoActivity extends AppCompatActivity {
             }
         });
 
+        editValor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtValor.setEnabled(true);
+            }
+        });
+
+        editDescontoMembro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtDescontoMembro.setEnabled(true);
+            }
+        });
+
+        editDescontoAssociado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtDescontoAssociado.setEnabled(true);
+            }
+        });
 
         salvarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // Obtenha o texto dos EditText e remova a formatação
+                String valorEventoTexto = txtValor.getText().toString().replace("R$", "").replace(",", ".");
+                String valorDescontoMembroTexto = txtDescontoMembro.getText().toString().replace("R$", "").replace(",", ".");
+                String valorDescontoAssociadoTexto = txtDescontoAssociado.getText().toString().replace("R$", "").replace(",", ".");
+
+                // Converta para Double e atribua às variáveis
+                valorDoEvento = Double.parseDouble(valorEventoTexto);
+                valorDescontoMembro = Double.parseDouble(valorDescontoMembroTexto);
+                valorDescontoAssociado = Double.parseDouble(valorDescontoAssociadoTexto);
+
+
+                System.out.println("Valor do Evento: " + valorDoEvento);
+                System.out.println("Valor Desconto Membro: " + valorDescontoMembro);
+                System.out.println("Valor Desconto Associado: " + valorDescontoAssociado);
+
+                eventosRequest.setValorDoEvento(valorDoEvento);
+                eventosRequest.setValorDescontoMembro(valorDescontoMembro);
+                eventosRequest.setValorDescontoAssociado(valorDescontoAssociado);
+
+
+
                 // Lógica para salvar os detalhes do evento
                 eventosRequest.setTitulo(txtNomeEvento.getText().toString());
                 eventosRequest.setDescricao(txtDescricao.getText().toString());
@@ -283,12 +349,6 @@ public class EditEventoActivity extends AppCompatActivity {
                 Date data = null;
 
                 eventosRequest.setDate(data);
-
-
-
-
-
-
 
 
                 eventosRequest.setHorario(txtHorario.getText().toString());
@@ -342,4 +402,43 @@ public class EditEventoActivity extends AppCompatActivity {
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         return Base64.encodeToString(byteArray, Base64.DEFAULT);
     }
+
+    private void setupCurrencyFormatting(EditText editText) {
+        editText.addTextChangedListener(new TextWatcher() {
+            private String current = "";
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!s.toString().equals(current)) {
+                    editText.removeTextChangedListener(this);
+
+                    String cleanString = s.toString().replaceAll("[R$,]", "").replace(".", "");
+                    double parsed;
+                    try {
+                        parsed = Double.parseDouble(cleanString);
+                    } catch (NumberFormatException e) {
+                        parsed = 0.00;
+                    }
+
+                    String formatted = String.format(Locale.getDefault(), "%.2f", parsed / 100);
+
+                    current = "R$ " + formatted.replace(".", ",");
+                    editText.setText(current);
+                    editText.setSelection(current.length());
+
+                    editText.addTextChangedListener(this);
+                }
+            }
+        });
+    }
+
+
 }
