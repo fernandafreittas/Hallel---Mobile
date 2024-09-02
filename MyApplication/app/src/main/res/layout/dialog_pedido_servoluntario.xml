@@ -3,51 +3,88 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="20dp"
+    android:layout_height="match_parent">
 
-    android:gravity="center_horizontal">
-
-    <ImageView
-        android:id="@+id/imgPedVolunt"
-        android:layout_width="161dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/conf"
-        android:scaleType="fitStart"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewS"
+        android:layout_width="359dp"
+        android:layout_height="249dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView4PedVolunt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Seu pedido para ser volutário foi realizado com sucesso, fique atento ao seu telefone e e-mail que em breve!"
-        android:textAlignment="center"
-        android:textColor="@color/cordetextohallel"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPedVolunt" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnDialogPedVolunt"
-        android:layout_width="91dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/circulo_verdeclaro"
-        android:fontFamily="@font/inter"
-        android:text="FECHAR"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/cortexto2"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4PedVolunt" />
+            <Button
+                android:id="@+id/buttonS"
+                android:layout_width="110dp"
+                android:layout_height="37dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/backgroundtxt"
+                android:text="CONTINUAR"
+                android:textColor="@color/cortexto2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4S"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView4S"
+                android:layout_width="292dp"
+                android:layout_height="121dp"
+                android:text="Seu pedido para ser volutário foi realizado com sucesso, fique atento ao seu telefone e e-mail que em breve!"
+                android:textAlignment="center"
+                android:textColor="@color/cortexto2"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.414" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="95dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="-30dp"
+        android:translationZ="20dp"
+        app:cardBackgroundColor="#F2F5F3"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewS"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewS"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/cardViewS">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewS"
+                android:layout_width="130dp"
+                android:layout_height="115dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.48"
+                app:srcCompat="@drawable/aaq" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

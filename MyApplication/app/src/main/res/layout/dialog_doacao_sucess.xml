@@ -3,64 +3,97 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="20dp"
+    android:layout_height="match_parent">
 
-    android:gravity="center_horizontal">
-
-    <ImageView
-        android:id="@+id/imgDoacaosuces"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:background="@drawable/image_75"
-        android:scaleType="fitStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4Doacaosuces"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Sua doação foi realizada com sucesso! "
-        android:textColor="@color/cortexto2"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgDoacaosuces" />
-
-    <TextView
-        android:id="@+id/subnfoDoacaosuces"
-        android:layout_width="304dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="4dp"
-        android:text="Clique em 'Continuar' para ir para a tela inicial."
-        android:textAlignment="center"
-        android:textColor="@color/cordetextohallel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4Doacaosuces" />
-
-    <Button
-        android:id="@+id/btndialogDoacaosuces"
-        android:layout_width="114dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/backgroundtxt"
-        android:fontFamily="@font/inter"
-        android:text="CONTINUAR"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/cortexto2"
-        android:textSize="16sp"
-        android:textStyle="bold"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDoacaosu"
+        android:layout_width="348dp"
+        android:layout_height="202dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subnfoDoacaosuces" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/subnfoDoacaosu"
+                android:layout_width="336dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="4dp"
+                android:text="Clique em 'Continuar' para ir para a tela inicial."
+                android:textAlignment="center"
+                android:textColor="@color/cordetextohallel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDoacaosu" />
+
+            <TextView
+                android:id="@+id/textViewDoacaosu"
+                android:layout_width="258dp"
+                android:layout_height="54dp"
+                android:text="Sua doação foi realizada com sucesso! "
+                android:textAlignment="center"
+                android:textColor="@color/cortexto2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.257" />
+
+            <Button
+                android:id="@+id/buttonDoacaosu"
+                android:layout_width="110dp"
+                android:layout_height="37dp"
+                android:background="@drawable/backgroundtxt"
+                android:text="CONTINUAR"
+                android:textColor="@color/cortexto2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subnfoDoacaosu"
+                app:layout_constraintVertical_bias="0.466" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="95dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="-30dp"
+        android:translationZ="20dp"
+        app:cardBackgroundColor="#122E02"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewDoacaosu"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewDoacaosu"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/cardViewDoacaosu">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewDoacaosu"
+                android:layout_width="87dp"
+                android:layout_height="76dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/checksss" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
