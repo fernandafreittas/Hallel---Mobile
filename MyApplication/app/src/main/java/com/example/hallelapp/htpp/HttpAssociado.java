@@ -4,6 +4,9 @@ import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
 import com.google.gson.Gson;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -34,6 +37,30 @@ public class HttpAssociado {
         void onFailure(IOException e);
     }
 
+    private boolean isValidJson(String responseBody) {
+        // Verifica se a resposta é um valor booleano simples
+        if ("true".equals(responseBody) || "false".equals(responseBody)) {
+            return true;
+        }
+
+        try {
+            // Tenta interpretar como JSONObject
+            new JSONObject(responseBody);
+            return true;
+        } catch (Exception e) {
+            try {
+                // Tenta interpretar como JSONArray
+                new JSONArray(responseBody);
+                return true;
+            } catch (Exception e1) {
+                return false; // Se der erro em ambos os casos, não é um JSON válido
+            }
+        }
+    }
+
+
+
+
     public void listarPagamentoAssociadoPerfilByMesAndAno (String idAssociado,String mes ,String ano,
                                    InformacoesDaSessao informacoesDaSessao , final HttpMain.HttpCallback callback) {
         OkHttpClient client = new OkHttpClient();
@@ -63,7 +90,11 @@ public class HttpAssociado {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -94,7 +125,11 @@ public class HttpAssociado {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }

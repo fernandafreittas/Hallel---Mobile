@@ -1,5 +1,6 @@
 package com.example.hallelapp.activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Base64;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -69,6 +71,7 @@ public class PerfilActivity extends AppCompatActivity {
         TextView nomePagador = findViewById(R.id.nomePagador);
         TextView dataPagamento = findViewById(R.id.textView36);
         TextView formaDePagamento = findViewById(R.id.textView40);
+        Button btnEditarPerfil = findViewById(R.id.button6);
 
         // Obter o mês e o ano atuais
         Calendar calendar = Calendar.getInstance();
@@ -94,6 +97,11 @@ public class PerfilActivity extends AppCompatActivity {
         cpf.setText(perfilResponse.getCpf());
         telefone.setText(perfilResponse.getTelefone());
 
+        statusAtivo.setVisibility(View.INVISIBLE);
+        statusExpirado.setVisibility(View.INVISIBLE);
+        statusPendente.setVisibility(View.INVISIBLE);
+
+
         if (StatusMembro.ATIVO.equals(perfilResponse.getStatus())) {
             statusAtivo.setVisibility(View.VISIBLE);
             statusExpirado.setVisibility(View.INVISIBLE);
@@ -107,6 +115,17 @@ public class PerfilActivity extends AppCompatActivity {
             statusExpirado.setVisibility(View.INVISIBLE);
             statusPendente.setVisibility(View.VISIBLE);
         }
+
+
+
+        btnEditarPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PerfilActivity.this, EditPerfilActivity.class);
+                intent.putExtra("informacoesPerfil",perfilResponse);
+                startActivity(intent);
+            }
+        });
 
         BuscarIdAssociadoReq buscarIdAssociadoReq = new BuscarIdAssociadoReq(perfilResponse.getEmail());
         requestMembro.BuscarIdAssociado(buscarIdAssociadoReq, informacoesDeLogin, new HttpMain.HttpCallback() {

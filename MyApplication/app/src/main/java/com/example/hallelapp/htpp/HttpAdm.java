@@ -18,6 +18,9 @@ import com.example.hallelapp.payload.resposta.AuthenticationResponse;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -62,6 +65,31 @@ public class HttpAdm {
         void onFailure(IOException e);
     }
 
+
+
+    private boolean isValidJson(String responseBody) {
+        // Verifica se a resposta é um valor booleano simples
+        if ("true".equals(responseBody) || "false".equals(responseBody)) {
+            return true;
+        }
+
+        try {
+            // Tenta interpretar como JSONObject
+            new JSONObject(responseBody);
+            return true;
+        } catch (Exception e) {
+            try {
+                // Tenta interpretar como JSONArray
+                new JSONArray(responseBody);
+                return true;
+            } catch (Exception e1) {
+                return false; // Se der erro em ambos os casos, não é um JSON válido
+            }
+        }
+    }
+
+
+
     public void RealizarLogin(final AdministradorLoginRequest administradorLoginRequest, final HttpAdm.HttpCallback callback
     ) {
 
@@ -87,7 +115,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -138,7 +170,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -182,7 +218,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -230,7 +270,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -279,7 +323,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -326,7 +374,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -370,7 +422,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -417,7 +473,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -460,7 +520,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -502,7 +566,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -544,7 +612,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -559,6 +631,49 @@ public class HttpAdm {
             }
         });
     }
+
+    public void ListVoluntarioByEmail(String idEventos, String email, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback) {
+
+        OkHttpClient client = new OkHttpClient();
+
+        // Inclui o email como parâmetro de query na URL
+        String url = UrlBase + "/eventos/" + idEventos + "/listVoluntariosByEmail?email=" + email;
+
+        Log.d("HttpADM", "url: " + url);
+
+        String token = authenticationResponse.getToken();
+
+        Request request = new Request.Builder()
+                .url(url)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println("deu certooo");
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+                System.out.println("deu errado");
+                callback.onFailure(e);
+            }
+        });
+    }
+
+
 
 
     public void ListParticipantesEvento(String idEventos, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
@@ -587,7 +702,12 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    System.out.println(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -634,7 +754,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -680,7 +804,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -728,11 +856,12 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
 
-                    // Informe o tipo genérico para converter a lista corretamente
-                    Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
-                    List<AllEventosListResponse> responseEventos = new Gson().fromJson(responseBody, listType);
 
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição"));
                 }
@@ -779,7 +908,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -826,7 +959,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -865,7 +1002,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -907,7 +1048,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -962,7 +1107,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -1001,7 +1150,11 @@ public class HttpAdm {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }

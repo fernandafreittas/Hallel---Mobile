@@ -4,9 +4,13 @@ import android.util.Log;
 
 import com.example.hallelapp.model.InformacoesDaSessao;
 import com.example.hallelapp.payload.requerimento.BuscarIdAssociadoReq;
+import com.example.hallelapp.payload.requerimento.EditPerfilRequest;
 import com.example.hallelapp.payload.requerimento.ParticiparEventosRequest;
 import com.example.hallelapp.payload.requerimento.SeVoluntariarEventoReq;
 import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -42,6 +46,27 @@ public class HttpMembro {
         void onFailure(IOException e);
     }
 
+    private boolean isValidJson(String responseBody) {
+        // Verifica se a resposta é um valor booleano simples
+        if ("true".equals(responseBody) || "false".equals(responseBody)) {
+            return true;
+        }
+
+        try {
+            // Tenta interpretar como JSONObject
+            new JSONObject(responseBody);
+            return true;
+        } catch (Exception e) {
+            try {
+                // Tenta interpretar como JSONArray
+                new JSONArray(responseBody);
+                return true;
+            } catch (Exception e1) {
+                return false; // Se der erro em ambos os casos, não é um JSON válido
+            }
+        }
+    }
+
 
 
     public void InformacoesDePerfil (
@@ -68,7 +93,11 @@ public class HttpMembro {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -114,7 +143,11 @@ public class HttpMembro {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println(responseBody);
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -153,7 +186,11 @@ public class HttpMembro {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -192,7 +229,11 @@ public class HttpMembro {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -205,6 +246,54 @@ public class HttpMembro {
         });
     }
 
+    public void EditPerfilUsuario (EditPerfilRequest editPerfilRequest,String id,
+                                   InformacoesDaSessao informacoesDaSessao , final HttpMain.HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+
+        token = informacoesDaSessao.getToken();
+
+        Gson gson = new Gson();
+        String json = gson.toJson(editPerfilRequest);
+
+        String url = UrlBase + "membros/perfil/editar/"+id;
+
+        System.out.println(url);
+
+        System.out.println(token);
+
+        System.out.println(editPerfilRequest.toString());
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+
+        Request request = new Request.Builder()
+                .url(url)
+                .put(body)
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    System.out.println(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
 
 
 

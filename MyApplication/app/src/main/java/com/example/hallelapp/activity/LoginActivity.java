@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -76,48 +77,56 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showLoadingDialog();
-                String email = txtEmail.getText().toString();
-                String senha = textSenha.getText().toString();
+                String email = txtEmail.getText().toString().trim();
+                String senha = textSenha.getText().toString().trim();
 
-                if (email != null && senha != null) {
-                    LoginRequest loginRequest = new LoginRequest(email, senha);
-                    HttpMain httpMain = new HttpMain();
-                    httpMain.login(loginRequest, new HttpMain.HttpCallback() {
-                        @Override
-                        public void onSuccess(String response) {
-                            System.out.println(response);
-                            hideLoadingDialog();
-                            LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
-
-
-                            Log.d("JSON_RESPONSE", response);
-
-                            System.out.println(loginResponse.toString());
-
-
-                                SalvarDados(loginResponse,lembreDeMim.isChecked(), senha);
-
-
-
-                            InformacoesDaSessao informacoesDaSessao = new InformacoesDaSessao();
-                            informacoesDaSessao.setToken(loginResponse.getToken());
-                            Membro membro = loginResponse.getMembro();
-                            informacoesDaSessao.setId(membro.getId());
-
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            intent.putExtra("logadoRecentemente", 1);
-                            startActivity(intent);
-
-                        }
-
-                        @Override
-                        public void onFailure(IOException e) {
-
-                        }
-                    });
-
+                // Verificar se os campos estão preenchidos
+                if (email.isEmpty() || senha.isEmpty()) {
+                    hideLoadingDialog();
+                    Toast.makeText(LoginActivity.this, "Todos os campos devem ser preenchidos.", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
+                // Verificar se o e-mail está em um formato válido
+                if (!isValidEmail(email)) {
+                    hideLoadingDialog();
+                    Toast.makeText(LoginActivity.this, "Insira um e-mail válido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Proseguir com o login
+                LoginRequest loginRequest = new LoginRequest(email, senha);
+                HttpMain httpMain = new HttpMain();
+                httpMain.login(loginRequest, new HttpMain.HttpCallback() {
+                    @Override
+                    public void onSuccess(String response) {
+                        hideLoadingDialog();
+                        LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
+
+                        Log.d("JSON_RESPONSE", response);
+                        SalvarDados(loginResponse, lembreDeMim.isChecked(), senha);
+
+                        InformacoesDaSessao informacoesDaSessao = new InformacoesDaSessao();
+                        informacoesDaSessao.setToken(loginResponse.getToken());
+                        Membro membro = loginResponse.getMembro();
+                        informacoesDaSessao.setId(membro.getId());
+
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("logadoRecentemente", 1);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onFailure(IOException e) {
+
+                        runOnUiThread(()->{
+                            hideLoadingDialog();
+                            // Exibir o diálogo de erro de login
+                            showLoginErrorDialog();
+                        });
+
+                    }
+                });
             }
         });
 
@@ -199,6 +208,36 @@ public class LoginActivity extends AppCompatActivity {
         if (loadingDialog != null && loadingDialog.isShowing()) {
             loadingDialog.dismiss();
         }
+    }
+
+    // Método para validar o formato do e-mail
+    private boolean isValidEmail(String email) {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        return email.matches(emailPattern);
+    }
+
+
+    // Método para exibir o diálogo de erro
+    private void showLoginErrorDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_errologin, null);
+        builder.setView(dialogView);
+
+
+
+        AlertDialog dialog = builder.create();
+
+        // Botão "CONTINUAR" para fechar o diálogo
+        Button buttonErrlo = dialogView.findViewById(R.id.buttonErrlo);
+        buttonErrlo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
 }

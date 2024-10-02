@@ -167,7 +167,6 @@ public class Membro implements Serializable {
                 ", statusMembro=" + statusMembro +
                 ", idade=" + idade +
                 ", telefone='" + telefone + '\'' +
-                ", image='" + image + '\'' +
                 ", funcao='" + funcao + '\'' +
                 ", doador=" + doador +
                 ", quantidadeDoacoes=" + quantidadeDoacoes +

@@ -68,9 +68,10 @@
                     android:inputType="number"
                     android:paddingStart="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/nometitularcartao"
                     app:layout_constraintVertical_bias="0.082"
-                    tools:layout_editor_absoluteX="41dp"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -108,7 +109,7 @@
                     android:layout_height="40dp"
                     android:background="@drawable/input_text_cartao"
                     android:ems="10"
-                    android:inputType="date"
+                    android:inputType="number"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.118"
@@ -199,33 +200,39 @@
                     app:layout_constraintStart_toStartOf="@+id/view"
                     app:layout_constraintTop_toTopOf="@+id/view" />
 
-                <RadioButton
-                    android:id="@+id/radiocartaocredt"
+                <RadioGroup
+                    android:id="@+id/Radiocartao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="48dp"
-                    android:buttonTint="#225324"
-                    android:fontFamily="@font/inter_semibold"
-                    android:text="Cartão de crédito"
-                    android:textColor="@color/cordetextohallel"
-                    android:textSize="16sp"
+                    android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="@+id/view"
-                    app:layout_constraintTop_toTopOf="@+id/view" />
+                    app:layout_constraintTop_toTopOf="@+id/view">
 
-                <RadioButton
-                    android:id="@+id/radiocartaodebt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="48dp"
-                    android:buttonTint="#225324"
-                    android:fontFamily="@font/inter_semibold"
-                    android:text="Cartão de débito"
-                    android:textColor="@color/cordetextohallel"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/radiocartaocredt"
-                    app:layout_constraintTop_toTopOf="@+id/view" />
+                    <RadioButton
+                        android:id="@+id/radiocartaocredt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:buttonTint="#225324"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="Cartão de crédito"
+                        android:textColor="@color/cordetextohallel"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/radiocartaodebt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:buttonTint="#225324"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="Cartão de débito"
+                        android:textColor="@color/cordetextohallel"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
 
                 <Switch
                     android:id="@+id/switchautomatico"

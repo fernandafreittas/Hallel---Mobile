@@ -256,6 +256,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     System.out.println("deu certo informações de perfil");
                     Gson gson = new Gson();
                     perfilResponse = gson.fromJson(response, PerfilResponse.class);
+                    System.out.println(perfilResponse.getStatus());
                 }
 
                 @Override

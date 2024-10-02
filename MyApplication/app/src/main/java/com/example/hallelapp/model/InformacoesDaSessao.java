@@ -1,6 +1,8 @@
 package com.example.hallelapp.model;
 
-public class InformacoesDaSessao {
+import java.io.Serializable;
+
+public class InformacoesDaSessao implements Serializable {
 
     private String token;
     private String id;

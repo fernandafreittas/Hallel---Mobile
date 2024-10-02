@@ -2,6 +2,7 @@ package com.example.hallelapp.activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -38,6 +39,7 @@ public class ListParticipantesEventoActivity  extends AppCompatActivity {
 
     List<String> listaDeNomes;
     private AlertDialog loadingDialog;
+    List<Membro> responseMembro;
 
 
     @Override
@@ -64,7 +66,7 @@ public class ListParticipantesEventoActivity  extends AppCompatActivity {
                 System.out.println(response);
                 hideLoadingDialog();
                 Type listType = new TypeToken<List<Membro>>() {}.getType();
-                List<Membro> responseMembro = new Gson().fromJson(response, listType);
+                responseMembro = new Gson().fromJson(response, listType);
 
 
                 List<String> nomesDosMembros = new ArrayList<>();
@@ -92,7 +94,33 @@ public class ListParticipantesEventoActivity  extends AppCompatActivity {
                             textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
                             textView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
                             textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold)); // Defina o tipo de fonte conforme necessário
+
+
+                            textView.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    // Encontre o objeto Membro correspondente ao nome clicado
+                                    Membro membroSelecionado = null;
+                                    for (Membro m : responseMembro) {
+                                        if (m.getNome().equals(membro)) {
+                                            membroSelecionado = m;
+                                            break;
+                                        }
+                                    }
+
+                                    // Crie o intent e passe o objeto Membro
+                                    Intent intent = new Intent(ListParticipantesEventoActivity.this, DadosParticipanteActivity.class);
+                                    intent.putExtra("membro", membroSelecionado);
+                                    intent.putExtra("informaçõesADM", authenticationResponse);
+                                    intent.putExtra("id", evento.getId());
+                                    startActivity(intent);
+                                }
+                            });
+
+
                             tableLayout.addView(textView);
+
+
                         }
                     }
                 });
@@ -135,7 +163,33 @@ public class ListParticipantesEventoActivity  extends AppCompatActivity {
                     textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
                     textView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
                     textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold)); // Defina o tipo de fonte conforme necessário
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Encontre o objeto Membro correspondente ao nome clicado
+                            Membro membroSelecionado = null;
+                            for (Membro m : responseMembro) {
+                                if (m.getNome().equals(membro)) {
+                                    membroSelecionado = m;
+                                    break;
+                                }
+                            }
+
+                            // Crie o intent e passe o objeto Membro
+                            Intent intent = new Intent(ListParticipantesEventoActivity.this, DadosParticipanteActivity.class);
+                            intent.putExtra("membro", membroSelecionado);
+                            intent.putExtra("informaçõesADM", authenticationResponse);
+                            intent.putExtra("id", evento.getId());
+                            startActivity(intent);
+                        }
+                    });
+
+
                     tableLayout.addView(textView);
+
+
+
                 }
 
 
@@ -172,6 +226,29 @@ public class ListParticipantesEventoActivity  extends AppCompatActivity {
                     textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16); // Defina o tamanho do texto conforme necessário
                     textView.setPadding(8, 8, 8, 8); // Defina o preenchimento conforme necessário
                     textView.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semibold)); // Defina o tipo de fonte conforme necessário
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Encontre o objeto Membro correspondente ao nome clicado
+                            Membro membroSelecionado = null;
+                            for (Membro m : responseMembro) {
+                                if (m.getNome().equals(membro)) {
+                                    membroSelecionado = m;
+                                    break;
+                                }
+                            }
+
+                            // Crie o intent e passe o objeto Membro
+                            Intent intent = new Intent(ListParticipantesEventoActivity.this, DadosParticipanteActivity.class);
+                            intent.putExtra("membro", membroSelecionado);
+                            intent.putExtra("informaçõesADM", authenticationResponse);
+                            intent.putExtra("id", evento.getId());
+                            startActivity(intent);
+                        }
+                    });
+
+
                     tableLayout.addView(textView);
                 }
 

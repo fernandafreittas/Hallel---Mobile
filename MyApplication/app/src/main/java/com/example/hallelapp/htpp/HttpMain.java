@@ -29,6 +29,9 @@ import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 
 public class HttpMain {
 
@@ -59,118 +62,102 @@ public class HttpMain {
         void onFailure(IOException e);
     }
 
-    // consumido a rota de cadastro de membro da API
+    private boolean isValidJson(String responseBody) {
+        // Verifica se a resposta é um valor booleano simples
+        if ("true".equals(responseBody) || "false".equals(responseBody)) {
+            return true;
+        }
 
+        try {
+            // Tenta interpretar como JSONObject
+            new JSONObject(responseBody);
+            return true;
+        } catch (Exception e) {
+            try {
+                // Tenta interpretar como JSONArray
+                new JSONArray(responseBody);
+                return true;
+            } catch (Exception e1) {
+                return false; // Se der erro em ambos os casos, não é um JSON válido
+            }
+        }
+    }
+
+
+
+    // Consumindo a rota de cadastro de membro da API
     public void cadastrar(final CadastroRequest cadastroRequest, final HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
 
-        //execulta a requisição em outra thread fazendo com que a thead principal fique livre para a interfacae
-        new AsyncTask<Void, Void, String>() {
-            @SuppressLint("StaticFieldLeak")
+        String json = gson.toJson(cadastroRequest);
+        String url = UrlBase + "cadastrar";
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
             @Override
-            protected String doInBackground(Void... voids) {
-
-                OkHttpClient client = new OkHttpClient();
-                Gson gson = new Gson();
-
-                //transformando o objeto em Json
-                String json = gson.toJson(cadastroRequest);
-
-                //url base
-                String url = UrlBase + "cadastrar";
-
-                //impressões no console para teste
-                System.out.println(url);
-                System.out.println(cadastroRequest.toString());
-
-                //construindo o corpo da requisão
-                RequestBody body = RequestBody.create(json, JSON);
-
-                Request request = new Request.Builder()
-                        .url(url)
-                        .post(body)
-                        .build();
-                try {
-                    Response response = client.newCall(request).execute();
-                    return response.body().string();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    return null;
-                }
-            }
-
-
-            // depois da resposta ser execultada
-            @Override
-            protected void onPostExecute(String result) {
-                //se o resultado for indiferente de null ele chama o metodo OnSucess que imprime a resposta do servidor
-                // se não chaama onFailure para lançar uma exeção
-                if (result != null) {
-                    callback.onSuccess(result);
-                } else {
-                    callback.onFailure(new IOException("Erro ao realizar requisição"));
-                }
-            }
-        }.execute();
-    }
-
-//realiza o login e traz as informações de login
-
-    public void login(final LoginRequest loginRequest ,  final HttpCallback callback){
-        new AsyncTask<Void,Void,String>() {
-            @SuppressLint("StaticFieldLeak")
-            @Override
-            protected String doInBackground(Void... voids) {
-                OkHttpClient client = new OkHttpClient();
-                Gson gson = new Gson();
-
-                String json = gson.toJson(loginRequest);
-
-                String url = UrlBase + "login";
-
-                System.out.println(url);
-                System.out.println(loginRequest.toString());
-
-                RequestBody body = RequestBody.create(json, JSON);
-
-                Request request = new Request
-                        .Builder()
-                        .url(url)
-                        .post(body)
-                        .build();
-
-
-                try {
-                    Response response = client.newCall(request).execute();
-                    if (response.isSuccessful()) {
-                        // Retorna o conteúdo da resposta como uma string
-                        return response.body().string();
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
                     } else {
-                        // Retorna null se a resposta não for bem-sucedida
-                        return null;
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    // Retorna null em caso de exceção
-                    return null;
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
             }
-
 
             @Override
-            protected void onPostExecute(String result) {
-                if (result != null) {
-                    System.out.println(result);
-                    callback.onSuccess(result);
-                } else {
-                    callback.onFailure(new IOException("erro ao realizar requisição"));
-                }
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
             }
-        }.execute();
-
-
+        });
     }
 
+    // Realiza o login e traz as informações de login
+    public void login(final LoginRequest loginRequest, final HttpCallback callback) {
+        OkHttpClient client = new OkHttpClient();
+        Gson gson = new Gson();
 
+        String json = gson.toJson(loginRequest);
+        String url = UrlBase + "login";
+
+        RequestBody body = RequestBody.create(json, JSON);
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseBody = response.body().string();
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
+                } else {
+                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                callback.onFailure(e);
+            }
+        });
+    }
 
     // Método para listar todos os eventos
     public void ListAllEventos(final HttpCallback callback) {
@@ -192,23 +179,26 @@ public class HttpMain {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
 
-                    // Informe o tipo genérico para converter a lista corretamente
-                    Type listType = new TypeToken<List<AllEventosListResponse>>() {}.getType();
-                    List<AllEventosListResponse> responseEventos = new Gson().fromJson(responseBody, listType);
-
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        // Resposta não é um JSON válido, logando a resposta completa para depuração
+                        Log.e("ListAllEventos", "Resposta não é um JSON válido: " + responseBody);
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
-                    callback.onFailure(new IOException("Erro ao realizar requisição"));
+                    Log.e("ListAllEventos", "Erro na requisição de eventos: " + response.code());
+                    callback.onFailure(new IOException("Erro ao realizar requisição, código: " + response.code()));
                 }
             }
 
             @Override
             public void onFailure(Call call, IOException e) {
+                Log.e("ListAllEventos", "Erro na requisição de eventos", e);
                 callback.onFailure(e);
             }
         });
     }
-
 
 
     public void SeVoluntariarEmEvento(final SeVoluntariarEventoReq seVoluntariarEventoReq
@@ -237,7 +227,12 @@ public class HttpMain {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
                     System.out.println("deu certooo");
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        // Resposta não é um JSON válido
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -272,7 +267,12 @@ public class HttpMain {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        // Resposta não é um JSON válido
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -317,7 +317,13 @@ public class HttpMain {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        // Resposta não é um JSON válido, logando a resposta completa para depuração
+                        Log.e("ListAllEventos", "Resposta não é um JSON válido: " + responseBody);
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -359,7 +365,12 @@ public class HttpMain {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        // Resposta não é um JSON válido
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -400,7 +411,12 @@ public class HttpMain {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        // Resposta não é um JSON válido
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }
@@ -443,7 +459,12 @@ public class HttpMain {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseBody = response.body().string();
-                    callback.onSuccess(responseBody);
+                    if (isValidJson(responseBody)) {
+                        callback.onSuccess(responseBody);
+                    } else {
+                        // Resposta não é um JSON válido
+                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                    }
                 } else {
                     callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                 }

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -88,17 +89,34 @@ public class DoarParaEventoActivity extends AppCompatActivity {
         btnContinuarForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                doacaoDinheiroEventoReq.setNomeDoador(nome);
-                doacaoDinheiroEventoReq.setEmailDoador(email);
-                doacaoDinheiroEventoReq.setAnualmente(false);
-                doacaoDinheiroEventoReq.setMensalmente(false);
-                setDonationValue();
 
-                Intent intent = new Intent(DoarParaEventoActivity.this,PagamentoEventoActivity.class);
-                intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
-                intent.putExtra("doacao", doacaoDinheiroEventoReq);
-                startActivity(intent);
+                String valorString = inptValor.getText().toString().trim();
 
+                // Verifica se o campo não está vazio
+                if (!valorString.isEmpty()) {
+                    try {
+                        // Converte o valor para um número
+                        setDonationValue();
+
+                        // Configura os dados da doação
+                        doacaoDinheiroEventoReq.setNomeDoador(nome);
+                        doacaoDinheiroEventoReq.setEmailDoador(email);
+                        doacaoDinheiroEventoReq.setAnualmente(false);
+                        doacaoDinheiroEventoReq.setMensalmente(false);
+
+                        // Inicia a próxima activity
+                        Intent intent = new Intent(DoarParaEventoActivity.this, PagamentoEventoActivity.class);
+                        intent.putExtra("evento", evento); // Adiciona o objeto evento como um extra
+                        intent.putExtra("doacao", doacaoDinheiroEventoReq);
+                        startActivity(intent);
+                    } catch (NumberFormatException e) {
+                        // Exibe uma mensagem de erro se o valor não for um número válido
+                        Toast.makeText(DoarParaEventoActivity.this, "Valor de doação inválido", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    // Exibe uma mensagem se o campo de valor estiver vazio
+                    Toast.makeText(DoarParaEventoActivity.this, "Por favor, preencha o campo de valor", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -107,16 +125,20 @@ public class DoarParaEventoActivity extends AppCompatActivity {
     }
 
 
+
     // Método para definir o valor no EditText
     private void setValueToInput(double value) {
         inptValor.setText(String.format(Locale.getDefault(), "%.2f", value));
     }
 
-
-    private void setDonationValue() {
+    private void setDonationValue() throws NumberFormatException {
         String valueString = inptValor.getText().toString().replace(",", ".");
-        double value = Double.parseDouble(valueString);
-        doacaoDinheiroEventoReq.setValorDoado(value);
+        if (!valueString.isEmpty()) {
+            double value = Double.parseDouble(valueString);
+            doacaoDinheiroEventoReq.setValorDoado(value);
+        } else {
+            throw new NumberFormatException("String vazia");
+        }
     }
 
 }

@@ -151,17 +151,7 @@
             android:src="@drawable/olhosenha" />
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/txtErro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_gravity="left"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#BF1B1B" />
+
 
 
     <Button

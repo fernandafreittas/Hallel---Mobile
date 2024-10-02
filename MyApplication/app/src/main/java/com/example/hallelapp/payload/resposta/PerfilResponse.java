@@ -88,7 +88,6 @@ public class PerfilResponse implements Serializable {
                 ", email='" + email + '\'' +
                 ", status=" + status +
                 ", idade=" + idade +
-                ", image='" + image + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", Telefone='" + Telefone + '\'' +
                 '}';

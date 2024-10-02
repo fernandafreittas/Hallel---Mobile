@@ -9,6 +9,9 @@
         android:targetSdkVersion="34" />
     <!-- permisão para usar a internet -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <permission
         android:name="com.example.hallelapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -30,12 +33,29 @@
         android:testOnly="true"
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true" >
+
+        <!-- FileProvider para permitir o compartilhamento de arquivos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.hallelapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.example.hallelapp.activity.EditPerfilActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.hallelapp.activity.ListDoacaoObjetosAlimentos"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.ListVoluntariosEventoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.FormDoacoesActivity"
             android:exported="false"
@@ -46,13 +66,16 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.ListAssociadoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.ListMemberActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.VizualizarEventosEditActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.DoarParaEventoActivity"
             android:exported="false"
@@ -78,38 +101,50 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.EditEventoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.VizualizarEventosVoluntario"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.ListLocaisActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.EditLocalActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.VizualizarEventosParticipantes"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.ListParticipantesEventoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.InformacoesDoMembroActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.ListDoacoesDinheirEvento"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.VizualizarEventosDoacao"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.CreateEventosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.example.hallelapp.activity.EventosCadastradosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.example.hallelapp.activity.DadosParticipanteActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditPerfilActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="1080dp">
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/elipse_perfil_capa" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.103"
+                    app:srcCompat="@drawable/foto_de_perfil2" />
+
+                <EditText
+                    android:id="@+id/nome_usuarioMain"
+                    android:layout_width="244dp"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/input_text_cartao"
+                    android:fontFamily="@font/inter"
+                    android:hint=" "
+                    android:text="Nome Completo Usuário"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView18"
+                    app:layout_constraintVertical_bias="0.003" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Email:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.054"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/nome_usuarioMain"
+                    app:layout_constraintVertical_bias="0.066" />
+
+                <EditText
+                    android:id="@+id/emailuser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_text_cartao"
+                    android:fontFamily="@font/inter"
+                    android:inputType="textEmailAddress"
+                    android:text="emailcadastrado@gmail.com"
+                    android:textColor="@color/verde"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.236"
+                    app:layout_constraintStart_toEndOf="@+id/textView31"
+                    app:layout_constraintTop_toBottomOf="@+id/nome_usuarioMain"
+                    app:layout_constraintVertical_bias="0.033" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Telefone:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.073"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31"
+                    app:layout_constraintVertical_bias="0.031" />
+
+                <EditText
+                    android:id="@+id/telefoneuser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_text_cartao"
+                    android:fontFamily="@font/inter"
+                    android:inputType="number"
+                    android:minWidth="150dp"
+                    android:text="(92) 98410-6048"
+                    android:textColor="@color/verde"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.059"
+                    app:layout_constraintStart_toEndOf="@+id/textView33"
+                    app:layout_constraintTop_toBottomOf="@+id/emailuser"
+                    app:layout_constraintVertical_bias="0.032" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="CPF:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.066"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33"
+                    app:layout_constraintVertical_bias="0.03" />
+
+                <EditText
+                    android:id="@+id/cpfUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_text_cartao"
+                    android:fontFamily="@font/inter"
+                    android:inputType="number"
+                    android:text="042.105.772-60"
+                    android:textColor="@color/verde"
+                    android:minWidth="150dp"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.043"
+                    app:layout_constraintStart_toEndOf="@+id/textView35"
+                    app:layout_constraintTop_toBottomOf="@+id/telefoneuser"
+                    app:layout_constraintVertical_bias="0.031" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Associação"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cpfUser" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="370dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView42"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/background_edittext" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Status:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView19"
+                    app:layout_constraintHorizontal_bias="0.044"
+                    app:layout_constraintStart_toStartOf="@+id/imageView19"
+                    app:layout_constraintTop_toTopOf="@+id/imageView19" />
+
+                <TextView
+                    android:id="@+id/statusAtivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:text="Ativo"
+                    android:textColor="@color/verde"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView19"
+                    app:layout_constraintHorizontal_bias="0.042"
+                    app:layout_constraintStart_toEndOf="@+id/textView38"
+                    app:layout_constraintTop_toTopOf="@+id/imageView19"
+                    app:layout_constraintVertical_bias="0.515" />
+
+                <TextView
+                    android:id="@+id/statusPendente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:text="Pendente"
+                    android:textColor="@color/yelow_pendente"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView19"
+                    app:layout_constraintHorizontal_bias="0.039"
+                    app:layout_constraintStart_toEndOf="@+id/textView38"
+                    app:layout_constraintTop_toTopOf="@+id/statusExpirado"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/statusExpirado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:text="Expirado"
+                    android:textColor="@color/red_exp"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView19"
+                    app:layout_constraintHorizontal_bias="0.038"
+                    app:layout_constraintStart_toEndOf="@+id/textView38"
+                    app:layout_constraintTop_toTopOf="@+id/statusAtivo"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="252dp"
+                    android:layout_height="71dp"
+                    android:layout_marginEnd="136dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Selecione um mês e veja detalhes sobre o pagamento"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="121dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="44dp"
+                    android:background="@drawable/background_perfil_button"
+                    android:drawableEnd="@drawable/icon_hour_event"
+                    android:ems="10"
+                    android:fontFamily="@font/inter"
+                    android:hint="05/2024"
+                    android:inputType="date"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/cortexto2"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.924"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="370dp"
+                    android:layout_height="71dp"
+                    android:layout_marginBottom="276dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.512"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/background_edit_date" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Pago por:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                    app:layout_constraintHorizontal_bias="0.04"
+                    app:layout_constraintStart_toStartOf="@+id/imageView16"
+                    app:layout_constraintTop_toTopOf="@+id/imageView16"
+                    app:layout_constraintVertical_bias="0.214" />
+
+                <TextView
+                    android:id="@+id/nomePagador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Nome do Pagador"
+                    android:textColor="@color/verde"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                    app:layout_constraintHorizontal_bias="0.069"
+                    app:layout_constraintStart_toEndOf="@+id/textView30"
+                    app:layout_constraintTop_toTopOf="@+id/imageView16"
+                    app:layout_constraintVertical_bias="0.214" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Data do pagamento:"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintStart_toStartOf="@+id/imageView16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView30"
+                    app:layout_constraintVertical_bias="0.375" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="01/05/2024"
+                    android:textColor="@color/cordetextohallel"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                    app:layout_constraintHorizontal_bias="0.067"
+                    app:layout_constraintStart_toEndOf="@+id/textView34"
+                    app:layout_constraintTop_toBottomOf="@+id/nomePagador"
+                    app:layout_constraintVertical_bias="0.375" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="369dp"
+                    android:layout_height="89dp"
+                    android:layout_marginBottom="156dp"
+                    android:elevation="-1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.523"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView16"
+                    app:layout_constraintVertical_bias="0.235"
+                    app:srcCompat="@drawable/back_pagamento_feito_via" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Pagamento feito via"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                    app:layout_constraintHorizontal_bias="0.376"
+                    app:layout_constraintStart_toStartOf="@+id/imageView20" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Boleto"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                    app:layout_constraintHorizontal_bias="0.088"
+                    app:layout_constraintStart_toEndOf="@+id/textView39" />
+
+                <Button
+                    android:id="@+id/buttonEventosPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_buttons_perfil"
+                    android:drawableTop="@drawable/agenda_perfil"
+                    android:fontFamily="@font/inter_semibold"
+                    android:paddingTop="25dp"
+                    android:text="Eventos"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView20"
+                    app:layout_constraintVertical_bias="0.177" />
+
+                <Button
+                    android:id="@+id/buttonSorteios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_buttons_perfil"
+                    android:drawableTop="@drawable/gift"
+                    android:fontFamily="@font/inter_semibold"
+                    android:paddingTop="25dp"
+                    android:text="Sorteios"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cortexto2"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/buttonEventosPerfil"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView20"
+                    app:layout_constraintVertical_bias="0.194" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="41dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/editarr"
+                    app:layout_constraintStart_toEndOf="@+id/nome_usuarioMain"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="41dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/editarr"
+                    app:layout_constraintStart_toEndOf="@+id/emailuser"
+                    app:layout_constraintTop_toBottomOf="@+id/nome_usuarioMain" />
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="42dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/editarr"
+                    app:layout_constraintStart_toEndOf="@+id/telefoneuser"
+                    app:layout_constraintTop_toBottomOf="@+id/emailuser" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="41dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/editarr"
+                    app:layout_constraintStart_toEndOf="@+id/cpfUser"
+                    app:layout_constraintTop_toBottomOf="@+id/telefoneuser" />
+
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="153dp"
+                    android:layout_height="155dp"
+                    android:background="#469D9B9B"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView18"
+                    app:layout_constraintStart_toStartOf="@+id/imageView18"
+                    app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/editarr"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView18"
+                    app:layout_constraintStart_toStartOf="@+id/imageView18"
+                    app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+                <ImageView
+                    android:id="@+id/imageView27"
+                    android:layout_width="416dp"
+                    android:layout_height="537dp"
+                    android:background="#2A626262"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button14"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="393dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="As informações abaixo não podem ser alteradas."
+                    android:textAlignment="center"
+                    android:textColor="#171F17"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView27"
+                    app:layout_constraintHorizontal_bias="0.45"
+                    app:layout_constraintStart_toStartOf="@+id/imageView27"
+                    app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="174dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/backgroundbutton"
+                    android:fontFamily="@font/inter"
+                    android:text="Salvar alterações"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button14" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

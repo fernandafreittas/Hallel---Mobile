@@ -4,6 +4,12 @@
     package="com.example.hallelapp">
     <!-- permisão para usar a internet -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+
 
     <application
         android:allowBackup="true"
@@ -16,218 +22,188 @@
         android:theme="@style/Theme.HallelApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <!-- FileProvider para permitir o compartilhamento de arquivos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.hallelapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.EditPerfilActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.ListDoacaoObjetosAlimentos"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.ListVoluntariosEventoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.FormDoacoesActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.DadosAssociadoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.ListAssociadoActivity"
             android:exported="false"
-
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.ListMemberActivity"
             android:exported="false"
-
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.VizualizarEventosEditActivity"
             android:exported="false"
-
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.DoarParaEventoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.PagamentoEventoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.PagamentoCartaoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.PagamentoBoletoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.PagamentoPixActivity"
             android:exported="false" />
         <activity
             android:name=".activity.EventosArquivadosActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.EditEventoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.VizualizarEventosVoluntario"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.ListLocaisActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.EditLocalActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.VizualizarEventosParticipantes"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.ListParticipantesEventoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.InformacoesDoMembroActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.ListDoacoesDinheirEvento"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.VizualizarEventosDoacao"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.CreateEventosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".activity.EventosCadastradosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
-
-
-
+        <activity
+            android:name=".activity.DadosParticipanteActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.EventosAdmActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MainAdmActivity"
             android:exported="false"
-
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.LoginAdmActiviy"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.ParticiparDeEventos"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.PerfilActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.FormVoluntarioActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.MoreInfosActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.VizualizaEventosActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.VizualizarEventosDoacaoObjetos"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
-
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.CadastroActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.LoginActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.DirecionamentoDoacaoActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.DadosDoacaoObjActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.DadosDoacaoDinheiroActivity"
             android:exported="false" />
-
-
         <activity
             android:name=".activity.DoacaoDeObjetosAlimentosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-
         <activity
             android:name=".activity.UserListDoacaoDinheiro"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-
         <activity
             android:name=".activity.UserListDoacaoObjetos"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-
         <activity
             android:name=".activity.DirecionamentoDoacaoUser"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />

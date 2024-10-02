@@ -7,8 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -42,7 +44,6 @@ public class CadastroActivity extends AppCompatActivity {
         EditText txtEmail = findViewById(R.id.TxtEmail);
         EditText txtSenha = findViewById(R.id.PsSenha);
         EditText txtConfirmaSenha = findViewById(R.id.PsConfirmarSenha);
-        TextView txtErro = findViewById(R.id.txtErro);
         ImageButton mostrasenha = findViewById(R.id.mostraSenha);
         ImageButton mostraConfirmaSenha = findViewById(R.id.mostraConfirmarSenha);
         TextView fazerLogin = findViewById(R.id.fazerLogin);
@@ -92,38 +93,54 @@ public class CadastroActivity extends AppCompatActivity {
 
 
 
-        //evento disparado quando clicar no botão de criar conta
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nome = txtNome.getText().toString();
-                String email = txtEmail.getText().toString();
+                String nome = txtNome.getText().toString().trim();
+                String email = txtEmail.getText().toString().trim();
+                String senha = txtSenha.getText().toString();
+                String confirmaSenha = txtConfirmaSenha.getText().toString();
 
-                System.out.println("oi!");
-                if(txtSenha.getText().toString().equals( txtConfirmaSenha.getText().toString())){
-
-                    String senha = txtSenha.getText().toString();
-
-                    CadastroRequest cadastroRequest = new CadastroRequest(nome,email,senha);
-                    HttpMain httpMain = new HttpMain();
-                    httpMain.cadastrar(cadastroRequest, new HttpMain.HttpCallback() {
-                        @Override
-                        public void onSuccess(String response) {
-                            // Lida com a resposta bem-sucedida
-                        }
-
-                        @Override
-                        public void onFailure(IOException e) {
-                            // Lida com a falha na requisição
-                        }
-                    });
-                }else {
-                    txtErro.setText("Erro senhas digitadas não são iguais");
+                // Verificar se todos os campos estão preenchidos
+                if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmaSenha.isEmpty()) {
+                    Toast.makeText(CadastroActivity.this, "Todos os campos devem ser preenchidos.", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
+                // Verificar se o e-mail está em um formato válido
+                if (!isValidEmail(email)) {
+                    Toast.makeText(CadastroActivity.this, "Insira um e-mail válido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Verificar se as senhas correspondem
+                if (!senha.equals(confirmaSenha)) {
+                    Toast.makeText(CadastroActivity.this, "Os campos de senha estão diferentes.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Prosegue com o cadastro
+                CadastroRequest cadastroRequest = new CadastroRequest(nome, email, senha);
+                HttpMain httpMain = new HttpMain();
+                httpMain.cadastrar(cadastroRequest, new HttpMain.HttpCallback() {
+                    @Override
+                    public void onSuccess(String response) {
+                        runOnUiThread(()->{
+                            showSuccessDialog();
+                        });
+
+                    }
+
+                    @Override
+                    public void onFailure(IOException e) {
+
+                        runOnUiThread(()->{
+                            showErrorDialog();
+                        });
 
 
-
+                    }
+                });
             }
         });
 
@@ -151,6 +168,58 @@ public class CadastroActivity extends AppCompatActivity {
 
     }
 
+
+    private void showErrorDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_errocadastro, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_cadastrosucesso, null);
+
+        // Cria o dialog a partir do layout inflado
+       AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.button3bolgerados);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                // Redireciona para a tela de login, por exemplo
+                Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        dialog.show();
+    }
+
+    private boolean isValidEmail(String email) {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        return email.matches(emailPattern);
+    }
 
 
 
