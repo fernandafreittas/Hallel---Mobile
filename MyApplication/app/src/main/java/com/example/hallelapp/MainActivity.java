@@ -166,18 +166,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     AppCompatTextView txtEmail = headerView.findViewById(R.id.textView3);
                     AppCompatImageView imgPerfil = headerView.findViewById(R.id.imageView5);
 
-                    if (perfilResponse != null) {
-                        txtNome.setText(perfilResponse.getNome());
-                        txtEmail.setText(perfilResponse.getEmail());
-                        if (perfilResponse.getImage() != null) {
-                            String suaStringBase64 = perfilResponse.getImage();
-                            String[] partes = suaStringBase64.split(",");
-                            String dadosBase64 = partes[1];
-                            byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
-                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                            imgPerfil.setImageBitmap(decodedByte);
-                        }
+
+                    // Requisição para API - Pega as informações do membro
+                    if (informacoesDeLogin.getToken() != null) {
+
+
+
+
+
+                        System.out.println(informacoesDeLogin.getToken());
+                        System.out.println(informacoesDeLogin.toString());
+                        requisicaoMembro.InformacoesDePerfil(informacoesDeLogin, new HttpMain.HttpCallback() {
+                            @Override
+                            public void onSuccess(String response) {
+                                System.out.println("deu certo informações de perfil");
+                                Gson gson = new Gson();
+                                perfilResponse = gson.fromJson(response, PerfilResponse.class);
+                                System.out.println(perfilResponse.getStatus());
+                                if (perfilResponse != null) {
+                                    txtNome.setText(perfilResponse.getNome());
+                                    txtEmail.setText(perfilResponse.getEmail());
+                                    if (perfilResponse.getImage() != null) {
+                                        String suaStringBase64 = perfilResponse.getImage();
+                                        String[] partes = suaStringBase64.split(",");
+                                        String dadosBase64 = partes[1];
+                                        byte[] decodedString = Base64.decode(dadosBase64, Base64.DEFAULT);
+                                        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                                        imgPerfil.setImageBitmap(decodedByte);
+                                    }
+                                }
+
+                            }
+
+                            @Override
+                            public void onFailure(IOException e) {
+                                // Lida com falhas na obtenção do perfil
+                            }
+                        });
+
                     }
+
                 }
 
                 @Override
@@ -241,31 +269,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
 
-        // Requisição para API - Pega as informações do membro
-        if (informacoesDeLogin.getToken() != null) {
 
-
-
-
-
-            System.out.println(informacoesDeLogin.getToken());
-            System.out.println(informacoesDeLogin.toString());
-            requisicaoMembro.InformacoesDePerfil(informacoesDeLogin, new HttpMain.HttpCallback() {
-                @Override
-                public void onSuccess(String response) {
-                    System.out.println("deu certo informações de perfil");
-                    Gson gson = new Gson();
-                    perfilResponse = gson.fromJson(response, PerfilResponse.class);
-                    System.out.println(perfilResponse.getStatus());
-                }
-
-                @Override
-                public void onFailure(IOException e) {
-                    // Lida com falhas na obtenção do perfil
-                }
-            });
-
-    }
 
         botaoAvancaEvento.setOnClickListener(v -> {
             if (responseEventos != null && !responseEventos.isEmpty()) {
