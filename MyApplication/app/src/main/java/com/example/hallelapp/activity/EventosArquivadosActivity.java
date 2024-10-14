@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -116,69 +117,104 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
 
     @Override
     public void onDesarquivarClick(EventoArquivado eventoArquivado) {
-
-
         requisicao = new HttpAdm();
         showLoadingDialog();
         requisicao.DesarquivaEvento(eventoArquivado.getId(), authenticationResponse, new HttpMain.HttpCallback() {
             @Override
             public void onSuccess(String response) {
-
-
                 runOnUiThread(() -> {
+                    // Remover o evento desarquivado da lista
+                    responseEventos.remove(eventoArquivado);
+                    binding.recyclerView.getAdapter().notifyDataSetChanged(); // Notifica o adaptador sobre a mudança
+
                     Toast.makeText(context, "Evento desarquivado com sucesso", Toast.LENGTH_SHORT).show();
-                    finish();
                     hideLoadingDialog();
                 });
             }
 
             @Override
             public void onFailure(IOException e) {
-
+                runOnUiThread(() -> {
+                    Toast.makeText(context, "Erro ao desarquivar o evento", Toast.LENGTH_SHORT).show();
+                    hideLoadingDialog();
+                });
             }
         });
-
-
-
-
-
     }
+
 
     @Override
     public void onDeleteClick(EventoArquivado eventoArquivado) {
+        showCertezaDialog(eventoArquivado);
+    }
 
+    private void showCertezaDialog(EventoArquivado eventoArquivado) {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_certeza_deletarevento, null);
 
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
 
-        requisicao = new HttpAdm();
-        showLoadingDialog();
-        requisicao.DesarquivaEvento(eventoArquivado.getId(), authenticationResponse, new HttpMain.HttpCallback() {
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de não continuar
+        Button btnNaoContinuar = dialogView.findViewById(R.id.buttonCertDel);
+        btnNaoContinuar.setOnClickListener(v -> dialog.dismiss());
+
+        Button btnContinuar = dialogView.findViewById(R.id.buttonCertDelsim);
+        btnContinuar.setOnClickListener(v -> {
+            dialog.dismiss();
+
+            requisicao = new HttpAdm();
+            showLoadingDialog();
+            requisicao.DeletarEvento(eventoArquivado.getId(), authenticationResponse, new HttpMain.HttpCallback() {
+                @Override
+                public void onSuccess(String response) {
+                    runOnUiThread(() -> {
+                        hideLoadingDialog();
+                        // Atualizar a lista removendo o evento deletado
+                        responseEventos.remove(eventoArquivado);
+                        binding.recyclerView.getAdapter().notifyDataSetChanged(); // Notifica o adaptador sobre a mudança
+                        Toast.makeText(context, "Evento deletado com sucesso", Toast.LENGTH_SHORT).show();
+                    });
+                }
+
+                @Override
+                public void onFailure(IOException e) {
+                    System.out.println("deu errado ao deletar");
+                    hideLoadingDialog();
+                    showErrorDialog();
+                }
+            });
+        });
+
+        dialog.show();
+    }
+
+    private void showErrorDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_deletarevento, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrDEvnt);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSuccess(String response) {
-              requisicao.DeletarEvento(eventoArquivado.getId(), authenticationResponse, new HttpMain.HttpCallback() {
-                  @Override
-                  public void onSuccess(String response) {
-                      runOnUiThread(() -> {
-                          Toast.makeText(context, "Evento deletado com sucesso", Toast.LENGTH_SHORT).show();
-                          hideLoadingDialog();
-                          finish();
-                      });
-                  }
-
-                  @Override
-                  public void onFailure(IOException e) {
-
-                  }
-              });
-
-
-            }
-
-            @Override
-            public void onFailure(IOException e) {
-
+            public void onClick(View v) {
+                dialog.dismiss();
             }
         });
 
-
+        dialog.show();
     }
+
+
+
+
 }

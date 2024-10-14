@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallelapp.MainActivity;
@@ -50,7 +51,7 @@ public class PagamentoBoletoActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(PagamentoBoletoActivity.this, "Boleto baixado com sucesso!", Toast.LENGTH_LONG).show();
+                             dialogBoletoGerado();
                             }
                         });
 
@@ -107,5 +108,28 @@ public class PagamentoBoletoActivity extends AppCompatActivity {
 
     }
 
+    private void dialogBoletoGerado() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_boletosucesso, null);
 
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.button3bolgerados);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
+
+
+
+}

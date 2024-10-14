@@ -2975,6 +2975,7 @@ int drawable baseline_subdirectory_arrow_left_24 0x7f08008b
 int drawable bckgd_alterar_infos 0x7f08008c
 int drawable bckground_pix 0x7f08008d
 int drawable bol 0x7f08008e
+int drawable bol_geradoo 0x7f08016d
 int drawable boleto 0x7f08008f
 int drawable borda_button 0x7f080090
 int drawable botton_valores 0x7f080091
@@ -2998,6 +2999,7 @@ int drawable circulo_verdeclaro 0x7f0800a2
 int drawable conf 0x7f0800a3
 int drawable copy 0x7f0800a4
 int drawable cursos_vector 0x7f0800a5
+int drawable dda 0x7f08016c
 int drawable delete_obj 0x7f0800a6
 int drawable design_fab_background 0x7f0800a7
 int drawable design_ic_visibility 0x7f0800a8
@@ -3368,6 +3370,8 @@ int id buttonAz 0x7f0a00a0
 int id buttonAzAssociados 0x7f0a00a1
 int id buttonAzParticipantes 0x7f0a00a2
 int id buttonAzVoluntarios 0x7f0a00a3
+int id buttonCertDel 0x7f0a03ab
+int id buttonCertDelsim 0x7f0a03ac
 int id buttonDeleteArq 0x7f0a00a4
 int id buttonDeleteLocal 0x7f0a00a5
 int id buttonDeleteObj 0x7f0a00a6
@@ -3377,6 +3381,7 @@ int id buttonDoar 0x7f0a00a9
 int id buttonDonationMoney 0x7f0a00aa
 int id buttonDonationObj 0x7f0a00ab
 int id buttonEPG 0x7f0a00ac
+int id buttonEc 0x7f0a03ad
 int id buttonEditEvento 0x7f0a00ad
 int id buttonEditLocal 0x7f0a00ae
 int id buttonErrPa 0x7f0a00af
@@ -3402,10 +3407,13 @@ int id buttoncursos 0x7f0a00c2
 int id cache_measures 0x7f0a00c3
 int id callMeasure 0x7f0a00c4
 int id cancel_button 0x7f0a00c5
+int id cardCertDel 0x7f0a03ae
 int id cardViewEPG 0x7f0a00c6
+int id cardViewEc 0x7f0a03af
 int id cardViewErrPa 0x7f0a00c7
 int id cardViewErrc 0x7f0a00c8
 int id cardViewErrlo 0x7f0a00c9
+int id cardViewbolgerados 0x7f0a03b4
 int id cardViewcadsus 0x7f0a00ca
 int id carryVelocity 0x7f0a00cb
 int id center 0x7f0a00cc
@@ -3554,6 +3562,7 @@ int id ignoreRequest 0x7f0a015a
 int id image 0x7f0a015b
 int id imageButton2 0x7f0a015c
 int id imageButton3 0x7f0a015d
+int id imageCertDel 0x7f0a03b0
 int id imageView 0x7f0a015e
 int id imageView10 0x7f0a015f
 int id imageView11 0x7f0a0160
@@ -3580,6 +3589,7 @@ int id imageView24edit 0x7f0a0174
 int id imageView25 0x7f0a0175
 int id imageView25aa 0x7f0a0176
 int id imageView26 0x7f0a0177
+int id imageView26bolgerados 0x7f0a03b5
 int id imageView26cadsus 0x7f0a0178
 int id imageView27 0x7f0a0179
 int id imageView28 0x7f0a017a
@@ -3595,6 +3605,7 @@ int id imageView7 0x7f0a0183
 int id imageView8 0x7f0a0184
 int id imageView9 0x7f0a0185
 int id imageViewEPG 0x7f0a0186
+int id imageViewEc 0x7f0a03b1
 int id imageViewErrPa 0x7f0a0187
 int id imageViewErrc 0x7f0a0188
 int id imageViewErrlo 0x7f0a0189
@@ -3926,6 +3937,7 @@ int id tag_window_insets_animation_callback 0x7f0a02cd
 int id telefoneuser 0x7f0a02ce
 int id text 0x7f0a02cf
 int id text2 0x7f0a02d0
+int id textCertDel 0x7f0a03b2
 int id textCriarconta 0x7f0a02d1
 int id textEnd 0x7f0a02d2
 int id textSpacerNoButtons 0x7f0a02d3
@@ -4062,6 +4074,7 @@ int id textView97 0x7f0a0355
 int id textView972 0x7f0a0356
 int id textViewArq 0x7f0a0357
 int id textViewEPG 0x7f0a0358
+int id textViewEc 0x7f0a03b3
 int id textViewEmailmembro 0x7f0a0359
 int id textViewErrPa 0x7f0a035a
 int id textViewErrc 0x7f0a035b
@@ -4069,6 +4082,7 @@ int id textViewErrlo 0x7f0a035c
 int id textViewLocal 0x7f0a035d
 int id textViewOff 0x7f0a035e
 int id textViewValores 0x7f0a035f
+int id textViewbolgerados 0x7f0a03b6
 int id textViewcad 0x7f0a0360
 int id textViewcadsus 0x7f0a0361
 int id textViewnomecompleto 0x7f0a0362
@@ -4309,10 +4323,14 @@ int layout design_navigation_menu 0x7f0d0050
 int layout design_navigation_menu_item 0x7f0d0051
 int layout design_text_input_end_icon 0x7f0d0052
 int layout design_text_input_start_icon 0x7f0d0053
+int layout dialog_boletosucesso 0x7f0d00a5
 int layout dialog_cadastrosucesso 0x7f0d0054
+int layout dialog_certeza_deletarevento 0x7f0d00a2
+int layout dialog_erro_cadastro_evento 0x7f0d00a3
 int layout dialog_errocadastro 0x7f0d0055
 int layout dialog_errologin 0x7f0d0056
 int layout dialog_erropagamento 0x7f0d0057
+int layout dialog_eventocadastrado_sucesso 0x7f0d00a4
 int layout dialog_pagamentosucesso 0x7f0d0058
 int layout eventos_adapter 0x7f0d0059
 int layout eventos_arq_adapter 0x7f0d005a

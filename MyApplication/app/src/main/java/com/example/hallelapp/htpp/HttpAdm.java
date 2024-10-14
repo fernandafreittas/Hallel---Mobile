@@ -33,6 +33,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 public class HttpAdm {
 
@@ -66,10 +67,14 @@ public class HttpAdm {
     }
 
 
-
     private boolean isValidJson(String responseBody) {
-        // Verifica se a resposta é um valor booleano simples
+        // Aceita strings específicas de sucesso ou valores booleanos
         if ("true".equals(responseBody) || "false".equals(responseBody)) {
+            return true;
+        }
+
+        // Verifica se a resposta é uma string de sucesso comum
+        if (responseBody.startsWith("\"") && responseBody.endsWith("\"")) {
             return true;
         }
 
@@ -87,6 +92,9 @@ public class HttpAdm {
             }
         }
     }
+
+
+
 
 
 
@@ -875,29 +883,19 @@ public class HttpAdm {
     }
 
 
-    public void DesarquivaEvento(String idEvento,AuthenticationResponse authenticationResponse,final HttpMain.HttpCallback callback) {
-
-
-
-
+    public void DesarquivaEvento(String idEvento, AuthenticationResponse authenticationResponse, final HttpMain.HttpCallback callback) {
         OkHttpClient client = new OkHttpClient.Builder().build();
-
 
         token = authenticationResponse.getToken();
 
-        String url = UrlBase + "/eventos/"+idEvento+"/desarquivar";
+        String url = UrlBase + "/eventos/" + idEvento + "/desarquivar";
 
         System.out.println(url);
-
         System.out.println(token);
-
-        System.out.println();
-
-
 
         Request request = new Request.Builder()
                 .url(url)
-                .get()
+                .get()  // Alterado para DELETE
                 .addHeader("Authorization", "Bearer " + token)
                 .build();
 
@@ -905,16 +903,18 @@ public class HttpAdm {
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                if (response.isSuccessful()) {
-                    String responseBody = response.body().string();
-                    System.out.println(responseBody);
-                    if (isValidJson(responseBody)) {
-                        callback.onSuccess(responseBody);
+                try (ResponseBody responseBody = response.body()) {
+                    if (response.isSuccessful()) {
+                        String responseBodyString = responseBody.string();
+                        System.out.println(responseBodyString);
+                        boolean sucesso = Boolean.parseBoolean(responseBodyString);  // Convertendo o resultado para boolean
+                        callback.onSuccess(Boolean.toString(sucesso));  // Convertendo boolean para String antes de enviar
                     } else {
-                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                        callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                     }
-                } else {
-                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    callback.onFailure(new IOException("Erro ao processar resposta: " + e.getMessage()));
                 }
             }
 
@@ -926,25 +926,12 @@ public class HttpAdm {
     }
 
 
-    public void DeletarEvento(String idEvento,AuthenticationResponse authenticationResponse,final HttpMain.HttpCallback callback) {
 
-
-
-
+    public void DeletarEvento(String idEvento, AuthenticationResponse authenticationResponse, final HttpMain.HttpCallback callback) {
         OkHttpClient client = new OkHttpClient.Builder().build();
 
-
         token = authenticationResponse.getToken();
-
-        String url = UrlBase + "/eventos/"+idEvento+"/delete";
-
-        System.out.println(url);
-
-        System.out.println(token);
-
-        System.out.println();
-
-
+        String url = UrlBase + "/eventos/" + idEvento + "/delete";
 
         Request request = new Request.Builder()
                 .url(url)
@@ -956,16 +943,22 @@ public class HttpAdm {
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                if (response.isSuccessful()) {
-                    String responseBody = response.body().string();
-                    System.out.println(responseBody);
-                    if (isValidJson(responseBody)) {
-                        callback.onSuccess(responseBody);
+                try (ResponseBody responseBody = response.body()) {
+                    if (response.isSuccessful()) {
+                        String responseBodyString = responseBody.string();
+                        System.out.println(responseBodyString);
+
+                        if ("true".equals(responseBodyString.trim())) {
+                            callback.onSuccess(responseBodyString);  // Chama o sucesso se o retorno for true
+                        } else {
+                            callback.onFailure(new IOException("Falha ao deletar evento: " + responseBodyString));
+                        }
                     } else {
-                        callback.onFailure(new IOException("Resposta não é um JSON válido"));
+                        callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
                     }
-                } else {
-                    callback.onFailure(new IOException("Erro ao realizar requisição: " + response.code()));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    callback.onFailure(new IOException("Erro ao processar resposta: " + e.getMessage()));
                 }
             }
 
@@ -975,6 +968,7 @@ public class HttpAdm {
             }
         });
     }
+
 
     public void ListDoacaoDinheiro(String idEventos, AuthenticationResponse authenticationResponse, final HttpAdm.HttpCallback callback
     ) {
@@ -1005,6 +999,7 @@ public class HttpAdm {
                     if (isValidJson(responseBody)) {
                         callback.onSuccess(responseBody);
                     } else {
+
                         callback.onFailure(new IOException("Resposta não é um JSON válido"));
                     }
                 } else {

@@ -2976,6 +2976,7 @@ drawable baseline_subdirectory_arrow_left_24
 drawable bckgd_alterar_infos
 drawable bckground_pix
 drawable bol
+drawable bol_geradoo
 drawable boleto
 drawable borda_button
 drawable botton_valores
@@ -2999,6 +3000,7 @@ drawable circulo_verdeclaro
 drawable conf
 drawable copy
 drawable cursos_vector
+drawable dda
 drawable delete_obj
 drawable design_fab_background
 drawable design_ic_visibility
@@ -3369,6 +3371,8 @@ id buttonAz
 id buttonAzAssociados
 id buttonAzParticipantes
 id buttonAzVoluntarios
+id buttonCertDel
+id buttonCertDelsim
 id buttonDeleteArq
 id buttonDeleteLocal
 id buttonDeleteObj
@@ -3378,6 +3382,7 @@ id buttonDoar
 id buttonDonationMoney
 id buttonDonationObj
 id buttonEPG
+id buttonEc
 id buttonEditEvento
 id buttonEditLocal
 id buttonErrPa
@@ -3403,10 +3408,13 @@ id buttoncursos
 id cache_measures
 id callMeasure
 id cancel_button
+id cardCertDel
 id cardViewEPG
+id cardViewEc
 id cardViewErrPa
 id cardViewErrc
 id cardViewErrlo
+id cardViewbolgerados
 id cardViewcadsus
 id carryVelocity
 id center
@@ -3555,6 +3563,7 @@ id ignoreRequest
 id image
 id imageButton2
 id imageButton3
+id imageCertDel
 id imageView
 id imageView10
 id imageView11
@@ -3581,6 +3590,7 @@ id imageView24edit
 id imageView25
 id imageView25aa
 id imageView26
+id imageView26bolgerados
 id imageView26cadsus
 id imageView27
 id imageView28
@@ -3596,6 +3606,7 @@ id imageView7
 id imageView8
 id imageView9
 id imageViewEPG
+id imageViewEc
 id imageViewErrPa
 id imageViewErrc
 id imageViewErrlo
@@ -3927,6 +3938,7 @@ id tag_window_insets_animation_callback
 id telefoneuser
 id text
 id text2
+id textCertDel
 id textCriarconta
 id textEnd
 id textSpacerNoButtons
@@ -4063,6 +4075,7 @@ id textView97
 id textView972
 id textViewArq
 id textViewEPG
+id textViewEc
 id textViewEmailmembro
 id textViewErrPa
 id textViewErrc
@@ -4070,6 +4083,7 @@ id textViewErrlo
 id textViewLocal
 id textViewOff
 id textViewValores
+id textViewbolgerados
 id textViewcad
 id textViewcadsus
 id textViewnomecompleto
@@ -4310,10 +4324,14 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_boletosucesso
 layout dialog_cadastrosucesso
+layout dialog_certeza_deletarevento
+layout dialog_erro_cadastro_evento
 layout dialog_errocadastro
 layout dialog_errologin
 layout dialog_erropagamento
+layout dialog_eventocadastrado_sucesso
 layout dialog_pagamentosucesso
 layout eventos_adapter
 layout eventos_arq_adapter
