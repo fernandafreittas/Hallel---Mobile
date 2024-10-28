@@ -138,15 +138,15 @@ public class EditPerfilActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(String response) {
                         System.out.println("deu super certo");
-                        Intent intent = new Intent(EditPerfilActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
+                        showSuccessDialog();
+
+
 
                     }
 
                     @Override
                     public void onFailure(IOException e) {
-
+                        showErrorEditDialog();
                     }
                 });
 
@@ -254,5 +254,56 @@ public class EditPerfilActivity extends AppCompatActivity {
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         return Base64.encodeToString(byteArray, Base64.DEFAULT);
     }
+
+
+    private void showErrorEditDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_deletarlocal, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrDEvntloc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_perfil_editadosucesso, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonPerE);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(EditPerfilActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        dialog.show();
+    }
+
+
+
 
 }

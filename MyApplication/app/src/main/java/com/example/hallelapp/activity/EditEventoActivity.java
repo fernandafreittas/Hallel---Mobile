@@ -23,6 +23,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -373,7 +374,7 @@ public class EditEventoActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(context, "Evento criado com sucesso", Toast.LENGTH_SHORT).show();
+                              showSuccessDialog();
                             }
                         });
                         finish();
@@ -384,7 +385,7 @@ public class EditEventoActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(context, "Erro ao criar evento", Toast.LENGTH_SHORT).show();
+                                showErrorDialog();
                             }
                         });
                     }
@@ -438,6 +439,51 @@ public class EditEventoActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void showErrorDialog() {
+
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_editarevento, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrEEvt);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_eventoeditado_sucesso, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonEdts);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
 

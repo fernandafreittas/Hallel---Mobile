@@ -24,6 +24,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\checksss.png"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_dialog_erro_desarqevento.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_erro_desarqevento.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_fundo_button.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\fundo_button.xml"
     },
@@ -116,16 +120,16 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\input_text_cartao.xml"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_icon_location.png.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\icon_location.png"
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_activity_dados_participante.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_dados_participante.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_activity_list_associado.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_list_associado.xml"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_activity_dados_participante.xml.flat",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_dados_participante.xml"
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_icon_location.png.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\icon_location.png"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_activity_direcionamento_doacao.xml.flat",
@@ -244,8 +248,16 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\cadastrado_adm_evento_check.png"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_dialog_certeza_deletarlocalevento.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_certeza_deletarlocalevento.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_fundo_edit_local_adm.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\fundo_edit_local_adm.png"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_bol_geradoo.png.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\bol_geradoo.png"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_activity_list_doacao_objetos_alimentos.xml.flat",
@@ -340,6 +352,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\dda.png"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_dialog_boletosucesso.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_boletosucesso.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_activity_user_doacaodinheiro.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_user_doacaodinheiro.xml"
     },
@@ -364,10 +380,6 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\my_donation.xml"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/drawable_bol_geradoo.png.flat",
-        "source": "com.example.hallelapp-main-36:/drawable/bol_geradoo.png"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_icon_money.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\icon_money.png"
     },
@@ -382,6 +394,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\font_inter.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\font\\inter.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_dialog_doacao_sucess.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_doacao_sucess.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_fundo_card_event_arq.xml.flat",
@@ -460,6 +476,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\backgroundtxt.xml"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_dialog_erro_deletarevento.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_erro_deletarevento.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
@@ -490,6 +510,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_icon_voluntario.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\icon_voluntario.png"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_dialog_erro_deletarlocal.xml.flat",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_erro_deletarlocal.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_fundo_cards.xml.flat",
@@ -588,10 +612,6 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dados_doacao_dinheiro.xml"
     },
     {
-        "merged": "com.example.hallelapp-debug-34:/layout_dialog_boletosucesso.xml.flat",
-        "source": "com.example.hallelapp-main-36:/layout/dialog_boletosucesso.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\layout_activity_adm_doacaoalimento.xml.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_adm_doacaoalimento.xml"
     },
@@ -670,6 +690,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_icon_edit_event.png.flat",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\drawable\\icon_edit_event.png"
+    },
+    {
+        "merged": "com.example.hallelapp-debug-34:/layout_dialog_erro_doacao.xml.flat",
+        "source": "com.example.hallelapp-main-36:/layout/dialog_erro_doacao.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-debug-34:\\drawable_termosdeuso.png.flat",

@@ -127,7 +127,7 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
                     responseEventos.remove(eventoArquivado);
                     binding.recyclerView.getAdapter().notifyDataSetChanged(); // Notifica o adaptador sobre a mudança
 
-                    Toast.makeText(context, "Evento desarquivado com sucesso", Toast.LENGTH_SHORT).show();
+                    showSuccessDesarquivarDialog();
                     hideLoadingDialog();
                 });
             }
@@ -135,8 +135,8 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
             @Override
             public void onFailure(IOException e) {
                 runOnUiThread(() -> {
-                    Toast.makeText(context, "Erro ao desarquivar o evento", Toast.LENGTH_SHORT).show();
                     hideLoadingDialog();
+                    showErrorDesarquivarDialog();
                 });
             }
         });
@@ -176,7 +176,7 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
                         // Atualizar a lista removendo o evento deletado
                         responseEventos.remove(eventoArquivado);
                         binding.recyclerView.getAdapter().notifyDataSetChanged(); // Notifica o adaptador sobre a mudança
-                        Toast.makeText(context, "Evento deletado com sucesso", Toast.LENGTH_SHORT).show();
+                        showSuccessDeleteDialog();
                     });
                 }
 
@@ -184,7 +184,7 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
                 public void onFailure(IOException e) {
                     System.out.println("deu errado ao deletar");
                     hideLoadingDialog();
-                    showErrorDialog();
+                    showErrorDeleteDialog();
                 }
             });
         });
@@ -192,7 +192,7 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
         dialog.show();
     }
 
-    private void showErrorDialog() {
+    private void showErrorDeleteDialog() {
         // Inflate o layout do diálogo de erro
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_deletarevento, null);
 
@@ -213,6 +213,76 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
 
         dialog.show();
     }
+
+    private void showErrorDesarquivarDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_desarqevento, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrDesEvntloc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDeleteDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_eventodeletado_sucesso, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonEd);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDesarquivarDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_eventodesarquivado, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonEdz);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+
+
+
 
 
 

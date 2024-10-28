@@ -28,6 +28,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_user_doacaodinheiro.xml"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_deletarlocal.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_erro_deletarlocal.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_doacao_obj_ali.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_doacao_obj_ali.xml"
     },
@@ -44,12 +48,12 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_list_associado.xml"
     },
     {
-        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\item_recycle_donation_obj.xml",
-        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\item_recycle_donation_obj.xml"
-    },
-    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_participar_de_eventos.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_participar_de_eventos.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\item_recycle_donation_obj.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\item_recycle_donation_obj.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_dados_membro.xml",
@@ -116,6 +120,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_participantes_list.xml"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_desarqevento.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_erro_desarqevento.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_servoluntario.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_servoluntario.xml"
     },
@@ -126,6 +134,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_errologin.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_errologin.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_erro_deletarevento.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_erro_deletarevento.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_main_adm.xml",
@@ -152,6 +164,10 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_list_doacao_objetos_alimentos.xml"
     },
     {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_boletosucesso.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_boletosucesso.xml"
+    },
+    {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_edit_perfil.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_edit_perfil.xml"
     },
@@ -172,8 +188,12 @@
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_erro_cadastro_evento.xml"
     },
     {
-        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/dialog_boletosucesso.xml",
-        "source": "com.example.hallelapp-main-36:/layout/dialog_boletosucesso.xml"
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_doacao_sucess.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_doacao_sucess.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_certeza_deletarlocalevento.xml",
+        "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\dialog_certeza_deletarlocalevento.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dialog_cadastrosucesso.xml",
@@ -238,6 +258,10 @@
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\activity_login.xml",
         "source": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-main-36:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "com.example.hallelapp-mergeDebugResources-33:/layout/dialog_erro_doacao.xml",
+        "source": "com.example.hallelapp-main-36:/layout/dialog_erro_doacao.xml"
     },
     {
         "merged": "C:\\Users\\RAINNER\\.gradle\\daemon\\8.7\\com.example.hallelapp-mergeDebugResources-33:\\layout\\dados_doacao_obj.xml",

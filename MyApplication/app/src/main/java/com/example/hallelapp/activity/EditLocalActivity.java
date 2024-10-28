@@ -16,13 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallelapp.R;
 import com.example.hallelapp.databinding.ActivityEditLocaisBinding;
-import com.example.hallelapp.databinding.ActivityListLocaisBinding;
 import com.example.hallelapp.htpp.HttpAdm;
 import com.example.hallelapp.model.LocalEvento;
 import com.example.hallelapp.payload.requerimento.LocalEventoReq;
 import com.example.hallelapp.payload.resposta.AuthenticationResponse;
 import com.example.hallelapp.recyclers.LocalEditRecycle;
-import com.example.hallelapp.recyclers.LocalRecycle;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -109,7 +107,7 @@ public class EditLocalActivity extends AppCompatActivity implements LocalEditRec
                             public void onSuccess(String response) {
                                 runOnUiThread(() -> {
                                     hideLoadingDialog();
-                                    Toast.makeText(context, "Local Editado com sucesso!", Toast.LENGTH_SHORT).show();
+                                    showSuccessEditDialog();
                                 });
 
                                 finish();
@@ -121,7 +119,7 @@ public class EditLocalActivity extends AppCompatActivity implements LocalEditRec
 
                                 runOnUiThread(() -> {
                                     hideLoadingDialog();
-                                    Toast.makeText(context, "Erro ao Editar o local!", Toast.LENGTH_SHORT).show();
+                                   showErrorEditDialog();
                                 });
 
                             }
@@ -171,31 +169,13 @@ public class EditLocalActivity extends AppCompatActivity implements LocalEditRec
         // Handle delete action
 
         LocalEvento local = locais.get(position);
+        CerterzaDialog(local,position);
 
-        requisicao.DeleteLocaisEventos(local, authenticationResponse, new HttpAdm.HttpCallback() {
-            @Override
-            public void onSuccess(String response) {
-
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        locais.remove(position);
-                        adapter.notifyItemRemoved(position);
-                    }
-                });
-            }
-
-            @Override
-            public void onFailure(IOException e) {
-                showErrorDialog();
-            }
-        });
 
 
 
     }
-    private void showErrorDialog() {
+    private void showErrorDeletarDialog() {
         // Inflate o layout do diálogo de erro
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_deletarlocal, null);
 
@@ -216,6 +196,126 @@ public class EditLocalActivity extends AppCompatActivity implements LocalEditRec
 
         dialog.show();
     }
+
+    private void CerterzaDialog(LocalEvento local,int position) {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_certeza_deletarlocalevento, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonCertDelsimloc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                requisicao.DeleteLocaisEventos(local, authenticationResponse, new HttpAdm.HttpCallback() {
+                    @Override
+                    public void onSuccess(String response) {
+
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                locais.remove(position);
+                                adapter.notifyItemRemoved(position);
+                                showSuccessDeleteDialog();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onFailure(IOException e) {
+                        showErrorDeletarDialog();
+                    }
+                });
+            }
+        });
+
+        Button btnNaoContinuar = dialogView.findViewById(R.id.buttonCertDelloc);
+
+        btnNaoContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
+        dialog.show();
+    }
+
+    private void showErrorEditDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_editarlocal, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDeleteDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_localdeletado_sucesso, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonEld);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessEditDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_localeditado_sucesso, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonEldt);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+
 
 
 }

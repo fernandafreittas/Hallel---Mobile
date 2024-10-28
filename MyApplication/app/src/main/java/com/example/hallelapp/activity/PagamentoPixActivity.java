@@ -1,11 +1,13 @@
 package com.example.hallelapp.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallelapp.R;
@@ -45,6 +47,7 @@ public class PagamentoPixActivity  extends AppCompatActivity {
 
             @Override
             public void onFailure(IOException e) {
+                showDialogErro();
 
             }
         });
@@ -67,6 +70,32 @@ public class PagamentoPixActivity  extends AppCompatActivity {
 
     }
 
+    private void showDialogErro(){
+
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erropagamento,null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        Button btnContinuar = dialog.findViewById(R.id.buttonErrPa);
+        if (btnContinuar == null) {
+            Log.e("PagamentoCartaoActivity", "Botão 'buttonErrPa' não encontrado no layout.");
+        } else {
+            btnContinuar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+        }
+        dialog.show();
+
 
 
     }
+
+
+
+
+}

@@ -2,11 +2,13 @@ package com.example.hallelapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -33,6 +35,8 @@ public class ParticiparDeEventos extends AppCompatActivity {
     InformacoesDaSessao informacoesDeLogin;
 
     ObterInformacoesDaSecao obterInformacoesDaSecao;
+
+    private android.app.AlertDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +87,7 @@ public class ParticiparDeEventos extends AppCompatActivity {
             public void onClick(View v) {
 
 
+                showLoadingDialog();
                 participarEventosRequest.setIdEvento(evento.getId());
                 participarEventosRequest.setId(informacoesDeLogin.getId());
                 participarEventosRequest.setNome(txtnome.getText().toString());
@@ -130,17 +135,19 @@ public class ParticiparDeEventos extends AppCompatActivity {
 
 
                     requisicao.ParticiparDeEvento(participarEventosRequest, new HttpMain.HttpCallback() {
+
+
                         @Override
                         public void onSuccess(String response) {
-                            System.out.println("deu certo !");
+                            hideLoadingDialog();
+                            showSuccessDialog();
 
-                            Intent intent = new Intent(ParticiparDeEventos.this, MainActivity.class);
-                            startActivity(intent);
                         }
 
                         @Override
                         public void onFailure(IOException e) {
-                            System.out.println("deu errado  !");
+                            hideLoadingDialog();
+                            showErrorParticiparDialog();
                         }
                     });
 
@@ -156,4 +163,69 @@ public class ParticiparDeEventos extends AppCompatActivity {
 
 
     }
+
+    private void showLoadingDialog() {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.loading_screen, null);
+        builder.setView(dialogView);
+        builder.setCancelable(false);
+
+        loadingDialog = builder.create();
+        loadingDialog.show();
+    }
+
+    private void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
+    }
+
+    private void showErrorParticiparDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_deletarlocal, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrDEvntloc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_particevento_concluida, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonParE);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(ParticiparDeEventos.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        dialog.show();
+    }
+
+
 }

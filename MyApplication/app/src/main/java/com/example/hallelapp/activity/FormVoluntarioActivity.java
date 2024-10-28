@@ -66,9 +66,8 @@ public class FormVoluntarioActivity extends AppCompatActivity {
                         System.out.println(seVoluntariarEventoReq.toString());
                         System.out.println("deu certo !");
                         hideLoadingDialog();
-                        Intent intent = new Intent(FormVoluntarioActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
+                        showSuccessDialog();
+
                     }
 
                     @Override
@@ -97,4 +96,31 @@ public class FormVoluntarioActivity extends AppCompatActivity {
             loadingDialog.dismiss();
         }
     }
+
+    private void showSuccessDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_pedido_servoluntario, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonS);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(FormVoluntarioActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        dialog.show();
+    }
+
+
 }

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -79,20 +80,68 @@ public class DoacaoDeObjetosAlimentosActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(String response) {
                         System.out.println("Deu certo a doacao");
-                        Intent intent = new Intent(DoacaoDeObjetosAlimentosActivity.this,MainActivity.class);
+                        DoacaoSucess();
 
-                        startActivity(intent);
                     }
 
                     @Override
                     public void onFailure(IOException e) {
-                        System.out.println("Deu certo a doacao");
+
+                       showErrorDialog();
                     }
                 });
             }
         });
     }
 
+    private void DoacaoSucess() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_doacao_sucess, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonDoacaosu);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(DoacaoDeObjetosAlimentosActivity.this,MainActivity.class);
+
+                startActivity(intent);
+
+            }
+        });
+
+        dialog.show();
+    }
+
+
+    private void showErrorDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_doacao, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrdoa);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
 
 
 

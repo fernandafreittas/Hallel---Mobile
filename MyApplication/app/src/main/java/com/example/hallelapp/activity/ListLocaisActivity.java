@@ -163,28 +163,109 @@ public class ListLocaisActivity extends AppCompatActivity implements LocalRecycl
         // Handle delete action
 
         LocalEvento local = locais.get(position);
+        CerterzaDialog(local,position);
 
-        requisicao.DeleteLocaisEventos(local, authenticationResponse, new HttpAdm.HttpCallback() {
+    }
+
+    private void showErrorDeletarDialog() {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_erro_deletarlocal, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonErrDEvntloc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSuccess(String response) {
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showSuccessDeleteDialog() {
+        // Inflate o layout do diálogo de sucesso
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_localdeletado_sucesso, null);
+
+        // Cria o dialog a partir do layout inflado
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        androidx.appcompat.app.AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para redirecionar à página de login ou outra ação
+        Button btnContinuar = dialogView.findViewById(R.id.buttonEld);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
 
 
-                runOnUiThread(new Runnable() {
+    private void CerterzaDialog(LocalEvento local,int position) {
+        // Inflate o layout do diálogo de erro
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_certeza_deletarlocalevento, null);
+
+        // Cria o dialog a partir do layout inflado
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        // Clique no botão de continuar para fechar o diálogo
+        Button btnContinuar = dialogView.findViewById(R.id.buttonCertDelsimloc);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                requisicao.DeleteLocaisEventos(local, authenticationResponse, new HttpAdm.HttpCallback() {
                     @Override
-                    public void run() {
-                        locais.remove(position);
-                        adapter.notifyItemRemoved(position);
+                    public void onSuccess(String response) {
+
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                locais.remove(position);
+                                adapter.notifyItemRemoved(position);
+                                showSuccessDeleteDialog();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onFailure(IOException e) {
+                        showErrorDeletarDialog();
                     }
                 });
             }
+        });
 
+        Button btnNaoContinuar = dialogView.findViewById(R.id.buttonCertDelloc);
+
+        btnNaoContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFailure(IOException e) {
-
+            public void onClick(View v) {
+                dialog.dismiss();
             }
         });
 
 
-
+        dialog.show();
     }
+
+
+
+
+
 }
