@@ -183,6 +183,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 Gson gson = new Gson();
                                 perfilResponse = gson.fromJson(response, PerfilResponse.class);
                                 System.out.println(perfilResponse.getStatus());
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
                                 if (perfilResponse != null) {
                                     txtNome.setText(perfilResponse.getNome());
                                     txtEmail.setText(perfilResponse.getEmail());
@@ -196,6 +199,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                     }
                                 }
 
+                                    }
+                                });
                             }
 
                             @Override
@@ -211,13 +216,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 @Override
                 public void onFailure(IOException e) {
 
-                    atualizarInterfaceDeslogado();
-
-
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            atualizarInterfaceDeslogado();
+                        }
+                    });
                 }
             });
         } else {
-            atualizarInterfaceDeslogado();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    atualizarInterfaceDeslogado();
+                }
+            });
         }
 
         // Requisição para API - Pega os eventos que estão na API

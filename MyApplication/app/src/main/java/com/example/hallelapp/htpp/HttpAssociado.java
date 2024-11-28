@@ -23,7 +23,7 @@ public class HttpAssociado {
 
     //lorenzo
 
-    private static final String UrlBase = "http://192.168.1.7:8080/api/associado/";
+    private static final String UrlBase = "https://apihallel-deploy.onrender.com/api/associado/";
 
     //fernanda
 

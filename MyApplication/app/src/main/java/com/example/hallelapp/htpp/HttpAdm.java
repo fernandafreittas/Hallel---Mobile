@@ -41,11 +41,11 @@ public class HttpAdm {
 
     //lorenzo
 
-    private static final String UrlBase = "http://192.168.1.7:8080/api/administrador";
+    private static final String UrlBase = "https://apihallel-deploy.onrender.com/api/administrador";
 
-    private static final String UrlBaseMembro = "http://192.168.1.7:8080/api/";
+    private static final String UrlBaseMembro = "https://apihallel-deploy.onrender.com/api/";
 
-    private static final String UrlBaseAssociado = "http://192.168.1.7:8080/api/associado/";
+    private static final String UrlBaseAssociado = "https://apihallel-deploy.onrender.com/api/associado/";
 
 
 

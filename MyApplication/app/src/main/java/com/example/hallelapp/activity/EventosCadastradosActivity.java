@@ -89,11 +89,13 @@ public class EventosCadastradosActivity extends AppCompatActivity implements Eve
                     // Remover o evento da lista
                     responseEventos.remove(evento);
 
+                    runOnUiThread(() -> {
                     // Notificar o adaptador sobre a remoção
                     eventoAdapter.notifyItemRemoved(responseEventos.indexOf(evento));
                     eventoAdapter.notifyDataSetChanged();
                     hideLoadingDialog();
                     showSuccessDialog();
+                    });
                 });
             }
 

@@ -88,7 +88,7 @@
             android:id="@+id/btnFinanceiro"
             android:layout_width="139dp"
             android:layout_height="122dp"
-            android:layout_marginBottom="236dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/fundo_button_adm"
             android:drawableTop="@drawable/vector_cash"
             android:fontFamily="@font/inter_semibold"
@@ -97,17 +97,16 @@
             android:textAlignment="center"
             android:textColor="@color/cortexto2"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.143"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnmembros"
-            app:layout_constraintVertical_bias="0.969" />
+            app:layout_constraintTop_toBottomOf="@+id/btnmembros" />
 
         <Button
             android:id="@+id/btnEventos"
             android:layout_width="139dp"
             android:layout_height="122dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/fundo_button_adm"
             android:drawableTop="@drawable/vector_eventos_adm"
             android:fontFamily="@font/inter_semibold"
@@ -115,18 +114,16 @@
             android:text="eventos"
             android:textColor="@color/cortexto2"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.585"
             app:layout_constraintStart_toEndOf="@+id/btnFinanceiro"
-            app:layout_constraintTop_toBottomOf="@+id/btnAssociados"
-            app:layout_constraintVertical_bias="0.211" />
+            app:layout_constraintTop_toBottomOf="@+id/btnAssociados" />
 
         <Button
             android:id="@+id/btnAtividades"
             android:layout_width="139dp"
             android:layout_height="122dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/fundo_button_adm"
             android:drawableTop="@drawable/vector_atividades_adm"
             android:fontFamily="@font/inter_semibold"
@@ -145,6 +142,7 @@
             android:id="@+id/btnCursos"
             android:layout_width="139dp"
             android:layout_height="122dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/fundo_button_adm"
             android:drawableTop="@drawable/vector_cursos_adm"
             android:fontFamily="@font/inter_semibold"
@@ -152,13 +150,10 @@
             android:text="cursos"
             android:textColor="@color/cortexto2"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.585"
             app:layout_constraintStart_toEndOf="@+id/btnAtividades"
-            app:layout_constraintTop_toBottomOf="@+id/btnEventos"
-            app:layout_constraintVertical_bias="0.551" />
-
+            app:layout_constraintTop_toBottomOf="@+id/btnEventos" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

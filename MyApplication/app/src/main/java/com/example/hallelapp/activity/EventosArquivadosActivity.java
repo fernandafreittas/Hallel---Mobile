@@ -126,9 +126,10 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
                     // Remover o evento desarquivado da lista
                     responseEventos.remove(eventoArquivado);
                     binding.recyclerView.getAdapter().notifyDataSetChanged(); // Notifica o adaptador sobre a mudança
-
+                    runOnUiThread(() -> {
                     showSuccessDesarquivarDialog();
                     hideLoadingDialog();
+                });
                 });
             }
 
@@ -145,6 +146,7 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
 
     @Override
     public void onDeleteClick(EventoArquivado eventoArquivado) {
+
         showCertezaDialog(eventoArquivado);
     }
 
@@ -182,9 +184,11 @@ public class EventosArquivadosActivity extends AppCompatActivity implements OnEv
 
                 @Override
                 public void onFailure(IOException e) {
+                    runOnUiThread(() -> {
                     System.out.println("deu errado ao deletar");
                     hideLoadingDialog();
                     showErrorDeleteDialog();
+                    });
                 }
             });
         });

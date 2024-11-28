@@ -141,6 +141,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView7"
                     app:layout_constraintVertical_bias="0.078"
+                    android:clickable="true"
                     app:srcCompat="@drawable/icon_location" />
 
                 <TextView
@@ -152,6 +153,7 @@
                     android:text="Av. Margarita, 1359 - Cidade Nova, Manaus - AM, 69097-305"
                     android:textColor="@color/cortexto2"
                     android:textSize="18sp"
+                    android:clickable="true"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView8"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView12"

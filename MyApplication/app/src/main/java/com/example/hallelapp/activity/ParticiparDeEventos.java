@@ -2,6 +2,8 @@ package com.example.hallelapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -158,6 +160,50 @@ public class ParticiparDeEventos extends AppCompatActivity {
             }
         });
 
+
+
+
+
+        // Adiciona formatação ao campo de CPF
+        txtCpf.addTextChangedListener(new TextWatcher() {
+            private boolean isUpdating = false;
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Não precisa fazer nada aqui
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (isUpdating) {
+                    isUpdating = false;
+                    return;
+                }
+
+                String digitsOnly = s.toString().replaceAll("[^\\d]", ""); // Remove qualquer coisa que não seja dígito
+                String formatted = "";
+
+                // Aplica a formatação do CPF
+                if (digitsOnly.length() <= 3) {
+                    formatted = digitsOnly;
+                } else if (digitsOnly.length() <= 6) {
+                    formatted = digitsOnly.substring(0, 3) + "." + digitsOnly.substring(3);
+                } else if (digitsOnly.length() <= 9) {
+                    formatted = digitsOnly.substring(0, 3) + "." + digitsOnly.substring(3, 6) + "." + digitsOnly.substring(6);
+                } else if (digitsOnly.length() <= 11) {
+                    formatted = digitsOnly.substring(0, 3) + "." + digitsOnly.substring(3, 6) + "." + digitsOnly.substring(6, 9) + "-" + digitsOnly.substring(9);
+                }
+
+                isUpdating = true;
+                txtCpf.setText(formatted);
+                txtCpf.setSelection(formatted.length());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Não precisa fazer nada aqui
+            }
+        });
 
 
 

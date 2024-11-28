@@ -41,7 +41,7 @@ public class HttpMain {
 
     //lolo
 
-    private static final String UrlBase = "http://192.168.1.7:8080/api/";
+    private static final String UrlBase = "https://apihallel-deploy.onrender.com/api/";
 
 
 
@@ -162,9 +162,9 @@ public class HttpMain {
     // Método para listar todos os eventos
     public void ListAllEventos(final HttpCallback callback) {
         OkHttpClient client = new OkHttpClient.Builder()
-                .connectTimeout(30, TimeUnit.SECONDS) // Tempo de conexão
-                .writeTimeout(30, TimeUnit.SECONDS) // Tempo de escrita
-                .readTimeout(30, TimeUnit.SECONDS) // Tempo de leitura
+                .connectTimeout(60, TimeUnit.SECONDS) // Tempo de conexão
+                .writeTimeout(60, TimeUnit.SECONDS) // Tempo de escrita
+                .readTimeout(60, TimeUnit.SECONDS) // Tempo de leitura
                 .build();
 
         String url = UrlBase + "home/eventos/listar";

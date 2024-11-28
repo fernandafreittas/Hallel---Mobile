@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.LayoutInflater;
@@ -37,6 +38,7 @@ public class MoreInfosActivity extends AppCompatActivity {
     private AlertDialog loadingDialog;
 
     private ImageView imageEvento;
+    private ImageView imageEndereco;
     private TextView tituloEvento;
     private TextView descricaoEvento;
     private TextView enderecoEvento;
@@ -72,6 +74,7 @@ public class MoreInfosActivity extends AppCompatActivity {
         txtValorDescontoMembro = findViewById(R.id.textView24);
         txtValoreDescontoAssociado = findViewById(R.id.textView26);
         btnDoar = findViewById(R.id.buttonDoar);
+        imageEndereco = findViewById(R.id.imageView12);
 
         HttpMain requisicao = new HttpMain();
 
@@ -126,6 +129,30 @@ public class MoreInfosActivity extends AppCompatActivity {
                 });
             }
         });
+
+        Oncliclicks();
+    }
+
+    private void Oncliclicks() {
+        enderecoEvento.setOnClickListener(v -> {
+            if (evento != null && evento.getLocalEvento() != null) {
+                String endereco = evento.getLocalEvento().getLocalizacao();
+                abrirMapa(endereco);
+            } else {
+                Toast.makeText(MoreInfosActivity.this, "Endereço não disponível.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        imageEndereco.setOnClickListener(v -> {
+            if (evento != null && evento.getLocalEvento() != null) {
+                String endereco = evento.getLocalEvento().getLocalizacao();
+                abrirMapa(endereco);
+            } else {
+                Toast.makeText(MoreInfosActivity.this, "Endereço não disponível.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         button4.setOnClickListener(v -> {
             Intent intent = new Intent(MoreInfosActivity.this, MainActivity.class);
@@ -218,6 +245,27 @@ public class MoreInfosActivity extends AppCompatActivity {
         });
     }
 
+    private void abrirMapa(String endereco) {
+        try {
+            // Tentar primeiro abrir com o esquema "geo:"
+            Uri geoUri = Uri.parse("geo:0,0?q=" + Uri.encode(endereco));
+            Intent geoIntent = new Intent(Intent.ACTION_VIEW, geoUri);
+
+            try {
+                startActivity(geoIntent);
+            } catch (Exception e) {
+                // Caso o esquema "geo:" falhe, tentar abrir com uma URL no navegador
+                Uri mapsUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=" + Uri.encode(endereco));
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, mapsUri);
+                startActivity(webIntent);
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Erro ao abrir o mapa ou navegador.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
 
     private void showLoadingDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -235,4 +283,6 @@ public class MoreInfosActivity extends AppCompatActivity {
             loadingDialog.dismiss();
         }
     }
+
+
 }
